@@ -41,32 +41,20 @@
             <td th:text="${filterMessage}"></td>
         </tr>
     </table>
-    <form method="post" th:action="@{/books/removeBy}" th:object="${bookToRemove}">
+    <form method="post" th:action="@{/books/remove_by_author}" th:object="${removeByAuthor}">
         <table>
-            <tr>
-                <td>
-                    <input type="text" placeholder="id number" th:field="*{id}">
-                </td>
-                <td>
-                    <input type="text" placeholder="author" th:field="*{author}">
-                </td>
-                <td>
-                    <input type="text" placeholder="title" th:field="*{title}">
-                </td>
-                <td>
-                    <input type="text" placeholder="size" th:field="*{size}">
-                </td>
-                <td>
-                    <input type="submit" value="remove by filled field">
+            <tr th:if="${#fields.hasErrors()}">
+                <td colspan="2">
+                    <div>
+                        <ul>
+                            <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
+                        </ul>
+                    </div>
                 </td>
             </tr>
-        </table>
-    </form>
-    <form method="post" th:action="@{/books/remove_by_author}">
-        <table>
             <tr>
                 <td>
-                    <input type="text" placeholder="author" th:name="authorToRemove">
+                    <input type="text" placeholder="author" th:field="*{author}">
                 </td>
                 <td>
                     <input type="submit" value="remove by author">
@@ -74,11 +62,41 @@
             </tr>
         </table>
     </form>
-    <form method="post" th:action="@{/books/remove_by_title}">
+    <form method="post" th:action="@{/books/question}" th:object="${removeByAuthor2}">
         <table>
+            <tr th:if="${#fields.hasErrors()}">
+                <td colspan="2">
+                    <div>
+                        <ul>
+                            <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
             <tr>
                 <td>
-                    <input type="text" placeholder="title or part of title" th:name="titleToRemove">
+                    <input type="text" placeholder="author" th:field="*{author}">
+                </td>
+                <td>
+                    <input type="submit" value="question">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <form method="post" th:action="@{/books/remove_by_title}" th:object="${removeByTitle}">
+        <table>
+            <tr th:if="${#fields.hasErrors()}">
+                <td colspan="2">
+                    <div>
+                        <ul>
+                            <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="title or part of title" th:field="*{title}">
                 </td>
                 <td>
                     <input type="submit" value="remove by title or part">
@@ -86,11 +104,20 @@
             </tr>
         </table>
     </form>
-    <form method="post" th:action="@{/books/remove_by_size}">
+    <form method="post" th:action="@{/books/remove_by_size}" th:object="${removeBySize}">
         <table>
+            <tr th:if="${#fields.hasErrors()}">
+                <td colspan="2">
+                    <div>
+                        <ul>
+                            <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
             <tr>
                 <td>
-                    <input type="text" placeholder="size" th:name="sizeToRemove">
+                    <input type="text" placeholder="size" th:field="*{size}">
                 </td>
                 <td>
                     <input type="submit" value="remove by size">
@@ -142,7 +169,6 @@
                         <ul>
                             <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
                         </ul>
-<!--                        <p th:if="${#fields.hasErrors('size')}" th:errors="*{size}"></p>-->
                     </div>
                 </td>
             </tr>

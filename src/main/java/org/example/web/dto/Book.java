@@ -6,11 +6,12 @@ import javax.validation.constraints.*;
 
 public class Book {
 
+    @Positive(message = "Filed id must be integer value")
     private Integer id;
 
     @Size(min = 5, message = "Field author must contain at list 5 characters")
     private String author;
-    @NotEmpty(message="Field title must not be empty")
+    @Size(min = 5, message = "Field title must contain at list 5 characters")
     private String title;
 
     @Min(value = 1 , message = "Field size must be more or equal than 1")
