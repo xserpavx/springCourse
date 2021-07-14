@@ -41,14 +41,23 @@
             <td th:text="${filterMessage}"></td>
         </tr>
     </table>
-    <form method="post" th:action="@{/books/remove}">
+    <form method="post" th:action="@{/books/removeBy}" th:object="${bookToRemove}">
         <table>
             <tr>
                 <td>
-                    <input type="text" placeholder="id number" th:name="bookIdToRemove">
+                    <input type="text" placeholder="id number" th:field="*{id}">
                 </td>
                 <td>
-                    <input type="submit" value="remove by id">
+                    <input type="text" placeholder="author" th:field="*{author}">
+                </td>
+                <td>
+                    <input type="text" placeholder="title" th:field="*{title}">
+                </td>
+                <td>
+                    <input type="text" placeholder="size" th:field="*{size}">
+                </td>
+                <td>
+                    <input type="submit" value="remove by filled field">
                 </td>
             </tr>
         </table>
@@ -128,7 +137,14 @@
     <form method="post" th:action="@{/books/save}" th:object="${book}">
         <table>
             <tr th:if="${#fields.hasErrors()}">
-                <td colspan="4"> something wrong</td>
+                <td colspan="4">
+                    <div>
+                        <ul>
+                            <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
+                        </ul>
+<!--                        <p th:if="${#fields.hasErrors('size')}" th:errors="*{size}"></p>-->
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td>

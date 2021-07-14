@@ -2,13 +2,21 @@ package org.example.web.dto;
 
 import org.json.simple.JSONObject;
 
-import javax.validation.constraints.Digits;
+import javax.validation.constraints.*;
 
 public class Book {
+
     private Integer id;
+
+    @Size(min = 5, message = "Field author must contain at list 5 characters")
     private String author;
+    @NotEmpty(message="Field title must not be empty")
     private String title;
-    @Digits(integer=4,fraction=0)
+
+    @Min(value = 1 , message = "Field size must be more or equal than 1")
+    @Max(value = 9999 , message = "Field size must be less or equal than 9999")
+    @NotNull(message="Field size can not be null. Please input page count value between 1 to 9999")
+    @Digits(message = "Field size must be digits and less than 4 signs", integer = 4, fraction = 0)
     private Integer size;
 
     public Integer getId() {

@@ -68,6 +68,7 @@ public class BookShelfController {
         model.addAttribute("bookList", bookService.getAllBooks());
         model.addAttribute("lastMessage", bookService.getLastMessage());
         model.addAttribute("filterMessage", bookService.getFilterMessage());
+        model.addAttribute("bookToRemove", new Book());
         return "book_shelf";
     }
 
@@ -78,6 +79,7 @@ public class BookShelfController {
             model.addAttribute("bookList", bookService.getAllBooks());
             model.addAttribute("lastMessage", bookService.getLastMessage());
             model.addAttribute("filterMessage", bookService.getFilterMessage());
+            model.addAttribute("bookToRemove", new Book());
             return "book_shelf";
         } else {
             bookService.saveBook(book);
@@ -87,19 +89,58 @@ public class BookShelfController {
     }
 
     @PostMapping("/remove")
-    public String removeBook(@RequestParam(value = "bookIdToRemove") String bookIdToRemove) {
+    public String removeBook(Book bookToRemove) {
         try {
-            if (bookService.removeBookById(Integer.parseInt(bookIdToRemove))) {
-                bookService.setLastMessage(String.format("Book with id \"%s\" deleted succesfully", bookIdToRemove));
+
+            if (bookService.removeBookById(bookToRemove.getId())) {
+                bookService.setLastMessage(String.format("Book with id \"%s\" deleted succesfully", bookToRemove.getId()));
             } else {
-                bookService.setLastMessage(String.format("Book with id \"%s\" not found!", bookIdToRemove));
+                bookService.setLastMessage(String.format("Book with id \"%s\" not found!", bookToRemove.getId()));
             }
         } catch (NumberFormatException e) {
-            bookService.setLastMessage(String.format("Book id must be integer instead \"%s\"", bookIdToRemove));
+            bookService.setLastMessage(String.format("Book id must be integer instead \"%s\"", bookToRemove.getId()));
             logger.warn(String.format("book id must be integer!"));
         }
         return "redirect:/books/shelf";
     }
+
+//    @PostMapping("/removeBy")
+//    public String removeBookBy(@Valid Book bookToRemove, BindingResult bindingResult, Model model) {
+//        if (bindingResult.hasErrors()) {
+//            model.addAttribute("book", new Book());
+//            model.addAttribute("bookList", bookService.getAllBooks());
+//            model.addAttribute("lastMessage", bookService.getLastMessage());
+//            model.addAttribute("filterMessage", bookService.getFilterMessage());
+//            bookToRemove.setId(1);
+//            bookToRemove.setAuthor("roland");
+//            bookToRemove.setTitle("homework");
+//            model.addAttribute("bookToRemove", bookToRemove);
+//            return "book_shelf";
+//        } else {
+//            if (bookToRemove.getId() != null) {
+//                if (bookService.removeBookById(bookToRemove.getId())) {
+//                    bookService.setLastMessage(String.format("Book with id \"%s\" deleted succesfully", bookToRemove.getId()));
+//                } else {
+//                    bookService.setLastMessage(String.format("Book with id \"%s\" not found!", bookToRemove.getId()));
+//                }
+//            }
+//            return "redirect:/books/shelf";
+//        }
+////        try {
+////            if (bookToRemove.getId() != null) {
+////                if (bookService.removeBookById(bookToRemove.getId())) {
+////                    bookService.setLastMessage(String.format("Book with id \"%s\" deleted succesfully", bookToRemove.getId()));
+////                } else {
+////                    bookService.setLastMessage(String.format("Book with id \"%s\" not found!", bookToRemove.getId()));
+////                }
+////            }
+////
+////        } catch (NumberFormatException e) {
+////            bookService.setLastMessage(String.format("Book id must be integer instead \"%s\"", bookToRemove.getId()));
+////            logger.warn(String.format("book id must be integer!"));
+////        }
+//
+//    }
 
     @PostMapping("/remove_by_author")
     public String removeBooksByAuthor(@RequestParam(value = "authorToRemove") String authorToRemove) {
