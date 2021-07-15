@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.io.*;
 
 @Controller
 @RequestMapping(value = "/books")
@@ -84,7 +86,9 @@ public class BookShelfController {
         model.addAttribute("book2", new Book());
         model.addAttribute("removeByTitle", new RemoveByTitle());
         model.addAttribute("removeByAuthor", new RemoveByAuthor());
-        model.addAttribute("removeByAuthor2", new RemoveByAuthor());
+        RemoveByAuthor test = new RemoveByAuthor();
+        test.setAuthor("12");
+        model.addAttribute("removeByAuthor2", test);
         model.addAttribute("removeBySize", new RemoveBySize());
         return "book_shelf";
     }
@@ -149,11 +153,30 @@ public class BookShelfController {
 
     @PostMapping("/question")
     public String question(@Valid RemoveByAuthor author, BindingResult bindingResult, Model model) {
+        /*
+            Post запрос question связан с формой на странице book_shelf через аттрибут модели removeByAuthor2.
+            В переменной author хранятся поля объекта связанного с этой формой и это правильно
+             */
         if (bindingResult.hasErrors()) {
+            /*
+            Проверка правильности заполнения полей выдает ошибку и это правильно. По аналогии с примером из лекции кладем
+            переменную author в аттрибут модели removeByAuthor2, в остальные аттрибуты кладем пустые объекты
+             */
             addCommonParameters2Model(model);
+
             model.addAttribute(varBookName, new Book());
             model.addAttribute("removeByTitle", new RemoveByTitle());
+            /*
+            В настоящий момент одним из аттрибутов модели является org.springframework.validation.BindingResult.removeByAuthor.
+            Как я понимаю в нем хранятся сведения об ошибках валидации. Если этого объекта не будет в модели - то и на форме не
+            будет сведений об ошибках
+             */
             model.addAttribute("removeByAuthor", new RemoveByAuthor());
+            /*
+            А вот теперь аттрибут модели org.springframework.validation.BindingResult.removeByAuthor пропадает.
+            И ошибок на форме не будет.
+            Почему?
+             */
             model.addAttribute("removeByAuthor2", author);
             model.addAttribute("removeBySize", new RemoveBySize());
             return "book_shelf";
@@ -240,5 +263,25 @@ public class BookShelfController {
         bookService.setSizeFilter(0);
         bookService.setLastMessage("All filters are clear!");
         return "redirect:/books/shelf";
+    }
+
+    @PostMapping("/upload")
+    public String uploadFile(@RequestParam("file")MultipartFile file) throws Exception {
+        String fileName = file.getOriginalFilename();
+        byte[] bytes = file.getBytes();
+
+        String rootPath = String.format("%s%s%s", System.getProperty("catalina.home"), File.separator, "uploads");
+        File path = new File(rootPath);
+        if (!path.exists()) {
+            path.mkdirs();
+        }
+
+        File uploadFile = new File(String.format("%s%s%s", path.getAbsolutePath(), File.separator, fileName));
+        try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(uploadFile))) {
+            bos.write(bytes);
+        }
+
+        return "redirect:/books/shelf";
+
     }
 }
