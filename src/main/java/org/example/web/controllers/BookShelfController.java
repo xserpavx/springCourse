@@ -265,23 +265,4 @@ public class BookShelfController {
         return "redirect:/books/shelf";
     }
 
-    @PostMapping("/upload")
-    public String uploadFile(@RequestParam("file")MultipartFile file) throws Exception {
-        String fileName = file.getOriginalFilename();
-        byte[] bytes = file.getBytes();
-
-        String rootPath = String.format("%s%s%s", System.getProperty("catalina.home"), File.separator, "uploads");
-        File path = new File(rootPath);
-        if (!path.exists()) {
-            path.mkdirs();
-        }
-
-        File uploadFile = new File(String.format("%s%s%s", path.getAbsolutePath(), File.separator, fileName));
-        try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(uploadFile))) {
-            bos.write(bytes);
-        }
-
-        return "redirect:/books/shelf";
-
-    }
 }

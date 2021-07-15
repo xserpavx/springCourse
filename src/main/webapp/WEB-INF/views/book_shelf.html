@@ -41,6 +41,7 @@
             <td th:text="${filterMessage}"></td>
         </tr>
     </table>
+    <a th:href="@{/files}">Working with files</a>
     <form method="post" th:action="@{/books/remove_by_author}" th:object="${removeByAuthor}">
         <table>
             <tr th:if="${#fields.hasErrors()}">
