@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
  **/
 
 public class BS_FileException extends Exception {
-    private final static Logger log = LoggerFactory.getLogger(BS_FileException.class);
 
     private String message;
 

@@ -84,27 +84,6 @@
             </tr>
         </table>
     </form>
-    <form method="post" th:action="@{/books/question}" th:object="${removeByAuthor2}">
-        <table>
-            <tr th:if="${#fields.hasErrors()}">
-                <td colspan="2">
-                    <div>
-                        <ul>
-                            <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="text" placeholder="author" th:field="*{author}">
-                </td>
-                <td>
-                    <input type="submit" value="question">
-                </td>
-            </tr>
-        </table>
-    </form>
     <form method="post" th:action="@{/books/remove_by_title}" th:object="${removeByTitle}">
         <table>
             <tr th:if="${#fields.hasErrors()}">

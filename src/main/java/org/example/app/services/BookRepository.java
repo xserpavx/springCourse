@@ -85,4 +85,37 @@ public class BookRepository implements ProjectRepository<Book> {
         }
         return Math.abs(booksCount - repo.size());
     }
+
+    public BookRepository() {
+        Book book = new Book();
+        book.setAuthor("JRR Tolkien");
+        book.setTitle("The Fellowship of the Ring");
+        book.setSize(756);
+        store(book);
+        book = new Book();
+        book.setAuthor("JRR Tolkien");
+        book.setTitle("The Two Towers");
+        book.setSize(658);
+        store(book);
+        book = new Book();
+        book.setAuthor("JRR Tolkien");
+        book.setTitle("The Return of the King");
+        book.setSize(930);
+        store(book);
+        book = new Book();
+        book.setAuthor("JRR Tolkien");
+        book.setTitle("The Hobbit or There and Back Again");
+        book.setSize(428);
+        store(book);
+        book = new Book();
+        book.setAuthor("O.Henry");
+        book.setTitle("Cabbages and Kings");
+        book.setSize(370);
+        store(book);
+        book = new Book();
+        book.setAuthor("A. Conan Doyle");
+        book.setTitle("The adventures of Sherlock Holmes");
+        book.setSize(428);
+        store(book);
+    }
 }

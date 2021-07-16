@@ -35,46 +35,8 @@ public class BookShelfController {
     @Autowired
     public BookShelfController(BookService bookService) {
         this.bookService = bookService;
-        Book book = new Book();
-        book.setAuthor("JRR Tolkien");
-        book.setTitle("The Fellowship of the Ring");
-        book.setSize(756);
-        bookService.saveBook(book);
-        book = new Book();
-        book.setAuthor("JRR Tolkien");
-        book.setTitle("The Two Towers");
-        book.setSize(658);
-        bookService.saveBook(book);
-        book = new Book();
-        book.setAuthor("JRR Tolkien");
-        book.setTitle("The Return of the King");
-        book.setSize(930);
-        bookService.saveBook(book);
-        book = new Book();
-        book.setAuthor("JRR Tolkien");
-        book.setTitle("The Hobbit or There and Back Again");
-        book.setSize(428);
-        bookService.saveBook(book);
-        book = new Book();
-        book.setAuthor("O.Henry");
-        book.setTitle("Cabbages and Kings");
-        book.setSize(370);
-        bookService.saveBook(book);
-        book = new Book();
-        book.setAuthor("A. Conan Doyle");
-        book.setTitle("The adventures of Sherlock Holmes");
-        book.setSize(428);
-        bookService.saveBook(book);
-//        book = new Book();
-//        book.setAuthor("Mark Twain");
-//        book.setTitle("The Adventures of Tom Sawyer");
-//        book.setSize(250);
-//        bookService.saveBook(book);
-//        book = new Book();
-//        book.setAuthor("Mark Twain");
-//        book.setTitle("The Adventures of Huckleberry Finn");
-//        book.setSize(300);
-//        bookService.saveBook(book);
+
+
 
         bookService.setLastMessage("");
         bookService.setFilterMessage("filters off");
@@ -88,11 +50,6 @@ public class BookShelfController {
         return "book_shelf";
     }
 
-    private void addCommonParameters2Model(Model model) {
-        model.addAttribute("bookList", bookService.getAllBooks());
-        model.addAttribute("lastMessage", bookService.getLastMessage());
-        model.addAttribute("filterMessage", bookService.getFilterMessage());
-    }
 
     private void addCommonParameters2Model2(Model model, String skipAttribute) {
         if (skipAttribute.compareTo("bookList") != 0) {
@@ -166,46 +123,6 @@ public class BookShelfController {
     public String removeBooksByAuthor(@Valid RemoveByAuthor author, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
             addCommonParameters2Model2(model, "removeByAuthor");
-            return "book_shelf";
-        } else {
-            int delCount = bookService.removeBooksByAuthor(author.getAuthor());
-            if (delCount != 0) {
-                bookService.setLastMessage(String.format("Removed %d books written by %s.", delCount, author.getAuthor()));
-            } else {
-                bookService.setLastMessage(String.format("Books written by %s not found!", author.getAuthor()));
-            }
-            return "redirect:/books/shelf";
-        }
-    }
-
-    @PostMapping("/question")
-    public String question(@Valid RemoveByAuthor author, BindingResult bindingResult, Model model) {
-        /*
-            Post запрос question связан с формой на странице book_shelf через аттрибут модели removeByAuthor2.
-            В переменной author хранятся поля объекта связанного с этой формой и это правильно
-             */
-        if (bindingResult.hasErrors()) {
-            /*
-            Проверка правильности заполнения полей выдает ошибку и это правильно. По аналогии с примером из лекции кладем
-            переменную author в аттрибут модели removeByAuthor2, в остальные аттрибуты кладем пустые объекты
-             */
-            addCommonParameters2Model(model);
-
-            model.addAttribute(varBookName, new Book());
-            model.addAttribute("removeByTitle", new RemoveByTitle());
-            /*
-            В настоящий момент одним из аттрибутов модели является org.springframework.validation.BindingResult.removeByAuthor.
-            Как я понимаю в нем хранятся сведения об ошибках валидации. Если этого объекта не будет в модели - то и на форме не
-            будет сведений об ошибках
-             */
-            model.addAttribute("removeByAuthor", new RemoveByAuthor());
-            /*
-            А вот теперь аттрибут модели org.springframework.validation.BindingResult.removeByAuthor пропадает.
-            И ошибок на форме не будет.
-            Почему?
-             */
-            model.addAttribute("removeByAuthor2", author);
-            model.addAttribute("removeBySize", new RemoveBySize());
             return "book_shelf";
         } else {
             int delCount = bookService.removeBooksByAuthor(author.getAuthor());
