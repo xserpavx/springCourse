@@ -3,7 +3,11 @@ package org.example.web.controllers;
 import org.apache.log4j.Logger;
 import org.example.app.services.BookService;
 import org.example.web.dto.Book;
+import org.example.web.dto.filter.FilterByAuthor;
+import org.example.web.dto.filter.FilterBySize;
+import org.example.web.dto.filter.FilterByTitle;
 import org.example.web.dto.remove.RemoveByAuthor;
+import org.example.web.dto.remove.RemoveById;
 import org.example.web.dto.remove.RemoveBySize;
 import org.example.web.dto.remove.RemoveByTitle;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +18,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.io.*;
@@ -81,15 +84,7 @@ public class BookShelfController {
     @GetMapping("/shelf")
     public String books(Model model) {
         logger.info("got book shelf");
-        addCommonParameters2Model(model);
-        model.addAttribute(varBookName, new Book());
-        model.addAttribute("book2", new Book());
-        model.addAttribute("removeByTitle", new RemoveByTitle());
-        model.addAttribute("removeByAuthor", new RemoveByAuthor());
-        RemoveByAuthor test = new RemoveByAuthor();
-        test.setAuthor("12");
-        model.addAttribute("removeByAuthor2", test);
-        model.addAttribute("removeBySize", new RemoveBySize());
+        addCommonParameters2Model2(model, "");
         return "book_shelf";
     }
 
@@ -99,29 +94,66 @@ public class BookShelfController {
         model.addAttribute("filterMessage", bookService.getFilterMessage());
     }
 
-    @PostMapping("/remove")
-    public String removeBook(Book bookToRemove) {
-        try {
-            if (bookService.removeBookById(bookToRemove.getId())) {
-                bookService.setLastMessage(String.format("Book with id \"%s\" deleted succesfully", bookToRemove.getId()));
-            } else {
-                bookService.setLastMessage(String.format("Book with id \"%s\" not found!", bookToRemove.getId()));
-            }
-        } catch (NumberFormatException e) {
-            bookService.setLastMessage(String.format("Book id must be integer instead \"%s\"", bookToRemove.getId()));
-            logger.warn(String.format("book id must be integer!"));
+    private void addCommonParameters2Model2(Model model, String skipAttribute) {
+        if (skipAttribute.compareTo("bookList") != 0) {
+            model.addAttribute("bookList", bookService.getAllBooks());
         }
-        return "redirect:/books/shelf";
+        if (skipAttribute.compareTo("lastMessage") != 0) {
+            model.addAttribute("lastMessage", bookService.getLastMessage());
+        }
+        if (skipAttribute.compareTo("bookList") != 0) {
+            model.addAttribute("filterMessage", bookService.getFilterMessage());
+        }
+        if (skipAttribute.compareTo(varBookName) != 0) {
+            model.addAttribute(varBookName, new Book());
+        }
+        if (skipAttribute.compareTo("removeByTitle") != 0) {
+            model.addAttribute("removeByTitle", new RemoveByTitle());
+        }
+        if (skipAttribute.compareTo("removeByAuthor") != 0) {
+            model.addAttribute("removeByAuthor", new RemoveByAuthor());
+        }
+        if (skipAttribute.compareTo("removeByAuthor2") != 0) {
+            RemoveByAuthor test = new RemoveByAuthor();
+            test.setAuthor("12");
+            model.addAttribute("removeByAuthor2", test);
+        }
+        if (skipAttribute.compareTo("removeBySize") != 0) {
+            model.addAttribute("removeBySize", new RemoveBySize());
+        }
+        if (skipAttribute.compareTo("filterByAuthor") != 0) {
+            model.addAttribute("filterByAuthor", new FilterByAuthor());
+        }
+        if (skipAttribute.compareTo("filterByTitle") != 0) {
+            model.addAttribute("filterByTitle", new FilterByTitle());
+        }
+        if (skipAttribute.compareTo("filterBySize") != 0) {
+            model.addAttribute("filterBySize", new FilterBySize());
+        }
+        if (skipAttribute.compareTo("removeById") != 0) {
+            model.addAttribute("removeById", new RemoveById());
+        }
+    }
+
+    @PostMapping("/remove")
+    public String removeBook(@Valid RemoveById id, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            addCommonParameters2Model2(model, "removeById");
+            return "book_shelf";
+        } else {
+            if (bookService.removeBookById(id.getId())) {
+                bookService.setLastMessage(String.format("Book with id \"%s\" deleted succesfully", id.getId()));
+            } else {
+                bookService.setLastMessage(String.format("Book with id \"%s\" not found!", id.getId()));
+            }
+            return "redirect:/books/shelf";
+        }
     }
 
     @PostMapping("/save")
     public String saveBook(@Valid Book saveBook, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
-            addCommonParameters2Model(model);
-            model.addAttribute("removeByTitle", new RemoveByTitle());
-            model.addAttribute("removeByAuthor", new RemoveByAuthor());
-            model.addAttribute("removeByAuthor2", new RemoveByAuthor());
-            model.addAttribute("removeBySize", new RemoveBySize());
+            addCommonParameters2Model2(model, varBookName);
             return "book_shelf";
         } else {
             bookService.saveBook(saveBook);
@@ -133,12 +165,7 @@ public class BookShelfController {
     @PostMapping("/remove_by_author")
     public String removeBooksByAuthor(@Valid RemoveByAuthor author, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
-            addCommonParameters2Model(model);
-            model.addAttribute(varBookName, new Book());
-            model.addAttribute("removeByTitle", new RemoveByTitle());
-            model.addAttribute("removeByAuthor", author);
-            model.addAttribute("removeByAuthor2", new RemoveByAuthor());
-            model.addAttribute("removeBySize", new RemoveBySize());
+            addCommonParameters2Model2(model, "removeByAuthor");
             return "book_shelf";
         } else {
             int delCount = bookService.removeBooksByAuthor(author.getAuthor());
@@ -194,12 +221,7 @@ public class BookShelfController {
     @PostMapping("/remove_by_title")
     public String removeBooksByTitle(@Valid RemoveByTitle removeByTitle, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
-            addCommonParameters2Model(model);
-            model.addAttribute("removeByTitle", removeByTitle);
-            model.addAttribute("removeByAuthor", new RemoveByAuthor());
-            model.addAttribute("removeByAuthor2", new RemoveByAuthor());
-            model.addAttribute("removeBySize", new RemoveBySize());
-            model.addAttribute("book", new Book());
+            addCommonParameters2Model2(model, "removeByTitle");
             return "book_shelf";
         } else {
             int delCount = bookService.removeBooksByTitle(removeByTitle.getTitle());
@@ -215,11 +237,7 @@ public class BookShelfController {
     @PostMapping("/remove_by_size")
     public String removeBooksBySize(@Valid RemoveBySize size, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
-            addCommonParameters2Model(model);
-            model.addAttribute("removeByTitle", new RemoveByTitle());
-            model.addAttribute("removeByAuthor", new RemoveByAuthor());
-            model.addAttribute("removeByAuthor2", new RemoveByAuthor());
-            model.addAttribute("book", new Book());
+            addCommonParameters2Model2(model, "removeBySize");
             return "book_shelf";
         } else {
             int delCount = bookService.removeBooksByPageSize(size.getSize());
@@ -233,27 +251,36 @@ public class BookShelfController {
     }
 
     @PostMapping("/set_author_filter")
-    public String setAuthorFilter(@RequestParam(value = "authorFilter") String authorFilter) {
-        bookService.setAuthorFilter(authorFilter);
-        return "redirect:/books/shelf";
+    public String setAuthorFilter(@Valid FilterByAuthor author, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            addCommonParameters2Model2(model, "filterByAuthor");
+            return "book_shelf";
+        } else {
+            bookService.setAuthorFilter(author.getAuthor());
+            return "redirect:/books/shelf";
+        }
     }
 
     @PostMapping("/set_title_filter")
-    public String setTitleFilter(@RequestParam(value = "titleFilter") String titleFilter) {
-        bookService.setTitleFilter(titleFilter);
-        return "redirect:/books/shelf";
+    public String setTitleFilter(@Valid FilterByTitle title, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            addCommonParameters2Model2(model, "filterByTitle");
+            return "book_shelf";
+        } else {
+            bookService.setTitleFilter(title.getTitle());
+            return "redirect:/books/shelf";
+        }
     }
 
     @PostMapping("/set_size_filter")
-    public String setSizeFilter(@RequestParam(value = "sizeFilter") String sizeFilter) {
-        try {
-            int size = Integer.parseInt(sizeFilter);
-            bookService.setSizeFilter(size);
-        } catch (NumberFormatException e) {
-            bookService.setLastMessage(String.format("Size filter value must be integer instead \"%s\"", sizeFilter));
-            logger.warn(String.format("Size filter value must be integer!"));
+    public String setSizeFilter(@Valid FilterBySize size, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            addCommonParameters2Model2(model, "filterBySize");
+            return "book_shelf";
+        } else {
+            bookService.setSizeFilter(size.getSize());
+            return "redirect:/books/shelf";
         }
-        return "redirect:/books/shelf";
     }
 
     @GetMapping("/clear_filter")

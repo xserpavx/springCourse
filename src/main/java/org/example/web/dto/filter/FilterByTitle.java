@@ -1,4 +1,4 @@
-package org.example.web.dto.remove;
+package org.example.web.dto.filter;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,8 +13,9 @@ import javax.validation.constraints.Size;
  * @author roland
  **/
 
-public class RemoveByTitle {
-    private final static Logger log = LoggerFactory.getLogger(RemoveByTitle.class);
+public class FilterByTitle {
+    private final static Logger log = LoggerFactory.getLogger(FilterByTitle.class);
+
     @Getter
     @Setter
     @Size(min = 4, message = "Field title must contain at list 4 characters")

@@ -17,7 +17,7 @@
         }
 
         table {
-            margin: 25px;
+            margin: 5px;
         }
 
         th {
@@ -42,6 +42,27 @@
         </tr>
     </table>
     <a th:href="@{/files}">Working with files</a>
+    <form method="post" th:action="@{/books/remove}" th:object="${removeById}">
+        <table>
+            <tr th:if="${#fields.hasErrors()}">
+                <td colspan="2">
+                    <div>
+                        <ul>
+                            <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="id" th:field="*{id}">
+                </td>
+                <td>
+                    <input type="submit" value="remove by id">
+                </td>
+            </tr>
+        </table>
+    </form>
     <form method="post" th:action="@{/books/remove_by_author}" th:object="${removeByAuthor}">
         <table>
             <tr th:if="${#fields.hasErrors()}">
@@ -126,11 +147,20 @@
             </tr>
         </table>
     </form>
-    <form method="post" th:action="@{/books/set_author_filter}">
+    <form method="post" th:action="@{/books/set_author_filter}" th:object="${filterByAuthor}">
         <table>
+            <tr th:if="${#fields.hasErrors()}">
+                <td colspan="2">
+                    <div>
+                        <ul>
+                            <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
             <tr>
                 <td>
-                    <input type="text" placeholder="type for filter by Author" th:name="authorFilter">
+                    <input type="text" placeholder="type for filter by Author" th:field="*{author}">
                 </td>
                 <td>
                     <input type="submit" value="set filter by Author">
@@ -138,11 +168,20 @@
             </tr>
         </table>
     </form>
-    <form method="post" th:action="@{/books/set_title_filter}">
+    <form method="post" th:action="@{/books/set_title_filter}" th:object="${filterByTitle}">
         <table>
+            <tr th:if="${#fields.hasErrors()}">
+                <td colspan="2">
+                    <div>
+                        <ul>
+                            <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
             <tr>
                 <td>
-                    <input type="text" placeholder="type for filter by Title" th:name="titleFilter">
+                    <input type="text" placeholder="type for filter by Title" th:field="*{title}">
                 </td>
                 <td>
                     <input type="submit" value="set filter by Title">
@@ -150,11 +189,20 @@
             </tr>
         </table>
     </form>
-    <form method="post" th:action="@{/books/set_size_filter}">
+    <form method="post" th:action="@{/books/set_size_filter}" th:object="${filterBySize}">
         <table>
+            <tr th:if="${#fields.hasErrors()}">
+                <td colspan="2">
+                    <div>
+                        <ul>
+                            <li th:each="err : ${#fields.errors()}" th:text="${err}" class="error"></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
             <tr>
                 <td>
-                    <input type="text" placeholder="type for filter by size" th:name="sizeFilter">
+                    <input type="text" placeholder="type for filter by size" th:field="*{size}">
                 </td>
                 <td>
                     <input type="submit" value="set filter by Size">
