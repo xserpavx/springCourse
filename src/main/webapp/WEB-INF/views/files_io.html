@@ -16,6 +16,17 @@
         </div>
     </form>
     <br>
-
+    <p> List files stored by server</p>
+    <table id="files">
+        <tr>
+            <th>filename</th>
+            <th>download file</th>
+            <th>delete file</th>
+        <tr th:each="fileName : ${listFiles}">
+            <td th:text="${fileName}"></td>
+            <td><a th:href="@{/getFile(fn=${fileName})}">download</a></td>
+            <td><a th:href="@{/deleteFile(fn=${fileName})}">delete</a></td>
+        </tr>
+    </table>
 </body>
 </html>
