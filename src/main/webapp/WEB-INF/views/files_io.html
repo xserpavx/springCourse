@@ -6,7 +6,7 @@
 </head>
 <body>
     <a th:href="@{/books/shelf}">Back to the book shelf</a>
-    <p th:text="${message}"></p>
+    <h2 th:text="${errorMessage}"></h2>
     <br>
     <form method="post" th:action="@{/upload}"  enctype="multipart/form-data">
         <div>

@@ -66,7 +66,6 @@ public class LoginController {
     @ExceptionHandler(BS_LoginException.class)
     public String handleError(Model model, BS_LoginException exception) {
         setMessage(exception.getMessage());
-//        model.addAttribute("errorMessage", exception.getMessage());
         return "redirect:/login";
     }
 }
