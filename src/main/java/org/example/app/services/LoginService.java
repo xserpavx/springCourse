@@ -1,9 +1,7 @@
 package org.example.app.services;
 
 import org.apache.log4j.Logger;
-import org.example.web.dto.Book;
 import org.example.web.dto.LoginForm;
-import org.example.web.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

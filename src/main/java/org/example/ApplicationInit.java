@@ -53,9 +53,6 @@ public class ApplicationInit implements WebApplicationInitializer {
         </servlet-mapping>
          */
 
-//        XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
-//        webApplicationContext.setConfigLocation("classpath:web-config.xml");
-
         AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext();
         webApplicationContext.register(WebConfigXML.class);
 

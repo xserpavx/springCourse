@@ -38,11 +38,5 @@ public class User {
         jso.put("login", login);
         jso.put("password", password);
         return String.format("%s%s", getClass().getName(), jso.toString());
-//        return "Book{" +
-//                "id=" + id +
-//                ", author='" + author + '\'' +
-//                ", title='" + title + '\'' +
-//                ", size=" + size +
-//                '}';
     }
 }

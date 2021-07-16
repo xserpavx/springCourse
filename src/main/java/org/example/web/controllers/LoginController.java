@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.security.auth.login.LoginException;
-
 @Controller
 @RequestMapping(value = "/login")
 public class LoginController {
@@ -53,7 +51,6 @@ public class LoginController {
         } else {
             logger.info("login FAIL redirect back to login");
             throw new BS_LoginException("Invalid username or password!");
-//            return "redirect:/login";
         }
     }
 

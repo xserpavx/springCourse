@@ -1,8 +1,6 @@
 package org.example.app.services;
 
-import org.example.web.dto.Book;
 import org.example.web.dto.LoginForm;
-import org.example.web.dto.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

@@ -55,12 +55,6 @@ public class Book {
 
     @Override
     public String toString() {
-//        return "Book{" +
-//                "id=" + id +
-//                ", author='" + author + '\'' +
-//                ", title='" + title + '\'' +
-//                ", size=" + size +
-//                '}';
         JSONObject jso = new JSONObject();
         jso.put("author", author);
         jso.put("title", title);
