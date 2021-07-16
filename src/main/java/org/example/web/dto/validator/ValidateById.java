@@ -1,4 +1,4 @@
-package org.example.web.dto.remove;
+package org.example.web.dto.validator;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,8 +14,7 @@ import javax.validation.constraints.NotNull;
  * @author roland
  **/
 
-public class RemoveById {
-    private final static Logger log = LoggerFactory.getLogger(RemoveById.class);
+public class ValidateById {
 
     @Getter
     @Setter

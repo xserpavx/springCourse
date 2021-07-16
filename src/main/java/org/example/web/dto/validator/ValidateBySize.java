@@ -1,4 +1,4 @@
-package org.example.web.dto.filter;
+package org.example.web.dto.validator;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,8 +14,8 @@ import javax.validation.constraints.NotNull;
  * @author roland
  **/
 
-public class FilterBySize {
-    private final static Logger log = LoggerFactory.getLogger(FilterBySize.class);
+public class ValidateBySize {
+    private final static Logger log = LoggerFactory.getLogger(ValidateBySize.class);
 
     @Getter
     @Setter

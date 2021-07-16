@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.app.config.AppContextConfig;
 import org.example.web.config.WebConfigXML;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,8 +34,9 @@ public class ApplicationInit implements WebApplicationInitializer {
             <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
         </listener>
         */
-        XmlWebApplicationContext applicationContext = new XmlWebApplicationContext();
-        applicationContext.setConfigLocation("classpath:app-config.xml");
+
+        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
+        applicationContext.register(AppContextConfig.class);
         servletContext.addListener(new ContextLoaderListener(applicationContext));
 
         /*
