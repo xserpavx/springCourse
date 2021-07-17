@@ -22,7 +22,7 @@ import javax.validation.Valid;
 public class BookShelfController {
 
     private Logger logger = Logger.getLogger(BookShelfController.class);
-    private BookService bookService;
+    private final BookService bookService;
 
     @Autowired
     public BookShelfController(BookService bookService) {
