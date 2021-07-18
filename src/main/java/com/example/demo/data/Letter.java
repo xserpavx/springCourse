@@ -5,7 +5,6 @@ import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Set;
 
 /**
  * Created on 18.07.2021
@@ -26,7 +25,7 @@ public class Letter {
     public void addAuthor(Author author) {
         ArrayList<Author> authors = letters.get(author.getLetter());
         if (authors == null) {
-            authors = new ArrayList<Author>();
+            authors = new ArrayList<>();
             letters.put(author.getLetter(), authors);
         }
         authors.add(author);
