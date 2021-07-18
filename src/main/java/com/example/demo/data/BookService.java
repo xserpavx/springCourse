@@ -28,10 +28,10 @@ public class BookService {
     }
 
     public List<Book> getBooks() {
-        List<Book> books = db.query("select * from books", (ResultSet sqlResult, int row) -> {
+        List<Book> books = db.query("select books.*, fio from books left outer join authors on authors.id = books.id_author", (ResultSet sqlResult, int row) -> {
             Book book = new Book();
             book.setId(sqlResult.getInt("id"));
-            book.setAuthor(sqlResult.getString("author"));
+            book.setAuthor(sqlResult.getString("fio"));
             book.setPrice(sqlResult.getString("price"));
             book.setPriceOld(sqlResult.getString("priceold"));
             book.setTitle(sqlResult.getString("title"));
