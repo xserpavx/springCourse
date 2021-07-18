@@ -1,0 +1,43 @@
+package com.example.demo.data;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.sql.ResultSet;
+
+
+/**
+ * Created on 18.07.2021
+ *
+ * @author roland
+ **/
+@Service
+public class BookService {
+    private final static Logger log = LoggerFactory.getLogger(BookService.class);
+
+    private final JdbcTemplate db;
+
+    @Autowired
+    public BookService(JdbcTemplate db) {
+        this.db = db;
+    }
+
+    public List<Book> getBooks() {
+        List<Book> books = db.query("select * from books", (ResultSet sqlResult, int row) -> {
+            Book book = new Book();
+            book.setId(sqlResult.getInt("id"));
+            book.setAuthor(sqlResult.getString("author"));
+            book.setPrice(sqlResult.getString("price"));
+            book.setPriceOld(sqlResult.getString("priceold"));
+            book.setTitle(sqlResult.getString("title"));
+            return book;
+        });
+        return new ArrayList<>(books);
+    }
+
+}
