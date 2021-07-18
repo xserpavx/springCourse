@@ -1,8 +1,11 @@
 package com.example.demo.controllers;
 
+import com.example.demo.data.AuthorService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -14,10 +17,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/authors")
 public class AuthorsController {
-    private final static Logger log = LoggerFactory.getLogger(AuthorsController.class);
+    private final AuthorService authorService;
+
+    @Autowired
+    public AuthorsController(AuthorService authorService) {
+        this.authorService = authorService;
+    }
 
     @GetMapping("/main")
-    public String getMainPage() {
+    public String getMainPage(Model model) {
+        model.addAttribute("letters", authorService.getAuthorsLetter());
+        model.addAttribute("authors", authorService.getAuthors());
         return "/authors/index";
     }
 }

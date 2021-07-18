@@ -1,7 +1,5 @@
 package com.example.demo.data;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -18,7 +16,6 @@ import java.sql.ResultSet;
  **/
 @Service
 public class BookService {
-    private final static Logger log = LoggerFactory.getLogger(BookService.class);
 
     private final JdbcTemplate db;
 

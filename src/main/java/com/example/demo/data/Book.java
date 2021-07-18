@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
  **/
 
 public class Book {
-    private final static Logger log = LoggerFactory.getLogger(Book.class);
 
     @Getter @Setter
     private int id;

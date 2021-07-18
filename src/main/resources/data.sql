@@ -5,6 +5,12 @@ insert into authors(id,fio) values (3, 'Жюль Верн');
 insert into authors(id,fio) values (4, 'Дж.Р.Р. Толкиен');
 insert into authors(id,fio) values (5, 'Борис Заходер');
 insert into authors(id,fio) values (6, 'Станислав Лем');
+insert into authors(id,fio) values (7, 'Жорж Симеон');
+insert into authors(id,fio) values (8, 'Алистер Маклин');
+insert into authors(id,fio) values (9, 'Андрэ Нортон');
+
+
+
 
 insert into books (title, priceOld, price, id_author) values ('Приключения Шерлока Холмса', '₽203.23', '₽43.37', 1);
 insert into books (title, priceOld, price, id_author) values ('Записки о Шерлоке Холмсе', '₽203.23', '₽43.37', 1);
@@ -27,6 +33,21 @@ insert into books (title, priceOld, price, id_author) values ('Л.Кэррол. 
 insert into books (title, priceOld, price, id_author) values ('Рассказы о пилоте Пирксе', '₽203.23', '₽43.37', 6);
 insert into books (title, priceOld, price, id_author) values ('Звездные дневники Йона Тихого', '₽203.23', '₽43.37', 6);
 insert into books (title, priceOld, price, id_author) values ('Солярис', '₽203.23', '₽43.37', 6);
+insert into books (title, priceOld, price, id_author) values ('Маньяк из Бержерака', '₽203.23', '₽43.37', 7);
+insert into books (title, priceOld, price, id_author) values ('Тайна перекрестка «Трех вдов»', '₽203.23', '₽43.37', 7);
+insert into books (title, priceOld, price, id_author) values ('Висельник из Сен-Фольена', '₽203.23', '₽43.37', 7);
+insert into books (title, priceOld, price, id_author) values ('Золотое рандеву', '₽203.23', '₽43.37', 8);
+insert into books (title, priceOld, price, id_author) values ('Полярная станция зебра', '₽203.23', '₽43.37', 8);
+insert into books (title, priceOld, price, id_author) values ('Пушки острова Наваррон', '₽203.23', '₽43.37', 8);
+insert into books (title, priceOld, price, id_author) values ('10 баллов с острова Наваррон', '₽203.23', '₽43.37', 8);
+insert into books (title, priceOld, price, id_author) values ('Саргассы в космосе', '₽203.23', '₽43.37', 9);
+insert into books (title, priceOld, price, id_author) values ('Зачумленный корабль', '₽203.23', '₽43.37', 9);
+insert into books (title, priceOld, price, id_author) values ('Проштемпелевано звездами', '₽203.23', '₽43.37', 9);
+
+
+
+
+
 
 -- insert into books (title, priceOld, price, id_author) values ('Drucie Goodbourn', 'exploit real-time e-commerce', '$203.23', '$43.37', 0);
 -- insert into books (title, priceOld, price, id_author) values ('Marcia Aggiss', 'utilize real-time interfaces', '$260.31', '$35.96', 0);
