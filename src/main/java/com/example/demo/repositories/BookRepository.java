@@ -1,26 +1,26 @@
-package com.example.demo.data;
+package com.example.demo.repositories;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.demo.entity.Book;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.ResultSet;
-
 
 /**
- * Created on 18.07.2021
+ * Created on 19.07.2021
  *
  * @author roland
  **/
-@Service
-public class BookService {
-
+@Repository
+public class BookRepository {
+    private final static Logger log = LoggerFactory.getLogger(BookRepository.class);
     private final JdbcTemplate db;
 
-    @Autowired
-    public BookService(JdbcTemplate db) {
+    public BookRepository(JdbcTemplate db) {
         this.db = db;
     }
 
@@ -36,5 +36,4 @@ public class BookService {
         });
         return new ArrayList<>(books);
     }
-
 }

@@ -1,9 +1,7 @@
-package com.example.demo.data;
+package com.example.demo.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Created on 18.07.2021
