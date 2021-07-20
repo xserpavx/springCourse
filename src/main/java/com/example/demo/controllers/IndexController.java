@@ -26,6 +26,7 @@ public class IndexController {
     @GetMapping("/main")
     public String mainPage(Model model) {
         model.addAttribute("books", bookService.getBooks());
+        model.addAttribute("active", "main");
         return "index";
     }
 

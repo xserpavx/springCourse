@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation fragment</title>
+
+</head>
+<body>
+    <div class="Header-menu" th:fragment="header-menu">
+        <div class="wrap">
+            <nav class="menuModal" id="navigate">
+                <ul class="menu menu_main">
+                    <li class="menu-item" th:classappend="${active == 'main' ? 'menu-item_ACTIVE' : ''}"><a class="menu-link" href="/library/main" th:text="#{topbar.main}">Главная</a>
+                    </li>
+                    <li class="menu-item" th:classappend="${active == 'genres' ? 'menu-item_ACTIVE' : ''}"><a class="menu-link" href="/genres/main" th:text="#{topbar.genres}">Жанры</a>
+                    </li>
+                    <li class="menu-item" th:classappend="${active == 'recent' ? 'menu-item_ACTIVE' : ''}><a class="menu-link" href="/books/recent.html" th:text="#{topbar.recent}">Новинки</a>
+                    </li>
+                    <li class="menu-item" th:classappend="${active == 'popular' ? 'menu-item_ACTIVE' : ''}><a class="menu-link" href="/books/popular.html" th:text="#{topbar.popular}">Популярное</a>
+                    </li>
+                    <li class="menu-item" th:classappend="${active == 'author' ? 'menu-item_ACTIVE' : ''}"><a class="menu-link" href="/authors/main" th:text="#{topbar.authors}">Авторы</a>
+                    </li>
+                    <li class="menu-item">
+                        <span th:text="#{lang.selection}">Выбор языка</span>
+                        <select id="locales">
+                            <option value = ""></option>
+                            <option value = "en">English</option>
+                            <option value = "ru">Русский</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
