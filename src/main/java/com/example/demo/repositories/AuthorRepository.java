@@ -7,12 +7,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.Author;
-import com.example.demo.entity.LetterAuthors;
 
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.TreeMap;
 
 /**
  * Created on 19.07.2021
@@ -24,41 +23,31 @@ public class AuthorRepository {
     private final static Logger log = LoggerFactory.getLogger(AuthorRepository.class);
 
     private final JdbcTemplate db;
-    private HashMap<String, ArrayList<Author>> letters;
+    private TreeMap<String, ArrayList<Author>> authors;
 
     @Autowired
     public AuthorRepository(JdbcTemplate db) {
         this.db = db;
-        letters = new HashMap<>();
+        authors = new TreeMap<>();
     }
 
-    public ArrayList<LetterAuthors> getAuthors() {
+    public TreeMap<String, ArrayList<Author>> getAuthors() {
+        authors.clear();
         db.query("select fio from authors where id > 0 order by fio", (ResultSet sqlResult, int rowNum) -> {
             Author author = new Author();
             author.setFio(sqlResult.getString("fio"));
             addAuthor(author);
             return null;
         });
-        return getLetterAuthors();
+        return authors;
     }
 
     private void addAuthor(Author author) {
-        ArrayList<Author> authors = letters.get(author.getLetter());
-        if (authors == null) {
-            authors = new ArrayList<>();
-            letters.put(author.getLetter(), authors);
+        ArrayList<Author> authorsList = authors.get(author.getLetter());
+        if (authorsList == null) {
+            authorsList = new ArrayList<>();
+            authors.put(author.getLetter(), authorsList);
         }
-        authors.add(author);
-    }
-
-    private ArrayList<LetterAuthors> getLetterAuthors() {
-        ArrayList<LetterAuthors> arrayLetterAuthors = new ArrayList<LetterAuthors>();
-        for (String letter : letters.keySet()) {
-            LetterAuthors letterAuthors = new LetterAuthors();
-            letterAuthors.setLetter(letter);
-            letterAuthors.setAuthors(letters.get(letter));
-            arrayLetterAuthors.add(letterAuthors);
-        }
-        return arrayLetterAuthors;
+        authorsList.add(author);
     }
 }

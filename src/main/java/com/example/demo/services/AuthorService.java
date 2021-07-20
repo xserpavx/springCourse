@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.TreeMap;
 
 /**
  * Created on 18.07.2021
@@ -20,7 +21,7 @@ public class AuthorService {
         this.authorRepository = authorRepository;
     }
 
-    public ArrayList<LetterAuthors> getAuthors() {
+    public TreeMap<String, ArrayList<Author>> getAuthors() {
         return authorRepository.getAuthors();
     }
 }
