@@ -15,11 +15,10 @@ price VARCHAR(250) DEFAULT NULL,
 FOREIGN KEY (id_author) references authors(id)
 );
 
-CREATE TABLE  books(
-   id INT AUTO_INCREMENT PRIMARY KEY,
-   id_author INT NOT NULL,
-   title VARCHAR(250) NOT NULL,
-   priceOld  VARCHAR(250) DEFAULT NULL,
-   price VARCHAR(250) DEFAULT NULL,
-   FOREIGN KEY (id_author) references authors(id)
-);
+CREATE TABLE book2author(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    book_id INT NOT NULL,
+    author_id INT NOT NULL,
+    sort_index INT NOT NULL DEFAULT 0
+)
+
