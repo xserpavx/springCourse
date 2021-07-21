@@ -27,4 +27,11 @@ public class BookService {
         return bookRepository.getRecomendBooks();
     }
 
+    public List<Book> getRecentBooks() {
+        return bookRepository.getRecomendBooks();
+    }
+
+    public List<Book> getPopularBooks() {
+        return bookRepository.getRecomendBooks();
+    }
 }
