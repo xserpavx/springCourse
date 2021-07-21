@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Date;
 
 /**
@@ -36,7 +37,7 @@ public class Book {
     private Integer discount;
 
     public Float getCurrentPrice() {
-        return new BigDecimal(price).subtract(new BigDecimal(price).movePointLeft(2).multiply(new BigDecimal(discount))).floatValue();
+        return new BigDecimal(price).subtract(new BigDecimal(price).movePointLeft(2).multiply(new BigDecimal(discount))).setScale(2, RoundingMode.HALF_UP).floatValue();
     }
 
     @Override
