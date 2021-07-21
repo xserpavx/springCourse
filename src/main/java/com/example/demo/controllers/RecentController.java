@@ -1,27 +1,26 @@
 package com.example.demo.controllers;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Created on 18.07.2021
+ * Created on 21.07.2021
  *
  * @author roland
  **/
 @Controller
-@RequestMapping("/genres")
-public class GenresController {
+@RequestMapping("/books")
+public class RecentController {
 
     @ModelAttribute("active")
     public String active() {
-        return "genres";
+        return "recent";
     }
 
-    @GetMapping("/main")
-    public String getMainPage() {
-        return "/genres/index";
+    @GetMapping("/recent")
+    public String recentPage() {
+        return "/books/recent";
     }
 }

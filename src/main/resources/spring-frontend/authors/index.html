@@ -88,11 +88,11 @@
         <div class="Section">
           <div class="Authors">
             <div class="Authors-links" >
-              <a th:each="entry : ${authorsMap}" class="Authors-link" href="#a"
+              <a th:each="entry : ${authors}" class="Authors-link" href="#a"
                  th:href="'#' + ${#strings.toLowerCase(entry.key)}"
                  th:text="${entry.key}">А</a>
             </div>
-            <div class="Authors-block" th:each="entry : ${authorsMap}">
+            <div class="Authors-block" th:each="entry : ${authors}">
               <h2 class="Authors-title" th:id="${#strings.toLowerCase(entry.key)}" th:text="${entry.key}"></h2>
                 <div class="Authors-letter">
                   <div class="Authors-item" th:each="author : ${entry.value}">

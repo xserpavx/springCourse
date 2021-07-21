@@ -31,10 +31,14 @@ public class IndexController {
         return bookService.getRecomendBooks();
     }
 
+    @ModelAttribute("active")
+    public String active() {
+        return "main";
+    }
+
 
     @GetMapping("/")
     public String mainPage(Model model) {
-        model.addAttribute("active", "main");
         return "index";
     }
 

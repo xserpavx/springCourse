@@ -9,15 +9,13 @@
 <!--[if IE 9]>
 <html class="ie9" lang="ru">
 <![endif]-->
-<!--[if gt IE 9]><!--> <html lang="ru"> <!--<![endif]-->
+<!--[if gt IE 9]><!--> <html lang="ru" xmlns="http://www.w3.org/1999/xhtml"
+                             xmlns:th="http://www.thymeleaf.org"> <!--<![endif]-->
 <head>
-  <title>Тут название страницы написать</title>
-  <meta name="description" content="Описание страницы">
+  <title>Популярные</title>
+  <meta name="description" content="Перечень наиболее популярных книг">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <!--meta( http-equiv="cache-control" content="no-cache")-->
-  <!--meta( http-equiv="expires" content="0")-->
-  <!--link(rel="preload" href="assets/css/extra.min.css?v=" + version as="style" crossorigin="anonymous")-->
   <link href="favicon.ico" rel="shortcut icon">
   <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-Light.woff2" as="font" crossorigin="anonymous">
@@ -28,17 +26,19 @@
   <link rel="stylesheet" href="/assets/css/extra.min.css?v=45035206"><!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script defer src="/assets/js/scripts.min.js?v=45035206"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#locales").change(function() {
+        var selectedOption = $("#locales").val();
+        if (selectedOption != '') {
+          window.location.replace('?lang='+selectedOption);
+        }
+      });
+    });
+  </script>
 </head>
 <body class="Site">
-  <!--if lt IE 8
-  p.error-browser
-      | Ваш браузер&nbsp;
-      em устарел!&nbsp;
-      a(href="http://browsehappy.com/") Выберите новую версию
-          +s
-          | браузера здесь&nbsp;
-      | для правильного отображения сайта.
-  -->
   <header class="Header">
     <div class="Header-rowMain">
       <div class="wrap">
@@ -72,24 +72,7 @@
         </div>
       </div>
     </div>
-    <div class="Header-menu">
-      <div class="wrap">
-        <nav class="menuModal" id="navigate">
-          <ul class="menu menu_main">
-            <li class="menu-item"><a class="menu-link" href="/index.html">Главная</a>
-            </li>
-            <li class="menu-item"><a class="menu-link" href="/genres/index.html">Жанры</a>
-            </li>
-            <li class="menu-item"><a class="menu-link" href="/books/recent.html">Новинки</a>
-            </li>
-            <li class="menu-item menu-item_ACTIVE"><a class="menu-link" href="/books/popular.html">Популярное</a>
-            </li>
-            <li class="menu-item"><a class="menu-link" href="/authors/index.html">Авторы</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <div th:replace="~{fragments/navigation :: header-menu}"></div>
   </header>
   <div class="Middle">
     <div class="wrap">
