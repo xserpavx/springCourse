@@ -1,10 +1,8 @@
 package com.example.demo.controllers;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Created on 21.07.2021
@@ -12,15 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author roland
  **/
 @Controller
-@RequestMapping("/books")
-public class PopularController {
+public class ContactsController {
     @ModelAttribute("active")
     public String active() {
-        return "popular";
+        return "contacts";
     }
 
-    @GetMapping("/popular")
-    public String popularPage() {
-        return "/books/popular";
+    @GetMapping("/contacts")
+    public String contactsPage() {
+        return "contacts";
     }
 }

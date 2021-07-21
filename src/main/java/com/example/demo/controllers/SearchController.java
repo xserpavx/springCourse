@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author roland
  **/
 @Controller
-@RequestMapping("/books")
-public class PopularController {
+@RequestMapping("/search")
+public class SearchController {
     @ModelAttribute("active")
     public String active() {
-        return "popular";
+        return "search";
     }
 
-    @GetMapping("/popular")
-    public String popularPage() {
-        return "/books/popular";
+    @GetMapping("/main")
+    public String searchPage() {
+        return "/search/index";
     }
 }
