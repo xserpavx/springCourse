@@ -9,9 +9,14 @@ CREATE TABLE authors(
 CREATE TABLE  books(
 id INT AUTO_INCREMENT PRIMARY KEY,
 id_author INT NOT NULL,
+pub_date DATE NOT NULL,
+is_bestseller SMALLINT NOT NULL,
+slug VARCHAR(255) NOT NULL,
 title VARCHAR(250) NOT NULL,
-priceOld  VARCHAR(250) DEFAULT NULL,
-price VARCHAR(250) DEFAULT NULL,
+image VARCHAR(255),
+description TEXT,
+price FLOAT NOT NULL,
+discount SMALLINT NOT NULL DEFAULT 0,
 FOREIGN KEY (id_author) references authors(id)
 );
 

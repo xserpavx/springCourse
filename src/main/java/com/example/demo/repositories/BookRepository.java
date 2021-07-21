@@ -29,9 +29,14 @@ public class BookRepository {
             Book book = new Book();
             book.setId(sqlResult.getInt("id"));
             book.setAuthor(sqlResult.getString("fio"));
-            book.setPrice(sqlResult.getString("price"));
-            book.setPriceOld(sqlResult.getString("priceold"));
+            book.setPrice(sqlResult.getFloat("price"));
             book.setTitle(sqlResult.getString("title"));
+            book.setPubDate(sqlResult.getDate("PUB_DATE"));
+            book.setBestseller(sqlResult.getInt("is_bestseller") == 1);
+            book.setSlug(sqlResult.getString("SLUG"));
+            book.setImage(sqlResult.getString("IMAGE"));
+            book.setDescription(sqlResult.getString("DESCRIPTION"));
+            book.setDiscount(sqlResult.getInt("DISCOUNT"));
             return book;
         });
         return new ArrayList<>(books);
