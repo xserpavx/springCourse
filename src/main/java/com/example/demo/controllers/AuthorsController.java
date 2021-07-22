@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
-import java.util.TreeMap;
+import java.util.Map;
 
 /**
  * Created on 18.07.2021
@@ -32,7 +32,7 @@ public class AuthorsController {
     }
 
     @ModelAttribute("authors")
-    public TreeMap<String, ArrayList<Author>> authors() {
+    public Map<String, ArrayList<Author>> authors() {
         return authorService.getAuthors();
     }
 

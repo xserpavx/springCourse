@@ -1,7 +1,5 @@
 package com.example.demo.repositories;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -11,6 +9,7 @@ import com.example.demo.entity.Author;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.TreeMap;
 
 /**
@@ -20,7 +19,6 @@ import java.util.TreeMap;
  **/
 @Repository
 public class AuthorRepository {
-    private final static Logger log = LoggerFactory.getLogger(AuthorRepository.class);
 
     private final JdbcTemplate db;
     private TreeMap<String, ArrayList<Author>> authors;
@@ -31,7 +29,7 @@ public class AuthorRepository {
         authors = new TreeMap<>();
     }
 
-    public TreeMap<String, ArrayList<Author>> getAuthors() {
+    public Map<String, ArrayList<Author>> getAuthors() {
         authors.clear();
         db.query("select fio from authors where id > 0 order by fio", (ResultSet sqlResult, int rowNum) -> {
             Author author = new Author();

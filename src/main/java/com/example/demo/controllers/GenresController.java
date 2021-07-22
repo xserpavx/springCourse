@@ -24,4 +24,9 @@ public class GenresController {
     public String getMainPage() {
         return "/genres/index";
     }
+
+    @GetMapping("/slug")
+    public String getSlugPage() {
+        return "/genres/slug";
+    }
 }

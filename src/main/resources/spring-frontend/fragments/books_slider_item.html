@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="кг" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Карусель книг</title>
+</head>
+<body>
+    <div class="Slider-content" th:fragment="book_slider_item">
+        <div class="Card">
+            <a class="Card-picture" href="/books/slug.html"><img th:src="'/assets/img/content/main/' + ${book.image.length() != 0 ? book.image : 'card.jpg'}" src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
+            <div class="Card-ribbon" th:if="${book.bestseller}"><span class="Card-ribbonText">Бестселлер</span></div>
+            <div class="Card-content">
+                <strong class="Card-title"><a href="/books/slug.html" th:text="${book.getTitle()}"></a>
+                </strong>
+                <div class="Card-description" th:text="${book.getAuthor()}">
+                </div>
+                <div class="Card-cost"><span class="Card-priceOld" th:text="${book.getPrice()}"></span><span class="Card-price" th:text="${book.getCurrentPrice()}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
