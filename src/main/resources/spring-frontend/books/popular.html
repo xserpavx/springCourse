@@ -43,12 +43,13 @@
   <div class="Middle">
     <div class="wrap">
       <main class="Middle-main">
+<!--        <ul class="breadcrumbs" th:replace="~{fragments/breadcrumbs :: breadcrumbs}">-->
         <ul class="breadcrumbs">
-          <li class="breadcrumbs-item"><a href="/index.html">Главная</a>
+          <li class="breadcrumbs-item"><a href="/" th:text="#{topbar.main}">Главная</a>
           </li>
-          <li class="breadcrumbs-item"><a href="/genres/index.html">Книги</a>
+          <li class="breadcrumbs-item"><a href="/genres/main" th:text="#{nav.books}">Книги</a>
           </li>
-          <li class="breadcrumbs-item breadcrumbs-item_current"><span>Популярное</span>
+          <li class="breadcrumbs-item breadcrumbs-item_current" th:text="#{topbar.recent}"><span>Популярное</span>
           </li>
         </ul>
         <div class="Section">
