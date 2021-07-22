@@ -40,6 +40,10 @@ public class Book {
         return new BigDecimal(price).subtract(new BigDecimal(price).movePointLeft(2).multiply(new BigDecimal(discount))).setScale(2, RoundingMode.HALF_UP).floatValue();
     }
 
+    public String discountString() {
+        return String.format("Скидка %d%%", discount);
+    }
+
     @Override
     public String toString() {
         return "Book{" +

@@ -26,7 +26,7 @@ public class RecentController {
         this.bookService = bookService;
     }
 
-    @ModelAttribute("recentBooks")
+    @ModelAttribute("listBooks")
     public List<Book> recommendBooks() {
         return bookService.getRecentBooks();
     }

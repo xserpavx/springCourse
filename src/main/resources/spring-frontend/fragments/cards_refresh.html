@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список книг на страницах Популярное и Недавние</title>
+</head>
+<body>
+<div class="Cards Cards_refresh" th:fragment="cards_refresh">
+        <div class="Card" th:each="book : ${listBooks}">
+            <div class="Card-picture"><a href="#"><img th:src="'/assets/img/content/main/' + ${book.image.length() != 0 ? book.image : 'card.jpg'}" src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
+            <div class="Card-sale" th:if="${book.discount != 0}" th:text="${book.discountString()}">30% скидка</div>
+            <div class="Card-ribbon" th:if="${book.bestseller}"><span class="Card-ribbonText">Бестселлер</span></div>
+            <!--                <a class="Card-status" title="Отложена"><img src="/assets/img/icons/heart.svg" alt="heart.svg"/>-->
+            <!--                <a class="Card-status" title="В корзине"><img src="/assets/img/icons/shopping-basket.svg" alt="shopping-basket.svg"/></a>-->
+            <!--                                <a class="Card-status" title="Куплена"><img src="/assets/img/icons/check.svg" alt="check.svg"/></a>-->
+        </div>
+        <div class="Card-content">
+            <strong class="Card-title"><a href="#" th:text="${book.getTitle()}">Техника</a>
+            </strong>
+            <div class="Card-description" th:text="${book.getAuthor()}">Кондратенко Александр Петрович
+            </div>
+            <div class="Card-cost"><span class="Card-priceOld" th:text="${book.getPrice()}"></span><span class="Card-price" th:text="${book.getCurrentPrice()}"></span>
+            </div>
+        </div>
+    </div>
+    <div class="Cards-footer Cards-footer_center"><a class="btn btn_primary" href="#" data-refreshshow="popular" data-refreshoffset="20" data-refreshlimit="20">Показать еще</a>
+    </div>
+</div>
+</body>
+</html>

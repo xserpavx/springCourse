@@ -32,7 +32,7 @@ public class PopularController {
         return "popular";
     }
 
-    @ModelAttribute("popularBooks")
+    @ModelAttribute("listBooks")
     public List<Book> recommendBooks() {
         return bookService.getPopularBooks();
     }

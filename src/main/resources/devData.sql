@@ -14,22 +14,22 @@ insert into authors(id,fio) values (12, 'Туве Яннсен');
 insert into authors(id,fio) values (13, 'Майн Рид');
 
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description)
-values ('Приключения Шерлока Холмса', 1, '2005-08-29', 1, 404.21, 32, '','','');
+values ('Приключения Шерлока Холмса', 1, '2005-08-29', 1, 404.21, 32, '','SH.jpg','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) 
-values ('Записки о Шерлоке Холмсе', 1, '2002-03-13', 1, 182.0, 1, '','','');
+values ('Записки о Шерлоке Холмсе', 1, '2002-03-13', 1, 182.0, 0, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) 
 values ('Этюд в багровых тонах', 1, '2001-10-27', 0, 285.75, 22, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) 
 values ('Собака Баскервилей', 1, '2010-02-26', 1, 662.09, 11, '','','');
-insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Проштемпелевано звездами', 9, '2018-07-28', 0, 619.27, 3, '','','');
+insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Проштемпелевано звездами', 9, '2018-07-28', 0, 619.27, 0, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Айвенго', 10, '2017-03-23', 0, 441.02, 30, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Последний из могикан', 11, '2017-05-09', 1, 178.28, 45, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Зверобой', 11, '2009-07-02', 1, 289.83, 45, '','','');
-insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Мумми Тролль и комета', 12, '2010-07-10', 1, 141.25, 6, '','','');
-insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Всадник без головы', 13, '2007-05-05', 0, 495.48, 1, '','','');
+insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Мумми Тролль и комета', 12, '2010-07-10', 1, 141.25, 0, '','','');
+insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Всадник без головы', 13, '2007-05-05', 0, 495.48, 0, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Затерянные в океане', 13, '2017-06-27', 1, 208.49, 10, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Белый вождь', 13, '2001-05-08', 1, 572.52, 37, '','','');
-insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Короли и капуста', 2, '2010-02-26', 1, 662.09, 11, '','','');
+insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Короли и капуста', 2, '2010-02-26', 1, 662.09, 10, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Благородный Жулик', 2, '2007-05-26', 1, 501.99, 33, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Горящий светильник', 2, '2000-07-25', 1, 223.47, 34, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Дороги судьбы', 2, '2018-08-18', 1, 254.09, 34, '','','');
@@ -54,7 +54,7 @@ insert into books (title, id_author, pub_date, is_bestseller, price, discount, s
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Пушки острова Наваррон', 8, '2014-01-30', 0, 206.44, 18, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('10 баллов с острова Наваррон', 8, '2000-05-18', 1, 251.36, 21, '','','');
 insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Саргассы в космосе', 9, '2000-06-03', 1, 331.83, 15, '','','');
-insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Зачумленный корабль', 9, '2006-04-23', 0, 563.72, 3, '','','');
+insert into books (title, id_author, pub_date, is_bestseller, price, discount, slug, image, description) values ('Зачумленный корабль', 9, '2006-04-23', 0, 563.72, 0, '','','');
 
 -- Сайт для генерации случайных данных https://www.mockaroo.com/
 -- , '2002-08-26', 1, 343.6, 46, '','','');

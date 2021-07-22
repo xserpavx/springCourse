@@ -56,12 +56,11 @@
             <h1 class="Section-title">Популярное
             </h1>
           </div>
-          <div class="Cards Cards_refresh">
+          <div class="Cards Cards_refresh" th:replace="~{fragments/cards_refresh :: cards_refresh}">
             <div class="Card" th:each="book : ${popularBooks}">
               <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
-                <div class="Card-sale">30% скидка</div>
-                <div class="Card-ribbon"><span class="Card-ribbonText">Бестселлер</span>
-                </div>
+              <div class="Card-sale" th:if="${book.discount != 0}" th:text="${book.discountString()}">30% скидка</div>
+              <div class="Card-ribbon" th:if="${book.bestseller}"><span class="Card-ribbonText">Бестселлер</span></div>
                 <!--                <a class="Card-status" title="Отложена"><img src="/assets/img/icons/heart.svg" alt="heart.svg"/>-->
                 <!--                <a class="Card-status" title="В корзине"><img src="/assets/img/icons/shopping-basket.svg" alt="shopping-basket.svg"/></a>-->
 <!--                                <a class="Card-status" title="Куплена"><img src="/assets/img/icons/check.svg" alt="check.svg"/></a>-->
@@ -71,7 +70,7 @@
                 </strong>
                 <div class="Card-description" th:text="${book.getAuthor()}">Кондратенко Александр Петрович
                 </div>
-                <div class="Card-cost"><span class="Card-priceOld" th:text="${book.getPriceOld()}">₽300.00</span><span class="Card-price" th:text="${book.getPrice()}">₽190.00</span>
+                <div class="Card-cost"><span class="Card-priceOld" th:text="${book.getPrice()}"></span><span class="Card-price" th:text="${book.getCurrentPrice()}"></span>
                 </div>
               </div>
             </div>
