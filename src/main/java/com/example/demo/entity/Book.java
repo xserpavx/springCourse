@@ -3,6 +3,7 @@ package com.example.demo.entity;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Date;
@@ -12,13 +13,16 @@ import java.util.Date;
  *
  * @author roland
  **/
-
+//@Entity
+//@Table(name="books")
 public class Book {
 
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter @Setter
     private int id;
-    @Getter @Setter
-    private String author;
+//    @Getter @Setter
+//    private String author;
     @Getter @Setter
     private String title;
     @Getter @Setter
@@ -36,6 +40,10 @@ public class Book {
     @Getter @Setter
     private Integer discount;
 
+    public String getAuthor() {
+        return "";
+    }
+
     public Float getCurrentPrice() {
         return new BigDecimal(price).subtract(new BigDecimal(price).movePointLeft(2).multiply(new BigDecimal(discount))).setScale(2, RoundingMode.HALF_UP).floatValue();
     }
@@ -48,7 +56,6 @@ public class Book {
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", author='" + author + '\'' +
                 ", title='" + title + '\'' +
                 ", price=" + price +
                 ", pubDate=" + pubDate +
