@@ -13,16 +13,19 @@ import java.util.Date;
  *
  * @author roland
  **/
-//@Entity
-//@Table(name="books")
+@Entity
+@Table(name="books")
 public class Book {
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter @Setter
     private int id;
-//    @Getter @Setter
-//    private String author;
+    @Getter @Setter
+    private int id_author;
+    @Getter @Setter
+    @Transient
+    private String author;
     @Getter @Setter
     private String title;
     @Getter @Setter

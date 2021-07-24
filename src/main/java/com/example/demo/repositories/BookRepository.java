@@ -32,7 +32,7 @@ public class BookRepository {
             book.setPrice(sqlResult.getFloat("price"));
             book.setTitle(sqlResult.getString("title"));
             book.setPubDate(sqlResult.getDate("PUB_DATE"));
-            book.setBestseller(sqlResult.getInt("is_bestseller") == 1);
+            book.setBestseller(sqlResult.getBoolean("bestseller"));
             book.setSlug(sqlResult.getString("SLUG"));
             book.setImage(sqlResult.getString("IMAGE"));
             book.setDescription(sqlResult.getString("DESCRIPTION"));

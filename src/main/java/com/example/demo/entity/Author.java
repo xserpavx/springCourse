@@ -10,12 +10,12 @@ import javax.persistence.*;
  *
  * @author roland
  **/
-//@Entity
-//@Table(name="authors")
+@Entity
+@Table(name="authors")
 public class Author {
     @Getter @Setter
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Getter @Setter
