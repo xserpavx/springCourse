@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
-    <changeSet author="roland (generated)" id="1627217775203-1">
+    <changeSet author="roland (generated)" id="1627218799909-1">
         <createSequence sequenceName="authors_id_seq"/>
     </changeSet>
-    <changeSet author="roland (generated)" id="1627217775203-2">
-        <createSequence sequenceName="authors_id_seq1"/>
-    </changeSet>
-    <changeSet author="roland (generated)" id="1627217775203-3">
+    <changeSet author="roland (generated)" id="1627218799909-4">
         <createSequence sequenceName="books_id_seq"/>
     </changeSet>
-    <changeSet author="roland (generated)" id="1627217775203-4">
-        <createSequence sequenceName="books_id_seq1"/>
-    </changeSet>
-    <changeSet author="roland (generated)" id="1627217775203-5">
+    <changeSet author="roland (generated)" id="1627218799909-7">
         <createTable tableName="authors">
             <column autoIncrement="true" name="id" type="SERIAL">
                 <constraints primaryKey="true" primaryKeyName="authors_pkey"/>
@@ -20,7 +14,7 @@
             <column name="fio" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet author="roland (generated)" id="1627217775203-6">
+    <changeSet author="roland (generated)" id="1627218799909-8">
         <createTable tableName="books">
             <column autoIncrement="true" name="id" type="SERIAL">
                 <constraints primaryKey="true" primaryKeyName="books_pkey"/>
@@ -38,7 +32,7 @@
             <column name="title" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet author="roland (generated)" id="1627217775203-7">
+    <changeSet author="roland (generated)" id="1627218799909-9">
         <addForeignKeyConstraint baseColumnNames="id_author" baseTableName="books" constraintName="fk4ih38omjrl63dv9509hddgyia" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="authors"/>
     </changeSet>
 </databaseChangeLog>

@@ -38,6 +38,6 @@ public class AuthorsController {
 
     @GetMapping("/main")
     public String getMainPage() {
-        return "/authors/index";
+        return "authors/index";
     }
 }

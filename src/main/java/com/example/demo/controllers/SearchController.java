@@ -22,11 +22,11 @@ public class SearchController {
 
     @GetMapping("/main")
     public String searchPage() {
-        return "/search/index";
+        return "search/index";
     }
 
     @PostMapping("/post")
     public String searchPostPage() {
-        return "/search/index";
+        return "search/index";
     }
 }
