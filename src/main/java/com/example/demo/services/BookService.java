@@ -24,14 +24,15 @@ public class BookService {
     }
 
     public List<Book> getRecomendBooks() {
-        return bookRepository.getRecomendBooks();
+
+        return bookRepository.findAll();
     }
 
     public List<Book> getRecentBooks() {
-        return bookRepository.getRecomendBooks();
+        return bookRepository.findAll();
     }
 
     public List<Book> getPopularBooks() {
-        return bookRepository.getRecomendBooks();
+        return bookRepository.findAll();
     }
 }

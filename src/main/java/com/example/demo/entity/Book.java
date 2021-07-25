@@ -23,9 +23,11 @@ public class Book {
     private int id;
     @Getter @Setter
     private int id_author;
+
     @Getter @Setter
-    @Transient
-    private String author;
+    @ManyToOne
+    @JoinColumn(name = "id_author", referencedColumnName = "id", insertable = false, updatable = false)
+    private Author author;
     @Getter @Setter
     private String title;
     @Getter @Setter
@@ -42,10 +44,6 @@ public class Book {
     private String description;
     @Getter @Setter
     private Integer discount;
-
-    public String getAuthor() {
-        return "";
-    }
 
     public Float getCurrentPrice() {
         return new BigDecimal(price).subtract(new BigDecimal(price).movePointLeft(2).multiply(new BigDecimal(discount))).setScale(2, RoundingMode.HALF_UP).floatValue();

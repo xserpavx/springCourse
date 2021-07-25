@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created on 18.07.2021
@@ -20,6 +22,10 @@ public class Author {
 
     @Getter @Setter
     private String fio;
+
+    @OneToMany (mappedBy = "author")
+//    @JoinColumn(name = "id_author", referencedColumnName = "id")
+    private List<Book> authorBooks = new ArrayList<>();
 
     public String getLetter() {
         return fio.substring(0,1).toUpperCase();

@@ -13,7 +13,7 @@
             <div class="Card-content">
                 <strong class="Card-title"><a href="/books/slug.html" th:text="${book.getTitle()}"></a>
                 </strong>
-                <div class="Card-description" th:text="${book.getAuthor()}">
+                <div class="Card-description" th:text="${book.getAuthor().getFio()}">
                 </div>
                 <div class="Card-cost"><span class="Card-priceOld" th:text="${book.getPrice()}"></span><span class="Card-price" th:text="${book.getCurrentPrice()}"></span>
                 </div>
