@@ -22,11 +22,11 @@ public class GenresController {
 
     @GetMapping("/main")
     public String getMainPage() {
-        return "/genres/index";
+        return "genres/index";
     }
 
     @GetMapping("/slug")
     public String getSlugPage() {
-        return "/genres/slug";
+        return "genres/slug";
     }
 }

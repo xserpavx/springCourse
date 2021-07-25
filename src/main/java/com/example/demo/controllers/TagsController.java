@@ -15,6 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TagsController {
     @GetMapping("/main")
     public String getMainPage() {
-        return "/tags/index";
+        return "tags/index";
     }
 }
