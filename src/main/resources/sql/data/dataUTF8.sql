@@ -1,3 +1,7 @@
+delete from books;
+delete from book_file_types;
+delete from authors;
+
 insert into authors(id, fio) values (0, 'Автор неизвестен');
 insert into authors(id,fio) values (1, 'Артур Конан Дойль');
 insert into authors(id,fio) values (2, 'О. Генри');
@@ -60,6 +64,9 @@ insert into books (title, id_author, pub_date, bestseller, price, discount, slug
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Остров сокровищ', 14, '2002-08-26', true, 343.6, 46, '','TreasureIsland.png','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Странная история доктора Джекила и мистера Хайда', 14, '2016-04-01', true, 600.31, 3, '','','');
 
+insert into book_file_types(name, description) values('FB2','Межплатформенный  формат электронных документов с использованием ряда возможностей языка PostScript.');
+insert into book_file_types(name, description) values('PDF','Формат электронных версий книг, обеспечивает совместимость с любыми устройствами и форматами.');
+insert into book_file_types(name, description) values('EPUB','Формат электронных версий книг, позволяет воспроизведить цифровые книги и другие публикации с плавающей вёрсткой.');
 -- Сайт для генерации случайных данных https://www.mockaroo.com/
 -- , '2002-08-26', true, 343.6, 46, '','','');
 -- , '2016-04-01', true, 600.31, 3, '','','');
