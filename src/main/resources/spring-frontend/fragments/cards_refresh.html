@@ -18,13 +18,13 @@
         <div class="Card-content">
             <strong class="Card-title"><a href="#" th:text="${book.getTitle()}">Техника</a>
             </strong>
-            <div class="Card-description" th:text="${book.getAuthor()}">Кондратенко Александр Петрович
+            <div class="Card-description" th:text="${book.getAuthor().getFio()}">Кондратенко Александр Петрович
             </div>
             <div class="Card-cost"><span class="Card-priceOld" th:text="${book.getPrice()}"></span><span class="Card-price" th:text="${book.getCurrentPrice()}"></span>
             </div>
         </div>
     </div>
-    <div class="Cards-footer Cards-footer_center"><a class="btn btn_primary" href="#" data-refreshshow="popular" data-refreshoffset="20" data-refreshlimit="20">Показать еще</a>
+    <div class="Cards-footer Cards-footer_center"><a class="btn btn_primary" href="#" data-refreshshow="popular" data-refreshoffset="20" data-refreshlimit="20" th:text="#{buttons.more}">Показать еще</a>
     </div>
 </div>
 </body>
