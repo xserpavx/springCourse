@@ -5,6 +5,8 @@ import com.example.demo.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 
@@ -29,10 +31,27 @@ public class BookService {
     }
 
     public List<Book> getRecentBooks() {
-        return bookRepository.findAll();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        cal.add(Calendar.YEAR, -2);
+        return bookRepository.findBooksByPubDateAfter(cal.getTime());
     }
 
     public List<Book> getPopularBooks() {
         return bookRepository.findAll();
     }
+
+    public List<Book> getBooksByAuthor(String author) {
+        return bookRepository.findBooksByAuthorFioContaining(author);
+    }
+
+    public List<Book> getHQuery() {
+        return bookRepository.getBestsellers();
+    }
+
+    public List<Book> getNativeQuery() {
+        return bookRepository.getDiscount();
+    }
+
+
 }

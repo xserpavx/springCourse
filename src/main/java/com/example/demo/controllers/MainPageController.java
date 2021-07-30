@@ -17,12 +17,12 @@ import java.util.List;
  * @author roland
  **/
 @Controller
-public class IndexController {
+public class MainPageController {
 
     private final BookService bookService;
 
     @Autowired
-    public IndexController(BookService bookService) {
+    public MainPageController(BookService bookService) {
         this.bookService = bookService;
     }
 
