@@ -49,6 +49,7 @@ public class Book {
     private Date pubDate;
     @Getter @Setter
     @ApiModelProperty("value is true if book is bestseller")
+    @JsonProperty("isBestseller")
     private Boolean bestseller;
     @Getter @Setter
     @ApiModelProperty("mnemonical book name")

@@ -17,6 +17,8 @@ insert into authors(id,fio) values (11, 'Фенимор Купер');
 insert into authors(id,fio) values (12, 'Туве Яннсен');
 insert into authors(id,fio) values (13, 'Майн Рид');
 insert into authors(id,fio) values (14, 'Роберт Льюис Стивенсон');
+insert into authors(id,fio) values (15, 'Рафаэль Сабатини');
+
 
 
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description)
@@ -63,25 +65,30 @@ insert into books (title, id_author, pub_date, bestseller, price, discount, slug
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Зачумленный корабль', 9, '2006-04-23', false, 563.72, 0, '','/assets/img/content/main/card.jpg','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Остров сокровищ', 14, '2002-08-26', true, 343.6, 46, '','/assets/img/content/main/TreasureIsland.png','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Странная история доктора Джекила и мистера Хайда', 14, '2016-04-01', true, 600.31, 3, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Одиссея капитана Блада', 15, '2021-04-01', true, 343.6, 46, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Хроника капитана Блада', 15, '2021-06-01', true, 343.6, 46, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Удачи капитана Блада', 15, '2021-04-01', true, 600.31, 3, '','/assets/img/content/main/card.jpg','');
+insert into authors(id,fio) values (16, 'Джордж Мартин');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Игра престолов', 16, '2020-11-03', true, 583.98, 7, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Битва королей', 16, '2020-08-15', false, 481.6, 29, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Буря мечей', 16, '2021-06-06', true, 114.84, 7, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Пир стервятников', 16, '2020-06-26', true, 581.16, 31, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Танец с драконами', 16, '2021-04-06', true, 481.65, 45, '','/assets/img/content/main/card.jpg','');
+insert into authors(id,fio) values (17, 'Энн Маккефри');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Полёт дракона', 17, '2006-07-25', true, 576.77, 14, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Странствия дракона', 17, '2009-01-17', true, 204.13, 14, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Белый дракон', 17, '2009-04-07', false, 186.85, 13, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Морита — повелительница драконов', 17, '2014-11-26', true, 460.65, 50, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('История Нерилки', 17, '2001-03-28', false, 370.9, 32, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Песни Перна', 17, '2017-09-12', true, 605.75, 8, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Певица Перна', 17, '2010-06-04', true, 244.5, 50, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Барабаны Перна', 17, '2010-05-21', true, 576.77, 14, '','/assets/img/content/main/card.jpg','');
 
 insert into book_file_types(name, description) values('FB2','Межплатформенный  формат электронных документов с использованием ряда возможностей языка PostScript.');
 insert into book_file_types(name, description) values('PDF','Формат электронных версий книг, обеспечивает совместимость с любыми устройствами и форматами.');
 insert into book_file_types(name, description) values('EPUB','Формат электронных версий книг, позволяет воспроизведить цифровые книги и другие публикации с плавающей вёрсткой.');
+
 -- Сайт для генерации случайных данных https://www.mockaroo.com/
--- , '2002-08-26', true, 343.6, 46, '','/assets/img/content/main/card.jpg','');
--- , '2016-04-01', true, 600.31, 3, '','/assets/img/content/main/card.jpg','');
--- , '2011-11-03', true, 583.98, 7, '','/assets/img/content/main/card.jpg','');
--- , '2014-08-15', false, 481.6, 29, '','/assets/img/content/main/card.jpg','');
--- , '2020-06-06', true, 114.84, 7, '','/assets/img/content/main/card.jpg','');
--- , '2008-06-26', true, 581.16, 31, '','/assets/img/content/main/card.jpg','');
--- , '2004-04-06', true, 481.65, 45, '','/assets/img/content/main/card.jpg','');
--- , '2006-07-25', true, 576.77, 14, '','/assets/img/content/main/card.jpg','');
--- , '2009-01-17', true, 204.13, 14, '','/assets/img/content/main/card.jpg','');
--- , '2009-04-07', false, 186.85, 13, '','/assets/img/content/main/card.jpg','');
--- , '2014-11-26', true, 460.65, 50, '','/assets/img/content/main/card.jpg','');
--- , '2001-03-28', false, 370.9, 32, '','/assets/img/content/main/card.jpg','');
--- , '2017-09-12', true, 605.75, 8, '','/assets/img/content/main/card.jpg','');
--- , '2010-06-04', true, 244.5, 50, '','/assets/img/content/main/card.jpg','');
 
 
 
