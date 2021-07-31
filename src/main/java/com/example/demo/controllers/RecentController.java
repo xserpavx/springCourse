@@ -27,8 +27,8 @@ public class RecentController {
     }
 
     @ModelAttribute("listBooks")
-    public List<Book> recommendBooks() {
-        return bookService.getRecentBooks();
+    public List<Book> recentBooks() {
+        return bookService.getPageRecentBooks(0,10).getContent();
     }
 
     @ModelAttribute("active")

@@ -39,10 +39,7 @@ public class BookService {
         return cal.getTime();
     }
 
-    public List<Book> getRecentBooks() {
 
-        return bookRepository.findBooksByPubDateAfter(getLowRecentDate());
-    }
 
     public List<Book> getPopularBooks() {
         return bookRepository.findAll();
@@ -60,15 +57,20 @@ public class BookService {
         return bookRepository.getDiscount();
     }
 
-    public Page<Book> getPageRecentBooks(Integer offset, Integer limit) {
-        Pageable nextPage = PageRequest.of(offset, limit);
-        return bookRepository.findBooksByPubDateAfter(getLowRecentDate(), nextPage);
-    }
+
 
     public Page<Book> getPageAllBooks(Integer offset, Integer limit) {
         Pageable nextPage = PageRequest.of(offset, limit);
         return bookRepository.findAll(nextPage);
     }
 
+    public List<Book> getRecentBooks() {
+        return bookRepository.findBookByOrderByPubDateDesc();
+    }
+
+    public Page<Book> getPageRecentBooks(Integer offset, Integer limit) {
+        Pageable nextPage = PageRequest.of(offset, limit);
+        return bookRepository.findBookByOrderByPubDateDesc(nextPage);
+    }
 
 }

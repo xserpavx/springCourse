@@ -17,7 +17,7 @@ insert into authors(id,fio) values (11, 'Фенимор Купер');
 insert into authors(id,fio) values (12, 'Туве Яннсен');
 insert into authors(id,fio) values (13, 'Майн Рид');
 insert into authors(id,fio) values (14, 'Роберт Льюис Стивенсон');
-insert into authors(id,fio) values (15, 'Рафаэль Сабатини');
+
 
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description)
 values ('Приключения Шерлока Холмса', 1, '2005-08-29', true, 404.21, 32, '','/assets/img/content/main/SH.png','');
@@ -42,7 +42,7 @@ insert into books (title, id_author, pub_date, bestseller, price, discount, slug
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Деловые люди', 2, '2011-09-13', true, 258.37, 30, '','/assets/img/content/main/card.jpg','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Дети капитана Гранта', 3, '2016-07-17', true, 495.55, 13, '','/assets/img/content/main/card.jpg','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('20 тысяч лье под водой', 3, '2005-06-12', false, 439.95, 13, '','/assets/img/content/main/card.jpg','');
-insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Таинственный остров', 3, '2021-06-13', true, 683.14, 13, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Таинственный остров', 3, '2021-06-13', true, 683.14, 13, '','/assets/img/content/main/secretIsland.png','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Хоббит или туда и обратно', 4, '2009-04-16', false, 459.37, 21, '','/assets/img/content/main/card.jpg','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Братство кольца', 4, '2014-12-14', false, 494.25, 13, '','/assets/img/content/main/card.jpg','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Две твердыни', 4, '2018-09-01', true, 535.68, 18, '','/assets/img/content/main/card.jpg','');
@@ -63,13 +63,14 @@ insert into books (title, id_author, pub_date, bestseller, price, discount, slug
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Зачумленный корабль', 9, '2006-04-23', false, 563.72, 0, '','/assets/img/content/main/card.jpg','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Остров сокровищ', 14, '2002-08-26', true, 343.6, 46, '','/assets/img/content/main/TreasureIsland.png','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Странная история доктора Джекила и мистера Хайда', 14, '2016-04-01', true, 600.31, 3, '','/assets/img/content/main/card.jpg','');
-insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Одиссея капитана Блада', 15, '2021-04-01', true, 343.6, 46, '','/assets/img/content/main/card.jpg','');
-insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Хроника капитана Блада', 15, '2021-06-01', true, 343.6, 46, '','/assets/img/content/main/card.jpg','');
+insert into authors(id,fio) values (15, 'Рафаэль Сабатини');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Одиссея капитана Блада', 15, '2021-04-01', true, 343.6, 46, '','/assets/img/content/main/cptBlood.png','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Хроника капитана Блада', 15, '2021-06-01', true, 343.6, 46, '','/assets/img/content/main/cptBlood.png','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Удачи капитана Блада', 15, '2021-04-01', true, 600.31, 3, '','/assets/img/content/main/card.jpg','');
 insert into authors(id,fio) values (16, 'Джордж Мартин');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Игра престолов', 16, '2020-11-03', true, 583.98, 7, '','/assets/img/content/main/card.jpg','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Битва королей', 16, '2020-08-15', false, 481.6, 29, '','/assets/img/content/main/card.jpg','');
-insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Буря мечей', 16, '2021-06-06', true, 114.84, 7, '','/assets/img/content/main/card.jpg','');
+insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Буря мечей', 16, '2021-06-06', true, 114.84, 7, '','/assets/img/content/main/swordStorm.png','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Пир стервятников', 16, '2020-06-26', true, 581.16, 31, '','/assets/img/content/main/card.jpg','');
 insert into books (title, id_author, pub_date, bestseller, price, discount, slug, image, description) values ('Танец с драконами', 16, '2021-04-06', true, 481.65, 45, '','/assets/img/content/main/card.jpg','');
 insert into authors(id,fio) values (17, 'Энн Маккефри');
@@ -87,7 +88,6 @@ insert into book_file_types(name, description) values('PDF','Формат эле
 insert into book_file_types(name, description) values('EPUB','Формат электронных версий книг, позволяет воспроизведить цифровые книги и другие публикации с плавающей вёрсткой.');
 
 -- Сайт для генерации случайных данных https://www.mockaroo.com/
-
 
 
 

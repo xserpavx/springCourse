@@ -12,6 +12,9 @@ import java.util.List;
 
 public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndSortingRepository<Book, Integer> {
 
+    List<Book> findBookByOrderByPubDateDesc();
+    Page<Book> findBookByOrderByPubDateDesc(Pageable pageable);
+
     Page<Book> findBooksByPubDateAfter(Date recentDate, Pageable pageable);
     List<Book> findBooksByPubDateAfter(Date recentDate);
 

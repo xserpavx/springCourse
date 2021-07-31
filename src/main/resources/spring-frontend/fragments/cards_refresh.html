@@ -20,7 +20,7 @@
             </strong>
             <div class="Card-description" th:text="${book.getAuthor().getFio()}">Кондратенко Александр Петрович
             </div>
-            <div class="Card-cost"><span class="Card-priceOld" th:text="${book.getPrice()}"></span><span class="Card-price" th:text="${book.getCurrentPrice()}"></span>
+            <div class="Card-cost"><span class="Card-priceOld" th:text="${book.getPrice()}"></span><span class="Card-price" th:text="${book.getDiscountPrice()}"></span>
             </div>
         </div>
     </div>
