@@ -52,9 +52,9 @@
             </h2>
           </div>
           <div class="Slider Slider_carousel">
-            <div class="Slider-box Cards" data-load="recommended" data-loadoffset="8" data-loadlimit="20">
+            <div class="Slider-box Cards" data-load="recommended" data-loadoffset="0" data-loadlimit="6">
               <div class="Slider-item" th:each="book : ${recommendBooks}">
-                <div class="Slider-content" th:replace="~{fragments/books_slider_item :: book_slider_item}"></div>
+                  <div class="Slider-content" th:replace="~{fragments/books_slider_item :: book_slider_item}"></div>
               </div>
             </div>
             <div class="Slider-navigateWrap">
@@ -71,7 +71,7 @@
             </h2>
           </div>
           <div class="Slider Slider_carousel">
-            <div class="Slider-box Cards" data-load="recent" data-loadoffset="8" data-loadlimit="20">
+            <div class="Slider-box Cards" data-load="recent" data-loadoffset="0" data-loadlimit="6">
               <div class="Slider-item" th:each="book : ${recommendBooks}">
                 <div class="Slider-content" th:replace="~{fragments/books_slider_item :: book_slider_item}"></div>
               </div>
@@ -90,7 +90,7 @@
             </h2>
           </div>
           <div class="Slider Slider_carousel">
-            <div class="Slider-box Cards" data-load="popular" data-loadoffset="8" data-loadlimit="20">
+            <div class="Slider-box Cards" data-load="popular" data-loadoffset="0" data-loadlimit="6">
               <div class="Slider-item" th:each="book : ${recommendBooks}">
                 <div class="Slider-content" th:replace="~{fragments/books_slider_item :: book_slider_item}"></div>
               </div>

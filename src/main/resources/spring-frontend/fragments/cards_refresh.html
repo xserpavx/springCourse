@@ -8,7 +8,7 @@
 <body>
 <div class="Cards Cards_refresh" th:fragment="cards_refresh">
         <div class="Card" th:each="book : ${listBooks}">
-            <div class="Card-picture"><a href="#"><img th:src="'/assets/img/content/main/' + ${book.image.length() != 0 ? book.image : 'card.jpg'}" src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
+            <div class="Card-picture"><a href="#"><img th:src="${book.image}" src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
             <div class="Card-sale" th:if="${book.discount != 0}" th:text="${book.discountString()}">30% скидка</div>
             <div class="Card-ribbon" th:if="${book.bestseller}"><span class="Card-ribbonText">Бестселлер</span></div>
             <!--                <a class="Card-status" title="Отложена"><img src="/assets/img/icons/heart.svg" alt="heart.svg"/>-->

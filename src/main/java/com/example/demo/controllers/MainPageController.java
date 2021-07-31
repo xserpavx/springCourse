@@ -1,13 +1,12 @@
 package com.example.demo.controllers;
 
+import com.example.demo.data.BookListDto;
 import com.example.demo.entity.Book;
 import com.example.demo.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,7 +27,7 @@ public class MainPageController {
 
     @ModelAttribute("recommendBooks")
     public List<Book> recommendBooks() {
-        return bookService.getRecomendBooks();
+        return bookService.getPageRecentBooks(0,6).getContent();
     }
 
     @ModelAttribute("active")
@@ -42,5 +41,21 @@ public class MainPageController {
         return "index";
     }
 
+    @GetMapping("/books/recommended")
+    @ResponseBody
+    public BookListDto getRecomendedBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
+        return new BookListDto(bookService.getPageRecentBooks(offset, limit).getContent());
+    }
 
+    @GetMapping("/books/recent")
+    @ResponseBody
+    public BookListDto getRecentBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
+        return new BookListDto(bookService.getPageRecentBooks(offset, limit).getContent());
+    }
+
+    @GetMapping("/books/popular")
+    @ResponseBody
+    public BookListDto getPopularBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
+        return new BookListDto(bookService.getPageRecentBooks(offset, limit).getContent());
+    }
 }

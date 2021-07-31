@@ -63,8 +63,14 @@ public class Book {
     @ApiModelProperty("discount of base price of book")
     private Integer discount;
 
-    public Float getCurrentPrice() {
-        return new BigDecimal(price).subtract(new BigDecimal(price).movePointLeft(2).multiply(new BigDecimal(discount))).setScale(2, RoundingMode.HALF_UP).floatValue();
+    @JsonProperty("authors")
+    public String getAuthors() {
+        return author.getFio();
+    }
+
+    @JsonProperty("discountPrice")
+    public Float getDiscountPrice() {
+        return new BigDecimal(price).subtract(new BigDecimal(price).multiply(new BigDecimal(discount)).movePointLeft(2)).setScale(2, RoundingMode.HALF_UP).floatValue();
     }
 
     public String discountString() {
