@@ -11,6 +11,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Date;
+import java.util.Set;
 
 /**
  * Created on 18.07.2021
@@ -36,6 +37,11 @@ public class Book {
     @JoinColumn(name = "id_author", referencedColumnName = "id", insertable = false, updatable = false)
     @JsonIgnore
     private Author author;
+
+    @ManyToMany
+    Set<Tag> bookTags;
+
+
     @Getter @Setter
     @ApiModelProperty("book title")
     private String title;

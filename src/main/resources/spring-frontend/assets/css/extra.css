@@ -3565,6 +3565,9 @@ img {
 .Tag_xs {
   font-size: 0.7em;
 }
+.Tag_hidden {
+  display: none; !important;
+}
 
 .Topup {
   visibility: visible;

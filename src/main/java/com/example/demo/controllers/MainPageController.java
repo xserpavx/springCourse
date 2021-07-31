@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.data.BookListDto;
 import com.example.demo.entity.Book;
+import com.example.demo.entity.Tag;
 import com.example.demo.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created on 18.07.2021
@@ -28,6 +30,16 @@ public class MainPageController {
     @ModelAttribute("recommendBooks")
     public List<Book> recommendBooks() {
         return bookService.getPageAllBooks(0,6).getContent();
+    }
+
+    @ModelAttribute("tags")
+    public List<Tag> getTags() {
+        return bookService.getAllTags();
+    }
+
+    @ModelAttribute("tag_divider")
+    public int calcTagDivider() {
+        return bookService.getMaxTag() / 4;
     }
 
     @ModelAttribute("popularBooks")
