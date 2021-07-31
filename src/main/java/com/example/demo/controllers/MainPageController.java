@@ -57,12 +57,6 @@ public class MainPageController {
         return new BookListDto(bookService.getPageAllBooks(offset, limit).getContent());
     }
 
-    @GetMapping("/books/recent")
-    @ResponseBody
-    public BookListDto getRecentBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-        return new BookListDto(bookService.getPageRecentBooks(offset, limit).getContent());
-    }
-
     @GetMapping("/books/popular")
     @ResponseBody
     public BookListDto getPopularBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {

@@ -73,4 +73,9 @@ public class BookService {
         return bookRepository.findBookByOrderByPubDateDesc(nextPage);
     }
 
+    public Page<Book> getPageRecentBooksByDate(Date from, Date to, Integer offset, Integer limit) {
+        Pageable nextPage = PageRequest.of(offset, limit);
+        return bookRepository.findBookByPubDateBetweenOrderByPubDateDesc(from, to, nextPage);
+    }
+
 }

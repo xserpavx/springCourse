@@ -15,6 +15,9 @@ public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndS
     List<Book> findBookByOrderByPubDateDesc();
     Page<Book> findBookByOrderByPubDateDesc(Pageable pageable);
 
+    Page<Book> findBookByPubDateBetweenOrderByPubDateDesc(Date from, Date to, Pageable pageable);
+
+
     Page<Book> findBooksByPubDateAfter(Date recentDate, Pageable pageable);
     List<Book> findBooksByPubDateAfter(Date recentDate);
 
