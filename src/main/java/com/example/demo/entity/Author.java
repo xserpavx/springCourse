@@ -37,6 +37,7 @@ public class Author {
     @ApiModelProperty("biography and fact`s about author")
     private String description;
 
+    @Getter
     @OneToMany (mappedBy = "author")
 //    @JoinColumn(name = "id_author", referencedColumnName = "id")
     private List<Book> authorBooks = new ArrayList<>();

@@ -31,4 +31,7 @@ public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndS
 
     @Query(value="select b.* from book2tag left outer join books b on b.id = book2tag.id_book left outer join tags on tags.id = book2tag.id_tag where tag_name = ?1", nativeQuery = true)
     Page<Book> getBooksByTag(String tag_name, Pageable pageable);
+
+    @Query(value="select * from books where id_author = ?1", nativeQuery = true)
+    Page<Book> getBooksByAuthor(Integer id_author, Pageable pageable);
 }

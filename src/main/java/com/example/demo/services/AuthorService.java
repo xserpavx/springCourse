@@ -43,4 +43,8 @@ public class AuthorService {
         }
         return authors;
     }
+
+    public List<Author> getAuthorById(Integer id) {
+        return authorRepository.findAuthorByIdEquals(id);
+    }
 }

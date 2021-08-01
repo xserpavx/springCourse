@@ -102,4 +102,9 @@ public class BookService {
         Pageable nextPage = PageRequest.of(offset, limit);
         return bookRepository.getBooksByTag(tag_name, nextPage);
     }
+
+    public Page<Book> getPageBooksByIdAuthor(Integer id, Integer offset, Integer limit) {
+        Pageable nextPage = PageRequest.of(offset, limit);
+        return bookRepository.getBooksByAuthor(id, nextPage);
+    }
 }
