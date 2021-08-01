@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,7 +33,7 @@ public class AuthorsController {
     }
 
     @ModelAttribute("authors")
-    public Map<String, ArrayList<Author>> authors() {
+    public Map<String, List<Author>> authors() {
         return authorService.getAuthors();
     }
 

@@ -18,28 +18,17 @@ import java.util.TreeMap;
 public class AuthorService {
     private final AuthorRepository authorRepository;
 
-    private Map<String, ArrayList<Author>> authors;
-
     @Autowired
     public AuthorService(AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
-        authors = new TreeMap<>();
     }
 
-    private void addAuthor(Author author) {
-        ArrayList<Author> authorsList = authors.get(author.getLetter());
-        if (authorsList == null) {
-            authorsList = new ArrayList<>();
-            authors.put(author.getLetter(), authorsList);
-        }
-        authorsList.add(author);
-    }
-
-    public Map<String, ArrayList<Author>> getAuthors() {
-        authors.clear();
+    public Map<String, List<Author>> getAuthors() {
+        Map<String, List<Author>> authors = new TreeMap<>();
         List<Author> authorsList = authorRepository.findAll();
         for (Author author : authorsList) {
-            addAuthor(author);
+            List<Author> letterAuthorList = authors.computeIfAbsent(author.getLetter(), key -> new ArrayList<>());
+            letterAuthorList.add(author);
         }
         return authors;
     }
