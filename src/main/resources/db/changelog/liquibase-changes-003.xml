@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="roland (generated)" id="1627827700362-1">
+        <createSequence sequenceName="book2tag_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-2">
+        <createSequence sequenceName="tags_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-3">
+        <createTable tableName="book2tag">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book2tag_pkey"/>
+            </column>
+            <column name="id_book" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_tag" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-4">
+        <createTable tableName="books_book_tags">
+            <column name="book_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="book_tags_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-5">
+        <createTable tableName="tags">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="tags_pkey"/>
+            </column>
+            <column name="tag_name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-6">
+        <addColumn tableName="authors">
+            <column name="description" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-7">
+        <addColumn tableName="authors">
+            <column name="name" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-8">
+        <addColumn tableName="authors">
+            <column name="photo" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-9">
+        <addColumn tableName="authors">
+            <column name="slug" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-10">
+        <addPrimaryKey columnNames="book_id, book_tags_id" constraintName="books_book_tags_pkey" tableName="books_book_tags"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-11">
+        <addForeignKeyConstraint baseColumnNames="id_tag" baseTableName="book2tag" constraintName="fkal4j1d0ese3oodaavkqxhgtov" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="tags"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-12">
+        <addForeignKeyConstraint baseColumnNames="book_id" baseTableName="books_book_tags" constraintName="fketjeddeeutdyhajn9cbqsrvgk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="books"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-13">
+        <addForeignKeyConstraint baseColumnNames="id_book" baseTableName="book2tag" constraintName="fksuxoubft9i0n66ywhtyuomjwa" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="books"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-14">
+        <addForeignKeyConstraint baseColumnNames="book_tags_id" baseTableName="books_book_tags" constraintName="fkt3iqwaifg0um0lkfqwt4p98gm" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="tags"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1627827700362-19">
+        <dropColumn columnName="fio" tableName="authors"/>
+    </changeSet>
+</databaseChangeLog>

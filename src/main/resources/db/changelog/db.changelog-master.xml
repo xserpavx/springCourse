@@ -10,5 +10,6 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 <!-- Перечень файлов содержащих применяемые изменения -->
 <include file="db/changelog/liquibase-changes-001.xml"/>
 <include file="db/changelog/liquibase-changes-002.xml"/>
+<include file="db/changelog/liquibase-changes-003.xml"/>
 
 </databaseChangeLog>
