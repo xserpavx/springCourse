@@ -10,9 +10,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 
 /**
@@ -95,4 +93,13 @@ public class BookService {
         return tagRepository.maxTagCount();
     }
 
+    public List<Book> getBooksByTag(Integer id) {
+        Tag tag = tagRepository.findTagById(id);
+        return new ArrayList<>(tag.getTaggedBooks());
+    }
+
+    public Page<Book> getPageBooksByTag(String tag_name, Integer offset, Integer limit) {
+        Pageable nextPage = PageRequest.of(offset, limit);
+        return bookRepository.getBooksByTag(tag_name, nextPage);
+    }
 }

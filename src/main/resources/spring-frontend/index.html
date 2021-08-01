@@ -109,7 +109,7 @@
         </h2>
         <div class="Tags" id="tags">
             <div class="Tag" th:classappend="${tag.tagClassName(tag_divider)}" th:style="${tag.tagHidden}"  th:each="tag : ${tags}">
-              <a href="/tags/main" th:text="${tag.getTagName()}">современная литература</a>
+              <a href="/tags/main" th:href="'/tags/main?tag='+${tag.getTagName()}" th:text="${tag.getTagName()}">современная литература</a>
             </div>
         </div>
       </main>

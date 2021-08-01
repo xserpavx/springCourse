@@ -1,8 +1,9 @@
+delete from book2tag;
 delete from books;
 delete from book_file_types;
 delete from authors;
 delete from tags;
-delete from book2tag;
+
 
 insert into authors(id, fio) values (0, 'Автор неизвестен');
 insert into authors(id,fio) values (1, 'Артур Конан Дойль');
@@ -20,10 +21,10 @@ insert into authors(id,fio) values (12, 'Туве Яннсен');
 insert into authors(id,fio) values (13, 'Майн Рид');
 insert into authors(id,fio) values (14, 'Роберт Льюис Стивенсон');
 
-insert into tags(id, tag_name) values(1, 'русские авторы');
-insert into tags(id, tag_name) values(2, 'английские авторы');
-insert into tags(id, tag_name) values(3, 'американские авторы');
-insert into tags(id, tag_name) values(4, 'французские авторы');
+insert into tags(id, tag_name) values(1, 'авторы ru');
+insert into tags(id, tag_name) values(2, 'авторы uk');
+insert into tags(id, tag_name) values(3, 'авторы eng');
+insert into tags(id, tag_name) values(4, 'французские авторы fr');
 insert into tags(id, tag_name) values(5, 'детективы');
 insert into tags(id, tag_name) values(6, 'роман');
 insert into tags(id, tag_name) values(7, 'исторический');
@@ -31,6 +32,8 @@ insert into tags(id, tag_name) values(8, 'детские');
 insert into tags(id, tag_name) values(9, 'приключения');
 insert into tags(id, tag_name) values(10, 'фантастика');
 insert into tags(id, tag_name) values(11, 'фэнтези');
+insert into tags(id, tag_name) values(12, 'юмор');
+insert into tags(id, tag_name) values(13, 'философия');
 
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description)
 values (1, 'Приключения Шерлока Холмса', 1, '2005-08-29', true, 404.21, 32, '','/assets/img/content/main/SH.png','');
@@ -170,12 +173,78 @@ insert into book2tag(id_book, id_tag) values(20, 4);
 insert into book2tag(id_book, id_tag) values(30, 4);
 insert into book2tag(id_book, id_tag) values(31, 4);
 insert into book2tag(id_book, id_tag) values(32, 4);
+insert into book2tag(id_book, id_tag) values(1, 5);
+insert into book2tag(id_book, id_tag) values(2, 5);
+insert into book2tag(id_book, id_tag) values(3, 5);
+insert into book2tag(id_book, id_tag) values(4, 5);
+insert into book2tag(id_book, id_tag) values(5, 10);
+insert into book2tag(id_book, id_tag) values(6, 6);			insert into book2tag(id_book, id_tag) values(6, 7);
+insert into book2tag(id_book, id_tag) values(7, 6);			insert into book2tag(id_book, id_tag) values(7, 7);
+insert into book2tag(id_book, id_tag) values(8, 6);			insert into book2tag(id_book, id_tag) values(8, 7);
+insert into book2tag(id_book, id_tag) values(9, 8);
+insert into book2tag(id_book, id_tag) values(10, 9);
+insert into book2tag(id_book, id_tag) values(11, 9);
+insert into book2tag(id_book, id_tag) values(12, 9);
+insert into book2tag(id_book, id_tag) values(13, 12);
+insert into book2tag(id_book, id_tag) values(14, 12);
+insert into book2tag(id_book, id_tag) values(15, 12);
+insert into book2tag(id_book, id_tag) values(16, 12);
+insert into book2tag(id_book, id_tag) values(17, 9);
+insert into book2tag(id_book, id_tag) values(18, 9);
+insert into book2tag(id_book, id_tag) values(19, 10);				insert into book2tag(id_book, id_tag) values(19, 9);
+insert into book2tag(id_book, id_tag) values(20, 9);
+insert into book2tag(id_book, id_tag) values(21, 11);	insert into book2tag(id_book, id_tag) values(21, 7);
+insert into book2tag(id_book, id_tag) values(22, 11);
+insert into book2tag(id_book, id_tag) values(23, 11);
+insert into book2tag(id_book, id_tag) values(24, 11);
+insert into book2tag(id_book, id_tag) values(25, 8);
+insert into book2tag(id_book, id_tag) values(26, 8);
+insert into book2tag(id_book, id_tag) values(27, 10);				insert into book2tag(id_book, id_tag) values(27, 9);
+insert into book2tag(id_book, id_tag) values(28, 10);				insert into book2tag(id_book, id_tag) values(28, 9);
+insert into book2tag(id_book, id_tag) values(29, 6);	insert into book2tag(id_book, id_tag) values(29, 10);						insert into book2tag(id_book, id_tag) values(29, 13);
+insert into book2tag(id_book, id_tag) values(30, 5);
+insert into book2tag(id_book, id_tag) values(31, 5);
+insert into book2tag(id_book, id_tag) values(32, 5);
+insert into book2tag(id_book, id_tag) values(33, 5);						insert into book2tag(id_book, id_tag) values(33, 9);
+insert into book2tag(id_book, id_tag) values(34, 5);						insert into book2tag(id_book, id_tag) values(34, 9);
+insert into book2tag(id_book, id_tag) values(35, 7);		insert into book2tag(id_book, id_tag) values(35, 9);
+insert into book2tag(id_book, id_tag) values(36, 7);		insert into book2tag(id_book, id_tag) values(36, 9);
+insert into book2tag(id_book, id_tag) values(37, 10);
+insert into book2tag(id_book, id_tag) values(38, 10);
+insert into book2tag(id_book, id_tag) values(39, 6);			insert into book2tag(id_book, id_tag) values(39, 7);		insert into book2tag(id_book, id_tag) values(39, 9);
+insert into book2tag(id_book, id_tag) values(40, 7);		insert into book2tag(id_book, id_tag) values(40, 9);
+insert into book2tag(id_book, id_tag) values(41, 7);		insert into book2tag(id_book, id_tag) values(41, 9);
+insert into book2tag(id_book, id_tag) values(42, 7);		insert into book2tag(id_book, id_tag) values(42, 9);
+insert into book2tag(id_book, id_tag) values(43, 7);		insert into book2tag(id_book, id_tag) values(43, 9);
+insert into book2tag(id_book, id_tag) values(44, 6);		insert into book2tag(id_book, id_tag) values(44, 11);
+insert into book2tag(id_book, id_tag) values(45, 6);		insert into book2tag(id_book, id_tag) values(45, 11);
+insert into book2tag(id_book, id_tag) values(46, 6);		insert into book2tag(id_book, id_tag) values(46, 11);
+insert into book2tag(id_book, id_tag) values(47, 6);		insert into book2tag(id_book, id_tag) values(47, 11);
+insert into book2tag(id_book, id_tag) values(48, 6);		insert into book2tag(id_book, id_tag) values(48, 11);
+insert into book2tag(id_book, id_tag) values(50, 10);	insert into book2tag(id_book, id_tag) values(50, 11);
+insert into book2tag(id_book, id_tag) values(51, 10);	insert into book2tag(id_book, id_tag) values(51, 11);
+insert into book2tag(id_book, id_tag) values(52, 10);	insert into book2tag(id_book, id_tag) values(52, 11);
+insert into book2tag(id_book, id_tag) values(53, 10);	insert into book2tag(id_book, id_tag) values(53, 11);
+insert into book2tag(id_book, id_tag) values(54, 10);	insert into book2tag(id_book, id_tag) values(54, 11);
+insert into book2tag(id_book, id_tag) values(55, 10);	insert into book2tag(id_book, id_tag) values(55, 11);
+insert into book2tag(id_book, id_tag) values(56, 10);	insert into book2tag(id_book, id_tag) values(56, 11);
+insert into book2tag(id_book, id_tag) values(57, 10);	insert into book2tag(id_book, id_tag) values(57, 11);
+insert into book2tag(id_book, id_tag) values(61, 8);	insert into book2tag(id_book, id_tag) values(61, 9);	insert into book2tag(id_book, id_tag) values(61, 12);
+insert into book2tag(id_book, id_tag) values(62, 8);	insert into book2tag(id_book, id_tag) values(62, 9);	insert into book2tag(id_book, id_tag) values(62, 12);
+insert into book2tag(id_book, id_tag) values(63, 8);	insert into book2tag(id_book, id_tag) values(63, 9);	insert into book2tag(id_book, id_tag) values(63, 12);
+insert into book2tag(id_book, id_tag) values(64, 8);	insert into book2tag(id_book, id_tag) values(64, 9);	insert into book2tag(id_book, id_tag) values(64, 12);
+insert into book2tag(id_book, id_tag) values(65, 6);			insert into book2tag(id_book, id_tag) values(65, 7);			insert into book2tag(id_book, id_tag) values(65, 12);
+insert into book2tag(id_book, id_tag) values(58, 10);
+insert into book2tag(id_book, id_tag) values(59, 10);
+insert into book2tag(id_book, id_tag) values(60, 10);
 
 
 
 insert into book_file_types(name, description) values('FB2','Межплатформенный  формат электронных документов с использованием ряда возможностей языка PostScript.');
 insert into book_file_types(name, description) values('PDF','Формат электронных версий книг, обеспечивает совместимость с любыми устройствами и форматами.');
 insert into book_file_types(name, description) values('EPUB','Формат электронных версий книг, позволяет воспроизведить цифровые книги и другие публикации с плавающей вёрсткой.');
+
+
 
 
 -- Сайт для генерации случайных данных https://www.mockaroo.com/
