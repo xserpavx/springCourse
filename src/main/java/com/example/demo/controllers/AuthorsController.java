@@ -35,7 +35,7 @@ public class AuthorsController {
     }
 
     @ModelAttribute("authors")
-    public Map<String, ArrayList<Author>> authors() {
+    public Map<String, List<Author>> authors() {
         return authorService.getAuthors();
     }
 
