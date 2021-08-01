@@ -53,7 +53,7 @@ public class BookService {
     }
 
     public List<Book> getBooksByAuthor(String author) {
-        return bookRepository.findBooksByAuthorFioContaining(author);
+        return bookRepository.findBooksByAuthorNameContaining(author);
     }
 
     public List<Book> getHQuery() {

@@ -72,7 +72,7 @@ public class Book {
 
     @JsonProperty("authors")
     public String getAuthors() {
-        return author.getFio();
+        return author.getName();
     }
 
     @JsonProperty("discountPrice")

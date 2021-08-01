@@ -4,22 +4,20 @@ delete from book_file_types;
 delete from authors;
 delete from tags;
 
-
-insert into authors(id, fio) values (0, 'Автор неизвестен');
-insert into authors(id,fio) values (1, 'Артур Конан Дойль');
-insert into authors(id,fio) values (2, 'О. Генри');
-insert into authors(id,fio) values (3, 'Жюль Верн');
-insert into authors(id,fio) values (4, 'Дж.Р.Р. Толкиен');
-insert into authors(id,fio) values (5, 'Борис Заходер');
-insert into authors(id,fio) values (6, 'Станислав Лем');
-insert into authors(id,fio) values (7, 'Жорж Симеон');
-insert into authors(id,fio) values (8, 'Алистер Маклин');
-insert into authors(id,fio) values (9, 'Андрэ Нортон');
-insert into authors(id,fio) values (10, 'Вальтер Скотт');
-insert into authors(id,fio) values (11, 'Фенимор Купер');
-insert into authors(id,fio) values (12, 'Туве Яннсен');
-insert into authors(id,fio) values (13, 'Майн Рид');
-insert into authors(id,fio) values (14, 'Роберт Льюис Стивенсон');
+insert into authors(id,name,description,slug,photo) values (1, 'Артур Конан Дойль','','','');
+insert into authors(id,name,description,slug,photo) values (2, 'О. Генри','','','');
+insert into authors(id,name,description,slug,photo) values (3, 'Жюль Верн','','','');
+insert into authors(id,name,description,slug,photo) values (4, 'Дж.Р.Р. Толкиен','','','');
+insert into authors(id,name,description,slug,photo) values (5, 'Борис Заходер','','','');
+insert into authors(id,name,description,slug,photo) values (6, 'Станислав Лем','','','');
+insert into authors(id,name,description,slug,photo) values (7, 'Жорж Симеон','','','');
+insert into authors(id,name,description,slug,photo) values (8, 'Алистер Маклин','','','');
+insert into authors(id,name,description,slug,photo) values (9, 'Андрэ Нортон','','','');
+insert into authors(id,name,description,slug,photo) values (10, 'Вальтер Скотт','','','');
+insert into authors(id,name,description,slug,photo) values (11, 'Фенимор Купер','','','');
+insert into authors(id,name,description,slug,photo) values (12, 'Туве Яннсен','','','');
+insert into authors(id,name,description,slug,photo) values (13, 'Майн Рид','','','');
+insert into authors(id,name,description,slug,photo) values (14, 'Роберт Льюис Стивенсон','','','');
 
 insert into tags(id, tag_name) values(1, 'авторы ru');
 insert into tags(id, tag_name) values(2, 'авторы uk');
@@ -79,17 +77,17 @@ insert into books (id, title, id_author, pub_date, bestseller, price, discount, 
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (38,'Зачумленный корабль', 9, '2006-04-23', false, 563.72, 0, '','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (39,'Остров сокровищ', 14, '2002-08-26', true, 343.6, 46, '','/assets/img/content/main/TreasureIsland.png','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (40,'Странная история доктора Джекила и мистера Хайда', 14, '2016-04-01', true, 600.31, 3, '','/assets/img/content/main/card.jpg','');
-insert into authors(id,fio) values (15, 'Рафаэль Сабатини');
+insert into authors(id,name,description,slug,photo) values (15, 'Рафаэль Сабатини','','','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (41,'Одиссея капитана Блада', 15, '2021-04-01', true, 343.6, 46, '','/assets/img/content/main/cptBlood.png','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (42,'Хроника капитана Блада', 15, '2021-06-01', true, 343.6, 46, '','/assets/img/content/main/cptBlood.png','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (43,'Удачи капитана Блада', 15, '2021-04-01', true, 600.31, 3, '','/assets/img/content/main/card.jpg','');
-insert into authors(id,fio) values (16, 'Джордж Мартин');
+insert into authors(id,name,description,slug,photo) values (16, 'Джордж Мартин','','','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (44,'Игра престолов', 16, '2020-11-03', true, 583.98, 7, '','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (45,'Битва королей', 16, '2020-08-15', false, 481.6, 29, '','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (46,'Буря мечей', 16, '2021-06-06', true, 114.84, 7, '','/assets/img/content/main/swordStorm.png','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (47,'Пир стервятников', 16, '2020-06-26', true, 581.16, 31, '','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (48,'Танец с драконами', 16, '2021-04-06', true, 481.65, 45, '','/assets/img/content/main/card.jpg','');
-insert into authors(id,fio) values (17, 'Энн Маккефри');
+insert into authors(id,name,description,slug,photo) values (17, 'Энн Маккефри','','','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (50,'Полёт дракона', 17, '2006-07-25', true, 576.77, 14, '','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (51,'Странствия дракона', 17, '2009-01-17', true, 204.13, 14, '','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (52,'Белый дракон', 17, '2009-04-07', false, 186.85, 13, '','/assets/img/content/main/card.jpg','');
@@ -99,14 +97,14 @@ insert into books (id, title, id_author, pub_date, bestseller, price, discount, 
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (56,'Певица Перна', 17, '2010-06-04', true, 244.5, 50, '','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (57,'Барабаны Перна', 17, '2010-05-21', true, 576.77, 14, '','/assets/img/content/main/card.jpg','');
 
-insert into authors(id,fio) values (19, 'Марк Твен');
+insert into authors(id,name,description,slug,photo) values (19, 'Марк Твен','','','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (61,'Приключения Тома Сойера', 19,'19.03.2021', true, 995.26, 41,'','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (62,'Приключения Геккльбери Финна', 19,'11.11.2021', true, 447.76, 25,'','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (63,'Том Сойер на воздушном шаре', 19,'17.12.2021', true, 744.07, 38,'','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (64,'Том Сойер сыщик', 19,'15.02.2021', true, 675.79, 9,'','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (65,'Приключения янки при дворе короля Артура', 19,'19.02.2021', true, 517.68, 19,'','/assets/img/content/main/card.jpg','');
 
-insert into authors(id,fio) values (18, 'Александр Беляев');
+insert into authors(id,name,description,slug,photo) values (18, 'Александр Беляев','','','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (58,'Человек амфибия', 18,'23.12.2021', true, 698.84, 46,'','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (59,'Голова профессора Доуэля', 18,'13.06.2021', true, 298.81, 5,'','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (60,'Продавец воздуха', 18,'03.05.2021', true, 930.07, 2,'','/assets/img/content/main/card.jpg','');

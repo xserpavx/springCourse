@@ -36,7 +36,7 @@ public class BooksRestApiController {
 
 
     @GetMapping(value = "/books/by-author" )
-    @ApiOperation("execute to get list books from bookshop by passed author fio")
+    @ApiOperation("execute to get list books from bookshop by passed author name")
     public ResponseEntity<List<Book>> booksByAuthor(@RequestParam("author") String author) {
         return ResponseEntity.ok(bookService.getBooksByAuthor(author));
     }
