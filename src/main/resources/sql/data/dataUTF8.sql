@@ -98,8 +98,8 @@ insert into books (id, title, id_author, pub_date, bestseller, price, discount, 
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (57,'Барабаны Перна', 17, '2010-05-21', true, 576.77, 14, '','/assets/img/content/main/card.jpg','');
 
 insert into authors(id,name,description,slug,photo) values (19, 'Марк Твен','','','/assets/img/content/authors/mt.jpg');
-insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (61,'Приключения Тома Сойера', 19,'19.03.2021', true, 995.26, 41,'','/assets/img/content/main/card.jpg','');
-insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (62,'Приключения Геккльбери Финна', 19,'11.11.2021', true, 447.76, 25,'','/assets/img/content/main/card.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (61,'Приключения Тома Сойера', 19,'19.03.2021', true, 995.26, 41,'','/assets/img/content/main/TS.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (62,'Приключения Геккльбери Финна', 19,'11.11.2021', true, 447.76, 25,'','/assets/img/content/main/GF.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (63,'Том Сойер на воздушном шаре', 19,'17.12.2021', true, 744.07, 38,'','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (64,'Том Сойер сыщик', 19,'15.02.2021', true, 675.79, 9,'','/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, slug, image, description) values (65,'Приключения янки при дворе короля Артура', 19,'19.02.2021', true, 517.68, 19,'','/assets/img/content/main/card.jpg','');
