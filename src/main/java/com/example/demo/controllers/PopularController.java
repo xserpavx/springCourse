@@ -34,7 +34,7 @@ public class PopularController {
 
     @ModelAttribute("listBooks")
     public List<Book> recommendBooks() {
-        return bookService.getPopularBooks();
+        return bookService.getPagePopularBooks(0,20).getContent();
     }
 
     @GetMapping("/popularPage")
