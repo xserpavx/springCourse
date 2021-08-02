@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Элемент списка жанров</title>
+</head>
+<body>
+    <div class="Tags" th:fragment="genre_node(rootNode)" th:each="node : ${rootNode}">
+        <div class="Tags-title">
+            <div class="Tag"><a href="/genres/slug" th:text="${node.getName()}+' ('+${node.getGenredBooks().size()}+')'">Детективы <span class="undefined-amount" >(10)</span> </a> </div>
+        </div>
+        <div th:if="${node.childs != null}" th:replace="~{fragments/genre_item :: genre_node(${node.childs})}"> </div>
+    </div>
+</body>
+</html>
