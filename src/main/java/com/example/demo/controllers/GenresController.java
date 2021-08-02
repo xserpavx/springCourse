@@ -37,7 +37,7 @@ public class GenresController {
         return "genres";
     }
 
-    @GetMapping("/main")
+    @GetMapping("/orig")
     public String getMainPage() {
         return "genres/index";
     }
@@ -47,7 +47,7 @@ public class GenresController {
         return "genres/slug";
     }
 
-    @GetMapping("/dev")
+    @GetMapping("/main")
     public String getMainPageDev(Model model) {
         Map<Integer, Genre> genres = new HashMap<>();
         List<Genre> root = new ArrayList<>();
