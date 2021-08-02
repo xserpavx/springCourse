@@ -55,6 +55,7 @@ public class GenresController {
             if (genre.getId_parent() != null) { continue;}
             genres.put(genre.getId(), genre);
             root.add(genre);
+
         }
         for (Genre genre : genreService.getGenres()) {
             if (genre.getId_parent() == null) { continue;}
