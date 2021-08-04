@@ -244,26 +244,27 @@ insert into book_file_types(name, description) values('FB2','Межплатфо�
 insert into book_file_types(name, description) values('PDF','Формат электронных версий книг, обеспечивает совместимость с любыми устройствами и форматами.');
 insert into book_file_types(name, description) values('EPUB','Формат электронных версий книг, позволяет воспроизведить цифровые книги и другие публикации с плавающей вёрсткой.');
 
-insert into genres(id, id_parent, slug, name) values(17, null, '', 'Классические произведения');
-insert into genres(id, id_parent, slug, name) values(1, 17, '', 'Детективы');
-insert into genres(id, id_parent, slug, name) values(2, 1, '', 'Классический детектив');
-insert into genres(id, id_parent, slug, name) values(3, 1, '', 'Остросюжетный детектив');
-insert into genres(id, id_parent, slug, name) values(4, 1, '', 'Шпионский детектив');
-insert into genres(id, id_parent, slug, name) values(5, 17, '', 'Фантастика');
-insert into genres(id, id_parent, slug, name) values(6, 5, '', 'Научная фантастика');
-insert into genres(id, id_parent, slug, name) values(7, 5, '', 'Фэнтези');
+insert into genres(id, id_parent, slug, name) values(1, 17, 'det', 'Детективы');
+insert into genres(id, id_parent, slug, name) values(2, 1, 'detc', 'Классический детектив');
+insert into genres(id, id_parent, slug, name) values(3, 1, 'deto', 'Остросюжетный детектив');
+--insert into genres(id, id_parent, slug, name) values(4, 1, 'dets', 'Шпионский детектив');
+insert into genres(id, id_parent, slug, name) values(5, 17, 'fant', 'Фантастика');
+insert into genres(id, id_parent, slug, name) values(6, 5, 'fants', 'Научная фантастика');
+insert into genres(id, id_parent, slug, name) values(7, 5, 'fantf', 'Фэнтези');
 
-insert into genres(id, id_parent, slug, name) values(8, null, '', 'Детские');
-insert into genres(id, id_parent, slug, name) values(9, 8, '', 'Для детей дошкольного возраста');
-insert into genres(id, id_parent, slug, name) values(10, 8, '', 'Для детей младшего школьного возраста');
-insert into genres(id, id_parent, slug, name) values(11, 8, '', 'Для детей среднего школьного возраста');
-insert into genres(id, id_parent, slug, name) values(12, 8, '', 'Для детей старшего школьного возраста');
+insert into genres(id, id_parent, slug, name) values(8, null, 'child', 'Детские');
+insert into genres(id, id_parent, slug, name) values(9, 8, 'child1', 'Для детей дошкольного возраста');
+insert into genres(id, id_parent, slug, name) values(10, 8, 'child2', 'Для детей младшего школьного возраста');
+insert into genres(id, id_parent, slug, name) values(11, 8, 'child3', 'Для детей среднего школьного возраста');
+insert into genres(id, id_parent, slug, name) values(12, 8, 'child4', 'Для детей старшего школьного возраста');
 
-insert into genres(id, id_parent, slug, name) values(13, null, '', 'Приключения');
-insert into genres(id, id_parent, slug, name) values(14, null, '', 'Юмор');
+insert into genres(id, id_parent, slug, name) values(13, null, 'adv', 'Приключения');
+insert into genres(id, id_parent, slug, name) values(14, null, 'hum', 'Юмор');
 
-insert into genres(id, id_parent, slug, name) values(15, 13, '', 'На море');
-insert into genres(id, id_parent, slug, name) values(16, 13, '', 'На суше');
+insert into genres(id, id_parent, slug, name) values(15, 13, 'advsea', 'На море');
+insert into genres(id, id_parent, slug, name) values(16, 13, 'advland', 'На суше');
+insert into genres(id, id_parent, slug, name) values(17, null, 'class', 'Классическая проза');
+insert into genres(id, id_parent, slug, name) values(18, null, 'now', 'Современная проза');
 
 insert into book2genre(id_book, id_genre) values(1, 1);	insert into book2genre(id_book, id_genre) values(1, 2);
 insert into book2genre(id_book, id_genre) values(2, 1);	insert into book2genre(id_book, id_genre) values(2, 2);
@@ -329,6 +330,70 @@ insert into book2genre(id_book, id_genre) values(65, 13);	insert into book2genre
 insert into book2genre(id_book, id_genre) values(58, 5);	insert into book2genre(id_book, id_genre) values(58, 6);
 insert into book2genre(id_book, id_genre) values(59, 5);	insert into book2genre(id_book, id_genre) values(59, 6);
 insert into book2genre(id_book, id_genre) values(60, 5);	insert into book2genre(id_book, id_genre) values(60, 6);
+insert into book2genre(id_book, id_genre) values(2, 17);
+insert into book2genre(id_book, id_genre) values(3, 17);
+insert into book2genre(id_book, id_genre) values(4, 17);
+insert into book2genre(id_book, id_genre) values(5, 17);
+insert into book2genre(id_book, id_genre) values(6, 17);
+insert into book2genre(id_book, id_genre) values(7, 17);
+insert into book2genre(id_book, id_genre) values(8, 17);
+insert into book2genre(id_book, id_genre) values(9, 17);
+insert into book2genre(id_book, id_genre) values(10, 17);
+insert into book2genre(id_book, id_genre) values(11, 17);
+insert into book2genre(id_book, id_genre) values(12, 17);
+insert into book2genre(id_book, id_genre) values(13, 17);
+insert into book2genre(id_book, id_genre) values(14, 17);
+insert into book2genre(id_book, id_genre) values(15, 17);
+insert into book2genre(id_book, id_genre) values(16, 17);
+insert into book2genre(id_book, id_genre) values(17, 17);
+insert into book2genre(id_book, id_genre) values(18, 17);
+insert into book2genre(id_book, id_genre) values(19, 17);
+insert into book2genre(id_book, id_genre) values(20, 17);
+insert into book2genre(id_book, id_genre) values(21, 17);
+insert into book2genre(id_book, id_genre) values(22, 17);
+insert into book2genre(id_book, id_genre) values(23, 17);
+insert into book2genre(id_book, id_genre) values(24, 17);
+insert into book2genre(id_book, id_genre) values(25, 17);
+insert into book2genre(id_book, id_genre) values(26, 17);
+insert into book2genre(id_book, id_genre) values(27, 17);
+insert into book2genre(id_book, id_genre) values(28, 17);
+insert into book2genre(id_book, id_genre) values(29, 17);
+insert into book2genre(id_book, id_genre) values(30, 17);
+insert into book2genre(id_book, id_genre) values(31, 17);
+insert into book2genre(id_book, id_genre) values(32, 17);
+insert into book2genre(id_book, id_genre) values(33, 17);
+insert into book2genre(id_book, id_genre) values(34, 17);
+insert into book2genre(id_book, id_genre) values(35, 17);
+insert into book2genre(id_book, id_genre) values(36, 17);
+insert into book2genre(id_book, id_genre) values(37, 17);
+insert into book2genre(id_book, id_genre) values(38, 17);
+insert into book2genre(id_book, id_genre) values(39, 17);
+insert into book2genre(id_book, id_genre) values(40, 17);
+insert into book2genre(id_book, id_genre) values(41, 17);
+insert into book2genre(id_book, id_genre) values(42, 17);
+insert into book2genre(id_book, id_genre) values(43, 17);
+insert into book2genre(id_book, id_genre) values(44, 18);
+insert into book2genre(id_book, id_genre) values(45, 18);
+insert into book2genre(id_book, id_genre) values(46, 18);
+insert into book2genre(id_book, id_genre) values(47, 18);
+insert into book2genre(id_book, id_genre) values(48, 18);
+insert into book2genre(id_book, id_genre) values(50, 17);
+insert into book2genre(id_book, id_genre) values(51, 17);
+insert into book2genre(id_book, id_genre) values(52, 17);
+insert into book2genre(id_book, id_genre) values(53, 17);
+insert into book2genre(id_book, id_genre) values(54, 17);
+insert into book2genre(id_book, id_genre) values(55, 17);
+insert into book2genre(id_book, id_genre) values(56, 17);
+insert into book2genre(id_book, id_genre) values(57, 17);
+insert into book2genre(id_book, id_genre) values(61, 17);
+insert into book2genre(id_book, id_genre) values(62, 17);
+insert into book2genre(id_book, id_genre) values(63, 17);
+insert into book2genre(id_book, id_genre) values(64, 17);
+insert into book2genre(id_book, id_genre) values(65, 17);
+insert into book2genre(id_book, id_genre) values(58, 17);
+insert into book2genre(id_book, id_genre) values(59, 17);
+insert into book2genre(id_book, id_genre) values(60, 17);
+
 
 
 

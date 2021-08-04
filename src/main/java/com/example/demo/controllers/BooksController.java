@@ -51,4 +51,10 @@ public class BooksController {
         Integer idAuthor = Integer.parseInt(id);
         return new BookListDto(bookService.getPageBooksByIdAuthor(idAuthor, offset, limit).getContent());
     }
+
+    @GetMapping("/genre/{slug}")
+    @ResponseBody
+    public BookListDto getBooksByGenre(@PathVariable String slug, @RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
+        return new BookListDto(bookService.getPageBooksByGenre(slug, offset, limit).getContent());
+    }
 }

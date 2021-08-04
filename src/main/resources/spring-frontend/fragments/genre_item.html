@@ -8,10 +8,10 @@
 <body>
     <div th:classappend="${node.childs != null ? 'Tags' : 'Tag'}" class="Tags"  th:fragment="genre_node(rootNode)" th:each="node : ${rootNode}">
         <div class="Tags-title" th:if="${node.childs != null || node.getId_parent() == null}">
-            <div class="Tag"><a href="/genres/slug" th:text="${node.getName()}+' ('+${node.getGenredBooks().size()}+')'">Детективы <span class="undefined-amount" >(10)</span> </a> </div>
+            <div class="Tag"><a href="/genres/slug" th:href="'/genres/'+${node.getSlug()}" th:text="${node.getName()}+' ('+${node.getGenredBooks().size()}+')'">Детективы <span class="undefined-amount" >(10)</span> </a> </div>
         </div>
         <div th:if="${node.childs != null}" th:replace="~{fragments/genre_item :: genre_node(${node.childs})}"> </div>
-        <a href="/genres/slug" th:if="${node.childs == null && node.getId_parent() != null}" th:text="${node.getName()}+' ('+${node.getGenredBooks().size()}+')'">Детективы <span class="undefined-amount" >(10)</span> </a>
+        <a href="/genres/slug" th:href="'/genres/'+${node.getSlug()}" th:if="${node.childs == null && node.getId_parent() != null}" th:text="${node.getName()}+' ('+${node.getGenredBooks().size()}+')'">Детективы <span class="undefined-amount" >(10)</span> </a>
     </div>
 </body>
 </html>
