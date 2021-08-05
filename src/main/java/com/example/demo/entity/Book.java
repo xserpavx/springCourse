@@ -70,6 +70,11 @@ public class Book {
     @ApiModelProperty("discount of base price of book")
     private Integer discount;
 
+    @Getter @Setter
+    @ApiModelProperty("index of book popular`s")
+    @Column(columnDefinition = "float default 0.0")
+    private float popular;
+
     @JsonProperty("authors")
     public String getAuthors() {
         return author.getName();

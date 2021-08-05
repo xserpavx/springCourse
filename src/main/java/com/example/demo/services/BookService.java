@@ -49,7 +49,7 @@ public class BookService {
 
     public Page<Book> getPagePopularBooks(Integer offset, Integer limit) {
         Pageable nextPage = PageRequest.of(offset, limit);
-        return bookRepository.findAll(nextPage);
+        return bookRepository.findBookByOrderByPopularDesc(nextPage);
     }
 
     public List<Book> getBooksByAuthor(String author) {

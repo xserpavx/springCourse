@@ -44,7 +44,7 @@ public class MainPageController {
 
     @ModelAttribute("popularBooks")
     public List<Book> popularBooks() {
-        return bookService.getPageAllBooks(0,6).getContent();
+        return bookService.getPagePopularBooks(0,6).getContent();
     }
 
     @ModelAttribute("recentBooks")
@@ -72,6 +72,6 @@ public class MainPageController {
     @GetMapping("/books/popular")
     @ResponseBody
     public BookListDto getPopularBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-        return new BookListDto(bookService.getPageAllBooks(offset, limit).getContent());
+        return new BookListDto(bookService.getPagePopularBooks(offset, limit).getContent());
     }
 }
