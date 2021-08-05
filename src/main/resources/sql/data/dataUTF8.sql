@@ -8,6 +8,43 @@ delete from book_file_types;
 delete from authors;
 delete from tags;
 
+CREATE OR REPLACE FUNCTION public."calcPopularWeight"(IN id_book bigint DEFAULT 0,IN book_user_type bigint DEFAULT  0)
+    RETURNS bigint
+    LANGUAGE 'sql'
+    VOLATILE
+    PARALLEL UNSAFE
+    COST 100
+
+AS $BODY$
+select count(*) from book2user where id_book = $1 and id_type = $2
+$BODY$;
+
+CREATE OR REPLACE FUNCTION public."calcBookPopular"(IN id_book bigint DEFAULT 0)
+    RETURNS numeric
+    LANGUAGE 'sql'
+    VOLATILE
+    PARALLEL UNSAFE
+    COST 100
+
+AS $BODY$
+select 0.4 * "calcPopularWeight"($1, 1) +
+       0.7 * "calcPopularWeight"($1, 2) +
+       "calcPopularWeight"($1, 3)
+$BODY$;
+
+create or replace function calcbookpopulartrigger() RETURNS trigger AS '
+    begin
+        update books set popular = "calcBookPopular"(new.id_book) where id = new.id_book;
+        RETURN new;
+    end;
+' LANGUAGE  plpgsql;
+
+DROP TRIGGER IF EXISTS book2user_after_iud ON book2user;
+
+CREATE TRIGGER book2user_after_iud
+    AFTER INSERT OR UPDATE OR DELETE ON book2user
+    FOR EACH ROW EXECUTE PROCEDURE calcbookpopulartrigger();
+
 insert into authors(id,name,description,slug,photo) values (1, 'Артур Конан Дойль','','','/assets/img/content/authors/acd.jpg');
 insert into authors(id,name,description,slug,photo) values (2, 'О. Генри','','','/assets/img/content/authors/oHenry.jpg');
 insert into authors(id,name,description,slug,photo) values (3, 'Жюль Верн','','','/assets/img/content/main/card.jpg');

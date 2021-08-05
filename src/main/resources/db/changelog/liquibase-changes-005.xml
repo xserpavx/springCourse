@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="roland (generated)" id="1628154614993-3">
+        <createSequence sequenceName="book2user_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1628154614993-4">
+        <createSequence sequenceName="book_popular_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1628154614993-5">
+        <createSequence sequenceName="book_user_types_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1628154614993-8">
+        <createSequence sequenceName="users_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1628154614993-10">
+        <createTable tableName="book2user">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book2user_pkey"/>
+            </column>
+            <column name="id_book" type="INT"/>
+            <column name="id_type" type="INT"/>
+            <column name="id_user" type="INT"/>
+            <column name="time" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1628154614993-12">
+        <createTable tableName="book_user_types">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_user_types_pkey"/>
+            </column>
+            <column name="code" type="INT"/>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1628154614993-14">
+        <createTable tableName="users">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="users_pkey"/>
+            </column>
+            <column defaultValueNumeric="0" name="balance" type="FLOAT4">
+                <constraints nullable="false"/>
+            </column>
+            <column name="hash" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="reg_time" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1628154614993-15">
+        <addColumn tableName="books">
+            <column defaultValue="0.0" defaultValueComputed="0.0" name="popular" type="float8"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

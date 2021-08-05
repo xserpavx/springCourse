@@ -12,4 +12,5 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 <include file="db/changelog/liquibase-changes-002.xml"/>
 <include file="db/changelog/liquibase-changes-003.xml"/>
 <include file="db/changelog/liquibase-changes-004.xml"/>
+<include file="db/changelog/liquibase-changes-005.xml"/>
 </databaseChangeLog>
