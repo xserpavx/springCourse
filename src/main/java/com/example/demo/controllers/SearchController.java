@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 
+import com.example.demo.data.BookListDto;
 import com.example.demo.entity.Book;
 import com.example.demo.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,12 +57,20 @@ public class SearchController {
         return "search/index";
     }
 
-    @GetMapping("/{text}")
-    public String searchPostPage(@PathVariable String text, Model model) {
-        List<Book> books = bookService.getPageBookByTitleContain(text, 0, 20).getContent();
-        model.addAttribute("listBooks", books);
-        model.addAttribute("searchTitle", text);
+    @GetMapping("/{searchTitle}")
+    public String search(@PathVariable String searchTitle, Model model) {
+        List<Book> books = bookService.getBookByTitleContain(searchTitle);
+
+        model.addAttribute("listBooks", bookService.getPageBookByTitleContain(searchTitle, 0, 20).getContent());
+        model.addAttribute("searchTitle", searchTitle);
         model.addAttribute("endless", endless(books.size()));
+        model.addAttribute("totalBooksCount", books.size());
         return "search/index";
+    }
+
+    @GetMapping("/page/{searchTitle}")
+    @ResponseBody
+    public BookListDto searchPage(@PathVariable String searchTitle, @RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit, Model model) {
+        return new BookListDto(bookService.getPageBookByTitleContain(searchTitle, offset, limit).getContent());
     }
 }

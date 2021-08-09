@@ -105,6 +105,10 @@ public class BookService {
         return bookRepository.getBooksByGenre(genreSlug, nextPage);
     }
 
+    public List<Book> getBookByTitleContain(String title) {
+        return new ArrayList<>(bookRepository.findBooksByTitleContainingIgnoreCase(title));
+    }
+
     public Page<Book> getPageBookByTitleContain(String title, Integer offset, Integer limit) {
         Pageable nextPage = PageRequest.of(offset, limit);
         return bookRepository.findBooksByTitleContainingIgnoreCase(title, nextPage);

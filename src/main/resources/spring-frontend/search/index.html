@@ -59,10 +59,10 @@
         </div>
         <div class="Section Section_close">
           <header class="Section-header">
-            <h2 class="Section-title Middle-searchHeader" th:text="'Найдено '+${listBooks.size()}+' книг'+${endless}">Найдено 40 книг</h2>
+            <h2 class="Section-title Middle-searchHeader" th:text="'Найдено '+${totalBooksCount}+' книг'+${endless}">Найдено 40 книг</h2>
           </header>
           <div class="Cards Cards_search Cards_refresh" th:replace="~{fragments/cards_refresh :: cards_refresh}"></div>
-          <div class="Cards-footer Cards-footer_center"><a class="btn btn_primary" href="#" data-refreshshow="search" data-refreshoffset="20" data-refreshlimit="20" data-refreshquery="Техника">Показать еще</a>          </div>
+          <div class="Cards-footer Cards-footer_center"><a class="btn btn_primary" href="#" data-refreshshow="search" data-refreshoffset="0" data-refreshlimit="20" th:attr="data-refreshquery=${searchTitle}"  data-refreshquery="Техника"  th:text="#{buttons.more}">Показать еще</a>          </div>
         </div>
       </main>
     </div>
