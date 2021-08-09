@@ -36,4 +36,8 @@ public class AuthorService {
     public List<Author> getAuthorById(Integer id) {
         return authorRepository.findAuthorByIdEquals(id);
     }
+
+    public List<Author> getAuthorBySlug(String slug) {
+        return authorRepository.findAuthorBySlugEquals(slug);
+    }
 }

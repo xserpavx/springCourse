@@ -44,10 +44,10 @@ public class AuthorsController {
         return "authors/index";
     }
 
-    @GetMapping("/slug/{id}")
-    public String getSlugPage(@PathVariable String id, Model model) {
+    @GetMapping("/slug/{slug}")
+    public String getSlugPage(@PathVariable String slug, Model model) {
         try {
-            List<Author> authors = authorService.getAuthorById(Integer.parseInt(id));
+            List<Author> authors = authorService.getAuthorBySlug(slug);
             if (authors.size() != 0) {
                 model.addAttribute("author",authors.get(0));
                 return "authors/slug";

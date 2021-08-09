@@ -34,7 +34,7 @@ public class User {
     @Getter @Setter
     @Column(columnDefinition = "real default 0", nullable = false)
     @ApiModelProperty("Current user`s balance, default value is 0")
-    double balance;
+    float balance;
 
     @Getter @Setter
     @ApiModelProperty("User`s name")
