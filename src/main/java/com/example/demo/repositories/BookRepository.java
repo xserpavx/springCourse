@@ -43,4 +43,8 @@ public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndS
 
     @Query(value="select * from books where id_author = ?1", nativeQuery = true)
     Page<Book> getBooksByAuthor(Integer id_author, Pageable pageable);
+
+    Page<Book> findBooksByTitleIn(String[] titles, Pageable pageable);
+
+    Page<Book> findBooksByTitleContainingIgnoreCase(String title, Pageable pageable);
 }
