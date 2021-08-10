@@ -1,16 +1,15 @@
 package com.example.demo.controllers;
 
-import com.example.demo.data.BookListDto;
 import com.example.demo.entity.Book;
 import com.example.demo.entity.Tag;
 import com.example.demo.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created on 18.07.2021
@@ -63,15 +62,15 @@ public class MainPageController {
         return "index";
     }
 
-    @GetMapping("/books/recommended")
-    @ResponseBody
-    public BookListDto getRecomendedBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-        return new BookListDto(bookService.getPageAllBooks(offset, limit).getContent());
-    }
-
-    @GetMapping("/books/popular")
-    @ResponseBody
-    public BookListDto getPopularBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-        return new BookListDto(bookService.getPagePopularBooks(offset, limit).getContent());
-    }
+//    @GetMapping("/books/recommended")
+//    @ResponseBody
+//    public BookListDto getRecomendedBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
+//        return new BookListDto(bookService.getPageAllBooks(offset, limit).getContent());
+//    }
+//
+//    @GetMapping("/books/popular")
+//    @ResponseBody
+//    public BookListDto getPopularBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
+//        return new BookListDto(bookService.getPagePopularBooks(offset, limit).getContent());
+//    }
 }

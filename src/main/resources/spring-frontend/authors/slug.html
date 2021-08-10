@@ -105,7 +105,7 @@
               </div>
             </div>
           </div>
-          <footer class="Section-footer"><a class="Author-books" href="/books/author/1" th:href="'/books/authorPage/'+${author.getId()}">Все книги автора<span class="Author-amount" th:text="'('+${author.getAuthorBooks().size()}+')'">(55)</span></a>
+          <footer class="Section-footer"><a class="Author-books" href="/books/author/1" th:href="'/books/authorPage/'+${author.getSlug()}">Все книги автора<span class="Author-amount" th:text="'('+${author.getAuthorBooks().size()}+')'">(55)</span></a>
           </footer>
         </div>
       </main>
