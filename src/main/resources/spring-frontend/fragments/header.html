@@ -6,7 +6,7 @@
     <title>Чердак</title>
 </head>
 <body>
-    <header class="Header" th:fragment="header">
+    <header class="Header" th:fragment="header(searchTitle)">
         <div class="Header-rowMain" th:fragment="header-rowmain">
             <div class="wrap">
                 <div class="row">
@@ -19,7 +19,7 @@
                         <div class="Header-search">
                             <div class="search">
                                 <form class="form form_search" action="#" th:action="@{/search/post}" method="post" data-searchlimit="20">
-                                    <input class="search-input" id="query" name="query" type="text" th:placeholder="#{topbar.placeholder}"  value=""/>
+                                    <input class="search-input" id="query" name="query" type="text" th:placeholder="#{topbar.placeholder}"  value="" th:value="${searchTitle}"/>
                                     <button class="search-button" type="submit" name="search" id="search" th:text="#{buttons.search}">Поиск
                                     </button>
                                 </form>

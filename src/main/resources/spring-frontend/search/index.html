@@ -42,21 +42,21 @@
   </script>
 </head>
 <body class="Site">
-  <header class="Header" th:replace="~{fragments/header :: header}"></header>
+  <header class="Header" th:replace="~{fragments/header :: header(${searchTitle})}"></header>
   <div class="Middle Middle_search">
     <div class="wrap">
       <main class="Middle-main">
         <h1 class="Middle-title">Поиск
         </h1>
-        <div class="Section">
-          <div class="search">
-            <form class="form form_search" action="#" method="post" data-searchlimit="20">
-              <input class="search-input" id="querypage" name="querypage" type="text" placeholder="Search over 30 million book titles" th:value="${searchTitle}" value="Техника"/>
-              <button class="search-button" type="submit" name="searchpage" id="searchpage">Поиск
-              </button>
-            </form>
-          </div>
-        </div>
+<!--        <div class="Section">-->
+<!--          <div class="search">-->
+<!--            <form class="form form_search" action="#" method="post" data-searchlimit="20">-->
+<!--              <input class="search-input" id="querypage" name="querypage" type="text" placeholder="Search over 30 million book titles" th:value="${searchTitle}" value="Техника"/>-->
+<!--              <button class="search-button" type="submit" name="searchpage" id="searchpage">Поиск-->
+<!--              </button>-->
+<!--            </form>-->
+<!--          </div>-->
+<!--        </div>-->
         <div class="Section Section_close">
           <header class="Section-header">
             <h2 class="Section-title Middle-searchHeader" th:text="'Найдено '+${totalBooksCount}+' книг'+${endless}">Найдено 40 книг</h2>

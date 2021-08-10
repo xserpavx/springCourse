@@ -1,13 +1,15 @@
 package com.example.demo.controllers;
 
 
-import com.example.demo.data.BookListDto;
 import com.example.demo.entity.Book;
 import com.example.demo.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -68,9 +70,4 @@ public class SearchController {
         return "search/index";
     }
 
-    @GetMapping("/page/{searchTitle}")
-    @ResponseBody
-    public BookListDto searchPage(@PathVariable String searchTitle, @RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit, Model model) {
-        return new BookListDto(bookService.getPageBookByTitleContain(searchTitle, offset, limit).getContent());
-    }
 }
