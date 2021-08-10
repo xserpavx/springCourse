@@ -1,12 +1,12 @@
 package com.example.demo.controllers;
 
 
-import com.example.demo.data.BookListDto;
 import com.example.demo.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * Created on 22.07.2021
@@ -30,9 +30,9 @@ public class TagsController {
         return "tags/index";
     }
 
-    @GetMapping("/books/tag/{id}")
-    @ResponseBody
-    public BookListDto getBooksByTag(@PathVariable String id, @RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-        return new BookListDto(bookService.getPageBooksByTag(id, offset, limit).getContent());
-    }
+//    @GetMapping("/books/tag/{id}")
+//    @ResponseBody
+//    public BookListDto getBooksByTag(@PathVariable String id, @RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
+//        return new BookListDto(bookService.getPageBooksByTag(id, offset, limit).getContent());
+//    }
 }

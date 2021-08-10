@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -44,7 +43,7 @@ public class AuthorsController {
         return "authors/index";
     }
 
-    @GetMapping("/slug/{slug}")
+    @GetMapping("/{slug}")
     public String getSlugPage(@PathVariable String slug, Model model) {
         try {
             List<Author> authors = authorService.getAuthorBySlug(slug);
