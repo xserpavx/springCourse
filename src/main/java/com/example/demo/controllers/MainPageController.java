@@ -61,17 +61,4 @@ public class MainPageController {
     public String mainPage(Model model) {
         return "index";
     }
-
-//FIXME закомментированный код убираем
-//    @GetMapping("/books/recommended")
-//    @ResponseBody
-//    public BookListDto getRecomendedBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-//        return new BookListDto(bookService.getPageAllBooks(offset, limit).getContent());
-//    }
-//
-//    @GetMapping("/books/popular")
-//    @ResponseBody
-//    public BookListDto getPopularBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-//        return new BookListDto(bookService.getPagePopularBooks(offset, limit).getContent());
-//    }
 }

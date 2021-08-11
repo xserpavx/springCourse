@@ -44,8 +44,7 @@ public class Tag {
     }
 
     @Transient
-    //FIXME isEmpty()
     public String tagHidden() {
-        return taggedBooks.size() == 0 ? "display:none" : "";
+        return taggedBooks.isEmpty() ? "display:none" : "";
     }
 }

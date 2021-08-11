@@ -27,10 +27,8 @@ public class Genre {
     @Getter
     @Setter
     @ApiModelProperty("id of parent genre")
-    //FIXME поле nullable = true идет по умолчанию
-    @Column(nullable = true) //не задает ограничение на поле not null
-    //FIXME CamelCase
-    private Integer id_parent;
+    @Column(name="id_parent")
+    private Integer idParent;
 
     @Getter
     @Setter
@@ -42,11 +40,14 @@ public class Genre {
     @ApiModelProperty("genre name")
     private String name;
 
+    public Genre() {
+        this.childs = null;
+    }
+
     @Transient
     @Getter
     @Setter
-//FIXME инициализация переменных должна быть в конструкторе
-    private List<Genre> childs = null;
+    private List<Genre> childs;
 
     @Transient
     public void addChild(Genre childGenre) {
@@ -62,6 +63,5 @@ public class Genre {
             name = "book2genre",
             joinColumns = @JoinColumn(name = "id_genre"),
             inverseJoinColumns = @JoinColumn(name = "id_book"))
-    //FIXME еще один пример не защищенной переменной
-    Set<Book> genredBooks;
+    private Set<Book> genredBooks;
 }

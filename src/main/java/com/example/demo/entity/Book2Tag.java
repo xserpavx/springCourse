@@ -4,10 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created on 31.07.2021
@@ -25,11 +22,11 @@ public class Book2Tag {
 
     @Getter
     @Setter
-    //FIXME CamelCase
-    private int id_book;
+    @Column(name="id_book")
+    private int idBook;
 
     @Getter
     @Setter
-    //FIXME CamelCase
-    private int id_tag;
+    @Column(name="id_tag")
+    private int idTag;
 }

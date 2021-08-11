@@ -25,8 +25,6 @@ public class SpringFoxConfig {
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.example.demo.controllers"))
                 .paths(PathSelectors.any())
-//FIXME зачем оставлен закомментированный код?
-//                .paths(PathSelectors.ant("/api/*"))
                 .build()
                 .apiInfo(apiInfo());
     }

@@ -54,7 +54,7 @@ public class GenresController {
         Map<Integer, Genre> genres = new HashMap<>();
         List<Genre> root = new ArrayList<>();
         for (Genre genre : genreService.getGenres()) {
-            if (genre.getId_parent() != null) {
+            if (genre.getIdParent() != null) {
                 continue;
             }
             genres.put(genre.getId(), genre);
@@ -62,19 +62,18 @@ public class GenresController {
 
         }
         for (Genre genre : genreService.getGenres()) {
-            if (genre.getId_parent() == null) {
+            if (genre.getIdParent() == null) {
                 continue;
             }
             genres.put(genre.getId(), genre);
-            Genre parent = genres.get(genre.getId_parent());
+            Genre parent = genres.get(genre.getIdParent());
             if (parent != null) {
                 parent.addChild(genre);
             }
         }
 
         model.addAttribute("genres", root);
-        //FIXME закомментированный код убираем
-//        model.addAttribute("child", genreService.getChildNodes());
+
         return "genres/index";
     }
 }

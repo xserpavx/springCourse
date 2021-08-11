@@ -31,8 +31,7 @@ public class BooksRestApiController {
     @GetMapping(value = "/books/by-author")
     public ResponseEntity<List<Book>> booksByAuthor(@RequestParam("author") String author) {
         List<Book> books = bookService.getBooksByAuthor(author);
-        //FIXME используйте лучше проверку коллекции isEmpty
-        return books.size() != 0
+        return !books.isEmpty()
                 ? ResponseEntity.ok(books)
                 : new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -41,8 +40,7 @@ public class BooksRestApiController {
     @GetMapping(value = "/books/hQuery")
     public ResponseEntity<List<Book>> hQuery() {
         List<Book> books = bookService.getHQuery();
-        //FIXME используйте лучше проверку коллекции isEmpty
-        return books.size() != 0
+        return !books.isEmpty()
                 ? ResponseEntity.ok(books)
                 : new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -51,8 +49,7 @@ public class BooksRestApiController {
     @GetMapping(value = "/books/nativeQuery")
     public ResponseEntity<List<Book>> nativeQuery() {
         List<Book> books = bookService.getNativeQuery();
-        //FIXME используйте лучше проверку коллекции isEmpty
-        return books.size() != 0
+        return !books.isEmpty()
                 ? ResponseEntity.ok(books)
                 : new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -63,8 +60,7 @@ public class BooksRestApiController {
                                                     @RequestParam("offset") Integer offset,
                                                     @RequestParam("limit") Integer limit) {
         List<Book> books = bookService.getPageBooksByTag(id, offset, limit).getContent();
-        //FIXME используйте лучше проверку коллекции isEmpty
-        return books.size() != 0
+        return !books.isEmpty()
                 ? ResponseEntity.ok(books)
                 : new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -74,8 +70,7 @@ public class BooksRestApiController {
     @GetMapping("/books/genre/{slug}")
     public ResponseEntity<List<Book>> getBooksByGenre(@PathVariable String slug, @RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
         List<Book> books = bookService.getPageBooksByGenre(slug, offset, limit).getContent();
-        //FIXME используйте лучше проверку коллекции isEmpty
-        return books.size() != 0
+        return !books.isEmpty()
                 ? ResponseEntity.ok(books)
                 : new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -84,8 +79,7 @@ public class BooksRestApiController {
     @GetMapping("/books/recommended")
     public ResponseEntity<List<Book>> getRecomendedBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
         List<Book> books = bookService.getPageAllBooks(offset, limit).getContent();
-        //FIXME используйте лучше проверку коллекции isEmpty
-        return books.size() != 0
+        return !books.isEmpty()
                 ? ResponseEntity.ok(books)
                 : new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -95,8 +89,7 @@ public class BooksRestApiController {
     public ResponseEntity<List<Book>> getPopularBooks(@RequestParam("offset") Integer offset,
                                                       @RequestParam("limit") Integer limit) {
         List<Book> books = bookService.getPagePopularBooks(offset, limit).getContent();
-        //FIXME используйте лучше проверку коллекции isEmpty
-        return books.size() != 0
+        return !books.isEmpty()
                 ? ResponseEntity.ok(books)
                 : new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -106,8 +99,7 @@ public class BooksRestApiController {
     public ResponseEntity<List<Book>> getRecentBooks(@RequestParam("offset") Integer offset,
                                                      @RequestParam("limit") Integer limit) {
         List<Book> books = bookService.getPageRecentBooks(offset, limit).getContent();
-        //FIXME используйте лучше проверку коллекции isEmpty
-        return books.size() != 0
+        return !books.isEmpty()
                 ? ResponseEntity.ok(books)
                 : new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -118,12 +110,10 @@ public class BooksRestApiController {
                                                            @RequestParam(value = "to") String to,
                                                            @RequestParam("offset") Integer offset,
                                                            @RequestParam("limit") Integer limit) {
-        //FIXME аналогично var или DateFormat
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyy");
+        var sdf = new SimpleDateFormat("dd.MM.yyy");
         try {
             List<Book> books = bookService.getPageRecentBooksByDate(sdf.parse(from), sdf.parse(to), offset, limit).getContent();
-            //FIXME используйте лучше проверку коллекции isEmpty
-            return books.size() != 0
+            return !books.isEmpty()
                     ? ResponseEntity.ok(books)
                     : new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (ParseException e) {
@@ -136,8 +126,7 @@ public class BooksRestApiController {
                                                        @RequestParam("offset") Integer offset,
                                                        @RequestParam("limit") Integer limit) {
         List<Book> books = bookService.getPageBooksBySlugAuthor(slug, offset, limit).getContent();
-        //FIXME используйте лучше проверку коллекции isEmpty
-        return books.size() != 0
+        return !books.isEmpty()
                 ? ResponseEntity.ok(books)
                 : new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

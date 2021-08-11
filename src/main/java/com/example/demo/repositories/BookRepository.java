@@ -12,11 +12,7 @@ import java.util.List;
 
 public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndSortingRepository<Book, Integer> {
 
-    //FIXME почему не убрать это в enum?
-    public static int BUT_KEPT = 1; // книга отложена
-    public static int BUT_CART = 2; // в корзине
-    public static int BUT_PAID = 3; // Куплена
-    public static int BUT_ARCHIVED = 4; // В архиве
+    public static enum BookUserTypes {EMPTY, KEPT, CART, PAID, ARCHIVED}
 
     List<Book> findBookByOrderByPubDateDesc();
 

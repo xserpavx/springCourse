@@ -33,8 +33,7 @@ public class BooksController {
     @GetMapping("/authorPage/{slug}")
     public String getAuthorBooksPage(@PathVariable String slug, Model model) {
         List<Author> authors = authorService.getAuthorBySlug(slug);
-        //FIXME используйте лучше проверку коллекции isEmpty
-        if (authors.size() != 0) {
+        if (!authors.isEmpty()) {
             model.addAttribute("author", authors.get(0));
         }
         model.addAttribute("listBooks", bookService.getPageBooksBySlugAuthor(slug, 0, 20).getContent());

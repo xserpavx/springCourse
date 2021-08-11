@@ -20,20 +20,14 @@ public class LangConfig implements WebMvcConfigurer {
 
     @Bean
     public LocaleResolver localeResolver() {
-        //FIXME используйте абстракции или var,
-        // т.е. вместо SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
-        // var sessionLocaleResolver = new SessionLocaleResolver();
-        // или
-        // AbstractLocaleContextResolver sessionLocaleResolver = new SessionLocaleResolver();
-        SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
+        var sessionLocaleResolver = new SessionLocaleResolver();
         sessionLocaleResolver.setDefaultLocale(Locale.ENGLISH);
         return sessionLocaleResolver;
     }
 
     @Bean
     public LocaleChangeInterceptor localeChangeInterceptor() {
-        //FIXME используйте абстракции или var
-        LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
+        var localeChangeInterceptor = new LocaleChangeInterceptor();
         localeChangeInterceptor.setParamName("lang");
         return localeChangeInterceptor;
     }

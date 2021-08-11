@@ -28,10 +28,6 @@ public class GenreService {
         this.bookRepository = bookRepository;
     }
 
-    //FIXME закоментированный код удаляем
-//    private final List<Integer> root;
-//    private final Map<Integer, List<Integer>> nodes;
-
     public List<Genre> getGenres() {
         return genreRepository.findAll();
     }

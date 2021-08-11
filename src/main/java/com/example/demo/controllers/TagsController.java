@@ -29,10 +29,4 @@ public class TagsController {
         return "tags/index";
     }
 
-//FIXME закомментированый код
-//    @GetMapping("/books/tag/{id}")
-//    @ResponseBody
-//    public BookListDto getBooksByTag(@PathVariable String id, @RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-//        return new BookListDto(bookService.getPageBooksByTag(id, offset, limit).getContent());
-//    }
 }

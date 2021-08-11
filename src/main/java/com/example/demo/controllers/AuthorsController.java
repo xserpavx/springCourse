@@ -47,8 +47,7 @@ public class AuthorsController {
     public String getSlugPage(@PathVariable String slug, Model model) {
         try {
             List<Author> authors = authorService.getAuthorBySlug(slug);
-            //FIXME используйте лучше проверку коллекции isEmpty
-            if (authors.size() != 0) {
+            if (!authors.isEmpty()) {
                 model.addAttribute("author", authors.get(0));
                 return "authors/slug";
             }

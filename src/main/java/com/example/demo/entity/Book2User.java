@@ -5,10 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -33,19 +30,19 @@ public class Book2User {
     @Getter
     @Setter
     @ApiModelProperty("foreign key on table book_user_types")
-    //FIXME CamelCase
-    private Integer id_type;
+    @Column(name="id_type")
+    private Integer idType;
 
     @Getter
     @Setter
     @ApiModelProperty("foreign key on table books")
-    //FIXME CamelCase
-    private Integer id_book;
+    @Column(name="id_book")
+    private Integer idBook;
 
     @Getter
     @Setter
     @ApiModelProperty("foreign key on table users")
-    //FIXME CamelCase чтобы колонка сохранялась под нужным именем используйте @Column(name="")
-    private Integer id_user;
+    @Column(name="id_user")
+    private Integer idUser;
 
 }

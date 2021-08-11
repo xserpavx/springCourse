@@ -11,7 +11,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Date;
-import java.util.Set;
 
 /**
  * Created on 18.07.2021
@@ -32,8 +31,8 @@ public class Book {
     @Getter
     @Setter
     @ApiModelProperty("foreign key to table authors")
-    //FIXME в java используем camelCase
-    private int id_author;
+    @Column(name="id_author")
+    private int idAuthor;
 
     @Getter
     @Setter
@@ -41,10 +40,6 @@ public class Book {
     @JoinColumn(name = "id_author", referencedColumnName = "id", insertable = false, updatable = false)
     @JsonIgnore
     private Author author;
-
-    //FIXME пример не защищенного поля
-    @ManyToMany
-    Set<Tag> bookTags;
 
     @Getter
     @Setter
@@ -56,9 +51,6 @@ public class Book {
     private Float price;
     @Getter
     @Setter
-    //FIXME закомментированный код удаляем, если это единый комментарий оформите его как /* */
-//    Можно указать имя поля Json отличающееся от имени поля класса
-//    @JsonProperty("date")
     @ApiModelProperty("date of publication book")
     private Date pubDate;
     @Getter
@@ -96,7 +88,6 @@ public class Book {
 
     @JsonProperty("discountPrice")
     public Float getDiscountPrice() {
-//FIXME используйте BigDecimal.valueOf(price)
         return new BigDecimal(price)
                 .subtract(new BigDecimal(price)
                         .multiply(new BigDecimal(discount))

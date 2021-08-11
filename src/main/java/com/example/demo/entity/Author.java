@@ -46,13 +46,14 @@ public class Author {
 
     @Getter
     @OneToMany(mappedBy = "author")
-    //FIXME закомментированный код убираем, реализация new ArrayList так делать не верно,
-    // её необходимо убрать в конструктор
-//    @JoinColumn(name = "id_author", referencedColumnName = "id")
-    private List<Book> authorBooks = new ArrayList<>();
+    private List<Book> authorBooks;
 
     public String getLetter() {
         return name.substring(0, 1).toUpperCase();
+    }
+
+    public Author() {
+        authorBooks = new ArrayList<>();
     }
 
     @Override
