@@ -12,19 +12,27 @@ import javax.persistence.*;
  **/
 
 @Entity
-@Table(name="book_files")
+@Table(name = "book_files")
 public class BookFile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter @Setter
+    @Getter
+    @Setter
     private Integer id;
-    @Getter @Setter
+    @Getter
+    @Setter
     @ManyToOne
-    @JoinColumn(name = "id_book_file_type", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(
+            name = "id_book_file_type",
+            referencedColumnName = "id",
+            insertable = false,
+            updatable = false)
     private BookFileType idBookFileType;
-    @Getter @Setter
+    @Getter
+    @Setter
     private String hash;
-    @Getter @Setter
+    @Getter
+    @Setter
     @Column(name = "file_name")
     private String fileName;
 }

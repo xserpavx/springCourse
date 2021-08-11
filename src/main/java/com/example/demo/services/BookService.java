@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-
 /**
  * Created on 18.07.2021
  *
@@ -41,8 +40,6 @@ public class BookService {
         return cal.getTime();
     }
 
-
-
     public List<Book> getPopularBooks() {
         return bookRepository.findAll();
     }
@@ -63,8 +60,6 @@ public class BookService {
     public List<Book> getNativeQuery() {
         return bookRepository.getDiscount();
     }
-
-
 
     public Page<Book> getPageAllBooks(Integer offset, Integer limit) {
         Pageable nextPage = PageRequest.of(offset, limit);

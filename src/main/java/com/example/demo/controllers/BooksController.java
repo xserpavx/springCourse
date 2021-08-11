@@ -1,6 +1,5 @@
 package com.example.demo.controllers;
 
-
 import com.example.demo.entity.Author;
 import com.example.demo.services.AuthorService;
 import com.example.demo.services.BookService;
@@ -34,6 +33,7 @@ public class BooksController {
     @GetMapping("/authorPage/{slug}")
     public String getAuthorBooksPage(@PathVariable String slug, Model model) {
         List<Author> authors = authorService.getAuthorBySlug(slug);
+        //FIXME используйте лучше проверку коллекции isEmpty
         if (authors.size() != 0) {
             model.addAttribute("author", authors.get(0));
         }

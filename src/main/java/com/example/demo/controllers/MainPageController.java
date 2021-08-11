@@ -28,7 +28,7 @@ public class MainPageController {
 
     @ModelAttribute("recommendBooks")
     public List<Book> recommendBooks() {
-        return bookService.getPageAllBooks(0,6).getContent();
+        return bookService.getPageAllBooks(0, 6).getContent();
     }
 
     @ModelAttribute("tags")
@@ -43,12 +43,12 @@ public class MainPageController {
 
     @ModelAttribute("popularBooks")
     public List<Book> popularBooks() {
-        return bookService.getPagePopularBooks(0,6).getContent();
+        return bookService.getPagePopularBooks(0, 6).getContent();
     }
 
     @ModelAttribute("recentBooks")
     public List<Book> recentBooks() {
-        return bookService.getPageRecentBooks(0,6).getContent();
+        return bookService.getPageRecentBooks(0, 6).getContent();
     }
 
     @ModelAttribute("active")
@@ -62,6 +62,7 @@ public class MainPageController {
         return "index";
     }
 
+//FIXME закомментированный код убираем
 //    @GetMapping("/books/recommended")
 //    @ResponseBody
 //    public BookListDto getRecomendedBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {

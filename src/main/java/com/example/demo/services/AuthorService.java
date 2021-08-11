@@ -1,4 +1,5 @@
 package com.example.demo.services;
+
 import com.example.demo.entity.*;
 import com.example.demo.repositories.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,8 @@ public class AuthorService {
         Map<String, List<Author>> authors = new TreeMap<>();
         List<Author> authorsList = authorRepository.findAll();
         for (Author author : authorsList) {
-            List<Author> letterAuthorList = authors.computeIfAbsent(author.getLetter(), key -> new ArrayList<>());
+            List<Author> letterAuthorList = authors
+                    .computeIfAbsent(author.getLetter(), key -> new ArrayList<>());
             letterAuthorList.add(author);
         }
         return authors;

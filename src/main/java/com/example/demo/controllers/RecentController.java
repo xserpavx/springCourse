@@ -33,7 +33,7 @@ public class RecentController {
         Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());
         cal.add(Calendar.MONTH, -1);
-        return bookService.getPageRecentBooksByDate(cal.getTime(), new Date(), 0,20).getContent();
+        return bookService.getPageRecentBooksByDate(cal.getTime(), new Date(), 0, 20).getContent();
     }
 
     @ModelAttribute("active")
@@ -46,6 +46,7 @@ public class RecentController {
         return "books/recent";
     }
 
+//FIXME закомментированый код удаляем
 //    @GetMapping("/recent")
 //    @ResponseBody
 //    public BookListDto getRecentBooks(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {

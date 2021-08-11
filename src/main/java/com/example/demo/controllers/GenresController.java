@@ -1,6 +1,5 @@
 package com.example.demo.controllers;
 
-
 import com.example.demo.entity.Genre;
 import com.example.demo.services.GenreService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +42,8 @@ public class GenresController {
     }
 
     @GetMapping("/{slug}")
-    public String getSlugPage(@PathVariable(value="slug") String slug, Model model) {
+    public String getSlugPage(@PathVariable(value = "slug") String slug,
+                              Model model) {
         model.addAttribute("genre", genreService.getGenreBySlug(slug));
         model.addAttribute("listBooks", genreService.getPageBooksBySlug(slug, 0, 20).getContent());
         return "genres/slug";
@@ -54,13 +54,17 @@ public class GenresController {
         Map<Integer, Genre> genres = new HashMap<>();
         List<Genre> root = new ArrayList<>();
         for (Genre genre : genreService.getGenres()) {
-            if (genre.getId_parent() != null) { continue;}
+            if (genre.getId_parent() != null) {
+                continue;
+            }
             genres.put(genre.getId(), genre);
             root.add(genre);
 
         }
         for (Genre genre : genreService.getGenres()) {
-            if (genre.getId_parent() == null) { continue;}
+            if (genre.getId_parent() == null) {
+                continue;
+            }
             genres.put(genre.getId(), genre);
             Genre parent = genres.get(genre.getId_parent());
             if (parent != null) {
@@ -69,6 +73,7 @@ public class GenresController {
         }
 
         model.addAttribute("genres", root);
+        //FIXME закомментированный код убираем
 //        model.addAttribute("child", genreService.getChildNodes());
         return "genres/index";
     }

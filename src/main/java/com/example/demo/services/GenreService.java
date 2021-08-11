@@ -4,17 +4,13 @@ import com.example.demo.entity.Book;
 import com.example.demo.entity.Genre;
 import com.example.demo.repositories.BookRepository;
 import com.example.demo.repositories.GenreRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.net.URLConnection;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created on 02.08.2021
@@ -31,10 +27,10 @@ public class GenreService {
         this.genreRepository = genreRepository;
         this.bookRepository = bookRepository;
     }
+
+    //FIXME закоментированный код удаляем
 //    private final List<Integer> root;
 //    private final Map<Integer, List<Integer>> nodes;
-
-
 
     public List<Genre> getGenres() {
         return genreRepository.findAll();
@@ -45,6 +41,7 @@ public class GenreService {
         if (search != null) {
             return search.get(0);
         }
+        //FIXME ничего страшного нет, но не самая лучшая практика null кидать
         return null;
     }
 
