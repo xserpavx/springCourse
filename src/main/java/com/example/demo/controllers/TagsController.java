@@ -1,6 +1,5 @@
 package com.example.demo.controllers;
 
-
 import com.example.demo.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,9 +29,4 @@ public class TagsController {
         return "tags/index";
     }
 
-//    @GetMapping("/books/tag/{id}")
-//    @ResponseBody
-//    public BookListDto getBooksByTag(@PathVariable String id, @RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-//        return new BookListDto(bookService.getPageBooksByTag(id, offset, limit).getContent());
-//    }
 }

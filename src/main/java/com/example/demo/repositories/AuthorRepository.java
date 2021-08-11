@@ -13,5 +13,4 @@ public interface AuthorRepository extends JpaRepository<Author, Integer> {
     List<Author> findAuthorByIdEquals(Integer id);
 
     List<Author> findAuthorBySlugEquals(String slug);
-
 }

@@ -1,6 +1,5 @@
 package com.example.demo.controllers;
 
-
 import com.example.demo.entity.Book;
 import com.example.demo.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +33,7 @@ public class PopularController {
 
     @ModelAttribute("listBooks")
     public List<Book> recommendBooks() {
-        return bookService.getPagePopularBooks(0,20).getContent();
+        return bookService.getPagePopularBooks(0, 20).getContent();
     }
 
     @GetMapping("/popularPage")

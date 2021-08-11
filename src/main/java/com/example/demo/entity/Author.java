@@ -13,38 +13,48 @@ import java.util.List;
  *
  * @author roland
  **/
+//TODO вместо бесконечных @Getter @Setter почему не ставите одну аннотацию @Data над классом?
+
 @Entity
-@Table(name="authors")
+@Table(name = "authors")
 public class Author {
-    @Getter @Setter
+    @Getter
+    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     @ApiModelProperty("path to author photo image")
     private String photo;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     @ApiModelProperty("mnemonical author name")
     private String slug;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     @ApiModelProperty("First name and Last name of author")
     private String name;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     @ApiModelProperty("biography and fact`s about author")
     private String description;
 
     @Getter
-    @OneToMany (mappedBy = "author")
-//    @JoinColumn(name = "id_author", referencedColumnName = "id")
-    private List<Book> authorBooks = new ArrayList<>();
+    @OneToMany(mappedBy = "author")
+    private List<Book> authorBooks;
 
     @Transient
     public String getLetter() {
-        return name.substring(0,1).toUpperCase();
+        return name.substring(0, 1).toUpperCase();
+    }
+
+    public Author() {
+        authorBooks = new ArrayList<>();
     }
 
     @Override

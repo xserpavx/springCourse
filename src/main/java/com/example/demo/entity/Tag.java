@@ -45,6 +45,6 @@ public class Tag {
 
     @Transient
     public String tagHidden() {
-        return taggedBooks.size() == 0 ? "display:none" : "";
+        return taggedBooks.isEmpty() ? "display:none" : "";
     }
 }
