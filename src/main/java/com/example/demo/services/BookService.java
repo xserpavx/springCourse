@@ -113,4 +113,8 @@ public class BookService {
         Pageable nextPage = PageRequest.of(offset, limit);
         return bookRepository.findBooksByTitleContainingIgnoreCase(title, nextPage);
     }
+
+    public List<Book> getBookBySlug(String bookSlug) {
+        return bookRepository.findBookBySlugEquals(bookSlug);
+    }
 }

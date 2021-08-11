@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 
 import com.example.demo.entity.Author;
+import com.example.demo.entity.Book;
 import com.example.demo.services.AuthorService;
 import com.example.demo.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,16 @@ public class BooksController {
         }
         model.addAttribute("listBooks", bookService.getPageBooksBySlugAuthor(slug, 0, 20).getContent());
         return "books/author";
+    }
+
+    @GetMapping("/{slug}")
+    public String getBookPage(@PathVariable String slug, Model model) {
+        List<Book> books = bookService.getBookBySlug(slug);
+        if (books.size() != 0) {
+            model.addAttribute("book", books.get(0));
+            model.addAttribute("author", books.get(0).getAuthor());
+        }
+        return "books/slug";
     }
 
 

@@ -11,11 +11,11 @@
             <a class="Card-picture" href="/books/slug.html"><img th:src="${book.image}" src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
             <div class="Card-ribbon" th:if="${book.bestseller}"><span class="Card-ribbonText">Бестселлер</span></div>
             <div class="Card-content">
-                <strong class="Card-title"><a href="/books/slug.html" th:text="${book.getTitle()}"></a>
+                <strong class="Card-title"><a href="/books/slug.html" th:href="'/books/'+${book.getSlug()}" th:text="${book.getTitle()}"></a>
                 </strong>
                 <div class="Card-description" th:text="${book.getAuthors()}">
                 </div>
-                <div class="Card-cost"><span class="Card-priceOld" th:text="'₽' + ${book.getPrice()}"></span><span class="Card-price" th:text="'₽' + ${book.getDiscountPrice()}"></span>
+                <div class="Card-cost"><span class="Card-priceOld" th:if="${book.getDiscount() != 0}" th:text="'₽' + ${book.getPrice()}"></span><span class="Card-price" th:text="'₽' + ${book.getDiscountPrice()}"></span>
                 </div>
             </div>
         </div>

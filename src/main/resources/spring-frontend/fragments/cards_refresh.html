@@ -16,11 +16,11 @@
             <!--                                <a class="Card-status" title="Куплена"><img src="/assets/img/icons/check.svg" alt="check.svg"/></a>-->
         </div>
         <div class="Card-content">
-            <strong class="Card-title"><a href="#" th:text="${book.getTitle()}">Техника</a>
+            <strong class="Card-title"><a href="#" th:href="'/books/'+${book.getSlug()}" th:text="${book.getTitle()}">Техника</a>
             </strong>
             <div class="Card-description" th:text="${book.getAuthor().getName()}">Кондратенко Александр Петрович
             </div>
-            <div class="Card-cost"><span class="Card-priceOld" th:text="${book.getPrice()}"></span><span class="Card-price" th:text="${book.getDiscountPrice()}"></span>
+            <div class="Card-cost"><span class="Card-priceOld" th:if="${book.getDiscount() != 0}" th:text="${book.getPrice()}"></span><span class="Card-price" th:text="${book.getDiscountPrice()}"></span>
             </div>
         </div>
     </div>

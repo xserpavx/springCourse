@@ -42,6 +42,7 @@ public class Author {
 //    @JoinColumn(name = "id_author", referencedColumnName = "id")
     private List<Book> authorBooks = new ArrayList<>();
 
+    @Transient
     public String getLetter() {
         return name.substring(0,1).toUpperCase();
     }

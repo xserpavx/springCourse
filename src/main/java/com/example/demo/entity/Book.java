@@ -85,6 +85,7 @@ public class Book {
         return new BigDecimal(price).subtract(new BigDecimal(price).multiply(new BigDecimal(discount)).movePointLeft(2)).setScale(2, RoundingMode.HALF_UP).floatValue();
     }
 
+    @Transient
     public String discountString() {
         return String.format("Скидка %d%%", discount);
     }

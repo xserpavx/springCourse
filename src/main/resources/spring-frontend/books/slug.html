@@ -12,7 +12,7 @@
 <!--[if gt IE 9]><!--> <html lang="ru" xmlns="http://www.w3.org/1999/xhtml"
                              xmlns:th="http://www.thymeleaf.org"> <!--<![endif]-->
 <head>
-  <title th:text="'Все книги автора'+${author.getName()}">Все книги автора</title>
+  <title th:text="${book.getTitle()}">Наименование книги</title>
   <meta name="description" content="Описание страницы">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -48,24 +48,21 @@
     <div class="wrap">
       <main class="Middle-main">
         <ul class="breadcrumbs">
-          <li class="breadcrumbs-item"><a href="/index.html">Главная</a>
-          </li>
-          <li class="breadcrumbs-item"><a href="/genres/index.html">Книги</a>
-          </li>
-          <li class="breadcrumbs-item breadcrumbs-item_current"><span>Мара и морок</span>
+          <li class="breadcrumbs-item"><a href="/" th:text="#{topbar.main}">Главная</a></li>
+          <li class="breadcrumbs-item"><a href="/genres/main" th:text="#{nav.books}">Книги</a></li>
+          <li class="breadcrumbs-item breadcrumbs-item_current" th:text="${book.getTitle()}"><span>Мара и морок</span>
           </li>
         </ul>
         <div class="Product">
           <div class="ProductCard">
             <div class="ProductCard-look">
-              <div class="ProductCard-photo"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/>
+              <div class="ProductCard-photo"><img th:src="${book.image}" src="/assets/img/content/main/card.jpg" alt="card.jpg"/>
               </div>
             </div>
             <div class="ProductCard-desc">
               <div class="ProductCard-header">
-                <h1 class="ProductCard-title">Мара и морок
-                </h1>
-                <div class="ProductCard-author"><span class="ProductCard-titleProp">Автор:</span>&#32;<a href="#">Лия Арден</a>
+                <h1 class="ProductCard-title" th:text="${book.getTitle()}">Мара и морок</h1>
+                <div class="ProductCard-author"><span class="ProductCard-titleProp">Автор:</span>&#32;<a href="#" th:text="${author.getName()}">Лия Арден</a>
                 </div>
                 <div class="ProductCard-rating"><span class="ProductCard-titleProp">Рейтинг:</span>
                   <button class="trigger trigger_dropdown" type="button">
@@ -335,16 +332,8 @@
                 </div>
                 <div class="ProductCard-tags"><span class="ProductCard-titleProp">Тэги:</span><a href="/tags/">Современные</a>,&#32;<a href="/tags/">Психологическая проза</a>
                 </div>
-                <div class="ProductCard-cost"><span class="ProductCard-titleProp">Цена:</span><span class="ProductCard-priceOld">₽300</span><span class="ProductCard-price">₽180</span>
+                <div class="ProductCard-cost"><span class="ProductCard-titleProp">Цена:</span><span class="ProductCard-priceOld" th:if="${book.getDiscount() != 0}" th:text="${book.getPrice()}">₽300</span><span class="ProductCard-price" th:text="${book.getDiscountPrice()}">₽180</span>
                 </div>
-                <!--+div.-info
-                //+div.-cost
-                //    +div.-price $55.00
-                //    +div.-priceOld $115.00
-                //+div.-compare
-                //    +btn._default
-                //        +img('change.svg','icons/card').-icon
-                -->
               </div>
               <div class="ProductCard-text">
                 <p>Таких, как я, называют Марами - отмеченными самой богиней смерти Мораной. Когда-то у меня и моих шести сестер был свой путь. Тогда люди нас уважали и просили о милосердии. Они приносили нам подношения и молились нам. Но 200 лет назад все изменилось, когда принц Серата осмелился поднять руку на одну из нас. Я пыталась отомстить, но погибли мы все. Теперь правители Аракена, погрязшие в длительной войне со своим соседом Сератом, решили вернуть меня к жизни. Дать второй шанс на месть и свободу, привязав меня к тому, против кого я никогда не пойду. Таких, как он, называют Морок, и их боятся абсолютно все.
@@ -354,7 +343,7 @@
                 <!--+div.-cartElement.-cartElement_amount-->
                 <!--    +Amount._product-->
                 <div class="ProductCard-cartElement">
-                  <button class="btn btn_primary btn_outline" data-sendstatus="KEPT" data-bookid="[1111]" data-btntype="check" data-btnradio="buyblock" data-check="false" data-alttext="Отложена"><span class="btn-icon"><img src="/assets/img/icons/heart.svg" alt="heart.svg"/></span><span class="btn-content">Отложить</span>
+                  <button class="btn btn_primary btn_outline" data-sendstatus="KEPT" data-bookid="[1111]" th:attr="data-bookid=${book.getId()}" data-btntype="check" data-btnradio="buyblock" data-check="false" data-alttext="Отложена"><span class="btn-icon"><img src="/assets/img/icons/heart.svg" alt="heart.svg"/></span><span class="btn-content">Отложить</span>
                   </button>
                 </div>
                 <div class="ProductCard-cartElement">
