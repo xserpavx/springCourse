@@ -24,6 +24,8 @@ public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndS
 
     List<Book> findBookBySlugEquals(String bookSlug);
 
+    List<Book> findBookBySlugIn(String[] bookSlugs);
+
     Page<Book> findBooksByPubDateAfter(Date recentDate, Pageable pageable);
 
     List<Book> findBooksByPubDateAfter(Date recentDate);

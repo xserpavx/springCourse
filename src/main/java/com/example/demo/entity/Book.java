@@ -101,6 +101,21 @@ public class Book {
         return String.format("Скидка %d%%", discount);
     }
 
+    @Transient
+    private String priceToString(float value) {
+        return String.format("₽ %.2f", value);
+    }
+
+    @Transient
+    public String stringPrice() {
+        return priceToString(price);
+    }
+
+    @Transient
+    public String stringDiscountPrice() {
+        return priceToString(getDiscountPrice());
+    }
+
     @Override
     public String toString() {
         return "Book{" +

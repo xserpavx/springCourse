@@ -10,7 +10,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Created on 18.07.2021
@@ -115,5 +118,9 @@ public class BookService {
 
     public List<Book> getBookBySlug(String bookSlug) {
         return bookRepository.findBookBySlugEquals(bookSlug);
+    }
+
+    public List<Book> getBooksBySlug(String[] booksSlug) {
+        return bookRepository.findBookBySlugIn(booksSlug);
     }
 }
