@@ -1,7 +1,6 @@
 package com.example.demo.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 
@@ -12,15 +11,13 @@ import javax.persistence.*;
  **/
 
 @Entity
+@Data
 @Table(name = "book_files")
 public class BookFile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
     private Integer id;
-    @Getter
-    @Setter
+
     @ManyToOne
     @JoinColumn(
             name = "id_book_file_type",
@@ -28,11 +25,9 @@ public class BookFile {
             insertable = false,
             updatable = false)
     private BookFileType idBookFileType;
-    @Getter
-    @Setter
+
     private String hash;
-    @Getter
-    @Setter
+
     @Column(name = "file_name")
     private String fileName;
 }

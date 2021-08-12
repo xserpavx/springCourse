@@ -1,8 +1,7 @@
 package com.example.demo.entity;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -17,34 +16,24 @@ import java.util.List;
 
 @Entity
 @Table(name = "authors")
+@Data
 public class Author {
-    @Getter
-    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Getter
-    @Setter
     @ApiModelProperty("path to author photo image")
     private String photo;
 
-    @Getter
-    @Setter
     @ApiModelProperty("mnemonical author name")
     private String slug;
 
-    @Getter
-    @Setter
     @ApiModelProperty("First name and Last name of author")
     private String name;
 
-    @Getter
-    @Setter
     @ApiModelProperty("biography and fact`s about author")
     private String description;
 
-    @Getter
     @OneToMany(mappedBy = "author")
     private List<Book> authorBooks;
 
@@ -53,7 +42,7 @@ public class Author {
         return name.substring(0, 1).toUpperCase();
     }
 
-    public Author() {
+    private Author() {
         authorBooks = new ArrayList<>();
     }
 

@@ -1,7 +1,6 @@
 package com.example.demo.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 
@@ -11,18 +10,15 @@ import javax.persistence.*;
  * @author roland
  **/
 @Entity
+@Data
 @Table(name = "book_file_types")
 public class BookFileType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
     private Integer id;
-    @Getter
-    @Setter
+
     private String name;
-    @Getter
-    @Setter
+
     private String description;
 
 }
