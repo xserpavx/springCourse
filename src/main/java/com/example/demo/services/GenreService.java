@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created on 02.08.2021
@@ -33,12 +34,8 @@ public class GenreService {
     }
 
     public Genre getGenreBySlug(String slug) {
-        List<Genre> search = genreRepository.findBySlugEquals(slug);
-        if (search != null) {
-            return search.get(0);
-        }
-        //FIXME ничего страшного нет, но не самая лучшая практика null кидать
-        return null;
+        Optional<List<Genre>> search = Optional.of(genreRepository.findBySlugEquals(slug));
+        return search.isPresent() ? search.get().get(0) : new Genre();
     }
 
     public Page<Book> getPageBooksBySlug(String slug, int offset, int limit) {

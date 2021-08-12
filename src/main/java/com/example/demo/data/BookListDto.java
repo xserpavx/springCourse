@@ -13,11 +13,11 @@ import java.util.List;
  **/
 
 public class BookListDto {
-    @Getter
-    @Setter
+
+
     private Integer count;
-    @Getter
-    @Setter
+
+
     private List<Book> books;
 
     public BookListDto(List<Book> books) {
