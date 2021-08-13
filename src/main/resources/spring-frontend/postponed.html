@@ -121,7 +121,7 @@
             <div class="Cart-block Cart-block_total">
             </div>
             <div class="Cart-block">
-              <button class="btn btn_success btn_md Cart-buyAll" data-sendstatus="CART" data-bookid="[1111, 1122, 1133]" th:text="#{buttons.buyAll}">Купить все</button>
+              <button class="btn btn_success btn_md Cart-buyAll" data-sendstatus="CART" data-bookid="[1111, 1122, 1133]" th:attr="data-bookid=${slugs4BuyAll}" th:text="#{buttons.buyAll}">Купить все</button>
             </div>
           </div>
         </form>
