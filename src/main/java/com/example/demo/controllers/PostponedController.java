@@ -1,6 +1,5 @@
 package com.example.demo.controllers;
 
-import com.example.demo.repositories.BookRepository;
 import com.example.demo.services.BookService;
 import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +25,16 @@ public class PostponedController {
         this.controllerService = controllerService;
     }
 
+    @ModelAttribute("ppCount")
+    public int ppCount(@CookieValue(name="ppCount", required = false) String ppCount) {
+        return controllerService.getBooksCount(ppCount);
+    }
+
+    @ModelAttribute("cartCount")
+    public int cartCount(@CookieValue(name="cartCount", required = false) String ppCount) {
+        return controllerService.getBooksCount(ppCount);
+    }
+
     @ModelAttribute("active")
     public String active() {
         return "postponed";
@@ -43,24 +52,42 @@ public class PostponedController {
 
     @PostMapping(value="/books/changeBookStatus")
     public String changeBookStatus(@RequestParam(value = "booksIds") String slug, @RequestParam(value = "status") String status,
-                                   @CookieValue(name="postponedBooks", required = false) String postponedBooks,
-                                   @CookieValue(name="cartBooks", required = false) String cartBooks,
-                                   HttpServletResponse response, Model model
-    ) {
-        BookRepository.BookUserTypes switchBy = BookRepository.BookUserTypes.valueOf(status);
-        String cookieName = "";
-        String result = "";
+                                         @CookieValue(name="postponedBooks", required = false) String postponedBooks,
+                                         @CookieValue(name="cartBooks", required = false) String cartBooks,
+                                         HttpServletResponse response) {
+        var switchBy = ControllerService.ButtonsUI.valueOf(status);
+        String strValue;
         switch (switchBy) {
             case KEPT:
-                controllerService.addCookie("postponedBooks",  controllerService.addCookieValue(postponedBooks, slug), "/books", response);
-                controllerService.addCookie("cartBooks",  controllerService.removeCookieValue(cartBooks, slug), "/books", response);
+                postponedBooks = controllerService.addCookieValue(postponedBooks, slug);
+                controllerService.addCookie("postponedBooks", postponedBooks, "/books", response);
+                cartBooks = controllerService.removeCookieValue(cartBooks, slug);
+                controllerService.addCookie("cartBooks", cartBooks, "/books", response);
+                strValue = controllerService.definePostponedBooksCountCookie(postponedBooks);
+                controllerService.addCookie("ppCount", strValue, "/", response);
+                strValue = controllerService.definePostponedBooksCountCookie(cartBooks);
+                controllerService.addCookie("cartCount", strValue, "/", response);
                 return "redirect:/books/"+slug;
             case CART:
-                // При добавлении книг в cookie корзины - необходимо убрать их из cookie отложено
-                cookieName = "cartBooks";
+                cartBooks = controllerService.addCookieValue(cartBooks, slug);
+                controllerService.addCookie("cartBooks", cartBooks, "/books", response);
+                postponedBooks = controllerService.removeCookieValue(postponedBooks, slug);
+                controllerService.addCookie("postponedBooks", postponedBooks, "/books", response);
+                strValue = controllerService.definePostponedBooksCountCookie(postponedBooks);
+                strValue = controllerService.definePostponedBooksCountCookie(cartBooks);
+                controllerService.addCookie("cartCount", strValue, "/", response);
                 break;
+            case UNLINK_CART:
+                break;
+            case UNLINK:
+                postponedBooks = controllerService.removeCookieValue(postponedBooks, slug);
+                controllerService.addCookie("postponedBooks", postponedBooks, "/books", response);
+                strValue = controllerService.definePostponedBooksCountCookie(postponedBooks);
+                controllerService.addCookie("ppCount", strValue, "/", response);
+                return "redirect:postponed";
+            case CART_ALL:
         }
 
-        return result;
+        return "/";
     }
 }

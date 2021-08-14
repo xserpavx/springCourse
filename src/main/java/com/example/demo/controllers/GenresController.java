@@ -1,14 +1,12 @@
 package com.example.demo.controllers;
 
 import com.example.demo.entity.Genre;
+import com.example.demo.services.ControllerService;
 import com.example.demo.services.GenreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,10 +23,22 @@ import java.util.Map;
 public class GenresController {
 
     private final GenreService genreService;
+    private final ControllerService controllerService;
 
     @Autowired
-    public GenresController(GenreService genreService) {
+    public GenresController(GenreService genreService, ControllerService controllerService) {
         this.genreService = genreService;
+        this.controllerService = controllerService;
+    }
+
+    @ModelAttribute("ppCount")
+    public int ppCount(@CookieValue(name="ppCount", required = false) String ppCount) {
+        return controllerService.getBooksCount(ppCount);
+    }
+
+    @ModelAttribute("cartCount")
+    public int cartCount(@CookieValue(name="cartCount", required = false) String ppCount) {
+        return controllerService.getBooksCount(ppCount);
     }
 
     @ModelAttribute("active")

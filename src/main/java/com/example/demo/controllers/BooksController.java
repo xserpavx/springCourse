@@ -4,12 +4,11 @@ import com.example.demo.entity.Author;
 import com.example.demo.entity.Book;
 import com.example.demo.services.AuthorService;
 import com.example.demo.services.BookService;
+import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,11 +23,24 @@ public class BooksController {
 
     private final BookService bookService;
     private final AuthorService authorService;
+    private final ControllerService controllerService;
 
     @Autowired
-    public BooksController(BookService bookService, AuthorService authorService) {
+    public BooksController(BookService bookService, AuthorService authorService, ControllerService controllerService) {
         this.bookService = bookService;
         this.authorService = authorService;
+        this.controllerService = controllerService;
+    }
+
+    @ModelAttribute("ppCount")
+    public int ppCount(@CookieValue(name="ppCount", required = false) String ppCount, @CookieValue(name="postponedBooks", required = false) String postponedBooks) {
+        System.out.println(postponedBooks);
+        return controllerService.getBooksCount(ppCount);
+    }
+
+    @ModelAttribute("cartCount")
+    public int cartCount(@CookieValue(name="cartCount", required = false) String ppCount) {
+        return controllerService.getBooksCount(ppCount);
     }
 
     @GetMapping("/authorPage/{slug}")

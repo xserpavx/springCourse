@@ -3,13 +3,11 @@ package com.example.demo.controllers;
 
 import com.example.demo.entity.Book;
 import com.example.demo.services.BookService;
+import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,15 +21,27 @@ import java.util.List;
 public class SearchController {
 
     private final BookService bookService;
+    private final ControllerService controllerService;
 
     @Autowired
-    public SearchController(BookService bookService) {
+    public SearchController(BookService bookService, ControllerService controllerService) {
         this.bookService = bookService;
+        this.controllerService = controllerService;
     }
 
     @ModelAttribute("active")
     public String active() {
         return "search";
+    }
+
+    @ModelAttribute("ppCount")
+    public int ppCount(@CookieValue(name="ppCount", required = false) String ppCount) {
+        return controllerService.getBooksCount(ppCount);
+    }
+
+    @ModelAttribute("cartCount")
+    public int cartCount(@CookieValue(name="cartCount", required = false) String ppCount) {
+        return controllerService.getBooksCount(ppCount);
     }
 
     private String endless(Integer count) {

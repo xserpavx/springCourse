@@ -2,13 +2,11 @@ package com.example.demo.controllers;
 
 import com.example.demo.entity.Author;
 import com.example.demo.services.AuthorService;
+import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -22,10 +20,22 @@ import java.util.Map;
 @RequestMapping("/authors")
 public class AuthorsController {
     private final AuthorService authorService;
+    private final ControllerService controllerService;
 
     @Autowired
-    public AuthorsController(AuthorService authorService) {
+    public AuthorsController(AuthorService authorService, ControllerService controllerService) {
         this.authorService = authorService;
+        this.controllerService = controllerService;
+    }
+
+    @ModelAttribute("ppCount")
+    public int ppCount(@CookieValue(name="ppCount", required = false) String ppCount) {
+        return controllerService.getBooksCount(ppCount);
+    }
+
+    @ModelAttribute("cartCount")
+    public int cartCount(@CookieValue(name="cartCount", required = false) String ppCount) {
+        return controllerService.getBooksCount(ppCount);
     }
 
     @ModelAttribute("active")

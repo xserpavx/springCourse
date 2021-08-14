@@ -19,6 +19,17 @@ public class ControllerService {
     @Autowired
     ControllerService() {}
 
+    public int getBooksCount(String ppCount) {
+        try {
+            return ppCount == null || ppCount.isEmpty() ? 0 : Integer.parseInt(ppCount);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    public static enum ButtonsUI {KEPT, CART, UNLINK_CART, UNLINK, CART_ALL}
+
     /** Удаляет из cookie список передаваемых значений. Разделитель между значениями "/"
      * @param cookieValue текущее значение cookie
      * @param removeCookieValues список удаляемых значений
@@ -28,12 +39,13 @@ public class ControllerService {
         String result = cookieValue != null ? cookieValue : "";
         String[] removeValues = removeCookieValues.split("/");
         for (String remove : removeValues) {
+            // Удаляем значение из середины
+            result = result.replaceFirst("^(.*)/"+remove+"/?(.*)?", "$1/$2");
             // Удаляем значение из начала строки
             result = result.replaceFirst("^"+remove+"/?(.*)?", "$1");
             // Удаляем значение из конца строки
-            result = result.replaceFirst("^(.*)/e2$", "$1");
-            // Удаляем значение из середины
-            result = result.replaceFirst("^(.*)/e2/?(.*)?", "$1$2");
+            result = result.replaceFirst("^(.*)/"+remove+"$", "$1");
+
         }
         return result;
     }
@@ -65,10 +77,19 @@ public class ControllerService {
      * @param response HttpServletResponse в который добавляется cookie
      */
     public void addCookie(String cookieName, String cookieValue, String cookiePath, HttpServletResponse response) {
-        if (!cookieValue.isEmpty()) {
+//        if (!cookieValue.isEmpty()) {
             Cookie cookie = new Cookie(cookieName, cookieValue);
             cookie.setPath(cookiePath);
             response.addCookie(cookie);
+//        }
+    }
+
+    public String definePostponedBooksCountCookie(String cookieValue) {
+        if (cookieValue == null || cookieValue.isEmpty()) {
+            return "0";
+        } else {
+            var s = cookieValue.split("/");
+            return String.format("%d", s.length);
         }
     }
 }
