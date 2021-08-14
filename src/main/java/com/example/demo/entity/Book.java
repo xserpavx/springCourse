@@ -19,7 +19,6 @@ import java.util.Date;
 @Entity
 @Data
 @Table(name = "books")
-@Dat
 @ApiModel(description = "entity representing a book")
 public class Book {
 
