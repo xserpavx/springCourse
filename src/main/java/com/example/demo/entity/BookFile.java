@@ -17,7 +17,6 @@ public class BookFile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     @ManyToOne
     @JoinColumn(
             name = "id_book_file_type",
@@ -25,9 +24,7 @@ public class BookFile {
             insertable = false,
             updatable = false)
     private BookFileType idBookFileType;
-
     private String hash;
-
     @Column(name = "file_name")
     private String fileName;
 }

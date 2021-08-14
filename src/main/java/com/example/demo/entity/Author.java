@@ -12,11 +12,11 @@ import java.util.List;
  *
  * @author roland
  **/
-//TODO вместо бесконечных @Getter @Setter почему не ставите одну аннотацию @Data над классом?
 
 @Entity
-@Table(name = "authors")
 @Data
+@Table(name = "authors")
+
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
