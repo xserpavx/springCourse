@@ -57,6 +57,10 @@ public class Book {
     @Column(columnDefinition = "float default 0.0")
     private float popular;
 
+    @ApiModelProperty("average users rating of book")
+    @Column(columnDefinition = "int default 0")
+    private int rating;
+
     @JsonProperty("authors")
     public String getAuthors() {
         return author.getName();
