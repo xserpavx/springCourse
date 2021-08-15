@@ -123,4 +123,8 @@ public class BookService {
     public List<Book> getBooksBySlug(String[] booksSlug) {
         return bookRepository.findBookBySlugIn(booksSlug);
     }
+
+    public Integer getRateCount(int id) {
+        return bookRepository.getBookRateCount(id);
+    }
 }

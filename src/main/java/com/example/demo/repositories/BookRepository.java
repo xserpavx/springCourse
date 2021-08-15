@@ -12,6 +12,8 @@ import java.util.List;
 
 public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndSortingRepository<Book, Integer> {
 
+
+
     public static enum BookUserTypes {EMPTY, KEPT, CART, PAID, ARCHIVED}
 
     List<Book> findBookByOrderByPubDateDesc();
@@ -46,6 +48,9 @@ public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndS
 
     @Query(value = "select b.* from authors a left outer join books b on a.id = b.id_author where a.slug = ?1", nativeQuery = true)
     Page<Book> getBooksBySlugAuthor(String slug, Pageable pageable);
+
+    @Query(value = "select count(but.id) from book_user_rating but left outer join books b on but.id_book = b.id where id_book = ?1", nativeQuery = true)
+    Integer getBookRateCount(int id);
 
     Page<Book> findBooksByTitleIn(String[] titles, Pageable pageable);
 

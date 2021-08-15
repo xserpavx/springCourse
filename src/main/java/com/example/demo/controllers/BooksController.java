@@ -59,6 +59,7 @@ public class BooksController {
         if (books.size() != 0) {
             model.addAttribute("book", books.get(0));
             model.addAttribute("author", books.get(0).getAuthor());
+            model.addAttribute("rateCount", bookService.getRateCount(books.get(0).getId()));
         }
         return "books/slug";
     }
