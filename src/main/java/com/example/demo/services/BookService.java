@@ -127,4 +127,12 @@ public class BookService {
     public Integer getRateCount(int id) {
         return bookRepository.getBookRateCount(id);
     }
+
+    public List<Integer> getRateCountByRateValue(int idBook) {
+        List<Integer> rateCount = new ArrayList<>();
+        for (int i = 5; i > 0; i--) {
+            rateCount.add(bookRepository.getRateCountByRateValue(idBook, i));
+        }
+        return rateCount;
+    }
 }
