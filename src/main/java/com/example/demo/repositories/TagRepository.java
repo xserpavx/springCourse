@@ -11,4 +11,6 @@ public interface TagRepository extends JpaRepository<Tag, Integer> {
     int maxTagCount();
 
     Tag findTagById(Integer id);
+
+    Tag findTagByTagName(String tagName);
 }

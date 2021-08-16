@@ -10,6 +10,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created on 18.07.2021
@@ -95,6 +96,9 @@ public class Book {
     public String stringDiscountPrice() {
         return priceToString(getDiscountPrice());
     }
+
+    @ManyToMany(mappedBy = "taggedBooks")
+    List<Tag> bookTags;
 
     @Override
     public String toString() {

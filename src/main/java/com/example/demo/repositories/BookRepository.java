@@ -1,6 +1,7 @@
 package com.example.demo.repositories;
 
 import com.example.demo.entity.Book;
+import com.example.demo.entity.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -42,6 +43,9 @@ public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndS
 
     @Query(value = "select b.* from book2tag left outer join books b on b.id = book2tag.id_book left outer join tags on tags.id = book2tag.id_tag where tag_name = ?1", nativeQuery = true)
     Page<Book> getBooksByTag(String tag_name, Pageable pageable);
+
+    @Query(value = "select t.* from book2tag b2t left outer join tags t on b2t.id_tag = t.id where id_book = ?1", nativeQuery = true)
+    List<Tag> getTagsOfBook(int id_book);
 
     @Query(value = "select b.* from genres g left outer join book2genre b2g on b2g.id_genre = g.id left outer join books b on b2g.id_book = b.id where g.slug = ?1", nativeQuery = true)
     Page<Book> getBooksByGenre(String slug, Pageable pageable);

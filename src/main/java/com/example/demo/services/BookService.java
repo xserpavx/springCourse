@@ -10,10 +10,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created on 18.07.2021
@@ -134,5 +131,13 @@ public class BookService {
             rateCount.add(bookRepository.getRateCountByRateValue(idBook, i));
         }
         return rateCount;
+    }
+
+    public String getListTags4Book(int idBook) {
+        StringJoiner sj = new StringJoiner(", ");
+        for (Tag tag : bookRepository.getTagsOfBook(idBook)) {
+            sj.add(tag.getTagName());
+        }
+        return sj.toString();
     }
 }

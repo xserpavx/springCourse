@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 /**
  * Created on 31.07.2021
@@ -22,12 +22,12 @@ public class Tag {
 
     private String tagName;
 
-    @ManyToMany
+    @OneToMany
     @JoinTable(
             name = "book2tag",
             joinColumns = @JoinColumn(name = "id_tag"),
             inverseJoinColumns = @JoinColumn(name = "id_book"))
-    Set<Book> taggedBooks;
+    List<Book> taggedBooks;
 
     @Transient
     public String tagClassName(int classLength) {
