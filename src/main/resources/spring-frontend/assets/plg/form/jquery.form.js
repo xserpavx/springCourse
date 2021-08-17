@@ -906,7 +906,7 @@ $.fn.formToArray = function(semantic, elements) {
             continue;
         }
 
-        v = $.fieldValue(el, true);
+        v = $.fieldValue(el, 1);
         if (v && v.constructor == Array) {
             if (elements)
                 elements.push(el);

@@ -35,4 +35,13 @@ public class BookReviewLike {
     @ApiModelProperty("like/dislike of book review")
     private short value;
 
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "id_review", insertable = false, updatable = false)
+//    private BookReview ratedBookReview;
+
+//    @ManyToOne
+//    @JoinColumn(name = "id_review", referencedColumnName = "id", insertable = false, updatable = false)
+//    @JsonIgnore
+//    private BookReview bookReview;
+
 }

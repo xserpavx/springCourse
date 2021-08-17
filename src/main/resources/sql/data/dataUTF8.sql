@@ -1,5 +1,5 @@
-delete from book_review;
 delete from book_review_like;
+delete from book_review;
 delete from book2user;
 delete from book2genre;
 delete from book2tag;
@@ -2271,1560 +2271,2502 @@ insert into book_user_rating (id_book, id_user, time, rate) values (2, 145, '16.
 insert into book_user_rating (id_book, id_user, time, rate) values (88, 106, '08.04.2021', 3);
 insert into book_user_rating (id_book, id_user, time, rate) values (100, 64, '26.08.2021', 5);
 
-insert into book_review (id_user, id_book, time, text) values (196, 51, '12.05.2021', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
-insert into book_review (id_user, id_book, time, text) values (57, 47, '07.11.2020', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
-insert into book_review (id_user, id_book, time, text) values (234, 43, '17.01.2020', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+insert into book_review (id, id_user, id_book, time, text) values (1, 102, 48, '2020-02-08 21:41:19', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
+insert into book_review (id, id_user, id_book, time, text) values (2, 186, 68, '2021-12-08 12:44:45', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
 
 Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
-insert into book_review (id_user, id_book, time, text) values (29, 65, '29.02.2020', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
-
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
-insert into book_review (id_user, id_book, time, text) values (124, 48, '03.12.2020', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
-insert into book_review (id_user, id_book, time, text) values (7, 11, '22.11.2021', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (60, 20, '13.06.2021', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
-
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
-insert into book_review (id_user, id_book, time, text) values (83, 47, '16.03.2021', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
-
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
-
-Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
-insert into book_review (id_user, id_book, time, text) values (143, 21, '21.02.2020', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
-
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
-insert into book_review (id_user, id_book, time, text) values (12, 56, '26.05.2021', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
-insert into book_review (id_user, id_book, time, text) values (209, 25, '02.09.2021', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
-
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
-insert into book_review (id_user, id_book, time, text) values (9, 17, '28.10.2020', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
-insert into book_review (id_user, id_book, time, text) values (76, 25, '29.03.2021', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
-
-Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (7, 66, '23.05.2021', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
-insert into book_review (id_user, id_book, time, text) values (80, 32, '22.03.2021', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.');
-insert into book_review (id_user, id_book, time, text) values (171, 23, '06.12.2021', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
-
-Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
-insert into book_review (id_user, id_book, time, text) values (101, 45, '03.12.2021', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (214, 18, '26.05.2021', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (90, 18, '22.08.2020', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (191, 37, '07.01.2020', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
-
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
-insert into book_review (id_user, id_book, time, text) values (246, 16, '18.05.2021', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (203, 39, '25.10.2021', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (21, 12, '25.11.2020', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (51, 18, '23.08.2021', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (8, 36, '10.07.2020', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (166, 18, '10.02.2021', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (79, 23, '12.07.2020', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
-
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
-
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
-insert into book_review (id_user, id_book, time, text) values (26, 8, '11.02.2020', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
-
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
-
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
-insert into book_review (id_user, id_book, time, text) values (169, 31, '07.02.2021', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (39, 51, '20.10.2021', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (66, 37, '19.08.2020', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (208, 24, '03.05.2021', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
-
-Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
-
-Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
-insert into book_review (id_user, id_book, time, text) values (78, 44, '25.06.2021', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
-insert into book_review (id_user, id_book, time, text) values (152, 26, '20.12.2020', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
-
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (173, 51, '12.02.2020', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (59, 23, '19.02.2020', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
-
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
-insert into book_review (id_user, id_book, time, text) values (43, 22, '24.03.2021', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
-insert into book_review (id_user, id_book, time, text) values (216, 19, '02.01.2021', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (159, 20, '30.04.2021', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (42, 67, '26.06.2021', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
-insert into book_review (id_user, id_book, time, text) values (174, 18, '21.03.2021', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (91, 52, '04.01.2021', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
-
-Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
-insert into book_review (id_user, id_book, time, text) values (135, 53, '16.09.2021', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
-insert into book_review (id_user, id_book, time, text) values (11, 62, '22.05.2021', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (88, 28, '26.02.2020', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (47, 11, '29.08.2020', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
-
-Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (40, 35, '14.05.2021', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
-
-Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
-insert into book_review (id_user, id_book, time, text) values (244, 9, '29.09.2021', 'In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
-insert into book_review (id_user, id_book, time, text) values (48, 5, '01.02.2021', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
-insert into book_review (id_user, id_book, time, text) values (58, 7, '29.03.2021', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
-
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
-insert into book_review (id_user, id_book, time, text) values (92, 59, '07.08.2021', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
-
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
-insert into book_review (id_user, id_book, time, text) values (25, 16, '17.01.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
-insert into book_review (id_user, id_book, time, text) values (199, 1, '18.12.2020', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
-
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
-insert into book_review (id_user, id_book, time, text) values (209, 48, '02.01.2020', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (90, 27, '30.07.2020', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
-
-Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
-insert into book_review (id_user, id_book, time, text) values (223, 8, '06.09.2020', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
-
-Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (93, 20, '01.09.2021', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
-insert into book_review (id_user, id_book, time, text) values (167, 36, '03.01.2020', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (160, 14, '12.11.2021', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
-insert into book_review (id_user, id_book, time, text) values (221, 4, '06.05.2020', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.
-
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
-insert into book_review (id_user, id_book, time, text) values (126, 33, '05.10.2021', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
-
-Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
-insert into book_review (id_user, id_book, time, text) values (154, 7, '18.06.2021', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
-insert into book_review (id_user, id_book, time, text) values (71, 47, '26.12.2020', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
-insert into book_review (id_user, id_book, time, text) values (91, 3, '25.06.2020', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
-
-Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
-insert into book_review (id_user, id_book, time, text) values (159, 17, '01.08.2020', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (201, 20, '23.10.2020', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (198, 67, '29.11.2020', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (49, 63, '18.08.2020', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.
-
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
-insert into book_review (id_user, id_book, time, text) values (162, 42, '24.03.2020', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
-insert into book_review (id_user, id_book, time, text) values (138, 58, '29.01.2020', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (95, 9, '01.05.2021', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
-insert into book_review (id_user, id_book, time, text) values (210, 15, '07.05.2020', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
-insert into book_review (id_user, id_book, time, text) values (33, 8, '14.06.2020', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
-insert into book_review (id_user, id_book, time, text) values (226, 40, '15.06.2020', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
-
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
-insert into book_review (id_user, id_book, time, text) values (166, 28, '07.04.2020', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (152, 45, '12.12.2020', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (4, 39, '10.02.2021', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
-insert into book_review (id_user, id_book, time, text) values (184, 44, '27.08.2021', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
-
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (34, 16, '31.05.2020', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (246, 19, '28.11.2021', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (96, 19, '14.02.2020', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
-
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (201, 31, '26.08.2021', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
-insert into book_review (id_user, id_book, time, text) values (84, 50, '26.08.2020', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
-
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
-insert into book_review (id_user, id_book, time, text) values (93, 59, '02.11.2020', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+insert into book_review (id, id_user, id_book, time, text) values (3, 39, 66, '2020-07-09 10:57:00', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (4, 33, 37, '2021-07-16 04:49:07', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
 
 Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
-insert into book_review (id_user, id_book, time, text) values (101, 56, '13.11.2021', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (247, 37, '18.10.2020', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (184, 40, '04.09.2021', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+insert into book_review (id, id_user, id_book, time, text) values (5, 12, 1, '2021-08-04 07:44:57', 'Fusce consequat. Nulla nisl. Nunc nisl.
 
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (57, 10, '24.07.2020', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
-insert into book_review (id_user, id_book, time, text) values (100, 11, '03.10.2020', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (36, 18, '22.01.2021', 'Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (9, 4, '29.04.2021', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
 
 In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (43, 51, '10.08.2020', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
-insert into book_review (id_user, id_book, time, text) values (207, 53, '11.09.2020', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
-insert into book_review (id_user, id_book, time, text) values (162, 35, '08.11.2021', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (192, 37, '21.05.2020', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
-
-Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (142, 43, '15.11.2020', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
+insert into book_review (id, id_user, id_book, time, text) values (6, 95, 49, '2021-06-15 16:42:26', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
 
 Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
 
 Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (189, 21, '24.12.2021', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
-insert into book_review (id_user, id_book, time, text) values (74, 19, '04.01.2021', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+insert into book_review (id, id_user, id_book, time, text) values (7, 163, 41, '2020-10-31 03:25:02', 'Fusce consequat. Nulla nisl. Nunc nisl.
 
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (8, 142, 50, '2021-09-01 12:31:42', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (9, 141, 46, '2020-10-09 08:05:36', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
 
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
-insert into book_review (id_user, id_book, time, text) values (234, 19, '10.10.2020', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
-insert into book_review (id_user, id_book, time, text) values (6, 44, '13.09.2021', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (98, 33, '10.03.2020', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.
-
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
-insert into book_review (id_user, id_book, time, text) values (131, 53, '31.05.2020', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
-insert into book_review (id_user, id_book, time, text) values (164, 48, '13.08.2021', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (135, 14, '11.05.2021', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
-insert into book_review (id_user, id_book, time, text) values (77, 10, '25.12.2021', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (240, 11, '22.04.2020', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
-insert into book_review (id_user, id_book, time, text) values (245, 18, '18.07.2020', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
-insert into book_review (id_user, id_book, time, text) values (193, 4, '07.04.2021', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
-
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
-insert into book_review (id_user, id_book, time, text) values (85, 65, '20.01.2020', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
-insert into book_review (id_user, id_book, time, text) values (178, 56, '15.04.2021', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
-insert into book_review (id_user, id_book, time, text) values (34, 31, '20.12.2021', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
-insert into book_review (id_user, id_book, time, text) values (219, 7, '23.04.2021', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
-
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
-
-Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
-insert into book_review (id_user, id_book, time, text) values (239, 24, '28.10.2020', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
-
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
-insert into book_review (id_user, id_book, time, text) values (10, 38, '25.07.2020', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (190, 66, '09.08.2021', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
-
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
-insert into book_review (id_user, id_book, time, text) values (205, 55, '10.05.2021', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
-insert into book_review (id_user, id_book, time, text) values (54, 12, '19.06.2020', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
-insert into book_review (id_user, id_book, time, text) values (33, 3, '07.12.2021', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Phasellus in felis. Donec semper sapien a libero. Nam dui.');
+insert into book_review (id, id_user, id_book, time, text) values (10, 65, 17, '2020-08-12 23:41:48', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
 Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
-insert into book_review (id_user, id_book, time, text) values (141, 17, '07.11.2020', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
-insert into book_review (id_user, id_book, time, text) values (238, 4, '05.09.2021', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
-
-Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
-insert into book_review (id_user, id_book, time, text) values (31, 30, '21.12.2020', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
-
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (153, 36, '07.01.2020', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (192, 44, '20.03.2021', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
-
-Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
-
-Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
-insert into book_review (id_user, id_book, time, text) values (144, 5, '09.04.2020', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
-insert into book_review (id_user, id_book, time, text) values (231, 2, '27.10.2020', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
-insert into book_review (id_user, id_book, time, text) values (171, 3, '03.05.2021', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
-
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
-insert into book_review (id_user, id_book, time, text) values (50, 3, '15.11.2020', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (206, 66, '03.04.2021', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (123, 44, '28.11.2020', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
-insert into book_review (id_user, id_book, time, text) values (122, 60, '14.02.2021', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
-
-Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (61, 22, '07.07.2020', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (111, 30, '20.12.2021', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (44, 37, '15.01.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (72, 4, '15.12.2020', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
-
-Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
-insert into book_review (id_user, id_book, time, text) values (106, 10, '11.04.2021', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
-
-Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
-insert into book_review (id_user, id_book, time, text) values (86, 37, '04.10.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (50, 48, '17.07.2020', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
-insert into book_review (id_user, id_book, time, text) values (76, 42, '11.02.2020', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
-insert into book_review (id_user, id_book, time, text) values (193, 15, '15.01.2020', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
-insert into book_review (id_user, id_book, time, text) values (208, 26, '04.12.2020', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (247, 48, '27.11.2021', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
-insert into book_review (id_user, id_book, time, text) values (105, 30, '03.12.2021', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
-insert into book_review (id_user, id_book, time, text) values (28, 63, '05.06.2020', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
-
-Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
-insert into book_review (id_user, id_book, time, text) values (227, 26, '25.06.2020', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (120, 30, '26.01.2020', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
-
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
-
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
-insert into book_review (id_user, id_book, time, text) values (223, 6, '21.12.2020', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.');
-insert into book_review (id_user, id_book, time, text) values (40, 24, '02.10.2020', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
-
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (82, 20, '16.11.2021', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.');
-insert into book_review (id_user, id_book, time, text) values (31, 54, '16.04.2020', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
-insert into book_review (id_user, id_book, time, text) values (235, 52, '26.08.2020', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.');
-insert into book_review (id_user, id_book, time, text) values (68, 64, '01.02.2021', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (235, 35, '01.04.2020', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
-
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
-insert into book_review (id_user, id_book, time, text) values (138, 51, '17.01.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (196, 56, '18.02.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (237, 1, '02.06.2020', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
-insert into book_review (id_user, id_book, time, text) values (181, 10, '07.01.2021', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
-
-Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (227, 17, '23.08.2021', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (32, 55, '08.07.2020', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
-
-Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.');
-insert into book_review (id_user, id_book, time, text) values (209, 55, '19.10.2020', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
-insert into book_review (id_user, id_book, time, text) values (43, 29, '01.08.2021', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
-insert into book_review (id_user, id_book, time, text) values (32, 21, '27.11.2021', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (66, 31, '17.07.2021', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (169, 49, '10.12.2021', 'Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (116, 53, '18.09.2021', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
-insert into book_review (id_user, id_book, time, text) values (29, 23, '22.06.2020', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (206, 54, '27.06.2021', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (69, 51, '28.08.2020', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
-insert into book_review (id_user, id_book, time, text) values (170, 43, '02.09.2021', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
-insert into book_review (id_user, id_book, time, text) values (198, 51, '19.06.2021', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (115, 52, '06.05.2021', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (250, 6, '29.09.2020', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (76, 66, '12.08.2020', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
-
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
-insert into book_review (id_user, id_book, time, text) values (17, 13, '11.05.2020', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
-insert into book_review (id_user, id_book, time, text) values (91, 16, '26.10.2020', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (65, 52, '08.04.2021', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
-insert into book_review (id_user, id_book, time, text) values (28, 60, '10.10.2021', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
-
-Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
-insert into book_review (id_user, id_book, time, text) values (127, 46, '16.12.2021', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (219, 53, '10.03.2020', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (80, 31, '17.02.2021', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
-
-Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
-
-Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
-insert into book_review (id_user, id_book, time, text) values (185, 10, '27.11.2020', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (160, 45, '07.12.2021', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
-insert into book_review (id_user, id_book, time, text) values (216, 49, '07.03.2020', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (184, 28, '01.10.2020', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
-
-Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (124, 54, '18.10.2021', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
-
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
-insert into book_review (id_user, id_book, time, text) values (44, 47, '23.11.2020', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
-insert into book_review (id_user, id_book, time, text) values (43, 41, '29.03.2020', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
-
-Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
-insert into book_review (id_user, id_book, time, text) values (115, 6, '28.10.2021', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (19, 31, '14.05.2020', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (84, 11, '05.08.2021', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (91, 5, '08.03.2020', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
-insert into book_review (id_user, id_book, time, text) values (150, 16, '04.06.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (136, 44, '04.05.2020', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
-insert into book_review (id_user, id_book, time, text) values (12, 16, '21.04.2021', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (223, 46, '27.07.2020', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
-insert into book_review (id_user, id_book, time, text) values (32, 24, '18.05.2020', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (19, 23, '11.01.2020', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
-
-Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (67, 24, '06.12.2020', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
-
-Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
-insert into book_review (id_user, id_book, time, text) values (230, 8, '21.06.2020', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
-
-Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (50, 18, '12.12.2021', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
-insert into book_review (id_user, id_book, time, text) values (75, 38, '20.12.2020', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (249, 36, '07.10.2020', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
-insert into book_review (id_user, id_book, time, text) values (247, 48, '10.05.2020', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (82, 35, '25.03.2021', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
-
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
-insert into book_review (id_user, id_book, time, text) values (43, 65, '10.05.2021', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (227, 15, '07.05.2020', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (26, 22, '28.03.2021', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
-insert into book_review (id_user, id_book, time, text) values (35, 27, '20.11.2021', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
-insert into book_review (id_user, id_book, time, text) values (39, 14, '24.11.2021', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (164, 29, '13.10.2021', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (89, 19, '18.07.2020', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
-
-Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
-insert into book_review (id_user, id_book, time, text) values (69, 61, '09.05.2021', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
-insert into book_review (id_user, id_book, time, text) values (110, 32, '21.11.2021', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
-
-Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
-insert into book_review (id_user, id_book, time, text) values (37, 35, '17.07.2020', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
-
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
-
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
-insert into book_review (id_user, id_book, time, text) values (36, 46, '11.09.2021', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (157, 11, '14.07.2021', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.');
-insert into book_review (id_user, id_book, time, text) values (179, 16, '10.10.2021', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (39, 47, '20.09.2020', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
-insert into book_review (id_user, id_book, time, text) values (114, 14, '13.08.2021', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
-insert into book_review (id_user, id_book, time, text) values (188, 60, '16.02.2020', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
-insert into book_review (id_user, id_book, time, text) values (27, 5, '30.07.2021', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (63, 47, '15.02.2020', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (13, 67, '05.04.2021', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
-insert into book_review (id_user, id_book, time, text) values (109, 3, '07.08.2020', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
-
-Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (104, 55, '04.03.2020', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (50, 25, '19.04.2020', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
-
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
-
-Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (71, 38, '19.05.2020', 'Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (194, 32, '21.04.2021', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
-
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
-insert into book_review (id_user, id_book, time, text) values (185, 65, '15.05.2020', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (128, 15, '22.10.2021', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (137, 36, '02.04.2021', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (19, 26, '23.06.2020', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
-
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
-
-Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (148, 63, '17.03.2021', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
-
-Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
-
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
-insert into book_review (id_user, id_book, time, text) values (77, 37, '30.11.2020', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
-insert into book_review (id_user, id_book, time, text) values (70, 35, '24.02.2020', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
-insert into book_review (id_user, id_book, time, text) values (70, 57, '24.12.2021', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
-
-Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
-insert into book_review (id_user, id_book, time, text) values (229, 20, '13.02.2020', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
-
-Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
-insert into book_review (id_user, id_book, time, text) values (225, 33, '21.11.2021', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
-
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
-
-Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (74, 4, '11.03.2021', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
-insert into book_review (id_user, id_book, time, text) values (85, 47, '01.08.2021', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
-insert into book_review (id_user, id_book, time, text) values (229, 22, '18.05.2021', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
-
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (17, 44, '31.03.2020', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
-insert into book_review (id_user, id_book, time, text) values (197, 63, '04.11.2021', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (27, 43, '09.03.2020', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
-insert into book_review (id_user, id_book, time, text) values (242, 28, '14.10.2021', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (158, 13, '27.09.2020', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
-insert into book_review (id_user, id_book, time, text) values (11, 67, '19.04.2020', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (111, 9, '16.09.2021', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
-insert into book_review (id_user, id_book, time, text) values (154, 40, '20.11.2020', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
-insert into book_review (id_user, id_book, time, text) values (243, 4, '27.06.2020', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (177, 36, '08.12.2021', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
-
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
-insert into book_review (id_user, id_book, time, text) values (46, 38, '01.05.2020', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.');
-insert into book_review (id_user, id_book, time, text) values (175, 41, '22.03.2020', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (186, 66, '22.07.2021', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
-
-Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (82, 32, '26.07.2020', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
-insert into book_review (id_user, id_book, time, text) values (186, 39, '09.09.2020', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (243, 49, '11.08.2020', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
-insert into book_review (id_user, id_book, time, text) values (107, 19, '25.10.2020', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (160, 41, '17.04.2020', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (208, 56, '12.08.2020', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (10, 13, '25.07.2021', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (69, 16, '27.03.2020', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
-
-Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
-
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
-insert into book_review (id_user, id_book, time, text) values (35, 67, '05.12.2021', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (117, 15, '19.09.2020', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
-
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
-
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
-insert into book_review (id_user, id_book, time, text) values (91, 59, '28.09.2020', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.');
-insert into book_review (id_user, id_book, time, text) values (12, 47, '27.11.2021', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
-
-Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
-insert into book_review (id_user, id_book, time, text) values (80, 1, '21.10.2020', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (203, 6, '16.02.2021', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
-insert into book_review (id_user, id_book, time, text) values (101, 57, '15.09.2021', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
-insert into book_review (id_user, id_book, time, text) values (41, 4, '04.02.2021', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
-insert into book_review (id_user, id_book, time, text) values (214, 7, '29.03.2021', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
-insert into book_review (id_user, id_book, time, text) values (18, 34, '10.05.2020', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (188, 41, '28.04.2020', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
-insert into book_review (id_user, id_book, time, text) values (212, 39, '04.02.2020', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (197, 41, '09.12.2021', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
-
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
-insert into book_review (id_user, id_book, time, text) values (212, 35, '22.08.2021', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
-
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (80, 40, '10.01.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (2, 44, '23.02.2020', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
-insert into book_review (id_user, id_book, time, text) values (207, 1, '20.10.2020', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
-
-Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
-insert into book_review (id_user, id_book, time, text) values (184, 61, '19.10.2021', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (72, 34, '16.01.2021', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (162, 54, '14.05.2021', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (62, 4, '15.03.2021', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
-
-Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
-insert into book_review (id_user, id_book, time, text) values (49, 35, '13.02.2020', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
-
-Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
-insert into book_review (id_user, id_book, time, text) values (210, 5, '27.07.2020', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (53, 16, '16.10.2021', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
-
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
-insert into book_review (id_user, id_book, time, text) values (232, 30, '25.03.2020', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
-insert into book_review (id_user, id_book, time, text) values (219, 14, '08.10.2020', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
-
-Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
-
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
-insert into book_review (id_user, id_book, time, text) values (52, 5, '26.04.2020', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.');
-insert into book_review (id_user, id_book, time, text) values (48, 29, '12.10.2020', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
-
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
-insert into book_review (id_user, id_book, time, text) values (242, 25, '13.09.2020', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
-
-Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (97, 48, '22.09.2020', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (163, 63, '29.11.2021', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
-insert into book_review (id_user, id_book, time, text) values (145, 54, '18.07.2020', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
-insert into book_review (id_user, id_book, time, text) values (69, 37, '01.01.2021', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (156, 18, '22.08.2021', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
-
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (110, 47, '27.10.2020', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
-
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
-insert into book_review (id_user, id_book, time, text) values (240, 46, '19.05.2020', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (203, 53, '20.07.2020', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
-insert into book_review (id_user, id_book, time, text) values (6, 44, '07.06.2020', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
-
-Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (195, 8, '30.03.2021', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
-
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
-
-Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (50, 48, '08.06.2020', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (205, 67, '07.02.2021', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
-insert into book_review (id_user, id_book, time, text) values (55, 47, '25.02.2020', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.');
-insert into book_review (id_user, id_book, time, text) values (100, 29, '09.06.2020', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
-insert into book_review (id_user, id_book, time, text) values (152, 14, '16.08.2020', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
-
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
-insert into book_review (id_user, id_book, time, text) values (37, 53, '12.08.2020', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
-
-Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
-
-Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
-insert into book_review (id_user, id_book, time, text) values (224, 29, '15.03.2021', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
-insert into book_review (id_user, id_book, time, text) values (222, 25, '05.02.2021', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
-insert into book_review (id_user, id_book, time, text) values (77, 2, '02.04.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (230, 37, '29.11.2020', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
-insert into book_review (id_user, id_book, time, text) values (33, 2, '04.05.2020', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (34, 18, '12.01.2020', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (87, 42, '25.02.2020', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
-
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
-insert into book_review (id_user, id_book, time, text) values (160, 43, '13.04.2020', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (68, 3, '19.10.2021', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
-insert into book_review (id_user, id_book, time, text) values (211, 2, '13.07.2020', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
-
-Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (181, 11, '05.02.2020', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
-
-Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
-insert into book_review (id_user, id_book, time, text) values (69, 62, '22.09.2020', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (104, 63, '21.07.2020', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
-
-Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
-insert into book_review (id_user, id_book, time, text) values (67, 40, '15.09.2021', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (119, 57, '23.07.2021', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (247, 61, '02.01.2020', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
-
-Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
-insert into book_review (id_user, id_book, time, text) values (223, 62, '01.05.2020', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
-
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (168, 49, '17.06.2021', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (54, 28, '18.11.2021', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
-insert into book_review (id_user, id_book, time, text) values (124, 2, '31.05.2020', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
-insert into book_review (id_user, id_book, time, text) values (94, 45, '05.10.2020', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
-
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
-insert into book_review (id_user, id_book, time, text) values (30, 16, '20.08.2020', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
-insert into book_review (id_user, id_book, time, text) values (60, 25, '01.09.2021', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
-
-Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
-insert into book_review (id_user, id_book, time, text) values (107, 38, '06.03.2020', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (155, 15, '21.10.2020', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
-insert into book_review (id_user, id_book, time, text) values (219, 43, '13.06.2021', 'In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
-insert into book_review (id_user, id_book, time, text) values (10, 62, '23.11.2020', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
-insert into book_review (id_user, id_book, time, text) values (150, 15, '30.08.2020', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
-
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
-insert into book_review (id_user, id_book, time, text) values (246, 11, '25.12.2020', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
-
-Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
-
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
-insert into book_review (id_user, id_book, time, text) values (102, 54, '09.04.2021', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (139, 65, '22.02.2020', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
-insert into book_review (id_user, id_book, time, text) values (123, 3, '07.05.2020', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (157, 52, '22.11.2021', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
-
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
-
-Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
-insert into book_review (id_user, id_book, time, text) values (223, 28, '12.12.2021', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
-insert into book_review (id_user, id_book, time, text) values (206, 27, '12.03.2021', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (26, 53, '14.05.2021', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
-
-Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
-insert into book_review (id_user, id_book, time, text) values (140, 43, '10.02.2021', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (80, 9, '23.09.2020', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
-insert into book_review (id_user, id_book, time, text) values (128, 42, '20.11.2021', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
-insert into book_review (id_user, id_book, time, text) values (102, 18, '27.03.2020', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
-insert into book_review (id_user, id_book, time, text) values (249, 29, '24.01.2020', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
-insert into book_review (id_user, id_book, time, text) values (167, 5, '22.11.2021', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (6, 6, '12.02.2021', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (199, 46, '21.08.2020', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
-insert into book_review (id_user, id_book, time, text) values (25, 51, '19.05.2021', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (124, 32, '05.03.2020', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
-
-Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
-insert into book_review (id_user, id_book, time, text) values (5, 48, '28.08.2021', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
-
-Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
-insert into book_review (id_user, id_book, time, text) values (68, 62, '21.12.2021', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
-insert into book_review (id_user, id_book, time, text) values (111, 2, '30.10.2021', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
-
-Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
-
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
-insert into book_review (id_user, id_book, time, text) values (4, 6, '23.08.2020', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
-
-Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
-insert into book_review (id_user, id_book, time, text) values (245, 6, '21.04.2020', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
-
-Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
-
-Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
-insert into book_review (id_user, id_book, time, text) values (153, 12, '30.10.2021', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
-insert into book_review (id_user, id_book, time, text) values (163, 11, '29.01.2020', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
-insert into book_review (id_user, id_book, time, text) values (139, 58, '17.07.2020', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
-insert into book_review (id_user, id_book, time, text) values (61, 35, '23.12.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (137, 61, '08.10.2021', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
-
-Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
-insert into book_review (id_user, id_book, time, text) values (238, 41, '27.05.2021', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
-insert into book_review (id_user, id_book, time, text) values (137, 66, '03.08.2020', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (72, 40, '14.07.2020', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (151, 14, '27.03.2021', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (69, 9, '07.09.2021', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
-
-Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
-insert into book_review (id_user, id_book, time, text) values (241, 37, '29.05.2020', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
-insert into book_review (id_user, id_book, time, text) values (24, 36, '02.03.2020', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
-
-Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
-insert into book_review (id_user, id_book, time, text) values (50, 3, '23.11.2021', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (66, 2, '06.11.2020', 'In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
-insert into book_review (id_user, id_book, time, text) values (235, 32, '14.05.2021', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (169, 47, '31.08.2020', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
-
-Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
-
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
-insert into book_review (id_user, id_book, time, text) values (145, 22, '12.09.2020', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
-
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (193, 21, '17.05.2020', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
-
-Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
-insert into book_review (id_user, id_book, time, text) values (180, 58, '15.03.2020', 'Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (129, 21, '22.06.2021', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
-insert into book_review (id_user, id_book, time, text) values (149, 1, '05.08.2021', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
-
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
-insert into book_review (id_user, id_book, time, text) values (33, 25, '07.12.2020', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
-
-Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
-insert into book_review (id_user, id_book, time, text) values (154, 25, '05.04.2020', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (7, 4, '01.11.2021', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (96, 24, '21.11.2020', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
-insert into book_review (id_user, id_book, time, text) values (41, 13, '03.09.2021', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
-insert into book_review (id_user, id_book, time, text) values (70, 23, '18.01.2021', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
-
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
-insert into book_review (id_user, id_book, time, text) values (104, 21, '11.01.2020', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
-
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
-
-Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (209, 62, '28.05.2020', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (18, 23, '05.07.2020', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
-
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (50, 12, '10.01.2021', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
-
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (29, 23, '05.03.2021', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
-insert into book_review (id_user, id_book, time, text) values (147, 57, '19.08.2021', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
-
-Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
-insert into book_review (id_user, id_book, time, text) values (91, 38, '08.09.2020', 'In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
-
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
-insert into book_review (id_user, id_book, time, text) values (161, 44, '25.02.2021', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
-
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
-
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
-insert into book_review (id_user, id_book, time, text) values (138, 60, '02.10.2021', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
-
-Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
-insert into book_review (id_user, id_book, time, text) values (179, 40, '25.03.2020', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
-insert into book_review (id_user, id_book, time, text) values (101, 44, '06.04.2020', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
-
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
-insert into book_review (id_user, id_book, time, text) values (61, 58, '13.03.2020', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (129, 34, '03.06.2021', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
-
-Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
-insert into book_review (id_user, id_book, time, text) values (223, 31, '27.03.2020', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
-insert into book_review (id_user, id_book, time, text) values (69, 42, '07.10.2021', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (160, 20, '28.08.2021', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
-
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
-insert into book_review (id_user, id_book, time, text) values (150, 15, '09.07.2021', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
-insert into book_review (id_user, id_book, time, text) values (241, 63, '15.11.2021', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (110, 62, '24.11.2021', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (153, 1, '15.03.2021', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
-
-Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
-insert into book_review (id_user, id_book, time, text) values (4, 65, '23.07.2020', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (124, 14, '18.04.2021', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
+insert into book_review (id, id_user, id_book, time, text) values (11, 198, 36, '2020-04-08 23:49:35', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
 
 Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
 
 Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
-insert into book_review (id_user, id_book, time, text) values (37, 39, '24.11.2021', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
-insert into book_review (id_user, id_book, time, text) values (65, 50, '15.02.2021', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
-
-Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
-insert into book_review (id_user, id_book, time, text) values (29, 20, '07.10.2021', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (160, 21, '07.08.2021', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (80, 5, '15.09.2020', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (197, 22, '18.11.2021', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (46, 7, '18.02.2020', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
-
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (98, 64, '14.02.2020', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
-
-Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
-insert into book_review (id_user, id_book, time, text) values (21, 57, '25.05.2021', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.');
-insert into book_review (id_user, id_book, time, text) values (67, 10, '22.10.2021', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
-
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (152, 53, '20.04.2021', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
-insert into book_review (id_user, id_book, time, text) values (16, 1, '13.10.2021', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
-
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
-insert into book_review (id_user, id_book, time, text) values (64, 5, '03.03.2021', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
-
-Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
-insert into book_review (id_user, id_book, time, text) values (105, 13, '17.04.2020', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
-
-Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
-
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
-insert into book_review (id_user, id_book, time, text) values (132, 31, '30.04.2021', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
-insert into book_review (id_user, id_book, time, text) values (54, 53, '01.10.2020', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
-insert into book_review (id_user, id_book, time, text) values (52, 58, '13.06.2020', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+insert into book_review (id, id_user, id_book, time, text) values (12, 56, 19, '2020-08-02 00:29:09', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
 
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
 Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
-insert into book_review (id_user, id_book, time, text) values (72, 53, '18.12.2021', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+insert into book_review (id, id_user, id_book, time, text) values (13, 236, 47, '2020-11-21 08:20:05', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+
+Sed ante. Vivamus tortor. Duis mattis egestas metus.
+
+Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (14, 230, 31, '2021-08-26 14:51:21', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
+insert into book_review (id, id_user, id_book, time, text) values (15, 241, 52, '2021-03-14 03:17:26', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (16, 34, 62, '2021-07-17 04:21:53', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
+insert into book_review (id, id_user, id_book, time, text) values (17, 8, 55, '2021-11-01 14:43:04', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (18, 226, 34, '2021-09-13 18:25:22', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
+
+Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (19, 102, 19, '2020-08-03 07:11:30', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (20, 215, 28, '2020-10-23 18:57:40', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
+
+Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
+
+Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
+insert into book_review (id, id_user, id_book, time, text) values (21, 196, 31, '2020-11-17 02:22:59', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (22, 121, 45, '2020-03-27 12:46:28', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (23, 197, 39, '2020-08-10 06:29:34', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+
+Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
+insert into book_review (id, id_user, id_book, time, text) values (24, 119, 33, '2020-04-03 01:45:07', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+
+Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (25, 32, 44, '2020-06-28 02:14:59', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+
+Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
+insert into book_review (id, id_user, id_book, time, text) values (26, 64, 54, '2020-09-18 03:00:37', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (27, 14, 2, '2020-03-07 04:15:35', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (28, 216, 39, '2020-09-07 10:38:10', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+
+Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
+
+Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
+insert into book_review (id, id_user, id_book, time, text) values (29, 95, 40, '2020-03-25 11:54:24', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
+insert into book_review (id, id_user, id_book, time, text) values (30, 30, 13, '2021-11-12 02:31:16', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
+insert into book_review (id, id_user, id_book, time, text) values (31, 82, 71, '2021-06-21 23:43:30', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into book_review (id, id_user, id_book, time, text) values (32, 149, 41, '2020-07-29 09:09:03', 'In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (33, 25, 19, '2021-06-06 23:01:11', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
+insert into book_review (id, id_user, id_book, time, text) values (34, 11, 52, '2020-12-26 16:35:09', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (35, 118, 38, '2021-08-12 05:29:09', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (36, 175, 70, '2021-05-19 23:57:49', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (37, 149, 6, '2021-09-10 01:38:05', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+insert into book_review (id, id_user, id_book, time, text) values (38, 31, 31, '2020-03-04 04:53:02', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
+
+Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (39, 35, 46, '2020-02-20 10:09:50', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (40, 19, 61, '2021-03-19 00:10:04', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
+
+Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
+
+In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (41, 169, 35, '2021-04-19 05:29:12', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
+
+Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
+
+Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
+insert into book_review (id, id_user, id_book, time, text) values (42, 116, 28, '2020-08-02 17:32:04', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (43, 193, 21, '2021-06-08 03:02:12', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
+insert into book_review (id, id_user, id_book, time, text) values (44, 66, 47, '2020-04-05 18:25:44', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (45, 63, 53, '2021-01-05 19:53:40', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (46, 154, 43, '2020-06-05 05:06:04', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
+insert into book_review (id, id_user, id_book, time, text) values (47, 148, 52, '2021-03-18 05:42:17', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+
+Sed ante. Vivamus tortor. Duis mattis egestas metus.');
+insert into book_review (id, id_user, id_book, time, text) values (48, 111, 55, '2021-08-23 14:39:18', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (49, 78, 37, '2021-02-01 04:31:11', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+
+Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+
+Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
+insert into book_review (id, id_user, id_book, time, text) values (50, 33, 10, '2021-06-06 11:34:15', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (51, 165, 67, '2020-07-23 13:49:14', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (52, 190, 63, '2020-03-31 14:43:40', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
+insert into book_review (id, id_user, id_book, time, text) values (53, 83, 27, '2021-11-14 03:19:07', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (54, 90, 18, '2020-03-10 01:23:34', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+insert into book_review (id, id_user, id_book, time, text) values (55, 245, 25, '2020-01-29 01:10:49', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+
+Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
+
+Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
+insert into book_review (id, id_user, id_book, time, text) values (56, 218, 32, '2021-12-16 10:45:52', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (57, 15, 6, '2020-06-01 04:09:30', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (58, 238, 43, '2021-06-20 17:01:37', 'Fusce consequat. Nulla nisl. Nunc nisl.
+
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (59, 216, 64, '2020-02-15 05:19:56', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (60, 41, 19, '2021-11-01 06:11:30', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (61, 72, 52, '2021-08-08 16:57:11', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
+insert into book_review (id, id_user, id_book, time, text) values (62, 231, 49, '2020-10-13 04:02:18', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (63, 109, 17, '2020-01-23 07:47:26', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
+insert into book_review (id, id_user, id_book, time, text) values (64, 198, 57, '2021-06-13 16:32:17', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (65, 237, 12, '2020-03-02 20:05:57', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+
+Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
+insert into book_review (id, id_user, id_book, time, text) values (66, 134, 70, '2020-10-09 17:05:13', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (67, 61, 12, '2021-11-14 21:44:30', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (68, 146, 24, '2021-03-21 04:50:09', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (69, 229, 66, '2020-05-24 01:58:12', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+insert into book_review (id, id_user, id_book, time, text) values (70, 146, 4, '2021-01-17 08:23:00', 'In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (71, 152, 58, '2020-12-29 23:59:44', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (72, 111, 2, '2021-09-27 09:32:10', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+
+Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (73, 75, 18, '2020-05-19 03:21:26', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+
+Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
+insert into book_review (id, id_user, id_book, time, text) values (74, 124, 13, '2020-05-11 08:10:38', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (75, 204, 69, '2020-04-10 08:17:50', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (76, 244, 58, '2021-04-13 01:27:48', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (77, 58, 14, '2021-02-24 17:40:46', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
+insert into book_review (id, id_user, id_book, time, text) values (78, 37, 11, '2020-05-25 16:54:12', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (79, 199, 57, '2021-05-28 20:40:26', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (80, 179, 9, '2020-11-09 22:00:39', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+
+Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (81, 145, 68, '2021-11-21 14:27:03', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (82, 208, 39, '2021-06-13 11:44:34', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (83, 33, 49, '2020-04-15 01:03:35', 'Fusce consequat. Nulla nisl. Nunc nisl.
+
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (84, 166, 52, '2020-03-05 23:34:47', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
+insert into book_review (id, id_user, id_book, time, text) values (85, 85, 16, '2020-04-08 07:51:38', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (86, 92, 64, '2021-04-24 07:07:21', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (87, 4, 36, '2020-08-21 09:52:13', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (88, 182, 20, '2020-04-04 08:15:12', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
+insert into book_review (id, id_user, id_book, time, text) values (89, 39, 6, '2021-12-23 19:19:47', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (90, 129, 54, '2021-04-21 22:00:35', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (91, 243, 45, '2021-07-13 02:53:09', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (92, 7, 29, '2021-12-14 14:58:47', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (93, 178, 49, '2021-08-31 02:00:07', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (94, 142, 46, '2021-11-19 15:48:15', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+
+Fusce consequat. Nulla nisl. Nunc nisl.
+
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (95, 249, 43, '2021-08-06 11:19:19', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (96, 155, 26, '2021-09-14 16:51:39', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
+insert into book_review (id, id_user, id_book, time, text) values (97, 53, 6, '2021-08-18 11:15:59', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
+insert into book_review (id, id_user, id_book, time, text) values (98, 189, 71, '2020-04-12 19:52:22', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+
+Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
+
+Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
+insert into book_review (id, id_user, id_book, time, text) values (99, 130, 34, '2021-11-18 03:27:59', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (100, 158, 44, '2020-03-21 17:33:38', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (101, 139, 43, '2020-06-15 07:23:28', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
+
+In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (102, 196, 29, '2021-07-20 19:57:11', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
+
+Phasellus in felis. Donec semper sapien a libero. Nam dui.
+
+Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
+insert into book_review (id, id_user, id_book, time, text) values (103, 47, 25, '2021-09-03 16:12:35', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
+insert into book_review (id, id_user, id_book, time, text) values (104, 133, 64, '2020-08-31 08:16:05', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+
+Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+
+Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
+insert into book_review (id, id_user, id_book, time, text) values (105, 218, 50, '2020-09-11 13:55:35', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (106, 197, 44, '2020-08-13 16:26:28', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+insert into book_review (id, id_user, id_book, time, text) values (107, 242, 38, '2020-10-19 20:42:22', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (108, 218, 11, '2021-11-24 06:43:13', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (109, 107, 14, '2021-06-17 10:38:25', 'Fusce consequat. Nulla nisl. Nunc nisl.
+
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (110, 76, 42, '2021-07-07 00:58:12', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
+insert into book_review (id, id_user, id_book, time, text) values (111, 208, 37, '2020-05-22 15:00:03', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
+insert into book_review (id, id_user, id_book, time, text) values (112, 217, 67, '2021-03-20 09:18:16', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (113, 236, 26, '2021-10-05 18:03:49', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
+
+In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (114, 192, 44, '2021-05-10 09:04:57', 'Fusce consequat. Nulla nisl. Nunc nisl.
+
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
+
+In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
+insert into book_review (id, id_user, id_book, time, text) values (115, 104, 5, '2021-12-02 23:22:28', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+
+Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (116, 185, 7, '2021-03-24 20:17:46', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+
+Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
+insert into book_review (id, id_user, id_book, time, text) values (117, 34, 6, '2020-06-05 16:55:05', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+
+Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
+insert into book_review (id, id_user, id_book, time, text) values (118, 149, 2, '2020-12-22 00:06:20', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (119, 22, 1, '2020-09-27 22:44:20', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (120, 27, 15, '2020-05-12 16:04:36', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+
+Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+
+Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
+insert into book_review (id, id_user, id_book, time, text) values (121, 114, 58, '2021-04-30 09:28:13', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
+
+Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
+
+Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
+insert into book_review (id, id_user, id_book, time, text) values (122, 81, 6, '2020-09-09 19:35:38', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
+
+Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
+insert into book_review (id, id_user, id_book, time, text) values (123, 138, 64, '2020-12-15 18:56:09', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+
+Sed ante. Vivamus tortor. Duis mattis egestas metus.
+
+Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (124, 145, 57, '2021-03-23 14:30:26', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
+insert into book_review (id, id_user, id_book, time, text) values (125, 150, 35, '2020-02-23 23:04:28', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
+insert into book_review (id, id_user, id_book, time, text) values (126, 207, 33, '2020-03-29 15:14:14', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
+insert into book_review (id, id_user, id_book, time, text) values (127, 204, 55, '2020-06-01 07:42:56', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+
+Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
+insert into book_review (id, id_user, id_book, time, text) values (128, 124, 71, '2020-03-17 22:31:35', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
+insert into book_review (id, id_user, id_book, time, text) values (129, 192, 40, '2021-05-12 21:53:13', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
+insert into book_review (id, id_user, id_book, time, text) values (130, 16, 38, '2020-05-19 16:45:28', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into book_review (id, id_user, id_book, time, text) values (131, 160, 30, '2020-11-18 05:52:55', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
+insert into book_review (id, id_user, id_book, time, text) values (132, 148, 19, '2020-11-17 16:24:03', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (133, 141, 28, '2021-01-11 01:30:37', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+
+Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
+insert into book_review (id, id_user, id_book, time, text) values (134, 220, 49, '2020-06-20 03:14:04', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
+insert into book_review (id, id_user, id_book, time, text) values (135, 222, 23, '2020-10-17 15:50:31', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (136, 62, 45, '2021-09-13 08:59:44', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
+insert into book_review (id, id_user, id_book, time, text) values (137, 147, 5, '2020-09-04 10:13:47', 'Fusce consequat. Nulla nisl. Nunc nisl.
+
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
+
+In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
+insert into book_review (id, id_user, id_book, time, text) values (138, 55, 32, '2020-07-17 20:23:14', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (139, 34, 15, '2021-03-19 19:40:12', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
+insert into book_review (id, id_user, id_book, time, text) values (140, 87, 61, '2021-10-18 15:39:48', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (141, 36, 42, '2021-10-07 06:27:14', 'Fusce consequat. Nulla nisl. Nunc nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (142, 83, 32, '2021-05-19 08:50:19', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+
+Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
+insert into book_review (id, id_user, id_book, time, text) values (143, 219, 60, '2021-07-01 02:21:20', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
+insert into book_review (id, id_user, id_book, time, text) values (144, 150, 55, '2020-07-08 11:41:31', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+
+Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
+insert into book_review (id, id_user, id_book, time, text) values (145, 40, 58, '2021-04-07 01:42:48', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (146, 169, 57, '2020-05-20 23:18:07', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+
+Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
+insert into book_review (id, id_user, id_book, time, text) values (147, 183, 5, '2020-07-02 18:34:00', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
+insert into book_review (id, id_user, id_book, time, text) values (148, 164, 12, '2020-03-11 10:18:46', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
+insert into book_review (id, id_user, id_book, time, text) values (149, 164, 8, '2021-09-19 18:06:59', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
+insert into book_review (id, id_user, id_book, time, text) values (150, 125, 9, '2021-01-31 20:48:24', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
+insert into book_review (id, id_user, id_book, time, text) values (151, 48, 2, '2021-11-03 04:43:59', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (152, 118, 40, '2021-03-17 15:00:24', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (153, 240, 56, '2020-08-17 11:03:28', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+
+Fusce consequat. Nulla nisl. Nunc nisl.
+
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (154, 153, 21, '2021-05-19 01:21:46', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
+insert into book_review (id, id_user, id_book, time, text) values (155, 4, 71, '2021-08-27 02:27:10', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (156, 53, 48, '2020-01-28 19:51:12', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (157, 229, 29, '2021-11-25 22:01:37', 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
+insert into book_review (id, id_user, id_book, time, text) values (158, 183, 9, '2020-04-13 15:36:17', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+insert into book_review (id, id_user, id_book, time, text) values (159, 183, 3, '2020-10-10 08:39:51', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (160, 2, 69, '2020-06-28 10:39:00', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (161, 91, 8, '2021-07-05 05:58:18', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (162, 81, 70, '2020-06-24 13:15:40', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
 Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
 
 Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (110, 2, '25.06.2020', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (243, 57, '12.12.2020', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+insert into book_review (id, id_user, id_book, time, text) values (163, 129, 5, '2020-01-06 16:30:13', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
 
-Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (71, 2, '23.07.2020', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
+insert into book_review (id, id_user, id_book, time, text) values (164, 51, 55, '2020-10-12 21:17:39', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (165, 200, 38, '2020-08-22 18:11:47', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
+insert into book_review (id, id_user, id_book, time, text) values (166, 60, 49, '2020-06-03 00:45:58', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
+insert into book_review (id, id_user, id_book, time, text) values (167, 37, 65, '2021-06-05 11:25:30', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (168, 226, 36, '2021-04-21 17:11:04', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+
+Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+
+Fusce consequat. Nulla nisl. Nunc nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (169, 147, 10, '2021-12-28 16:19:43', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (170, 243, 68, '2021-10-03 01:07:31', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
+
+Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
+insert into book_review (id, id_user, id_book, time, text) values (171, 211, 41, '2020-07-09 19:16:12', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (172, 19, 38, '2021-09-12 01:07:18', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
+insert into book_review (id, id_user, id_book, time, text) values (173, 83, 55, '2020-06-15 21:35:53', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
+insert into book_review (id, id_user, id_book, time, text) values (174, 197, 13, '2021-04-18 17:19:58', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (175, 68, 50, '2020-07-01 05:49:52', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (176, 44, 38, '2021-05-05 03:21:15', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (177, 182, 56, '2021-09-03 05:51:53', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
+
+Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
+insert into book_review (id, id_user, id_book, time, text) values (178, 160, 18, '2020-03-24 23:47:17', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (179, 54, 61, '2020-07-17 15:28:27', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+
+Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (180, 245, 2, '2020-12-24 18:47:55', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (181, 163, 54, '2020-07-19 09:23:10', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
 
 Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (139, 42, '12.08.2021', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+insert into book_review (id, id_user, id_book, time, text) values (182, 221, 38, '2020-05-25 01:03:09', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (183, 225, 64, '2021-01-25 12:21:12', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (184, 97, 20, '2021-07-02 17:26:13', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (185, 139, 57, '2021-08-21 06:42:08', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+
+Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
+insert into book_review (id, id_user, id_book, time, text) values (186, 174, 28, '2020-10-06 01:39:25', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (187, 104, 61, '2020-03-16 05:10:08', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (188, 133, 71, '2020-09-07 03:24:56', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (189, 33, 64, '2020-12-17 20:54:55', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
+insert into book_review (id, id_user, id_book, time, text) values (190, 150, 1, '2020-03-18 14:52:54', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+
+Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (191, 89, 35, '2021-06-16 13:44:46', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (192, 69, 1, '2021-02-06 15:22:54', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (193, 119, 63, '2021-06-12 02:47:33', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
+
+In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (194, 247, 63, '2021-05-16 15:27:12', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (195, 131, 13, '2020-01-03 03:39:50', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
+insert into book_review (id, id_user, id_book, time, text) values (196, 27, 48, '2020-09-23 02:10:07', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (197, 81, 16, '2021-05-14 08:48:59', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+
+Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
+insert into book_review (id, id_user, id_book, time, text) values (198, 84, 1, '2021-10-05 10:45:12', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (199, 146, 5, '2020-09-05 17:48:23', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+
+Sed ante. Vivamus tortor. Duis mattis egestas metus.
+
+Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (200, 28, 29, '2021-12-01 16:43:25', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (201, 126, 64, '2021-10-09 00:30:56', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
+insert into book_review (id, id_user, id_book, time, text) values (202, 174, 7, '2020-10-05 00:26:45', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
+insert into book_review (id, id_user, id_book, time, text) values (203, 87, 59, '2020-03-27 16:48:58', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+
+Fusce consequat. Nulla nisl. Nunc nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (204, 23, 30, '2021-06-18 08:05:15', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
+insert into book_review (id, id_user, id_book, time, text) values (205, 56, 71, '2020-01-20 05:11:38', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
+
+Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+
+Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (206, 113, 49, '2021-10-31 00:16:26', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
+insert into book_review (id, id_user, id_book, time, text) values (207, 221, 36, '2020-09-28 22:32:55', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (208, 234, 15, '2020-03-26 19:24:21', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
+insert into book_review (id, id_user, id_book, time, text) values (209, 223, 42, '2021-02-14 20:20:03', 'In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (210, 98, 13, '2021-02-20 06:24:07', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (211, 246, 28, '2020-01-29 00:20:00', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (212, 180, 41, '2020-12-02 09:19:23', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+insert into book_review (id, id_user, id_book, time, text) values (213, 57, 4, '2020-10-19 22:39:24', 'Fusce consequat. Nulla nisl. Nunc nisl.
+
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (214, 152, 25, '2021-12-12 10:48:54', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
+
+Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (215, 7, 52, '2020-08-31 05:25:27', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (216, 236, 56, '2021-06-02 18:40:55', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+
+Fusce consequat. Nulla nisl. Nunc nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (217, 29, 68, '2021-06-23 02:09:35', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (218, 248, 30, '2021-01-21 16:23:46', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+
+Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
+
+Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
+insert into book_review (id, id_user, id_book, time, text) values (219, 140, 4, '2021-04-27 10:57:00', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (220, 230, 8, '2021-04-21 20:42:21', 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
+insert into book_review (id, id_user, id_book, time, text) values (221, 18, 4, '2021-08-05 15:24:34', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+
+Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
+insert into book_review (id, id_user, id_book, time, text) values (222, 26, 57, '2020-11-04 09:25:19', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.');
+insert into book_review (id, id_user, id_book, time, text) values (223, 110, 62, '2021-02-19 13:10:44', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (224, 22, 67, '2020-10-14 23:27:22', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into book_review (id, id_user, id_book, time, text) values (225, 134, 60, '2020-03-22 13:03:28', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+
+Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
+insert into book_review (id, id_user, id_book, time, text) values (226, 100, 52, '2021-11-16 14:03:43', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (227, 163, 28, '2020-08-15 18:17:04', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into book_review (id, id_user, id_book, time, text) values (228, 110, 37, '2020-02-25 14:59:12', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
 
 Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
-insert into book_review (id_user, id_book, time, text) values (55, 34, '31.05.2021', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
-
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
-insert into book_review (id_user, id_book, time, text) values (186, 6, '31.03.2020', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
-insert into book_review (id_user, id_book, time, text) values (140, 42, '13.08.2020', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
-
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
-insert into book_review (id_user, id_book, time, text) values (229, 46, '05.11.2020', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.');
-insert into book_review (id_user, id_book, time, text) values (30, 48, '15.01.2020', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (95, 59, '08.05.2021', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
-
-Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
-
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
-insert into book_review (id_user, id_book, time, text) values (198, 41, '20.12.2020', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (29, 66, '17.07.2020', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (90, 16, '07.12.2021', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.
-
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
-insert into book_review (id_user, id_book, time, text) values (130, 58, '09.05.2020', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
-
-Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
-
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
-insert into book_review (id_user, id_book, time, text) values (102, 14, '22.12.2021', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
-insert into book_review (id_user, id_book, time, text) values (50, 67, '13.03.2020', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (93, 7, '10.06.2020', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
-
-Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
-
-Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
-insert into book_review (id_user, id_book, time, text) values (108, 51, '02.04.2021', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (147, 44, '01.12.2020', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
-insert into book_review (id_user, id_book, time, text) values (3, 59, '27.08.2020', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+insert into book_review (id, id_user, id_book, time, text) values (229, 45, 59, '2020-07-17 19:17:56', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
+insert into book_review (id, id_user, id_book, time, text) values (230, 44, 14, '2021-07-31 03:10:55', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
+insert into book_review (id, id_user, id_book, time, text) values (231, 120, 62, '2021-06-06 09:08:12', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (232, 89, 45, '2021-07-10 00:34:50', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (233, 89, 68, '2021-04-12 05:37:11', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (234, 65, 66, '2021-02-04 15:55:39', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
 
 Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
 
 Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
-insert into book_review (id_user, id_book, time, text) values (15, 27, '10.08.2021', 'In congue. Etiam justo. Etiam pretium iaculis justo.
+insert into book_review (id, id_user, id_book, time, text) values (235, 12, 60, '2021-05-13 11:14:47', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.');
+insert into book_review (id, id_user, id_book, time, text) values (236, 74, 18, '2021-10-14 05:04:29', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
+insert into book_review (id, id_user, id_book, time, text) values (237, 145, 69, '2020-05-30 05:06:19', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (238, 31, 24, '2020-09-13 18:19:07', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
+insert into book_review (id, id_user, id_book, time, text) values (239, 47, 57, '2021-06-13 16:47:08', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (240, 222, 10, '2020-02-09 16:22:25', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
+
+Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (241, 12, 3, '2020-09-29 09:06:01', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
+insert into book_review (id, id_user, id_book, time, text) values (242, 214, 30, '2021-05-25 05:46:34', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
+insert into book_review (id, id_user, id_book, time, text) values (243, 101, 67, '2021-05-28 17:02:15', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (244, 64, 66, '2020-09-01 04:45:55', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
+
+In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
+insert into book_review (id, id_user, id_book, time, text) values (245, 38, 34, '2020-10-20 19:40:51', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+
+Fusce consequat. Nulla nisl. Nunc nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (246, 105, 32, '2020-09-16 11:16:19', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (247, 49, 6, '2020-08-26 10:14:29', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
+insert into book_review (id, id_user, id_book, time, text) values (248, 42, 13, '2021-04-30 12:46:46', 'In congue. Etiam justo. Etiam pretium iaculis justo.
 
 In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
 
 Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
-insert into book_review (id_user, id_book, time, text) values (104, 49, '09.11.2020', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (234, 34, '01.05.2020', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+insert into book_review (id, id_user, id_book, time, text) values (249, 165, 62, '2020-06-08 23:42:01', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (250, 69, 6, '2020-09-15 16:20:06', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
 
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (232, 67, '03.11.2021', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
 
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (251, 204, 45, '2021-05-29 14:03:37', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
 
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (84, 47, '11.03.2021', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (28, 33, '12.08.2020', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+Fusce consequat. Nulla nisl. Nunc nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (252, 154, 31, '2020-09-14 22:06:10', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
 
-Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
 
-Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (198, 21, '15.10.2020', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
+insert into book_review (id, id_user, id_book, time, text) values (253, 70, 55, '2020-03-10 12:35:55', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
 
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
-insert into book_review (id_user, id_book, time, text) values (76, 26, '10.10.2021', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
-insert into book_review (id_user, id_book, time, text) values (171, 62, '22.01.2020', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
 
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (43, 57, '10.03.2020', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
-
-Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
-
-In congue. Etiam justo. Etiam pretium iaculis justo.');
-insert into book_review (id_user, id_book, time, text) values (179, 52, '02.05.2021', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
-insert into book_review (id_user, id_book, time, text) values (144, 9, '06.10.2021', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
-
-Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
-insert into book_review (id_user, id_book, time, text) values (110, 31, '19.10.2021', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.');
-insert into book_review (id_user, id_book, time, text) values (216, 14, '03.03.2021', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
-insert into book_review (id_user, id_book, time, text) values (104, 61, '06.10.2020', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
-insert into book_review (id_user, id_book, time, text) values (99, 49, '15.09.2020', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
-
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
-insert into book_review (id_user, id_book, time, text) values (188, 41, '23.03.2020', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
-
-Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (171, 53, '26.07.2021', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (244, 39, '09.07.2020', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
-insert into book_review (id_user, id_book, time, text) values (217, 25, '09.06.2020', 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
-insert into book_review (id_user, id_book, time, text) values (164, 26, '22.02.2020', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (49, 35, '07.10.2020', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
-
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
-insert into book_review (id_user, id_book, time, text) values (40, 26, '23.09.2021', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
-
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
-
-Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
-insert into book_review (id_user, id_book, time, text) values (72, 66, '22.10.2021', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
-insert into book_review (id_user, id_book, time, text) values (2, 8, '21.05.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
-
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
-insert into book_review (id_user, id_book, time, text) values (111, 5, '13.08.2021', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
-
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
-insert into book_review (id_user, id_book, time, text) values (142, 67, '10.07.2021', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
-insert into book_review (id_user, id_book, time, text) values (108, 31, '20.09.2020', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
-
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
-insert into book_review (id_user, id_book, time, text) values (121, 9, '02.02.2020', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (254, 197, 52, '2020-09-16 09:20:35', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
 
 In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
 
 Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
-insert into book_review (id_user, id_book, time, text) values (204, 33, '06.06.2020', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+insert into book_review (id, id_user, id_book, time, text) values (255, 188, 42, '2021-08-10 15:00:52', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
+insert into book_review (id, id_user, id_book, time, text) values (256, 24, 49, '2020-07-30 03:23:10', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+
+Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
+insert into book_review (id, id_user, id_book, time, text) values (257, 86, 53, '2020-04-05 14:19:24', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into book_review (id, id_user, id_book, time, text) values (258, 2, 55, '2021-08-03 07:54:48', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (259, 89, 46, '2020-12-09 13:10:15', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
+insert into book_review (id, id_user, id_book, time, text) values (260, 216, 70, '2021-10-08 21:46:50', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
+insert into book_review (id, id_user, id_book, time, text) values (261, 250, 22, '2020-05-14 08:57:02', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
+insert into book_review (id, id_user, id_book, time, text) values (262, 11, 50, '2021-07-23 00:01:45', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (263, 71, 8, '2020-08-31 18:15:00', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (264, 152, 25, '2021-08-24 11:15:48', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (265, 11, 71, '2021-01-31 10:38:15', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (266, 246, 59, '2021-06-01 21:13:13', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
+
+Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+
+Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (267, 234, 40, '2020-12-18 09:16:38', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
+
+Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
+insert into book_review (id, id_user, id_book, time, text) values (268, 42, 63, '2021-07-31 20:54:32', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+
+Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
+insert into book_review (id, id_user, id_book, time, text) values (269, 25, 43, '2021-04-01 04:16:45', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
+insert into book_review (id, id_user, id_book, time, text) values (270, 235, 41, '2020-09-22 13:03:50', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (271, 211, 23, '2021-07-27 22:18:45', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.');
+insert into book_review (id, id_user, id_book, time, text) values (272, 7, 51, '2021-01-11 04:12:15', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (273, 18, 42, '2020-04-27 13:23:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
+insert into book_review (id, id_user, id_book, time, text) values (274, 89, 21, '2020-01-11 06:23:30', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
 
 Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
 
 Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
-insert into book_review (id_user, id_book, time, text) values (203, 35, '23.01.2020', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+insert into book_review (id, id_user, id_book, time, text) values (275, 24, 35, '2020-12-31 07:52:26', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
 
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
 
-Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (121, 19, '11.01.2020', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
+insert into book_review (id, id_user, id_book, time, text) values (276, 6, 3, '2020-12-16 02:40:01', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
 
-Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (277, 216, 24, '2020-02-10 09:18:54', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (278, 120, 45, '2020-06-07 16:25:00', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
 
-Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
-insert into book_review (id_user, id_book, time, text) values (62, 67, '27.04.2021', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
-insert into book_review (id_user, id_book, time, text) values (211, 9, '19.12.2020', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
-insert into book_review (id_user, id_book, time, text) values (59, 15, '31.03.2021', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (108, 46, '30.09.2021', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (105, 31, '23.02.2020', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (279, 91, 10, '2021-03-26 20:18:07', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+insert into book_review (id, id_user, id_book, time, text) values (280, 217, 67, '2021-08-05 09:26:54', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+
+Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
+
+Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
+insert into book_review (id, id_user, id_book, time, text) values (281, 64, 3, '2020-04-03 14:39:58', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
+
+In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (282, 219, 6, '2021-07-06 08:32:51', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (283, 74, 52, '2021-06-03 21:24:47', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
+insert into book_review (id, id_user, id_book, time, text) values (284, 76, 32, '2021-09-01 15:14:57', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (285, 143, 11, '2021-05-11 23:05:42', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (286, 109, 68, '2020-09-01 22:06:19', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
+
+Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
+insert into book_review (id, id_user, id_book, time, text) values (287, 204, 10, '2021-04-27 05:26:04', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
 
 Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
-insert into book_review (id_user, id_book, time, text) values (15, 57, '29.01.2021', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+insert into book_review (id, id_user, id_book, time, text) values (288, 178, 25, '2021-10-31 13:55:41', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
 
-Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
-insert into book_review (id_user, id_book, time, text) values (248, 52, '08.04.2020', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
-insert into book_review (id_user, id_book, time, text) values (189, 43, '05.05.2020', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
 
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
-insert into book_review (id_user, id_book, time, text) values (18, 43, '15.10.2020', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
-
-Sed ante. Vivamus tortor. Duis mattis egestas metus.
-
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (35, 53, '24.07.2021', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
-insert into book_review (id_user, id_book, time, text) values (201, 1, '16.07.2020', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
-
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
-insert into book_review (id_user, id_book, time, text) values (137, 29, '30.03.2021', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
-
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
-insert into book_review (id_user, id_book, time, text) values (49, 46, '13.08.2020', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
-
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
-insert into book_review (id_user, id_book, time, text) values (6, 9, '10.12.2020', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (289, 244, 44, '2020-07-15 21:05:09', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
+insert into book_review (id, id_user, id_book, time, text) values (290, 239, 7, '2020-04-30 04:03:08', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (291, 1, 41, '2020-11-18 10:40:06', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (292, 159, 59, '2020-07-15 15:05:11', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
 
 Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
 
 Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
-insert into book_review (id_user, id_book, time, text) values (54, 10, '11.02.2020', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
-insert into book_review (id_user, id_book, time, text) values (149, 56, '27.03.2020', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
+insert into book_review (id, id_user, id_book, time, text) values (293, 103, 53, '2020-02-17 14:13:58', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (294, 10, 16, '2021-09-12 17:05:55', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
 
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
-insert into book_review (id_user, id_book, time, text) values (82, 5, '16.03.2020', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
+insert into book_review (id, id_user, id_book, time, text) values (295, 132, 43, '2020-06-20 04:34:01', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
+
+Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
+
+Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
+insert into book_review (id, id_user, id_book, time, text) values (296, 129, 9, '2020-02-29 12:15:04', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (297, 179, 24, '2020-11-17 09:15:28', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (298, 84, 8, '2021-09-21 06:35:07', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
+
+Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
+
+Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
+insert into book_review (id, id_user, id_book, time, text) values (299, 200, 36, '2021-11-23 18:18:28', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+
+Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
+insert into book_review (id, id_user, id_book, time, text) values (300, 155, 40, '2020-10-13 19:52:39', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+
+Fusce consequat. Nulla nisl. Nunc nisl.
+
+Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (301, 215, 31, '2020-11-06 16:47:43', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
+
+Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
+
+Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
+insert into book_review (id, id_user, id_book, time, text) values (302, 194, 24, '2020-06-14 14:16:53', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
+insert into book_review (id, id_user, id_book, time, text) values (303, 74, 22, '2021-12-22 22:23:29', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
+insert into book_review (id, id_user, id_book, time, text) values (304, 118, 31, '2020-08-17 15:57:56', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (305, 15, 4, '2020-03-18 10:44:33', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (306, 171, 65, '2020-10-06 17:49:32', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (307, 205, 66, '2021-09-20 17:54:21', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (308, 117, 12, '2021-05-07 14:50:24', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (309, 28, 58, '2020-09-13 15:22:27', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (310, 132, 62, '2020-10-15 16:45:16', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
+
+Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+
+Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
+insert into book_review (id, id_user, id_book, time, text) values (311, 196, 1, '2021-09-14 03:29:32', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+
+Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (312, 156, 71, '2020-11-23 20:05:30', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (313, 113, 5, '2021-04-04 19:33:09', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (314, 66, 67, '2021-03-02 06:27:03', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
+
+In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (315, 225, 53, '2021-08-01 00:51:01', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (316, 47, 1, '2020-06-27 08:16:25', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (317, 59, 53, '2021-09-20 14:48:34', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+
+Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (318, 73, 34, '2021-03-29 12:52:31', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (319, 137, 59, '2021-10-18 14:44:56', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+
+Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+
+Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (320, 145, 25, '2021-08-09 21:56:32', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+
+Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (321, 143, 47, '2020-05-08 06:45:47', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
+
+In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (322, 81, 1, '2021-07-13 16:12:40', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (323, 110, 31, '2021-10-06 14:38:14', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
+
+In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.');
+insert into book_review (id, id_user, id_book, time, text) values (324, 205, 68, '2021-01-08 16:27:59', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
+
+Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
+insert into book_review (id, id_user, id_book, time, text) values (325, 145, 31, '2020-10-24 02:12:14', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+
+Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
+insert into book_review (id, id_user, id_book, time, text) values (326, 206, 53, '2020-08-12 12:38:03', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
+
+Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+
+Sed ante. Vivamus tortor. Duis mattis egestas metus.');
+insert into book_review (id, id_user, id_book, time, text) values (327, 116, 64, '2020-09-29 11:26:59', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (328, 19, 25, '2021-02-22 12:20:16', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (329, 58, 19, '2020-01-05 11:17:56', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (330, 220, 15, '2021-11-06 13:03:25', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
+insert into book_review (id, id_user, id_book, time, text) values (331, 217, 40, '2021-10-16 06:37:32', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (332, 2, 23, '2021-11-26 14:47:58', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
-insert into book_review (id_user, id_book, time, text) values (203, 55, '22.06.2020', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
+insert into book_review (id, id_user, id_book, time, text) values (333, 42, 50, '2020-07-18 03:53:30', 'In congue. Etiam justo. Etiam pretium iaculis justo.
 
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
-insert into book_review (id_user, id_book, time, text) values (110, 54, '13.04.2020', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
-insert into book_review (id_user, id_book, time, text) values (247, 39, '08.06.2021', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (334, 156, 58, '2020-10-17 04:29:03', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
+insert into book_review (id, id_user, id_book, time, text) values (335, 207, 6, '2021-06-21 17:05:25', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+
+Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (336, 189, 70, '2020-02-14 07:08:41', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (337, 136, 5, '2020-07-11 21:58:04', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+
+Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
+insert into book_review (id, id_user, id_book, time, text) values (338, 118, 4, '2020-09-15 20:46:53', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
+insert into book_review (id, id_user, id_book, time, text) values (339, 113, 58, '2020-02-20 23:42:38', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+
+Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
+insert into book_review (id, id_user, id_book, time, text) values (340, 56, 47, '2021-07-04 23:15:16', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
+insert into book_review (id, id_user, id_book, time, text) values (341, 109, 48, '2020-07-18 20:46:47', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (342, 70, 53, '2021-08-06 19:27:37', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
+insert into book_review (id, id_user, id_book, time, text) values (343, 91, 57, '2020-08-26 06:18:48', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (344, 213, 49, '2020-03-08 04:23:27', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (345, 88, 44, '2020-10-26 19:01:07', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
+insert into book_review (id, id_user, id_book, time, text) values (346, 110, 18, '2021-02-16 04:10:33', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (347, 233, 61, '2020-09-07 03:46:24', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
+
+In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
+
+Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
+insert into book_review (id, id_user, id_book, time, text) values (348, 16, 44, '2021-12-08 19:19:25', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+
+Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (349, 5, 68, '2021-09-21 23:01:15', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (350, 245, 71, '2020-02-16 14:16:31', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
+insert into book_review (id, id_user, id_book, time, text) values (351, 179, 56, '2020-12-28 19:00:35', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
+
+Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
+insert into book_review (id, id_user, id_book, time, text) values (352, 210, 5, '2021-09-16 07:39:40', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (353, 100, 64, '2020-04-23 16:01:48', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+
+Sed ante. Vivamus tortor. Duis mattis egestas metus.
+
+Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (354, 54, 32, '2020-03-29 06:15:18', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
+
+In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (355, 1, 27, '2020-06-06 22:28:54', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+
+Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (356, 51, 22, '2020-06-20 20:23:52', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (357, 78, 51, '2021-06-18 00:03:09', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
+
+Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+
+Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
+insert into book_review (id, id_user, id_book, time, text) values (358, 102, 52, '2020-07-26 15:36:24', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+
+Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
+insert into book_review (id, id_user, id_book, time, text) values (359, 87, 70, '2021-01-24 01:22:42', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (360, 213, 2, '2021-04-16 21:50:10', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (361, 194, 61, '2020-05-28 06:06:08', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
+insert into book_review (id, id_user, id_book, time, text) values (362, 20, 44, '2021-04-24 14:19:18', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (363, 208, 52, '2021-07-15 13:48:21', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into book_review (id, id_user, id_book, time, text) values (364, 241, 13, '2021-07-28 04:56:17', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (365, 90, 60, '2020-08-14 17:19:18', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
+
+Phasellus in felis. Donec semper sapien a libero. Nam dui.');
+insert into book_review (id, id_user, id_book, time, text) values (366, 102, 38, '2021-07-19 01:16:19', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
+insert into book_review (id, id_user, id_book, time, text) values (367, 99, 25, '2020-06-11 13:01:51', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
+
+Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+
+Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (368, 117, 42, '2020-08-31 17:28:54', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (369, 211, 11, '2021-11-12 05:26:16', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+
+Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
+insert into book_review (id, id_user, id_book, time, text) values (370, 163, 59, '2020-04-07 22:10:52', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
+
+Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (371, 207, 69, '2020-08-24 20:42:05', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (372, 112, 32, '2021-06-17 09:26:34', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
 
 Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
 
 Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
-insert into book_review (id_user, id_book, time, text) values (197, 51, '26.03.2021', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+insert into book_review (id, id_user, id_book, time, text) values (373, 122, 26, '2020-06-15 03:45:32', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+
+Sed ante. Vivamus tortor. Duis mattis egestas metus.
+
+Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (374, 154, 70, '2020-06-13 14:07:41', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
+
+Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
+insert into book_review (id, id_user, id_book, time, text) values (375, 138, 26, '2020-12-20 23:59:43', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
+insert into book_review (id, id_user, id_book, time, text) values (376, 88, 30, '2021-05-30 17:26:42', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
+insert into book_review (id, id_user, id_book, time, text) values (377, 108, 42, '2020-05-31 20:10:28', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+
+Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
+insert into book_review (id, id_user, id_book, time, text) values (378, 135, 56, '2020-08-22 16:06:13', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (379, 170, 66, '2021-08-07 02:44:54', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (380, 54, 8, '2020-11-04 00:32:08', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (381, 192, 62, '2020-10-04 21:10:11', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+
+Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into book_review (id, id_user, id_book, time, text) values (382, 7, 9, '2020-10-26 20:10:39', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+
+Fusce consequat. Nulla nisl. Nunc nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (383, 80, 25, '2021-02-16 19:51:09', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+
+Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (384, 159, 66, '2020-01-02 04:07:38', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
+
+Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+
+Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
+insert into book_review (id, id_user, id_book, time, text) values (385, 11, 22, '2021-05-19 16:56:02', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+
+Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
+insert into book_review (id, id_user, id_book, time, text) values (386, 199, 49, '2020-08-31 06:01:56', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (387, 172, 33, '2021-12-13 17:21:05', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
+insert into book_review (id, id_user, id_book, time, text) values (388, 248, 53, '2021-06-13 16:04:21', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (389, 231, 55, '2020-12-05 07:42:34', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (390, 157, 54, '2020-05-15 14:08:42', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
+insert into book_review (id, id_user, id_book, time, text) values (391, 240, 40, '2021-09-07 17:12:38', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (392, 186, 62, '2021-11-09 09:21:36', 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
+insert into book_review (id, id_user, id_book, time, text) values (393, 7, 14, '2021-12-10 09:03:45', 'In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (394, 238, 36, '2020-11-19 03:48:45', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
+insert into book_review (id, id_user, id_book, time, text) values (395, 177, 59, '2020-10-28 04:58:50', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (396, 28, 5, '2021-10-27 08:15:28', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
+insert into book_review (id, id_user, id_book, time, text) values (397, 15, 55, '2020-04-14 06:31:10', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
+insert into book_review (id, id_user, id_book, time, text) values (398, 14, 28, '2021-11-07 07:03:34', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+insert into book_review (id, id_user, id_book, time, text) values (399, 199, 16, '2021-12-28 18:20:41', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (400, 84, 14, '2020-08-18 06:13:53', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into book_review (id, id_user, id_book, time, text) values (401, 52, 35, '2020-08-16 11:10:46', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (402, 42, 68, '2021-01-04 00:52:14', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (403, 141, 20, '2021-06-04 09:41:11', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (404, 136, 65, '2021-05-30 15:05:17', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+
+Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+
+Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (405, 220, 24, '2020-03-10 01:51:52', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (406, 113, 55, '2021-11-18 00:46:59', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (407, 187, 56, '2021-03-08 23:37:20', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
+insert into book_review (id, id_user, id_book, time, text) values (408, 1, 43, '2021-05-31 23:08:27', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+
+Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
+insert into book_review (id, id_user, id_book, time, text) values (409, 74, 7, '2021-01-23 12:42:53', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+
+Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
+insert into book_review (id, id_user, id_book, time, text) values (410, 173, 42, '2020-03-20 14:45:50', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
+insert into book_review (id, id_user, id_book, time, text) values (411, 57, 44, '2020-04-12 15:42:05', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (412, 236, 35, '2020-09-01 12:04:01', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (413, 221, 6, '2020-07-21 06:06:42', 'In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (414, 75, 23, '2020-06-06 04:35:25', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (415, 121, 15, '2020-07-28 07:13:05', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (416, 172, 60, '2020-06-01 16:57:34', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (417, 163, 42, '2021-08-07 22:27:51', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (418, 70, 20, '2021-10-10 14:42:54', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+
+Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
+insert into book_review (id, id_user, id_book, time, text) values (419, 18, 66, '2021-07-25 03:27:58', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
+
+Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+
+Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (420, 2, 37, '2020-03-09 08:59:17', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+
+Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+insert into book_review (id, id_user, id_book, time, text) values (421, 79, 51, '2021-03-08 19:13:47', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
+insert into book_review (id, id_user, id_book, time, text) values (422, 15, 30, '2020-10-24 12:19:14', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
+
+Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
+insert into book_review (id, id_user, id_book, time, text) values (423, 186, 35, '2020-02-04 19:42:06', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+
+Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.');
+insert into book_review (id, id_user, id_book, time, text) values (424, 227, 62, '2020-12-03 01:38:56', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into book_review (id, id_user, id_book, time, text) values (425, 187, 63, '2021-12-18 14:51:35', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (426, 65, 6, '2021-10-08 10:27:19', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+
+Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
+insert into book_review (id, id_user, id_book, time, text) values (427, 87, 21, '2021-09-16 23:43:02', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
+
+In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (428, 19, 5, '2021-04-13 19:49:51', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+
+Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+
+Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.');
+insert into book_review (id, id_user, id_book, time, text) values (429, 106, 21, '2020-12-01 02:59:47', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
+insert into book_review (id, id_user, id_book, time, text) values (430, 45, 55, '2020-08-09 03:58:52', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
+
+Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
+
+Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
+insert into book_review (id, id_user, id_book, time, text) values (431, 158, 68, '2020-01-14 06:12:56', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (432, 247, 1, '2020-03-07 07:10:30', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (433, 19, 55, '2020-07-02 12:11:32', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (434, 94, 44, '2020-09-05 15:40:21', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+
+Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
+insert into book_review (id, id_user, id_book, time, text) values (435, 2, 60, '2021-12-09 03:17:31', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (436, 20, 61, '2021-11-24 16:35:05', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
+
+Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+
+Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (437, 25, 38, '2020-04-18 00:51:46', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (438, 150, 66, '2020-08-22 09:24:38', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
+insert into book_review (id, id_user, id_book, time, text) values (439, 237, 68, '2021-06-23 16:47:37', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (440, 217, 7, '2020-12-17 20:45:33', 'In congue. Etiam justo. Etiam pretium iaculis justo.
+
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (441, 226, 71, '2021-12-26 04:29:37', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.
+
+Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.');
+insert into book_review (id, id_user, id_book, time, text) values (442, 76, 68, '2020-10-03 04:56:36', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
+
+Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+
+Sed ante. Vivamus tortor. Duis mattis egestas metus.');
+insert into book_review (id, id_user, id_book, time, text) values (443, 9, 3, '2021-01-21 07:55:45', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (444, 204, 27, '2020-02-27 21:46:34', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+
+Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
+insert into book_review (id, id_user, id_book, time, text) values (445, 42, 61, '2020-04-16 23:11:36', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.');
+insert into book_review (id, id_user, id_book, time, text) values (446, 228, 19, '2021-10-23 20:35:39', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (447, 168, 38, '2020-08-11 04:10:52', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
+insert into book_review (id, id_user, id_book, time, text) values (448, 104, 64, '2021-01-05 07:37:09', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (449, 131, 68, '2020-05-15 13:52:51', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+
+Fusce consequat. Nulla nisl. Nunc nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (450, 218, 54, '2020-10-07 00:39:49', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.');
+insert into book_review (id, id_user, id_book, time, text) values (451, 173, 69, '2020-07-03 04:42:35', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into book_review (id, id_user, id_book, time, text) values (452, 139, 28, '2020-05-29 15:49:45', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (453, 124, 45, '2021-04-14 10:51:57', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
+insert into book_review (id, id_user, id_book, time, text) values (454, 65, 67, '2021-02-03 15:40:01', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (455, 39, 53, '2021-06-18 15:41:22', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
+
+Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
+insert into book_review (id, id_user, id_book, time, text) values (456, 72, 5, '2020-12-12 02:15:48', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into book_review (id, id_user, id_book, time, text) values (457, 155, 33, '2020-08-07 03:03:50', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
+
+Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
+
+Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.');
+insert into book_review (id, id_user, id_book, time, text) values (458, 171, 48, '2020-03-18 03:56:56', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.');
+insert into book_review (id, id_user, id_book, time, text) values (459, 110, 15, '2021-03-20 22:38:23', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (460, 106, 45, '2021-05-19 06:23:59', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
+
+Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
+
+In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into book_review (id, id_user, id_book, time, text) values (461, 111, 1, '2021-04-23 02:05:34', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.');
+insert into book_review (id, id_user, id_book, time, text) values (462, 209, 46, '2021-12-09 19:10:33', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
 
 Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
 
 Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-insert into book_review (id_user, id_book, time, text) values (38, 61, '27.10.2021', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+insert into book_review (id, id_user, id_book, time, text) values (463, 176, 22, '2020-01-21 00:23:25', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-Fusce consequat. Nulla nisl. Nunc nisl.');
-insert into book_review (id_user, id_book, time, text) values (237, 31, '23.09.2020', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
-insert into book_review (id_user, id_book, time, text) values (161, 53, '25.12.2021', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
+Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
 
-Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
+insert into book_review (id, id_user, id_book, time, text) values (464, 202, 19, '2021-02-09 19:40:06', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.');
+insert into book_review (id, id_user, id_book, time, text) values (465, 136, 24, '2021-06-01 04:05:28', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+
+Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.');
+insert into book_review (id, id_user, id_book, time, text) values (466, 12, 19, '2020-09-23 20:30:37', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
+insert into book_review (id, id_user, id_book, time, text) values (467, 235, 22, '2021-05-13 09:04:33', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
+insert into book_review (id, id_user, id_book, time, text) values (468, 243, 11, '2020-07-21 22:58:42', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.');
+insert into book_review (id, id_user, id_book, time, text) values (469, 162, 25, '2020-02-10 16:10:28', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
+
+Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.');
+insert into book_review (id, id_user, id_book, time, text) values (470, 137, 16, '2021-10-01 23:48:17', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
+
+Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
+
+Phasellus in felis. Donec semper sapien a libero. Nam dui.');
+insert into book_review (id, id_user, id_book, time, text) values (471, 113, 26, '2021-07-31 12:02:36', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+
+Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
+
+Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.');
+insert into book_review (id, id_user, id_book, time, text) values (472, 27, 33, '2021-02-03 14:54:06', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+
+Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into book_review (id, id_user, id_book, time, text) values (473, 225, 49, '2021-09-02 12:41:29', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+
+Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.');
+insert into book_review (id, id_user, id_book, time, text) values (474, 64, 62, '2021-12-10 09:27:38', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into book_review (id, id_user, id_book, time, text) values (475, 247, 35, '2021-08-07 07:10:03', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+
+Sed ante. Vivamus tortor. Duis mattis egestas metus.');
+insert into book_review (id, id_user, id_book, time, text) values (476, 54, 59, '2020-07-03 09:00:46', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (477, 145, 11, '2020-07-09 07:52:00', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.');
+insert into book_review (id, id_user, id_book, time, text) values (478, 209, 1, '2020-12-28 13:49:14', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
+
+Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
+insert into book_review (id, id_user, id_book, time, text) values (479, 74, 32, '2021-01-29 22:46:25', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.');
+insert into book_review (id, id_user, id_book, time, text) values (480, 87, 32, '2020-02-26 00:14:37', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.');
+insert into book_review (id, id_user, id_book, time, text) values (481, 46, 35, '2021-05-24 08:17:49', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
+insert into book_review (id, id_user, id_book, time, text) values (482, 19, 50, '2020-10-31 22:42:58', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
+
+Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.');
+insert into book_review (id, id_user, id_book, time, text) values (483, 165, 58, '2020-09-20 07:07:47', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into book_review (id, id_user, id_book, time, text) values (484, 2, 71, '2020-05-18 14:30:34', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into book_review (id, id_user, id_book, time, text) values (485, 231, 70, '2021-01-31 18:05:51', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+
+Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.');
+insert into book_review (id, id_user, id_book, time, text) values (486, 241, 57, '2020-03-04 04:41:08', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+
+In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
+insert into book_review (id, id_user, id_book, time, text) values (487, 235, 67, '2020-03-19 15:09:35', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (488, 151, 62, '2021-03-11 02:03:25', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+
+Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.');
+insert into book_review (id, id_user, id_book, time, text) values (489, 207, 43, '2020-09-23 17:20:27', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+
+Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.');
+insert into book_review (id, id_user, id_book, time, text) values (490, 46, 14, '2021-04-23 10:12:55', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+
+Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
+insert into book_review (id, id_user, id_book, time, text) values (491, 243, 36, '2020-11-16 09:57:50', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+
+Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (492, 143, 33, '2020-12-31 08:06:54', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
+insert into book_review (id, id_user, id_book, time, text) values (493, 183, 56, '2021-10-27 13:14:39', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.');
+insert into book_review (id, id_user, id_book, time, text) values (494, 90, 46, '2021-09-05 15:48:49', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.');
+insert into book_review (id, id_user, id_book, time, text) values (495, 104, 46, '2021-07-16 23:50:44', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.');
+insert into book_review (id, id_user, id_book, time, text) values (496, 8, 1, '2021-10-28 21:02:09', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.');
+insert into book_review (id, id_user, id_book, time, text) values (497, 75, 38, '2020-09-01 04:18:00', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+
+Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
+
+Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
+insert into book_review (id, id_user, id_book, time, text) values (498, 183, 71, '2020-04-20 21:05:32', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
+
+Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
+
+Phasellus in felis. Donec semper sapien a libero. Nam dui.');
+insert into book_review (id, id_user, id_book, time, text) values (499, 74, 59, '2020-09-26 06:05:41', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+
+Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
+insert into book_review (id, id_user, id_book, time, text) values (500, 155, 11, '2021-09-07 05:21:23', 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
+
+insert into book_review_like (id, id_user, id_review, time, value) values (1, 96, 61, '2021-12-23 02:11:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (2, 75, 434, '2021-09-29 21:17:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (3, 172, 342, '2020-04-15 09:40:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (4, 181, 423, '2021-07-16 18:46:07', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (5, 63, 17, '2020-11-28 01:48:08', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (6, 37, 414, '2020-07-30 00:03:00', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (7, 12, 33, '2021-08-13 08:34:37', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (8, 102, 331, '2021-06-06 10:49:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (9, 207, 350, '2021-05-24 11:44:13', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (10, 190, 210, '2020-05-09 01:21:31', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (11, 161, 411, '2020-06-16 20:57:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (12, 151, 201, '2020-06-11 15:28:03', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (13, 146, 119, '2021-07-26 06:35:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (14, 57, 378, '2021-05-22 16:34:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (15, 125, 186, '2021-10-12 02:27:41', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (16, 211, 50, '2021-08-08 01:53:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (17, 39, 171, '2020-02-11 10:49:52', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (18, 110, 78, '2021-11-11 10:36:49', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (19, 240, 173, '2021-05-22 00:13:58', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (20, 129, 346, '2020-09-02 23:59:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (21, 137, 429, '2020-05-18 02:27:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (22, 170, 178, '2021-12-17 18:47:56', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (23, 117, 74, '2020-03-05 08:31:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (24, 3, 304, '2021-03-01 22:33:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (25, 232, 425, '2020-12-06 07:23:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (26, 120, 290, '2020-08-23 05:55:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (27, 84, 221, '2020-05-01 03:51:18', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (28, 130, 418, '2020-09-23 21:40:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (29, 54, 412, '2020-09-04 01:19:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (30, 152, 426, '2021-04-23 18:31:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (31, 131, 421, '2021-05-27 20:50:21', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (32, 183, 70, '2021-03-20 21:47:18', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (33, 200, 137, '2020-09-26 01:26:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (34, 60, 433, '2020-04-07 07:27:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (35, 122, 55, '2021-05-07 15:14:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (36, 38, 364, '2020-05-11 02:12:26', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (37, 48, 462, '2021-03-19 21:21:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (38, 69, 286, '2021-07-23 04:37:07', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (39, 85, 68, '2020-08-07 22:17:41', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (40, 125, 225, '2020-02-19 05:20:34', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (41, 33, 40, '2021-05-10 05:46:17', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (42, 97, 442, '2020-02-16 16:52:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (43, 245, 396, '2020-11-05 18:32:54', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (44, 250, 134, '2021-05-01 22:28:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (45, 144, 36, '2021-01-21 18:28:07', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (46, 6, 246, '2021-09-11 20:47:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (47, 33, 473, '2020-05-10 15:27:28', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (48, 63, 204, '2020-10-05 11:33:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (49, 161, 379, '2021-03-07 05:28:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (50, 241, 373, '2021-08-05 13:44:28', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (51, 122, 173, '2020-03-03 03:05:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (52, 97, 448, '2021-07-23 03:51:50', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (53, 152, 385, '2020-05-18 09:46:08', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (54, 142, 431, '2021-02-12 01:19:53', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (55, 60, 265, '2021-11-22 10:57:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (56, 198, 202, '2021-02-11 00:27:44', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (57, 108, 270, '2021-09-12 12:33:08', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (58, 53, 1, '2020-11-08 13:21:46', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (59, 169, 35, '2020-07-22 10:19:44', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (60, 210, 51, '2020-01-29 15:45:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (61, 133, 350, '2021-06-28 15:45:09', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (62, 11, 306, '2020-01-27 00:36:55', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (63, 198, 363, '2021-10-04 08:16:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (64, 236, 284, '2021-11-18 01:44:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (65, 200, 382, '2021-08-01 21:05:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (66, 175, 177, '2020-01-17 03:50:26', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (67, 6, 305, '2020-09-21 16:06:16', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (68, 140, 441, '2021-01-12 12:50:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (69, 173, 60, '2020-11-07 09:02:09', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (70, 85, 71, '2021-05-18 08:31:23', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (71, 45, 463, '2020-06-27 09:35:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (72, 66, 75, '2021-08-05 09:27:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (73, 126, 462, '2021-12-03 01:34:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (74, 85, 25, '2020-04-08 06:52:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (75, 209, 122, '2021-12-24 00:47:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (76, 192, 360, '2020-10-24 09:03:44', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (77, 182, 404, '2021-01-25 14:19:15', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (78, 126, 116, '2020-08-18 04:38:30', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (79, 149, 453, '2021-04-04 13:17:36', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (80, 67, 265, '2020-12-23 21:05:18', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (81, 42, 123, '2020-05-13 14:16:45', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (82, 99, 413, '2020-09-01 16:46:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (83, 247, 323, '2021-08-15 17:42:07', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (84, 224, 65, '2020-04-04 09:08:08', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (85, 18, 350, '2020-10-24 05:34:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (86, 227, 454, '2020-12-21 15:13:56', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (87, 61, 294, '2020-04-06 06:36:17', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (88, 120, 316, '2021-08-18 09:32:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (89, 94, 365, '2020-05-13 10:08:13', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (90, 137, 73, '2020-11-02 13:35:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (91, 226, 236, '2020-07-25 07:02:49', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (92, 225, 93, '2020-06-08 03:06:24', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (93, 185, 210, '2020-06-29 12:08:30', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (94, 70, 493, '2021-12-09 09:03:07', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (95, 142, 28, '2021-06-19 09:04:20', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (96, 39, 418, '2020-11-05 07:18:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (97, 96, 276, '2021-01-02 08:39:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (98, 56, 422, '2020-07-26 06:29:49', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (99, 64, 62, '2020-11-06 12:25:38', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (100, 125, 105, '2020-01-18 23:20:03', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (101, 205, 29, '2020-08-08 11:16:13', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (102, 182, 242, '2020-01-28 07:35:49', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (103, 172, 246, '2021-02-19 14:17:48', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (104, 185, 302, '2021-12-20 13:17:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (105, 138, 193, '2020-02-28 11:12:49', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (106, 122, 313, '2021-06-15 15:18:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (107, 195, 167, '2021-08-25 00:20:21', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (108, 52, 455, '2021-08-05 21:45:15', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (109, 243, 146, '2020-08-31 03:44:44', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (110, 232, 66, '2020-10-12 09:44:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (111, 217, 31, '2020-08-19 01:51:20', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (112, 246, 76, '2021-04-23 10:07:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (113, 108, 147, '2020-02-09 01:01:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (114, 49, 115, '2020-09-17 01:37:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (115, 165, 162, '2021-01-24 10:01:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (116, 113, 252, '2020-01-07 12:13:37', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (117, 87, 270, '2020-08-01 23:53:46', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (118, 23, 75, '2020-03-04 16:00:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (119, 153, 373, '2021-08-12 09:19:18', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (120, 196, 126, '2020-03-03 03:45:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (121, 179, 49, '2020-04-19 15:55:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (122, 34, 426, '2021-04-02 17:04:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (123, 245, 107, '2021-08-20 03:19:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (124, 238, 426, '2021-08-24 22:29:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (125, 131, 428, '2020-03-19 16:56:55', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (126, 153, 400, '2021-07-18 21:57:45', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (127, 157, 70, '2020-07-06 09:46:08', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (128, 2, 235, '2021-11-07 01:04:00', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (129, 40, 421, '2021-10-02 09:33:21', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (130, 182, 467, '2021-10-26 05:58:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (131, 86, 465, '2021-12-30 00:10:41', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (132, 143, 363, '2020-07-30 15:39:48', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (133, 43, 138, '2021-09-11 06:29:53', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (134, 82, 337, '2020-03-11 03:18:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (135, 30, 102, '2021-12-10 21:25:16', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (136, 119, 364, '2021-04-08 05:33:44', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (137, 74, 450, '2020-06-21 20:01:06', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (138, 179, 120, '2020-02-28 14:34:29', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (139, 157, 45, '2020-09-07 07:41:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (140, 107, 19, '2020-07-21 02:46:12', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (141, 21, 431, '2020-02-09 10:16:36', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (142, 43, 299, '2021-06-07 13:49:33', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (143, 136, 444, '2020-09-24 19:32:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (144, 52, 58, '2020-07-18 11:19:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (145, 58, 11, '2021-02-27 15:55:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (146, 82, 336, '2021-12-28 14:39:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (147, 231, 164, '2021-02-19 06:22:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (148, 162, 387, '2020-09-12 10:46:16', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (149, 73, 381, '2020-02-14 02:37:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (150, 201, 100, '2020-08-01 03:32:38', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (151, 238, 168, '2020-12-19 13:55:45', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (152, 175, 48, '2021-01-01 19:59:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (153, 187, 320, '2020-05-13 13:32:16', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (154, 95, 401, '2021-08-07 22:56:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (155, 197, 245, '2021-09-03 00:36:04', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (156, 239, 394, '2021-04-26 20:09:32', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (157, 137, 416, '2021-11-30 19:08:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (158, 5, 324, '2021-07-01 09:39:16', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (159, 180, 100, '2020-11-16 05:11:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (160, 142, 233, '2020-07-25 10:40:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (161, 40, 119, '2020-01-20 09:50:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (162, 58, 358, '2021-10-03 14:29:55', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (163, 85, 331, '2020-05-31 11:17:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (164, 225, 490, '2021-02-10 23:52:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (165, 96, 412, '2021-10-03 01:14:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (166, 129, 44, '2020-04-19 18:04:41', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (167, 175, 379, '2020-02-06 12:21:50', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (168, 105, 497, '2021-09-01 02:13:00', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (169, 216, 253, '2021-04-11 06:10:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (170, 222, 302, '2021-01-03 01:04:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (171, 102, 12, '2021-08-03 12:52:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (172, 84, 379, '2021-10-17 14:37:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (173, 137, 250, '2021-01-10 08:25:12', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (174, 219, 466, '2020-05-19 05:09:45', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (175, 235, 240, '2020-03-18 07:35:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (176, 211, 425, '2020-06-22 00:21:51', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (177, 68, 154, '2020-10-04 18:20:08', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (178, 35, 481, '2021-05-12 01:34:40', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (179, 53, 36, '2021-05-28 21:33:37', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (180, 132, 98, '2020-06-04 04:34:42', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (181, 206, 29, '2021-03-17 15:19:01', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (182, 39, 384, '2020-10-17 12:58:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (183, 165, 10, '2021-06-28 12:11:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (184, 8, 484, '2020-04-23 07:15:56', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (185, 75, 121, '2020-11-23 16:27:42', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (186, 157, 342, '2021-12-30 11:49:41', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (187, 44, 58, '2020-05-07 21:33:45', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (188, 250, 205, '2021-07-08 14:47:18', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (189, 176, 52, '2021-10-18 00:08:16', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (190, 8, 6, '2020-03-29 02:42:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (191, 184, 250, '2020-02-06 14:25:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (192, 183, 382, '2020-01-16 16:23:13', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (193, 167, 472, '2020-08-17 12:17:12', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (194, 103, 74, '2020-12-22 01:20:43', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (195, 3, 6, '2020-07-29 13:34:04', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (196, 115, 104, '2021-03-23 09:11:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (197, 135, 161, '2020-02-05 00:34:00', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (198, 115, 490, '2021-01-22 03:29:05', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (199, 231, 132, '2020-01-05 13:17:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (200, 85, 34, '2020-07-16 18:58:02', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (201, 7, 116, '2021-03-25 03:38:07', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (202, 116, 178, '2021-05-14 06:27:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (203, 102, 197, '2021-04-06 19:51:57', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (204, 197, 277, '2021-01-23 19:14:35', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (205, 218, 401, '2020-01-03 21:51:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (206, 117, 398, '2020-09-20 15:51:06', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (207, 41, 455, '2021-09-09 19:24:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (208, 213, 217, '2020-06-17 18:11:40', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (209, 76, 357, '2021-05-09 11:38:02', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (210, 146, 110, '2020-06-24 16:39:21', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (211, 17, 117, '2021-09-16 14:11:24', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (212, 71, 450, '2021-12-28 05:15:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (213, 148, 405, '2020-10-25 23:06:52', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (214, 105, 233, '2020-06-11 04:17:24', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (215, 35, 285, '2020-09-06 12:24:24', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (216, 46, 368, '2020-10-31 06:59:58', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (217, 207, 66, '2020-05-23 20:23:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (218, 55, 485, '2020-09-05 21:52:13', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (219, 93, 12, '2020-02-19 04:59:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (220, 129, 139, '2020-11-19 11:09:06', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (221, 102, 281, '2020-11-09 20:03:31', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (222, 115, 195, '2020-12-31 01:42:38', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (223, 172, 325, '2021-03-15 21:24:15', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (224, 93, 476, '2020-11-17 09:23:02', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (225, 137, 296, '2021-09-28 19:17:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (226, 219, 327, '2020-10-30 18:53:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (227, 167, 51, '2021-09-11 14:27:25', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (228, 164, 317, '2020-02-17 14:39:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (229, 41, 6, '2021-06-16 19:29:35', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (230, 130, 189, '2020-03-09 23:40:08', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (231, 45, 349, '2020-07-15 04:43:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (232, 136, 172, '2020-12-26 06:30:10', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (233, 82, 156, '2021-04-21 04:11:18', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (234, 168, 441, '2021-01-14 13:51:49', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (235, 7, 325, '2020-11-13 19:43:50', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (236, 24, 284, '2020-07-20 16:07:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (237, 63, 57, '2020-04-14 23:39:03', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (238, 123, 284, '2020-06-26 04:26:20', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (239, 197, 258, '2021-05-08 08:17:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (240, 8, 424, '2020-02-22 16:45:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (241, 192, 463, '2021-11-17 15:11:18', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (242, 80, 194, '2021-11-02 12:13:39', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (243, 148, 6, '2020-04-12 17:26:16', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (244, 71, 10, '2020-12-17 14:24:28', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (245, 165, 349, '2020-05-13 16:06:08', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (246, 83, 380, '2021-12-17 22:27:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (247, 120, 55, '2020-01-15 15:36:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (248, 45, 126, '2021-08-30 21:50:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (249, 117, 423, '2021-01-14 13:12:32', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (250, 133, 89, '2020-12-17 05:50:52', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (251, 205, 121, '2020-08-08 09:13:28', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (252, 57, 171, '2021-07-25 06:53:31', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (253, 108, 410, '2021-08-29 16:42:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (254, 189, 98, '2021-05-08 04:19:30', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (255, 211, 464, '2021-11-06 00:06:28', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (256, 142, 309, '2021-11-28 12:58:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (257, 189, 425, '2020-05-14 13:18:49', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (258, 189, 54, '2020-09-10 15:22:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (259, 54, 309, '2020-10-23 22:57:25', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (260, 45, 147, '2021-06-03 00:00:00', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (261, 200, 347, '2020-02-27 09:47:29', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (262, 162, 3, '2020-12-30 15:08:33', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (263, 217, 172, '2021-05-19 16:18:37', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (264, 144, 178, '2021-11-14 18:00:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (265, 71, 434, '2021-12-17 00:24:46', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (266, 133, 218, '2020-06-24 05:21:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (267, 183, 187, '2020-03-02 07:13:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (268, 56, 133, '2020-10-16 19:44:26', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (269, 188, 136, '2021-11-25 10:30:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (270, 68, 63, '2020-02-19 21:32:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (271, 103, 401, '2020-07-24 10:32:04', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (272, 173, 270, '2021-12-28 07:39:06', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (273, 13, 100, '2021-11-30 08:33:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (274, 162, 478, '2021-12-21 05:55:38', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (275, 119, 474, '2021-11-06 08:45:29', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (276, 102, 22, '2020-04-25 17:07:47', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (277, 221, 124, '2021-12-21 17:28:49', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (278, 220, 2, '2020-04-27 00:28:17', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (279, 123, 369, '2020-04-08 15:30:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (280, 114, 489, '2020-07-25 04:27:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (281, 215, 325, '2021-08-04 10:55:59', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (282, 86, 127, '2020-05-29 03:50:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (283, 209, 38, '2020-02-23 07:46:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (284, 56, 403, '2021-12-14 06:56:04', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (285, 53, 30, '2020-07-16 21:54:46', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (286, 202, 443, '2021-12-23 01:40:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (287, 149, 73, '2020-08-09 17:39:42', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (288, 64, 485, '2020-05-11 20:16:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (289, 82, 316, '2021-02-25 08:24:59', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (290, 109, 372, '2021-02-28 15:45:53', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (291, 209, 389, '2021-05-12 13:59:17', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (292, 111, 196, '2021-10-03 11:38:14', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (293, 207, 193, '2021-08-18 11:32:43', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (294, 150, 474, '2020-12-26 00:57:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (295, 169, 457, '2020-01-18 15:59:49', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (296, 185, 434, '2021-10-06 17:11:24', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (297, 47, 490, '2021-03-26 06:32:04', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (298, 212, 34, '2020-05-22 03:06:32', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (299, 97, 416, '2021-07-02 17:04:47', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (300, 214, 471, '2020-08-03 09:43:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (301, 25, 403, '2020-05-22 08:36:07', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (302, 190, 2, '2020-06-21 00:48:20', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (303, 161, 262, '2021-02-07 12:45:17', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (304, 35, 165, '2021-03-15 20:17:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (305, 142, 218, '2020-07-02 13:45:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (306, 91, 176, '2020-04-26 05:07:29', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (307, 79, 311, '2021-03-07 18:48:28', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (308, 101, 78, '2020-09-02 19:42:06', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (309, 140, 423, '2020-02-20 20:45:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (310, 101, 137, '2020-07-26 05:01:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (311, 208, 3, '2020-12-31 06:15:00', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (312, 208, 204, '2021-09-11 21:58:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (313, 166, 276, '2021-06-23 20:19:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (314, 34, 438, '2021-09-03 23:37:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (315, 21, 238, '2020-04-25 21:19:06', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (316, 70, 220, '2020-04-24 18:52:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (317, 202, 114, '2021-10-26 03:54:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (318, 224, 398, '2020-06-11 23:30:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (319, 16, 285, '2020-06-10 15:03:00', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (320, 63, 326, '2021-10-28 20:00:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (321, 121, 254, '2021-09-17 14:24:36', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (322, 108, 141, '2020-06-01 03:43:52', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (323, 243, 414, '2021-12-02 15:49:24', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (324, 120, 492, '2020-04-09 12:05:07', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (325, 242, 347, '2020-12-24 12:42:18', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (326, 59, 8, '2020-12-31 04:48:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (327, 24, 368, '2021-08-23 22:25:28', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (328, 44, 2, '2021-05-08 10:51:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (329, 145, 122, '2020-07-14 03:00:30', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (330, 9, 361, '2020-10-29 10:56:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (331, 176, 418, '2020-09-05 12:57:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (332, 9, 236, '2021-12-15 22:22:34', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (333, 169, 381, '2020-06-26 19:47:07', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (334, 233, 84, '2020-12-08 00:29:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (335, 33, 97, '2020-04-23 11:41:41', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (336, 211, 191, '2020-05-10 15:17:18', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (337, 204, 327, '2020-05-15 14:27:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (338, 75, 60, '2021-09-06 05:18:40', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (339, 160, 119, '2020-05-25 14:11:15', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (340, 74, 403, '2021-09-30 05:28:57', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (341, 92, 37, '2020-04-23 23:35:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (342, 46, 274, '2020-11-07 16:49:52', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (343, 46, 181, '2020-08-02 09:50:00', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (344, 189, 321, '2021-03-06 20:02:17', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (345, 50, 263, '2021-02-14 22:04:08', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (346, 8, 23, '2021-07-03 14:58:10', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (347, 143, 128, '2020-12-09 03:53:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (348, 169, 60, '2020-06-07 10:56:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (349, 86, 34, '2021-07-27 18:53:20', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (350, 177, 136, '2020-08-11 12:18:47', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (351, 229, 398, '2020-06-16 16:04:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (352, 74, 419, '2021-08-14 07:00:42', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (353, 83, 498, '2021-04-19 08:23:37', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (354, 107, 261, '2020-08-04 07:52:14', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (355, 123, 28, '2021-09-01 07:11:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (356, 16, 160, '2021-12-30 07:36:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (357, 139, 127, '2020-08-28 19:38:05', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (358, 188, 343, '2020-08-27 05:58:34', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (359, 24, 50, '2021-02-06 13:47:21', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (360, 198, 352, '2020-07-01 06:18:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (361, 102, 170, '2020-07-19 21:27:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (362, 212, 432, '2021-06-16 11:33:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (363, 60, 26, '2021-06-22 00:41:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (364, 196, 358, '2021-05-19 20:55:10', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (365, 198, 321, '2021-10-09 19:53:33', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (366, 219, 74, '2020-02-18 00:22:55', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (367, 222, 494, '2020-10-26 18:00:10', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (368, 29, 454, '2021-10-26 17:36:47', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (369, 24, 388, '2020-12-02 01:07:57', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (370, 71, 474, '2020-05-12 11:34:41', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (371, 59, 320, '2021-05-21 11:18:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (372, 137, 53, '2020-02-06 01:43:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (373, 51, 14, '2020-03-07 15:10:20', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (374, 31, 363, '2021-11-24 16:15:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (375, 248, 406, '2020-07-03 06:34:59', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (376, 196, 25, '2020-05-07 04:01:12', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (377, 181, 193, '2020-09-05 17:11:08', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (378, 2, 359, '2021-10-08 18:57:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (379, 146, 305, '2020-06-07 12:40:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (380, 83, 192, '2020-11-14 08:26:08', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (381, 238, 190, '2020-03-02 01:22:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (382, 178, 183, '2020-01-27 00:56:09', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (383, 62, 44, '2021-04-28 10:43:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (384, 132, 180, '2021-11-06 02:27:10', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (385, 22, 64, '2020-08-20 15:57:44', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (386, 118, 465, '2021-11-06 23:06:58', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (387, 230, 356, '2021-03-04 05:09:49', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (388, 175, 304, '2020-01-10 23:01:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (389, 131, 308, '2020-07-14 14:08:05', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (390, 195, 293, '2021-07-27 21:49:34', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (391, 128, 165, '2021-10-13 21:04:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (392, 17, 213, '2021-05-03 00:00:15', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (393, 150, 336, '2020-05-11 01:36:38', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (394, 139, 478, '2021-05-29 11:39:29', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (395, 166, 185, '2020-08-23 01:42:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (396, 97, 401, '2020-09-22 03:54:09', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (397, 192, 221, '2020-04-26 07:20:40', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (398, 67, 348, '2020-12-26 12:59:01', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (399, 30, 437, '2021-04-08 05:33:51', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (400, 73, 344, '2020-03-09 13:39:15', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (401, 77, 52, '2020-01-21 21:31:55', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (402, 210, 112, '2020-12-16 11:10:42', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (403, 65, 461, '2020-06-05 14:47:51', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (404, 4, 53, '2020-09-11 06:32:13', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (405, 74, 251, '2021-04-23 16:27:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (406, 17, 219, '2020-11-22 09:50:28', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (407, 193, 8, '2021-04-11 02:00:26', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (408, 182, 426, '2020-01-02 11:40:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (409, 61, 494, '2021-07-03 22:23:46', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (410, 210, 212, '2020-10-27 14:16:55', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (411, 241, 58, '2020-07-16 22:45:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (412, 189, 475, '2021-05-15 07:05:12', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (413, 12, 255, '2021-11-24 04:41:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (414, 234, 453, '2020-06-23 08:43:00', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (415, 58, 250, '2021-08-01 01:07:28', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (416, 80, 324, '2020-12-16 09:12:41', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (417, 81, 62, '2020-01-13 23:12:16', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (418, 63, 193, '2020-10-11 23:32:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (419, 215, 318, '2020-12-16 09:41:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (420, 165, 310, '2021-10-15 00:13:06', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (421, 165, 134, '2021-04-26 06:42:09', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (422, 234, 498, '2020-02-11 01:38:31', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (423, 146, 267, '2020-12-13 00:48:54', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (424, 232, 478, '2020-05-28 20:30:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (425, 185, 213, '2020-08-30 04:59:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (426, 105, 411, '2021-04-14 12:15:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (427, 22, 22, '2021-10-27 12:41:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (428, 21, 486, '2021-11-10 07:17:01', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (429, 41, 95, '2021-01-10 09:13:00', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (430, 237, 253, '2021-01-19 20:24:32', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (431, 153, 91, '2021-12-24 13:48:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (432, 211, 95, '2020-11-17 22:10:19', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (433, 246, 242, '2021-04-22 22:06:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (434, 124, 145, '2021-09-01 19:34:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (435, 208, 127, '2021-08-06 08:28:29', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (436, 126, 5, '2020-09-19 02:15:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (437, 198, 327, '2020-10-22 08:44:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (438, 189, 79, '2021-01-24 15:41:20', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (439, 42, 491, '2020-10-30 00:57:54', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (440, 92, 265, '2021-09-23 22:50:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (441, 236, 203, '2021-11-19 07:26:38', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (442, 110, 140, '2021-10-11 12:47:18', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (443, 160, 221, '2020-09-19 14:24:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (444, 151, 423, '2020-01-02 11:19:06', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (445, 209, 97, '2021-03-14 18:16:25', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (446, 176, 403, '2021-07-18 13:18:25', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (447, 229, 283, '2021-07-30 17:52:02', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (448, 147, 433, '2021-01-15 10:00:24', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (449, 154, 26, '2020-02-17 19:18:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (450, 59, 258, '2020-04-24 09:43:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (451, 99, 488, '2021-06-11 13:43:36', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (452, 66, 155, '2021-11-10 02:54:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (453, 161, 265, '2020-11-03 11:01:48', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (454, 17, 421, '2021-06-13 15:27:23', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (455, 176, 77, '2020-04-26 00:29:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (456, 98, 312, '2021-04-30 09:25:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (457, 45, 455, '2021-09-16 07:28:46', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (458, 120, 364, '2020-04-29 10:04:55', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (459, 13, 450, '2021-08-09 06:20:06', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (460, 168, 362, '2020-04-03 06:00:18', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (461, 104, 332, '2021-02-01 13:46:12', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (462, 91, 395, '2020-09-03 13:33:13', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (463, 216, 399, '2020-12-29 06:49:20', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (464, 223, 232, '2021-06-30 20:46:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (465, 31, 367, '2021-01-20 03:29:46', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (466, 218, 64, '2020-12-14 13:26:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (467, 41, 303, '2020-11-07 04:42:59', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (468, 59, 297, '2020-05-02 23:18:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (469, 47, 50, '2021-12-26 08:50:12', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (470, 152, 294, '2020-07-25 04:54:37', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (471, 47, 10, '2021-06-09 08:23:42', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (472, 217, 441, '2020-05-21 16:46:00', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (473, 99, 274, '2020-01-31 05:31:49', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (474, 91, 495, '2020-04-15 14:25:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (475, 51, 340, '2021-08-19 08:46:52', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (476, 33, 383, '2020-06-01 09:51:56', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (477, 160, 390, '2020-06-14 02:05:31', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (478, 135, 476, '2020-11-28 10:32:40', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (479, 238, 337, '2020-04-20 13:09:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (480, 123, 469, '2020-02-07 10:10:45', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (481, 134, 184, '2021-12-26 19:24:49', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (482, 190, 4, '2020-11-28 19:15:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (483, 154, 228, '2021-10-14 10:20:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (484, 150, 412, '2021-02-25 07:41:01', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (485, 146, 114, '2020-06-05 04:24:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (486, 184, 164, '2021-05-12 07:47:45', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (487, 223, 158, '2020-01-21 23:03:42', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (488, 62, 447, '2021-03-10 22:55:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (489, 90, 64, '2021-02-03 21:19:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (490, 52, 14, '2020-03-10 23:32:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (491, 11, 357, '2020-05-07 08:04:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (492, 171, 444, '2020-07-15 22:56:43', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (493, 192, 121, '2020-04-17 03:17:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (494, 99, 208, '2021-04-20 08:19:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (495, 166, 398, '2020-11-21 05:17:43', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (496, 208, 429, '2020-06-05 03:48:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (497, 194, 22, '2021-02-25 01:26:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (498, 61, 266, '2020-03-24 04:08:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (499, 88, 381, '2021-10-09 00:02:44', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (500, 220, 136, '2020-07-24 12:33:07', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (501, 118, 292, '2021-04-14 12:41:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (502, 117, 213, '2020-01-19 12:09:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (503, 101, 334, '2021-03-29 10:19:34', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (504, 232, 183, '2021-03-24 22:21:28', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (505, 150, 457, '2021-01-27 16:58:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (506, 102, 202, '2021-09-04 16:02:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (507, 179, 270, '2020-08-16 07:36:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (508, 176, 199, '2021-12-28 09:59:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (509, 85, 342, '2020-07-21 23:09:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (510, 203, 270, '2021-05-08 08:07:01', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (511, 34, 99, '2020-04-14 16:41:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (512, 240, 364, '2021-10-04 08:09:06', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (513, 29, 495, '2021-12-08 06:32:24', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (514, 161, 298, '2021-04-23 03:06:41', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (515, 166, 442, '2021-01-20 03:37:30', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (516, 129, 243, '2021-07-04 00:18:25', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (517, 18, 198, '2020-01-14 19:05:03', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (518, 105, 472, '2020-12-01 06:22:38', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (519, 135, 191, '2021-10-19 09:32:14', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (520, 7, 134, '2020-12-03 00:12:59', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (521, 65, 151, '2020-09-14 13:39:45', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (522, 168, 118, '2021-04-22 17:53:41', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (523, 149, 362, '2021-05-04 06:42:26', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (524, 155, 458, '2020-03-22 10:17:38', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (525, 202, 111, '2021-03-13 12:43:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (526, 210, 125, '2020-03-12 14:01:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (527, 171, 20, '2020-02-06 18:33:47', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (528, 247, 30, '2021-06-09 01:23:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (529, 232, 164, '2020-07-14 20:15:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (530, 206, 235, '2021-02-28 01:42:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (531, 125, 482, '2021-09-01 19:29:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (532, 143, 285, '2021-07-14 19:40:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (533, 136, 39, '2021-10-03 08:28:15', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (534, 176, 248, '2020-08-15 12:34:12', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (535, 109, 182, '2020-07-16 23:35:41', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (536, 201, 143, '2020-07-26 17:26:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (537, 132, 58, '2020-01-29 10:38:15', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (538, 140, 486, '2020-07-25 16:24:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (539, 223, 269, '2020-06-25 05:00:05', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (540, 23, 218, '2021-01-23 05:48:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (541, 237, 138, '2020-04-15 09:23:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (542, 242, 301, '2020-05-07 16:40:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (543, 43, 489, '2021-09-30 08:36:28', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (544, 240, 156, '2020-12-26 14:32:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (545, 249, 383, '2020-06-20 17:31:14', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (546, 116, 194, '2020-08-10 21:40:50', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (547, 182, 399, '2021-03-20 00:34:07', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (548, 239, 183, '2021-07-30 23:37:19', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (549, 29, 205, '2021-06-21 17:13:42', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (550, 86, 470, '2020-01-05 07:06:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (551, 205, 161, '2020-05-02 16:37:41', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (552, 26, 226, '2021-08-16 09:34:04', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (553, 228, 459, '2020-11-19 06:50:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (554, 105, 494, '2021-04-13 23:07:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (555, 103, 360, '2020-06-19 22:47:54', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (556, 121, 162, '2021-04-02 03:55:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (557, 21, 261, '2020-05-24 14:32:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (558, 44, 318, '2021-08-06 23:00:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (559, 51, 57, '2020-11-12 12:49:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (560, 230, 16, '2021-07-06 16:30:43', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (561, 199, 451, '2020-02-02 08:34:29', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (562, 21, 65, '2020-08-12 09:33:12', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (563, 63, 82, '2020-05-14 13:41:14', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (564, 188, 37, '2021-11-15 21:15:56', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (565, 93, 140, '2021-02-07 20:30:43', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (566, 182, 247, '2020-08-23 18:12:14', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (567, 105, 206, '2020-10-15 06:35:05', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (568, 71, 148, '2021-01-16 12:24:19', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (569, 1, 160, '2021-01-01 09:25:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (570, 40, 8, '2020-10-28 21:43:08', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (571, 119, 243, '2021-05-24 07:06:30', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (572, 250, 136, '2020-02-20 09:36:36', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (573, 199, 451, '2020-12-15 14:37:55', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (574, 136, 116, '2021-01-28 08:08:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (575, 226, 106, '2020-03-20 07:52:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (576, 12, 477, '2021-04-04 03:50:50', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (577, 225, 484, '2020-02-03 12:07:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (578, 169, 69, '2021-10-07 03:16:32', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (579, 128, 428, '2021-05-07 05:20:16', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (580, 92, 65, '2021-08-13 13:18:44', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (581, 142, 257, '2021-05-15 14:55:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (582, 70, 329, '2021-11-10 03:06:18', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (583, 99, 229, '2021-06-01 03:43:32', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (584, 58, 161, '2020-04-22 00:45:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (585, 198, 60, '2021-08-31 18:28:29', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (586, 48, 282, '2020-09-29 15:44:06', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (587, 73, 444, '2020-12-21 10:57:55', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (588, 226, 368, '2021-11-02 05:29:18', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (589, 206, 284, '2021-06-19 00:54:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (590, 191, 448, '2020-08-24 17:08:46', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (591, 127, 124, '2021-02-01 11:33:54', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (592, 130, 445, '2021-10-02 22:08:08', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (593, 230, 135, '2020-10-13 04:17:53', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (594, 18, 187, '2021-11-04 06:17:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (595, 7, 138, '2020-12-18 02:29:54', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (596, 86, 388, '2021-09-14 02:03:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (597, 228, 44, '2021-08-19 13:13:58', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (598, 138, 242, '2020-09-16 07:25:34', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (599, 231, 172, '2020-02-29 23:34:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (600, 236, 164, '2021-03-11 15:17:37', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (601, 152, 178, '2020-04-12 19:34:29', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (602, 14, 354, '2021-05-23 20:15:21', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (603, 191, 42, '2021-07-08 21:45:40', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (604, 31, 294, '2021-12-13 02:47:42', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (605, 116, 463, '2020-11-18 02:09:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (606, 231, 229, '2021-11-02 14:04:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (607, 232, 379, '2020-06-19 09:31:38', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (608, 249, 41, '2021-07-05 20:51:03', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (609, 113, 88, '2021-11-06 20:09:37', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (610, 230, 17, '2020-10-08 07:00:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (611, 157, 226, '2021-10-28 03:29:56', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (612, 210, 51, '2020-04-19 19:14:32', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (613, 136, 402, '2020-02-21 17:41:40', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (614, 214, 386, '2020-08-06 16:39:44', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (615, 56, 426, '2021-03-25 16:41:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (616, 79, 136, '2021-05-29 18:10:43', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (617, 180, 49, '2021-06-26 16:06:53', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (618, 69, 234, '2020-08-22 19:06:32', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (619, 221, 389, '2021-03-27 12:17:04', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (620, 236, 481, '2020-09-12 12:44:42', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (621, 103, 384, '2020-09-02 07:46:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (622, 210, 365, '2021-01-24 21:19:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (623, 239, 175, '2021-12-23 08:12:37', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (624, 241, 126, '2021-12-14 06:23:13', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (625, 249, 334, '2020-08-13 23:12:19', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (626, 89, 395, '2020-10-23 03:43:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (627, 60, 384, '2020-04-22 16:52:48', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (628, 94, 220, '2021-10-21 05:38:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (629, 53, 432, '2020-09-29 17:52:17', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (630, 172, 401, '2021-11-07 01:31:30', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (631, 44, 212, '2021-06-02 13:25:42', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (632, 160, 364, '2021-04-26 12:52:58', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (633, 61, 385, '2021-03-12 09:20:30', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (634, 7, 53, '2020-12-21 12:30:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (635, 98, 106, '2021-11-13 08:41:16', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (636, 46, 86, '2020-09-25 08:06:51', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (637, 234, 363, '2021-08-20 04:05:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (638, 8, 100, '2021-04-16 09:43:28', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (639, 221, 395, '2020-01-18 16:26:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (640, 204, 364, '2020-04-13 08:37:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (641, 159, 324, '2021-11-26 21:44:26', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (642, 61, 93, '2021-04-17 07:22:44', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (643, 89, 93, '2021-05-05 01:05:30', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (644, 199, 463, '2021-03-21 22:49:20', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (645, 130, 158, '2020-09-22 07:23:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (646, 89, 131, '2020-02-04 14:24:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (647, 10, 16, '2021-08-22 06:52:44', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (648, 202, 165, '2020-05-23 21:17:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (649, 212, 21, '2020-06-03 14:05:31', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (650, 117, 27, '2021-04-16 11:49:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (651, 127, 484, '2020-09-05 15:30:20', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (652, 180, 71, '2021-10-29 06:36:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (653, 247, 113, '2020-10-21 06:36:05', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (654, 24, 231, '2020-08-25 11:13:48', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (655, 20, 185, '2020-03-07 18:18:47', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (656, 68, 140, '2020-05-16 03:52:16', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (657, 212, 447, '2020-05-15 19:02:28', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (658, 116, 290, '2020-04-11 12:21:14', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (659, 137, 257, '2020-08-31 11:08:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (660, 101, 208, '2020-01-18 04:36:28', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (661, 231, 84, '2021-10-31 03:27:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (662, 242, 464, '2021-08-11 23:10:29', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (663, 63, 325, '2020-07-10 00:02:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (664, 201, 391, '2021-08-17 22:48:44', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (665, 92, 153, '2020-03-14 23:46:33', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (666, 192, 129, '2020-07-14 01:33:37', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (667, 186, 333, '2021-04-19 17:21:38', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (668, 151, 430, '2020-04-24 19:28:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (669, 32, 118, '2021-03-02 22:46:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (670, 244, 374, '2020-08-25 06:15:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (671, 175, 450, '2021-05-06 03:12:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (672, 152, 60, '2021-03-30 16:52:16', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (673, 188, 259, '2021-01-08 15:31:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (674, 246, 433, '2020-08-31 19:07:42', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (675, 35, 310, '2020-12-03 20:43:26', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (676, 35, 407, '2021-07-05 21:43:07', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (677, 66, 61, '2020-05-20 11:55:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (678, 249, 188, '2020-06-30 00:44:23', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (679, 23, 116, '2021-08-01 06:26:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (680, 16, 241, '2020-04-21 14:56:58', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (681, 141, 87, '2021-10-23 00:42:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (682, 204, 338, '2020-06-01 22:05:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (683, 203, 364, '2020-12-25 02:14:32', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (684, 94, 252, '2021-04-21 20:53:18', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (685, 98, 194, '2021-08-27 15:34:13', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (686, 237, 234, '2020-10-12 15:36:04', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (687, 182, 9, '2020-06-12 01:41:38', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (688, 102, 236, '2020-09-08 02:59:17', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (689, 33, 195, '2021-02-21 20:29:17', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (690, 9, 479, '2020-01-31 08:31:26', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (691, 234, 400, '2021-08-22 02:21:19', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (692, 171, 175, '2021-02-02 17:45:40', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (693, 107, 394, '2021-06-01 15:42:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (694, 107, 490, '2021-02-06 13:06:34', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (695, 54, 480, '2020-03-23 08:38:54', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (696, 103, 354, '2020-11-05 17:16:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (697, 232, 473, '2020-09-23 12:00:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (698, 84, 314, '2021-11-23 04:19:02', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (699, 218, 449, '2020-03-02 05:55:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (700, 188, 365, '2020-02-22 20:22:30', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (701, 186, 325, '2021-11-12 04:24:13', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (702, 111, 187, '2021-09-27 18:40:32', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (703, 105, 437, '2021-05-22 07:38:36', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (704, 77, 113, '2021-09-02 02:13:24', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (705, 108, 474, '2021-08-19 22:43:00', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (706, 201, 316, '2020-04-23 18:04:19', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (707, 185, 457, '2020-11-10 17:46:18', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (708, 213, 420, '2020-05-20 17:05:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (709, 27, 476, '2021-02-07 22:56:41', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (710, 38, 387, '2021-08-16 01:04:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (711, 205, 273, '2021-05-31 20:56:18', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (712, 66, 94, '2021-11-18 05:51:32', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (713, 64, 401, '2020-06-10 19:18:16', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (714, 146, 402, '2021-06-10 21:53:47', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (715, 164, 30, '2020-11-22 15:23:35', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (716, 207, 218, '2021-07-28 23:35:12', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (717, 103, 62, '2020-05-10 23:15:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (718, 238, 196, '2020-05-01 06:35:44', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (719, 94, 415, '2020-04-16 19:45:01', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (720, 83, 311, '2020-07-15 04:59:46', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (721, 66, 61, '2020-08-09 19:36:04', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (722, 200, 269, '2021-08-20 17:36:25', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (723, 122, 469, '2020-07-05 09:45:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (724, 140, 222, '2021-09-19 19:59:30', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (725, 226, 448, '2021-05-12 13:38:55', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (726, 150, 439, '2020-04-26 06:02:46', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (727, 159, 490, '2021-06-24 02:40:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (728, 55, 114, '2020-08-29 14:20:26', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (729, 122, 423, '2021-04-14 08:18:50', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (730, 169, 171, '2020-01-03 16:35:31', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (731, 175, 420, '2021-04-04 20:42:24', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (732, 94, 382, '2020-10-11 23:51:15', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (733, 183, 27, '2020-04-04 04:37:20', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (734, 82, 157, '2021-01-27 10:41:31', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (735, 141, 322, '2020-10-29 12:53:16', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (736, 209, 233, '2021-03-21 13:47:44', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (737, 132, 264, '2021-04-01 13:58:05', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (738, 42, 206, '2021-08-30 12:09:29', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (739, 62, 182, '2020-09-06 04:37:19', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (740, 223, 68, '2021-02-24 20:32:58', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (741, 110, 431, '2021-12-27 12:13:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (742, 120, 375, '2020-09-28 17:56:51', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (743, 74, 245, '2020-06-29 14:48:10', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (744, 127, 367, '2021-03-12 17:36:30', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (745, 72, 83, '2020-05-06 18:20:32', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (746, 14, 320, '2021-07-08 22:05:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (747, 90, 143, '2021-03-30 08:42:58', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (748, 177, 491, '2021-06-11 10:48:20', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (749, 159, 133, '2021-01-21 18:09:47', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (750, 250, 393, '2020-12-24 21:50:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (751, 207, 243, '2021-10-20 15:01:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (752, 128, 388, '2020-03-20 03:19:36', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (753, 246, 6, '2020-07-01 10:58:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (754, 235, 349, '2020-08-13 10:29:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (755, 68, 24, '2021-09-06 03:49:01', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (756, 130, 421, '2020-06-22 15:40:15', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (757, 183, 202, '2021-11-16 05:13:36', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (758, 205, 159, '2021-06-29 23:23:03', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (759, 142, 243, '2021-03-28 05:16:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (760, 108, 398, '2021-04-23 06:22:43', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (761, 194, 132, '2020-10-24 13:27:46', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (762, 91, 23, '2021-01-11 00:25:13', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (763, 162, 483, '2020-05-11 17:42:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (764, 76, 142, '2021-05-22 18:15:08', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (765, 230, 468, '2021-03-16 12:15:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (766, 82, 286, '2021-04-30 08:43:03', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (767, 182, 427, '2020-06-24 13:59:20', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (768, 218, 487, '2020-05-03 11:30:50', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (769, 122, 98, '2021-08-19 03:00:30', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (770, 111, 158, '2021-03-13 21:23:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (771, 93, 183, '2020-11-29 08:43:25', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (772, 169, 14, '2020-09-04 03:02:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (773, 41, 311, '2020-06-19 01:52:55', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (774, 38, 385, '2020-01-03 04:52:10', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (775, 104, 69, '2021-11-18 13:39:30', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (776, 111, 371, '2020-01-11 04:13:15', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (777, 53, 499, '2020-01-07 19:56:21', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (778, 164, 187, '2021-03-06 03:07:20', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (779, 96, 484, '2021-04-24 16:31:32', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (780, 155, 435, '2020-03-22 02:10:14', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (781, 42, 99, '2020-02-26 16:32:29', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (782, 229, 150, '2020-05-07 12:33:15', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (783, 58, 384, '2020-01-03 17:09:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (784, 223, 406, '2021-06-08 17:40:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (785, 160, 299, '2020-11-10 08:28:37', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (786, 134, 208, '2020-08-26 20:21:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (787, 32, 218, '2021-08-07 02:31:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (788, 139, 249, '2020-11-27 22:15:23', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (789, 41, 171, '2020-08-13 14:14:10', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (790, 162, 249, '2020-02-24 01:08:38', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (791, 147, 256, '2020-12-18 23:54:03', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (792, 152, 12, '2020-08-28 07:28:37', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (793, 191, 312, '2021-02-25 01:04:58', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (794, 10, 238, '2021-07-27 19:38:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (795, 138, 28, '2021-09-01 15:09:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (796, 14, 244, '2020-05-13 00:02:36', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (797, 238, 305, '2020-01-30 12:05:04', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (798, 103, 160, '2020-06-25 21:10:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (799, 209, 122, '2021-08-07 22:05:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (800, 141, 74, '2020-08-26 21:14:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (801, 4, 348, '2020-12-25 23:29:07', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (802, 144, 391, '2020-11-24 19:12:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (803, 180, 336, '2020-01-05 18:32:56', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (804, 101, 434, '2021-11-04 02:24:00', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (805, 36, 346, '2021-11-19 02:45:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (806, 118, 316, '2020-11-24 01:16:29', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (807, 3, 446, '2020-03-30 03:48:19', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (808, 126, 488, '2020-05-01 11:19:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (809, 1, 166, '2021-09-17 23:34:17', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (810, 172, 48, '2021-06-01 08:06:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (811, 189, 260, '2021-02-27 18:51:25', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (812, 127, 334, '2021-08-04 08:24:36', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (813, 201, 57, '2020-08-02 08:03:48', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (814, 206, 309, '2020-02-21 06:55:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (815, 32, 246, '2020-03-12 01:30:30', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (816, 101, 157, '2021-06-22 05:33:01', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (817, 214, 39, '2020-09-10 00:40:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (818, 80, 137, '2021-03-01 23:26:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (819, 192, 252, '2020-10-04 08:36:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (820, 25, 479, '2020-08-17 10:24:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (821, 193, 122, '2021-12-25 02:01:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (822, 23, 233, '2021-08-07 11:00:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (823, 18, 101, '2020-05-29 21:58:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (824, 130, 337, '2021-03-30 06:42:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (825, 131, 87, '2021-01-09 17:30:45', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (826, 61, 112, '2021-05-30 10:35:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (827, 14, 470, '2021-05-13 17:24:23', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (828, 204, 121, '2021-12-05 03:32:12', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (829, 235, 210, '2020-03-20 17:40:08', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (830, 179, 242, '2020-01-24 22:52:45', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (831, 5, 309, '2020-08-04 20:27:38', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (832, 203, 100, '2021-03-03 14:53:32', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (833, 250, 359, '2020-10-17 22:31:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (834, 102, 289, '2021-11-11 00:51:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (835, 129, 215, '2021-07-08 01:49:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (836, 193, 223, '2021-01-19 18:19:26', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (837, 141, 141, '2021-03-19 09:42:44', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (838, 6, 349, '2020-04-12 14:19:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (839, 129, 319, '2020-10-25 22:27:57', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (840, 76, 88, '2021-12-05 06:43:09', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (841, 161, 236, '2020-07-19 17:20:43', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (842, 84, 376, '2020-04-25 14:35:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (843, 69, 378, '2020-01-09 13:43:43', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (844, 116, 206, '2021-03-18 16:41:56', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (845, 137, 373, '2020-03-15 08:24:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (846, 222, 288, '2020-09-30 23:43:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (847, 57, 373, '2021-05-04 10:27:00', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (848, 64, 168, '2021-07-17 12:10:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (849, 2, 148, '2021-04-02 03:41:21', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (850, 45, 376, '2021-11-03 10:01:33', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (851, 58, 46, '2020-04-24 01:18:25', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (852, 232, 23, '2020-04-25 18:46:48', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (853, 88, 355, '2020-07-25 11:50:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (854, 108, 371, '2020-10-18 20:40:51', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (855, 217, 363, '2021-12-02 04:53:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (856, 123, 308, '2021-05-29 00:57:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (857, 83, 422, '2020-12-19 19:44:52', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (858, 89, 182, '2021-12-28 02:15:46', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (859, 154, 60, '2021-03-20 13:25:26', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (860, 124, 425, '2020-01-02 10:37:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (861, 168, 294, '2021-11-08 12:52:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (862, 229, 55, '2021-08-01 07:15:17', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (863, 218, 160, '2021-07-06 17:58:29', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (864, 191, 155, '2021-04-18 00:40:53', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (865, 85, 123, '2020-01-05 00:48:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (866, 7, 398, '2021-09-27 02:30:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (867, 32, 458, '2020-03-30 01:49:25', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (868, 108, 87, '2020-01-01 00:21:53', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (869, 60, 196, '2021-10-24 23:26:42', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (870, 219, 101, '2020-08-25 21:26:20', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (871, 68, 265, '2021-09-05 05:01:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (872, 42, 453, '2021-12-05 05:17:01', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (873, 88, 80, '2020-12-05 12:31:53', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (874, 115, 244, '2020-10-05 07:18:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (875, 201, 31, '2021-05-02 07:36:42', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (876, 172, 24, '2021-12-13 08:41:54', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (877, 68, 463, '2021-03-07 15:18:43', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (878, 108, 224, '2020-11-09 12:55:01', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (879, 122, 162, '2021-03-01 12:12:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (880, 106, 491, '2020-01-18 12:49:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (881, 241, 66, '2021-12-03 05:00:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (882, 189, 303, '2020-11-14 18:46:13', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (883, 213, 146, '2021-11-18 19:52:29', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (884, 178, 171, '2020-08-18 12:36:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (885, 14, 352, '2021-09-04 11:54:30', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (886, 5, 89, '2021-06-21 21:08:03', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (887, 103, 447, '2021-03-24 16:54:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (888, 177, 366, '2020-05-05 12:28:00', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (889, 17, 194, '2021-07-26 06:24:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (890, 149, 117, '2021-01-14 05:58:16', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (891, 146, 449, '2020-01-28 01:20:53', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (892, 82, 188, '2020-04-08 19:13:49', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (893, 250, 138, '2021-10-13 15:11:38', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (894, 53, 131, '2020-05-30 08:07:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (895, 20, 175, '2020-08-04 12:46:09', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (896, 198, 97, '2020-05-11 16:58:46', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (897, 193, 389, '2021-12-10 07:48:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (898, 123, 216, '2021-06-16 06:52:27', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (899, 89, 14, '2021-02-14 21:29:38', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (900, 241, 419, '2021-05-31 05:55:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (901, 110, 249, '2020-07-10 17:20:16', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (902, 107, 406, '2020-04-19 10:08:24', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (903, 101, 290, '2021-08-10 01:17:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (904, 156, 269, '2021-05-26 11:57:04', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (905, 34, 56, '2020-03-05 05:16:46', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (906, 15, 374, '2020-12-23 06:27:48', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (907, 42, 347, '2021-08-11 22:27:05', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (908, 234, 146, '2020-12-01 02:40:15', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (909, 90, 271, '2021-11-07 18:27:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (910, 20, 446, '2021-04-18 00:11:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (911, 75, 17, '2020-04-12 23:08:49', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (912, 221, 281, '2020-07-29 12:50:51', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (913, 168, 433, '2020-06-04 20:07:59', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (914, 156, 152, '2020-08-11 20:47:19', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (915, 186, 143, '2021-04-08 02:10:49', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (916, 146, 323, '2021-05-19 12:46:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (917, 37, 76, '2020-10-18 18:44:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (918, 241, 432, '2021-09-26 12:10:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (919, 132, 223, '2021-10-06 05:24:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (920, 103, 354, '2020-04-17 21:39:54', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (921, 35, 487, '2021-03-11 21:35:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (922, 169, 313, '2020-03-20 21:08:09', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (923, 135, 478, '2021-01-25 13:25:59', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (924, 8, 236, '2021-11-16 23:05:38', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (925, 220, 261, '2020-03-07 22:24:57', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (926, 89, 455, '2020-09-22 07:52:46', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (927, 104, 114, '2020-02-27 15:25:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (928, 161, 102, '2021-06-17 10:41:26', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (929, 141, 290, '2021-07-15 22:43:05', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (930, 235, 445, '2021-06-03 03:43:54', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (931, 141, 28, '2020-04-01 17:15:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (932, 116, 81, '2020-08-28 13:57:12', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (933, 209, 150, '2021-09-11 04:29:12', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (934, 32, 8, '2020-01-16 01:41:54', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (935, 166, 207, '2021-10-19 15:20:19', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (936, 123, 365, '2021-03-12 18:52:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (937, 110, 76, '2020-04-05 02:16:36', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (938, 107, 139, '2021-04-29 10:52:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (939, 14, 21, '2020-09-20 00:59:39', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (940, 241, 453, '2020-02-03 03:56:34', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (941, 26, 132, '2021-04-30 18:48:46', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (942, 49, 324, '2021-07-29 07:59:52', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (943, 46, 357, '2021-06-29 11:17:28', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (944, 55, 303, '2021-06-06 10:59:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (945, 246, 5, '2021-05-26 17:59:15', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (946, 229, 14, '2021-07-03 00:46:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (947, 147, 483, '2021-07-22 21:15:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (948, 21, 352, '2020-10-09 20:45:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (949, 72, 380, '2020-01-28 10:43:30', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (950, 216, 245, '2020-04-14 00:09:47', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (951, 3, 247, '2020-08-19 17:34:09', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (952, 234, 124, '2020-06-26 00:10:34', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (953, 177, 410, '2020-09-06 01:00:01', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (954, 145, 428, '2020-04-16 09:05:17', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (955, 69, 314, '2020-05-25 06:13:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (956, 244, 377, '2020-01-13 19:12:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (957, 105, 214, '2020-11-23 08:19:08', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (958, 229, 267, '2020-10-06 00:44:35', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (959, 233, 490, '2021-01-07 03:31:09', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (960, 10, 373, '2021-02-19 23:55:23', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (961, 157, 61, '2020-02-27 20:11:50', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (962, 205, 200, '2021-05-29 03:48:13', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (963, 120, 49, '2021-10-19 16:18:06', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (964, 81, 169, '2020-09-02 07:07:02', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (965, 126, 221, '2021-11-25 23:50:22', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (966, 189, 357, '2021-05-12 12:39:16', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (967, 138, 217, '2021-07-09 04:24:15', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (968, 74, 454, '2020-12-26 02:22:16', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (969, 139, 254, '2021-08-10 09:33:31', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (970, 73, 121, '2021-10-29 07:17:36', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (971, 90, 181, '2021-05-09 14:36:20', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (972, 27, 411, '2021-10-11 04:20:45', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (973, 103, 235, '2020-12-12 05:49:11', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (974, 96, 326, '2020-06-22 08:57:48', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (975, 81, 347, '2020-04-20 10:45:06', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (976, 104, 27, '2021-08-13 03:31:27', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (977, 169, 368, '2021-06-02 22:08:19', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (978, 192, 418, '2021-12-02 16:01:48', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (979, 72, 108, '2021-01-26 22:34:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (980, 133, 179, '2021-06-25 14:07:44', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (981, 179, 275, '2021-11-07 03:40:19', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (982, 159, 458, '2021-03-01 19:18:10', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (983, 209, 258, '2021-03-04 01:42:07', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (984, 95, 15, '2021-11-17 13:58:45', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (985, 34, 281, '2020-04-22 10:16:17', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (986, 51, 391, '2020-02-12 06:33:58', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (987, 223, 52, '2020-12-31 03:05:11', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (988, 228, 468, '2020-10-27 07:50:15', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (989, 52, 177, '2020-02-08 08:52:56', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (990, 40, 124, '2021-06-01 20:26:14', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (991, 208, 448, '2021-03-25 00:33:47', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (992, 52, 123, '2020-11-18 12:06:28', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (993, 148, 23, '2021-11-23 17:09:39', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (994, 42, 398, '2021-07-27 20:47:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (995, 165, 344, '2020-06-29 01:15:40', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (996, 120, 486, '2020-12-04 12:08:07', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (997, 14, 388, '2021-02-09 01:51:22', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (998, 203, 62, '2021-02-12 07:42:21', 1);
+insert into book_review_like (id, id_user, id_review, time, value) values (999, 63, 115, '2020-04-04 09:43:43', -1);
+insert into book_review_like (id, id_user, id_review, time, value) values (1000, 245, 134, '2021-10-25 11:14:30', 1);
+
 
 
 -- Сайт для генерации случайных данных https://www.mockaroo.com/

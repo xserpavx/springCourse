@@ -4,9 +4,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created on 16.08.2021
@@ -46,6 +48,22 @@ public class BookReview {
     @JoinColumn(name = "id_user", referencedColumnName = "id", insertable = false, updatable = false)
     @JsonIgnore
     private User reviewedUser;
+
+    @OneToMany
+    @JoinTable(
+            name = "book_review_like",
+            joinColumns = @JoinColumn(name = "id_review"),
+            inverseJoinColumns = @JoinColumn(name = "id"))
+    @Where(clause = "value = 1")
+    List<BookReviewLike> likeBookReviews;
+
+    @OneToMany
+    @JoinTable(
+            name = "book_review_like",
+            joinColumns = @JoinColumn(name = "id_review"),
+            inverseJoinColumns = @JoinColumn(name = "id"))
+    @Where(clause = "value = -1")
+    List<BookReviewLike> dislikeBookReviews;
 
 //    @ManyToOne
 //    @JoinColumn(name = "id_user", referencedColumnName = "id", insertable = false, updatable = false)
