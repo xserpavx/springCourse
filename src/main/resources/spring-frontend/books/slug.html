@@ -86,7 +86,7 @@
                         </strong>
                         <div class="RatingGroup">
                           <span class="Rating" th:each="j : ${#numbers.sequence(4, 0)}">
-                            <span class="Rating-stars" >
+                            <span class="Rating-stars">
                               <span class="Rating-star" th:each="i : ${#numbers.sequence(0, 4)}" th:classappend="${i <= j ? 'Rating-star_view' : ''}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
                                   <g>
@@ -199,7 +199,7 @@
             </div>
           </div>
           <div class="Comments">
-            <div class="Comment">
+            <div class="Comment" th:each="review : ${book.getBookReviews()}">
               <div class="Comment-column Comment-column_pict">
                 <div class="Comment-avatar">
                 </div>
@@ -207,48 +207,29 @@
               <div class="Comment-column">
                 <header class="Comment-header">
                   <div>
-                    <strong class="Comment-title">Александр Кузнецов<span class="Comment-rating"><span class="Rating Rating_comment"><span class="Rating-stars"><span class="Rating-star Rating-star_view">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
-                                <g>
+                    <div>
+                      <strong class="Comment-title" style="display: inline-block" th:text="${review.getReviewedUser().getName()}">Дмитрий Петров</strong>
+                      <span class="Comment-rating" style="display: inline-block">
+                        <span class="Rating Rating_comment">
+                          <span class="Rating-stars">
+                            <span class="Rating-star" th:each="i : ${#numbers.sequence(0, 4)}" th:classappend="${i <= 3 ? 'Rating-star_view' : ''}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
                                   <g>
-                                    <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
+                                    <g>
+                                      <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
+                                    </g>
                                   </g>
-                                </g>
-                              </svg></span><span class="Rating-star Rating-star_view">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
-                                <g>
-                                  <g>
-                                    <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
-                                  </g>
-                                </g>
-                              </svg></span><span class="Rating-star">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
-                                <g>
-                                  <g>
-                                    <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
-                                  </g>
-                                </g>
-                              </svg></span><span class="Rating-star">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
-                                <g>
-                                  <g>
-                                    <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
-                                  </g>
-                                </g>
-                              </svg></span><span class="Rating-star">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
-                                <g>
-                                  <g>
-                                    <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
-                                  </g>
-                                </g>
-                              </svg></span></span></span></span>
-                    </strong><span class="Comment-date">17.04.2020 16:40</span>
+                                </svg>
+                            </span>
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                    <span class="Comment-date" th:text="${review.getTime()}">17.04.2020 16:40</span>
                   </div>
                 </header>
                 <div class="Comment-content">
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. Cumtipsu sociis natoque penatibus et magnis dis parturient montesti, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eutu, pretiumem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justotuio, rhoncus ut loret, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus element semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae.
-                  </p>
+                  <p th:text="${review.getText()}">Текст отзыва</p>
                   <div class="Comment-footer">
                     <div class="Comment-appeal">
                       <button class="btn btn_white btn_like" data-btntype="check" data-check="false" data-btnradio="two2" data-likeid="1111"><span class="btn-icon"><img src="/assets/img/icons/comment/like.svg" alt="like.svg"/></span><span class="btn-content">200</span>
@@ -268,43 +249,24 @@
               <div class="Comment-column">
                 <header class="Comment-header">
                   <div>
-                    <strong class="Comment-title">Дмитрий Петров<span class="Comment-rating"><span class="Rating Rating_comment"><span class="Rating-stars"><span class="Rating-star Rating-star_view">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
-                                <g>
+                    <strong class="Comment-title" >Дмитрий Петров
+                      <span class="Comment-rating">
+                        <span class="Rating Rating_comment">
+                          <span class="Rating-stars">
+                            <span class="Rating-star" th:each="i : ${#numbers.sequence(0, 4)}" th:classappend="${i <= 2 ? 'Rating-star_view' : ''}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
                                   <g>
-                                    <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
+                                    <g>
+                                      <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
+                                    </g>
                                   </g>
-                                </g>
-                              </svg></span><span class="Rating-star Rating-star_view">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
-                                <g>
-                                  <g>
-                                    <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
-                                  </g>
-                                </g>
-                              </svg></span><span class="Rating-star Rating-star_view">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
-                                <g>
-                                  <g>
-                                    <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
-                                  </g>
-                                </g>
-                              </svg></span><span class="Rating-star Rating-star_view">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
-                                <g>
-                                  <g>
-                                    <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
-                                  </g>
-                                </g>
-                              </svg></span><span class="Rating-star">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
-                                <g>
-                                  <g>
-                                    <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
-                                  </g>
-                                </g>
-                              </svg></span></span></span></span>
-                    </strong><span class="Comment-date">17.04.2020 16:40</span>
+                                </svg>
+                            </span>
+                          </span>
+                        </span>
+                      </span>
+                    </strong>
+                    <span class="Comment-date">17.04.2020 16:40</span>
                   </div>
                 </header>
                 <div class="Comment-content">
