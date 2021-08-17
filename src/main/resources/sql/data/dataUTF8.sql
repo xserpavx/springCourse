@@ -1,3 +1,5 @@
+delete from book_review;
+delete from book_review_like;
 delete from book2user;
 delete from book2genre;
 delete from book2tag;
@@ -9,6 +11,7 @@ delete from book_file_types;
 delete from authors;
 delete from tags;
 delete from book_user_rating;
+
 
 CREATE OR REPLACE FUNCTION public."calcBookRating"(IN id_book bigint DEFAULT 0)
     RETURNS numeric
@@ -205,6 +208,13 @@ insert into authors(id,name,description,photo) values (20, 'Фредерик Ф�
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (66, 'День Шакала', 20, '31.01.2021', false, 288.14, 29,'/assets/img/content/main/card.jpg','');
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (67, 'Псы войны', 20, '31.01.2021', false, 948.45, 19,'/assets/img/content/main/card.jpg','');
 
+insert into authors(id,name,description,photo) values (21, 'Джек Лондон','','/assets/img/content/authors/dl.jpg');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (49, 'Белый клык', 21, '09.01.2021', true, 657.0, 22,'/assets/img/content/main/card.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (68, 'Любовь к жизни', 21, '14.12.2021', true, 203.08, 1,'/assets/img/content/main/card.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (69, 'Кулау прокаженный', 21, '02.05.2021', true, 549.75, 23,'/assets/img/content/main/card.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (70, 'Мартин иден', 21, '07.02.2021', true, 468.37, 22,'/assets/img/content/main/card.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (71, 'Мексиканец', 21, '28.09.2021', false, 793.93, 46,'/assets/img/content/main/card.jpg','');
+
 insert into book2tag(id_book, id_tag) values(58, 1);
 insert into book2tag(id_book, id_tag) values(59, 1);
 insert into book2tag(id_book, id_tag) values(60, 1);
@@ -333,6 +343,12 @@ insert into book2tag(id_book, id_tag) values(59, 10);
 insert into book2tag(id_book, id_tag) values(60, 10);
 insert into book2tag(id_book, id_tag) values(66, 5);	insert into book2tag(id_book, id_tag) values(66, 6);			insert into book2tag(id_book, id_tag) values(66, 7);
 insert into book2tag(id_book, id_tag) values(67, 6);
+insert into book2tag(id_book, id_tag) values(49, 6);					insert into book2tag(id_book, id_tag) values(49, 9);			insert into book2tag(id_book, id_tag) values(49, 3);
+insert into book2tag(id_book, id_tag) values(68, 9);			insert into book2tag(id_book, id_tag) values(68, 3);
+insert into book2tag(id_book, id_tag) values(69, 3);
+insert into book2tag(id_book, id_tag) values(70, 6);								insert into book2tag(id_book, id_tag) values(70, 3);
+insert into book2tag(id_book, id_tag) values(71, 3);
+
 
 
 insert into book_file_types(name, description) values('FB2','Межплатформенный  формат электронных документов с использованием ряда возможностей языка PostScript.');
@@ -490,6 +506,11 @@ insert into book2genre(id_book, id_genre) values(59, 17);
 insert into book2genre(id_book, id_genre) values(60, 17);
 insert into book2genre(id_book, id_genre) values(66, 18);		insert into book2genre(id_book, id_genre) values(66, 1);		insert into book2genre(id_book, id_genre) values(66, 3);	insert into book2genre(id_book, id_genre) values(66, 4);												insert into book2genre(id_book, id_genre) values(66, 16);
 insert into book2genre(id_book, id_genre) values(67, 18);														insert into book2genre(id_book, id_genre) values(67, 13);			insert into book2genre(id_book, id_genre) values(67, 16);
+insert into book2genre(id_book, id_genre) values(49, 18);									insert into book2genre(id_book, id_genre) values(49, 8);			insert into book2genre(id_book, id_genre) values(49, 11);		insert into book2genre(id_book, id_genre) values(49, 13);			insert into book2genre(id_book, id_genre) values(49, 16);
+insert into book2genre(id_book, id_genre) values(68, 18);									insert into book2genre(id_book, id_genre) values(68, 8);			insert into book2genre(id_book, id_genre) values(68, 11);		insert into book2genre(id_book, id_genre) values(68, 13);			insert into book2genre(id_book, id_genre) values(68, 16);
+insert into book2genre(id_book, id_genre) values(69, 18);									insert into book2genre(id_book, id_genre) values(69, 8);			insert into book2genre(id_book, id_genre) values(69, 11);		insert into book2genre(id_book, id_genre) values(69, 13);
+insert into book2genre(id_book, id_genre) values(70, 18);									insert into book2genre(id_book, id_genre) values(70, 8);			insert into book2genre(id_book, id_genre) values(70, 11);
+insert into book2genre(id_book, id_genre) values(71, 18);									insert into book2genre(id_book, id_genre) values(71, 8);			insert into book2genre(id_book, id_genre) values(71, 11);
 
 
 insert into book_user_types(code, name) values (1, 'Отложена');
@@ -3808,13 +3829,7 @@ Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit u
 
 -- Сайт для генерации случайных данных https://www.mockaroo.com/
 
---,'09.01.2021', true, 657.0, 22,'','/assets/img/content/main/card.jpg','');
---,'14.12.2021', true, 203.08, 1,'','/assets/img/content/main/card.jpg','');
---,'02.05.2021', true, 549.75, 23,'','/assets/img/content/main/card.jpg','');
---,'07.02.2021', true, 468.37, 22,'','/assets/img/content/main/card.jpg','');
---,'28.09.2021', false, 793.93, 46,'','/assets/img/content/main/card.jpg','');
---,'30.05.2021', false, 242.73, 30,'','/assets/img/content/main/card.jpg','');
---,'25.06.2021', false, 516.63, 18,'','/assets/img/content/main/card.jpg','');
+
 --,'21.07.2021', true, 920.75, 11,'','/assets/img/content/main/card.jpg','');
 --,'02.05.2021', false, 971.26, 50,'','/assets/img/content/main/card.jpg','');
 --,'29.03.2021', true, 583.34, 20,'','/assets/img/content/main/card.jpg','');

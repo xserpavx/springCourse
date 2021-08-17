@@ -92,4 +92,30 @@ public class ControllerService {
             return String.format("%d", s.length);
         }
     }
+
+    /** Получаем окончание слова при перечислении. Например одна книгА две книгИ, одиннадцать книг
+     * @param count Числительное, для которого надо получить окончание
+     * @param firstEnding окончание которое используется при значениях оканчивающихся на 1, кроме 11
+     * @param secondEnding окончание которое используется при значениях оканчивающихся на 2, 3, 4 кроме 12-14 и т.д.
+     * @param thirdEnding окончание которое используется при значениях оканчивающихся на 0, 5, 6, 7, 8, 9 и в интервале 11-19
+     * @return окончание слова для числительного @count
+     */
+    public static String getEnding(int count, String firstEnding, String secondEnding, String thirdEnding) {
+        if (count <= 10) {
+            switch (count) {
+                case 1: return firstEnding;
+                case 2: case 3: case 4: return secondEnding;
+                default: return thirdEnding;
+            }
+        }
+        else if (count > 10 && count < 20) {
+            return "";
+        } else {
+            switch (count % 10) {
+                case 1: return firstEnding;
+                case 2: case 3: case 4: return secondEnding;
+                default: return thirdEnding;
+            }
+        }
+    }
 }

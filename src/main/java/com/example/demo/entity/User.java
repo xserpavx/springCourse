@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created on 04.08.2021
@@ -32,4 +33,12 @@ public class User {
 
     @ApiModelProperty("User`s name")
     private String name;
+
+    @OneToMany
+    @JoinTable(
+            name = "book_review",
+            joinColumns = @JoinColumn(name = "id_user"),
+            inverseJoinColumns = @JoinColumn(name = "id_book"))
+    List<Book> reviewedBooks;
+
 }

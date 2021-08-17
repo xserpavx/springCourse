@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.services.ControllerService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
@@ -99,6 +100,18 @@ public class Book {
 
     @ManyToMany(mappedBy = "taggedBooks")
     List<Tag> bookTags;
+
+    @OneToMany
+    @JoinTable(
+            name = "book_review",
+            joinColumns = @JoinColumn(name = "id_book"),
+            inverseJoinColumns = @JoinColumn(name = "id"))
+    List<BookReview> bookReviews;
+
+    @Transient
+    public String getReviewEnding() {
+        return ControllerService.getEnding(bookReviews.size(), "", "а", "ов");
+    }
 
     @Override
     public String toString() {

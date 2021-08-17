@@ -45,23 +45,23 @@ public class SearchController {
     }
 
     private String endless(Integer count) {
-        if (count <= 10) {
-            switch (count) {
-                case 1: return "a";
-                case 2: case 3: case 4: return "и";
-                default: return "";
-            }
-        }
-        else if (count > 10 && count < 20) {
-            return "";
-        } else {
-            switch (count % 10) {
-                case 1: return "а";
-                case 2: case 3: case 4: return "и";
-                default: return "";
-            }
-        }
-
+        return ControllerService.getEnding(count, "а", "и", "");
+//        if (count <= 10) {
+//            switch (count) {
+//                case 1: return "a";
+//                case 2: case 3: case 4: return "и";
+//                default: return "";
+//            }
+//        }
+//        else if (count > 10 && count < 20) {
+//            return "";
+//        } else {
+//            switch (count % 10) {
+//                case 1: return "а";
+//                case 2: case 3: case 4: return "и";
+//                default: return "";
+//            }
+//        }
     }
 
     @GetMapping("/main")

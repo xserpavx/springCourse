@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -35,4 +36,20 @@ public class BookReview {
 
     @Column(columnDefinition="TEXT")
     private String text;
+
+    @ManyToOne
+    @JoinColumn(name = "id_book", referencedColumnName = "id", insertable = false, updatable = false)
+    @JsonIgnore
+    private Book reviewedBook;
+
+    @ManyToOne
+    @JoinColumn(name = "id_user", referencedColumnName = "id", insertable = false, updatable = false)
+    @JsonIgnore
+    private User reviewedUser;
+
+//    @ManyToOne
+//    @JoinColumn(name = "id_user", referencedColumnName = "id", insertable = false, updatable = false)
+//    @JsonIgnore
+//    private User reviewedUser;
+
 }
