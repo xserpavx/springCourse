@@ -65,9 +65,18 @@ public class BookReview {
     @Where(clause = "value = -1")
     List<BookReviewLike> dislikeBookReviews;
 
-//    @ManyToOne
-//    @JoinColumn(name = "id_user", referencedColumnName = "id", insertable = false, updatable = false)
-//    @JsonIgnore
-//    private User reviewedUser;
+    /** Определяет рейтинг текущего отзыва в звездах.
+     * @return Рейтинг отзыва в звездах. Счет ведется от 0, т.е. 0 - это 1 звезда
+     */
+    @Transient
+    public int calcReviewRating() {
+        if (likeBookReviews == null || dislikeBookReviews == null || likeBookReviews.isEmpty()) {
+            return -1;
+        }
+        if (likeBookReviews.size() == dislikeBookReviews.size()) {
+            return 2;
+        }
+        return Math.round(likeBookReviews.size() * 5 / (likeBookReviews.size() + dislikeBookReviews.size())) - 1;
+    }
 
 }

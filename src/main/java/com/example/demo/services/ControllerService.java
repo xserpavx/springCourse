@@ -109,7 +109,7 @@ public class ControllerService {
             }
         }
         else if (count > 10 && count < 20) {
-            return "";
+            return thirdEnding;
         } else {
             switch (count % 10) {
                 case 1: return firstEnding;

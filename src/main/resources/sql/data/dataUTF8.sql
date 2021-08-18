@@ -1,9 +1,9 @@
+delete from book2author;
 delete from book_review_like;
 delete from book_review;
 delete from book2user;
 delete from book2genre;
 delete from book2tag;
-delete from book2tag2;
 delete from users;
 delete from genres;
 delete from books;
@@ -11,7 +11,6 @@ delete from book_file_types;
 delete from authors;
 delete from tags;
 delete from book_user_rating;
-
 
 CREATE OR REPLACE FUNCTION public."calcBookRating"(IN id_book bigint DEFAULT 0)
     RETURNS numeric
@@ -78,11 +77,11 @@ CREATE OR REPLACE FUNCTION generateSlug()
     RETURNS trigger
 
     COST 100
-    AS '
-BEGIN
-    new.slug = reverse(to_hex(new.id));
-    RETURN NEW;
-END;'
+AS '
+    BEGIN
+        new.slug = reverse(to_hex(new.id));
+        RETURN NEW;
+    END;'
     LANGUAGE plpgsql;
 
 
@@ -209,11 +208,11 @@ insert into books (id, title, id_author, pub_date, bestseller, price, discount, 
 insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (67, 'Псы войны', 20, '31.01.2021', false, 948.45, 19,'/assets/img/content/main/card.jpg','');
 
 insert into authors(id,name,description,photo) values (21, 'Джек Лондон','','/assets/img/content/authors/dl.jpg');
-insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (49, 'Белый клык', 21, '09.01.2021', true, 657.0, 22,'/assets/img/content/main/card.jpg','');
-insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (68, 'Любовь к жизни', 21, '14.12.2021', true, 203.08, 1,'/assets/img/content/main/card.jpg','');
-insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (69, 'Кулау прокаженный', 21, '02.05.2021', true, 549.75, 23,'/assets/img/content/main/card.jpg','');
-insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (70, 'Мартин иден', 21, '07.02.2021', true, 468.37, 22,'/assets/img/content/main/card.jpg','');
-insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (71, 'Мексиканец', 21, '28.09.2021', false, 793.93, 46,'/assets/img/content/main/card.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (49, 'Белый клык', 21, '31.01.2021', false, 288.14, 29,'/assets/img/content/main/card.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (68, 'Любовь к жизни', 21, '31.01.2021', false, 948.45, 19,'/assets/img/content/main/card.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (69, 'Кулау прокаженный', 21, '31.01.2021', false, 288.14, 29,'/assets/img/content/main/card.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (70, 'Мартин Иден', 21, '31.01.2021', false, 948.45, 19,'/assets/img/content/main/card.jpg','');
+insert into books (id, title, id_author, pub_date, bestseller, price, discount, image, description) values (71, 'Мексиканец', 21, '31.01.2021', false, 948.45, 19,'/assets/img/content/main/card.jpg','');
 
 insert into book2tag(id_book, id_tag) values(58, 1);
 insert into book2tag(id_book, id_tag) values(59, 1);
@@ -348,7 +347,6 @@ insert into book2tag(id_book, id_tag) values(68, 9);			insert into book2tag(id_b
 insert into book2tag(id_book, id_tag) values(69, 3);
 insert into book2tag(id_book, id_tag) values(70, 6);								insert into book2tag(id_book, id_tag) values(70, 3);
 insert into book2tag(id_book, id_tag) values(71, 3);
-
 
 
 insert into book_file_types(name, description) values('FB2','Межплатформенный  формат электронных документов с использованием ряда возможностей языка PostScript.');
@@ -3766,6 +3764,7 @@ insert into book_review (id, id_user, id_book, time, text) values (499, 74, 59, 
 Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.');
 insert into book_review (id, id_user, id_book, time, text) values (500, 155, 11, '2021-09-07 05:21:23', 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.');
 
+
 insert into book_review_like (id, id_user, id_review, time, value) values (1, 96, 61, '2021-12-23 02:11:22', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (2, 75, 434, '2021-09-29 21:17:01', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (3, 172, 342, '2020-04-15 09:40:10', 1);
@@ -4768,10 +4767,15 @@ insert into book_review_like (id, id_user, id_review, time, value) values (999, 
 insert into book_review_like (id, id_user, id_review, time, value) values (1000, 245, 134, '2021-10-25 11:14:30', 1);
 
 
-
 -- Сайт для генерации случайных данных https://www.mockaroo.com/
 
-
+--,'09.01.2021', true, 657.0, 22,'','/assets/img/content/main/card.jpg','');
+--,'14.12.2021', true, 203.08, 1,'','/assets/img/content/main/card.jpg','');
+--,'02.05.2021', true, 549.75, 23,'','/assets/img/content/main/card.jpg','');
+--,'07.02.2021', true, 468.37, 22,'','/assets/img/content/main/card.jpg','');
+--,'28.09.2021', false, 793.93, 46,'','/assets/img/content/main/card.jpg','');
+--,'30.05.2021', false, 242.73, 30,'','/assets/img/content/main/card.jpg','');
+--,'25.06.2021', false, 516.63, 18,'','/assets/img/content/main/card.jpg','');
 --,'21.07.2021', true, 920.75, 11,'','/assets/img/content/main/card.jpg','');
 --,'02.05.2021', false, 971.26, 50,'','/assets/img/content/main/card.jpg','');
 --,'29.03.2021', true, 583.34, 20,'','/assets/img/content/main/card.jpg','');
