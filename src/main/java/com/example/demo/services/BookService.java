@@ -29,8 +29,9 @@ public class BookService {
         this.tagRepository = tagRepository;
     }
 
-    public List<Book> getRecomendBooks() {
-        return bookRepository.findAll();
+    public Page<Book> getRecomendBooks(Integer offset, Integer limit) {
+        Pageable nextPage = PageRequest.of(offset, limit);
+        return bookRepository.findBookByOrderByRatingDesc(nextPage);
     }
 
     private Date getLowRecentDate() {
@@ -61,6 +62,8 @@ public class BookService {
         Pageable nextPage = PageRequest.of(offset, limit);
         return bookRepository.findAll(nextPage);
     }
+
+
 
     public List<Book> getRecentBooks() {
         return bookRepository.findBookByOrderByPubDateDesc();

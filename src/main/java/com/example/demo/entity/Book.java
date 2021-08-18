@@ -99,6 +99,7 @@ public class Book {
     }
 
     @ManyToMany(mappedBy = "taggedBooks")
+    @JsonIgnore
     List<Tag> bookTags;
 
     @OneToMany
@@ -106,6 +107,7 @@ public class Book {
             name = "book_review",
             joinColumns = @JoinColumn(name = "id_book"),
             inverseJoinColumns = @JoinColumn(name = "id"))
+    @JsonIgnore
     List<BookReview> bookReviews;
 
     @Transient

@@ -32,7 +32,7 @@ public class MainPageController {
 
     @ModelAttribute("recommendBooks")
     public List<Book> recommendBooks() {
-        return bookService.getPageAllBooks(0, 6).getContent();
+        return bookService.getRecomendBooks(0, 6).getContent();
     }
 
     @ModelAttribute("ppCount")
