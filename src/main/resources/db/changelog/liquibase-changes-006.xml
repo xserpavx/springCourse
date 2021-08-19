@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="roland (generated)" id="1629413803447-1">
+        <createSequence sequenceName="book2author_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-2">
+        <createSequence sequenceName="book_review_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-3">
+        <createSequence sequenceName="book_review_like_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-4">
+        <createSequence sequenceName="book_user_rating_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-5">
+        <createTable tableName="book2author">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_author" type="INT"/>
+            <column name="id_book" type="INT"/>
+            <column name="sort_index" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-6">
+        <createTable tableName="book_review">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_review_pkey"/>
+            </column>
+            <column name="id_book" type="INT"/>
+            <column name="id_user" type="INT"/>
+            <column name="text" type="TEXT"/>
+            <column name="time" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-7">
+        <createTable tableName="book_review_like">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_review_like_pkey"/>
+            </column>
+            <column name="id_review" type="INT"/>
+            <column name="id_user" type="INT"/>
+            <column name="time" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="value" type="SMALLINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-8">
+        <createTable tableName="book_user_rating">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_user_rating_pkey"/>
+            </column>
+            <column name="id_book" type="INT"/>
+            <column name="id_user" type="INT"/>
+            <column name="rate" type="INT"/>
+            <column name="time" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-9">
+        <addColumn tableName="books">
+            <column defaultValue="0" defaultValueNumeric="0" name="rating" type="int4"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-10">
+        <addForeignKeyConstraint baseColumnNames="id_book" baseTableName="book_review" constraintName="fk6ugjc5i0p84u78xuscpqqp0w4" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="books"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-11">
+        <addForeignKeyConstraint baseColumnNames="id_user" baseTableName="book_review" constraintName="fk92xin8a8paq7c8r2w5tgcxywo" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="users"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-12">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="book_review_like" constraintName="fk9ja5v09wo156mryy7lo5nvvnt" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="book_review_like"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-13">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="book_review" constraintName="fk9ysi5m9qporlwja4g7xyonmx9" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="book_review"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-14">
+        <addForeignKeyConstraint baseColumnNames="id_author" baseTableName="book2author" constraintName="fkc1jsprhwwcxj5rg0b1op0mjyd" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="authors"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-15">
+        <addForeignKeyConstraint baseColumnNames="id_book" baseTableName="book2author" constraintName="fkdmewdxw8a76q0xgdrvkoto84f" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="books"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-16">
+        <addForeignKeyConstraint baseColumnNames="id_review" baseTableName="book_review_like" constraintName="fkowr59iedk0bm6fn9q8og7riyq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="book_review"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-17">
+        <dropForeignKeyConstraint baseTableName="books" constraintName="fk4ih38omjrl63dv9509hddgyia"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1629413803447-18">
+        <dropColumn columnName="id_author" tableName="books"/>
+    </changeSet>
+</databaseChangeLog>
