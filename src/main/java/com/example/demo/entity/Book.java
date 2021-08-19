@@ -98,11 +98,13 @@ public class Book {
         return priceToString(getDiscountPrice());
     }
 
-    @ManyToMany(mappedBy = "taggedBooks")
-    @JsonIgnore
-    List<Tag> bookTags;
+    @ManyToMany
+    @JoinTable(name = "book2tag",
+            joinColumns = @JoinColumn(name = "id_book"),
+            inverseJoinColumns = @JoinColumn(name = "id_tag"))
+    private List<Tag> tags;
 
-    @OneToMany
+    @ManyToMany
     @JoinTable(
             name = "book_review",
             joinColumns = @JoinColumn(name = "id_book"),
@@ -112,7 +114,8 @@ public class Book {
 
     @Transient
     public String getReviewEnding() {
-        return ControllerService.getEnding(bookReviews.size(), "", "а", "ов");
+        return ControllerService.getEnding(bookReviews.size(),
+                "", "а", "ов");
     }
 
     @Override

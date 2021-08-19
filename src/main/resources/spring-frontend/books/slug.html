@@ -149,7 +149,7 @@
                 </div>
                 <div class="ProductCard-tags">
                   <span class="ProductCard-titleProp" >Тэги:</span>
-                  <div style="display: inline" th:each="bookTag : ${book.getBookTags()}">
+                  <div style="display: inline" th:each="bookTag : ${book.getTags()}">
                     <a href="/tags/main/" th:href="'/tags/main/'+${bookTag.getTagName()}"  th:text="${bookTag.getTagName()}+' '">Современные</a>&#32;
                   </div>
 

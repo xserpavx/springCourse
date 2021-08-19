@@ -34,7 +34,7 @@ public class User {
     @ApiModelProperty("User`s name")
     private String name;
 
-    @OneToMany
+    @ManyToMany
     @JoinTable(
             name = "book_review",
             joinColumns = @JoinColumn(name = "id_user"),

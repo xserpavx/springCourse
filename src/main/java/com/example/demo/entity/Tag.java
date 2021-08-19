@@ -22,12 +22,12 @@ public class Tag {
 
     private String tagName;
 
-    @OneToMany
+    @ManyToMany
     @JoinTable(
             name = "book2tag",
             joinColumns = @JoinColumn(name = "id_tag"),
             inverseJoinColumns = @JoinColumn(name = "id_book"))
-    List<Book> taggedBooks;
+    private List<Book> taggedBooks;
 
     @Transient
     public String tagClassName(int classLength) {
