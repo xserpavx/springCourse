@@ -35,7 +35,8 @@ public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndS
 
     List<Book> findBooksByPubDateAfter(Date recentDate);
 
-    List<Book> findBooksByAuthorNameContaining(String author);
+    @Query(value = "select b.* from book2author b2a left outer join authors a on b2a.id_author = a.id left outer join books b on b2a.id_book = b.id where a.name ~ ?1", nativeQuery = true)
+    List<Book> getBooksByAuthorNamePart(String authorNamePart);
 
     @Query("from Book where bestseller = true")
     List<Book> getBestsellers();

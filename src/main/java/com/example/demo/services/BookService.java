@@ -47,7 +47,7 @@ public class BookService {
     }
 
     public List<Book> getBooksByAuthor(String author) {
-        return bookRepository.findBooksByAuthorNameContaining(author);
+        return bookRepository.getBooksByAuthorNamePart(author);
     }
 
     public List<Book> getHQuery() {

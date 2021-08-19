@@ -34,7 +34,7 @@ public class Author {
     @ApiModelProperty("biography and fact`s about author")
     private String description;
 
-    @OneToMany(mappedBy = "author")
+    @ManyToMany(mappedBy = "authors")
     private List<Book> authorBooks;
 
     @Transient

@@ -62,7 +62,7 @@
             <div class="ProductCard-desc">
               <div class="ProductCard-header">
                 <h1 class="ProductCard-title" th:text="${book.getTitle()}">Мара и морок</h1>
-                <div class="ProductCard-author"><span class="ProductCard-titleProp">Автор:</span>&#32;<a href="#" th:text="${book.getAuthor().getName()}">Лия Арден</a>
+                <div class="ProductCard-author"><span class="ProductCard-titleProp">Автор:</span>&#32;<a href="#" th:text="${book.getAuthors()}">Лия Арден</a>
                 </div>
                 <div class="ProductCard-rating"><span class="ProductCard-titleProp">Рейтинг:</span>
                   <button class="trigger trigger_dropdown" type="button">

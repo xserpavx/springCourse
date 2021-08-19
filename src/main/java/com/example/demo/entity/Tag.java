@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -27,6 +28,7 @@ public class Tag {
             name = "book2tag",
             joinColumns = @JoinColumn(name = "id_tag"),
             inverseJoinColumns = @JoinColumn(name = "id_book"))
+    @JsonIgnore
     private List<Book> taggedBooks;
 
     @Transient
