@@ -1,0 +1,13 @@
+insert into tags(id, tag_name) values(1, 'авторы ru');
+insert into tags(id, tag_name) values(2, 'авторы uk');
+insert into tags(id, tag_name) values(3, 'авторы eng');
+insert into tags(id, tag_name) values(4, 'авторы fr');
+insert into tags(id, tag_name) values(5, 'детективы');
+insert into tags(id, tag_name) values(6, 'роман');
+insert into tags(id, tag_name) values(7, 'исторический');
+insert into tags(id, tag_name) values(8, 'детские');
+insert into tags(id, tag_name) values(9, 'приключения');
+insert into tags(id, tag_name) values(10, 'фантастика');
+insert into tags(id, tag_name) values(11, 'фэнтези');
+insert into tags(id, tag_name) values(12, 'юмор');
+insert into tags(id, tag_name) values(13, 'философия');

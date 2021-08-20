@@ -1,0 +1,79 @@
+databaseChangeLog:
+  - changeSet:
+      id: roland-authors-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/authors.sql
+  - changeSet:
+      id: roland-books-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/book/books.sql
+  - changeSet:
+      id: roland-genres-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/genres.sql
+  - changeSet:
+      id: roland-tags-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/tags.sql
+  - changeSet:
+      id: roland-users-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/users.sql
+  - changeSet:
+      id: roland-book-user-rating-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/book_user_rating.sql
+  - changeSet:
+      id: roland-book2author-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/book/book2author.sql
+  - changeSet:
+      id: roland-book2genre-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/book/book2genre.sql
+  - changeSet:
+      id: roland-book2tag-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/book/book2tag.sql
+  - changeSet:
+      id: roland-book2user-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/book/book2user.sql
+  - changeSet:
+      id: roland-book-file-types-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/file/book_file_types.sql
+  - changeSet:
+      id: roland-book-review-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/review/book_review.sql
+  - changeSet:
+      id: roland-book-review-likes-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/review/book_review_like.sql

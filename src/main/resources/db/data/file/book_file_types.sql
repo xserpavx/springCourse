@@ -1,0 +1,3 @@
+insert into book_file_types(id, name, description) values(1, 'FB2','Межплатформенный  формат электронных документов с использованием ряда возможностей языка PostScript.');
+insert into book_file_types(id, name, description) values(2, 'PDF','Формат электронных версий книг, обеспечивает совместимость с любыми устройствами и форматами.');
+insert into book_file_types(id, name, description) values(3, 'EPUB','Формат электронных версий книг, позволяет воспроизведить цифровые книги и другие публикации с плавающей вёрсткой.');

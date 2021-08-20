@@ -1,0 +1,7 @@
+databaseChangeLog:
+- changeSet:
+    id: roland-triggers-001-sql
+    author: roland
+    changes:
+      - sqlFile:
+          path: db/data/triggers/triggers-001.sql

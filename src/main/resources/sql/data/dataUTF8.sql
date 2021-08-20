@@ -423,16 +423,13 @@ insert into genres(id, id_parent, slug, name) values(4, 1, 'dets', 'Шпионс
 insert into genres(id, id_parent, slug, name) values(5, 17, 'fant', 'Фантастика');
 insert into genres(id, id_parent, slug, name) values(6, 5, 'fants', 'Научная фантастика');
 insert into genres(id, id_parent, slug, name) values(7, 5, 'fantf', 'Фэнтези');
-
 insert into genres(id, id_parent, slug, name) values(8, null, 'child', 'Детские');
 insert into genres(id, id_parent, slug, name) values(9, 8, 'child1', 'Для детей дошкольного возраста');
 insert into genres(id, id_parent, slug, name) values(10, 8, 'child2', 'Для детей младшего школьного возраста');
 insert into genres(id, id_parent, slug, name) values(11, 8, 'child3', 'Для детей среднего школьного возраста');
 insert into genres(id, id_parent, slug, name) values(12, 8, 'child4', 'Для детей старшего школьного возраста');
-
 insert into genres(id, id_parent, slug, name) values(13, null, 'adv', 'Приключения');
 insert into genres(id, id_parent, slug, name) values(14, null, 'hum', 'Юмор');
-
 insert into genres(id, id_parent, slug, name) values(15, 13, 'advsea', 'На море');
 insert into genres(id, id_parent, slug, name) values(16, 13, 'advland', 'На суше');
 insert into genres(id, id_parent, slug, name) values(17, null, 'class', 'Классическая проза');
