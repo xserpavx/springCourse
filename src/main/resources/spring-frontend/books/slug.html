@@ -41,6 +41,8 @@
       });
     });
   </script>
+  <meta id="_csrf" name="_csrf" th:content="${_csrf.token}"/>
+  <meta id="_csrf_header" name="_csrf_header" th:content="${_csrf.headerName}"/>
 </head>
 <body class="Site">
   <header class="Header" th:replace="~{fragments/header :: header('')}"></header>

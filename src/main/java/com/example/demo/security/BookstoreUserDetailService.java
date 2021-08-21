@@ -5,7 +5,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import sun.net.ftp.FtpDirEntry;
 
 /**
  * Created on 20.08.2021
@@ -32,4 +31,6 @@ public class BookstoreUserDetailService implements UserDetailsService {
             throw new UsernameNotFoundException("user not found!");
         }
     }
+
+
 }

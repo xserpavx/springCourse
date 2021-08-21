@@ -12,7 +12,7 @@
 <!--[if gt IE 9]><!--> <html lang="ru" xmlns="http://www.w3.org/1999/xhtml"
                              xmlns:th="http://www.thymeleaf.org"> <!--<![endif]-->
 <head>
-  <title>Тут название страницы написать</title>
+  <title>Вход в книжный магазин</title>
   <meta name="description" content="Описание страницы">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -40,6 +40,8 @@
       });
     });
   </script>
+  <meta id="_csrf" name="_csrf" th:content="${_csrf.token}"/>
+  <meta id="_csrf_header" name="_csrf_header" th:content="${_csrf.headerName}"/>
 </head>
 <body class="Site">
   <header class="Header" th:replace="~{fragments/header :: header('')}"></header>
@@ -56,6 +58,8 @@
           <div class="Login-ins">
             <div class="Login-step">
               <div class="form-group">
+                <span th:if="${regOk}">Регистрация прошла успешно</span>
+                <br>
                 <label class="form-label Login-title">Введите e-mail или телефон
                 </label>
               </div>
@@ -97,18 +101,18 @@
             </div>
             <div class="Login-step Login-step_hide" data-type="mail">
               <div class="form-group">
-                <label class="form-label Login-title">На&nbsp;Ваш e-mail отправлена ссылка для входа и&nbsp;код. Перейдите по&nbsp;ссылке или введите код ниже:
+                <label class="form-label Login-title">Введите пароль учетной записи или зарегистрируйтесь по ссылке ниже
                 </label>
               </div>
               <div class="form-group form-group_key">
-                <input class="form-input" id="mailcode" name="mailcode" type="text" placeholder="Код" data-validate="key require" data-mask="999 999"/>
+                <input class="form-input" id="mailcode" name="mailcode" type="text" placeholder="Код" data-validate="key require"/>
               </div>
               <div class="form-group form-group_center">
                 <button class="btn btn_primary form-btn" type="button" name="toComeInMail" id="toComeInMail" data-send="">Войти
                 </button>
               </div>
             </div>
-            <div class="form-group form-group_center"><a class="Login-reg" href="/signup.html">Зарегистрироваться</a>
+            <div class="form-group form-group_center"><a class="Login-reg" href="/signup.html" th:href="@{/signup}">Зарегистрироваться</a>
             </div>
           </div>
         </form>

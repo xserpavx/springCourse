@@ -12,7 +12,7 @@
 <!--[if gt IE 9]><!--> <html lang="ru" xmlns="http://www.w3.org/1999/xhtml"
                              xmlns:th="http://www.thymeleaf.org"> <!--<![endif]-->
 <head>
-  <title>Тут название страницы написать</title>
+  <title>Регистрация нового пользователя</title>
   <meta name="description" content="Описание страницы">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="/assets/css/extra.min.css?v=65675850"><!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script defer src="/assets/js/scripts.min.js?v=65675850"></script>
+  <meta id="_csrf" name="_csrf" th:content="${_csrf.token}"/>
+  <meta id="_csrf_header" name="_csrf_header" th:content="${_csrf.headerName}"/>
 </head>
 <body class="Site">
   <header class="Header" th:replace="~{fragments/header :: header('')}"></header>
@@ -41,15 +43,15 @@
     </div>
     <div class="wrap">
       <main class="Middle-main">
-        <form class="form Login Login_registration" action="#" method="post">
+        <form class="form Login Login_registration" action="#" method="post" th:object="${regForm}" th:action="@{/reg}">
           <div class="Login-ins">
             <div class="Login-step">
               <div class="form-group">
-                <input class="form-input" id="name" name="name" type="text" placeholder="Введите Имя" data-validate="require"/>
+                <input class="form-input" id="name" name="name" type="text" placeholder="Введите Имя" data-validate="require" th:field="*{name}"/>
               </div>
               <div class="form-group form-group_row">
                 <div class="form-group">
-                  <input class="form-input form-input_phone" id="phone" name="phone" type="text" placeholder="Введите телефон" data-mask="+7 (999) 999-99-99" data-validate="require"/>
+                  <input class="form-input form-input_phone" id="phone" name="phone" type="text" placeholder="Введите телефон" data-mask="+7 (999) 999-99-99" data-validate="require" th:field="*{phone}"/>
                 </div>
                 <div class="form-group form-group_key">
                   <input class="form-input form-input_code" id="phoneCode" name="phoneCode" type="text" placeholder="Код из СМС" data-mask="999 999" data-validate="require key"/>
@@ -61,7 +63,7 @@
               </div>
               <div class="form-group form-group_row">
                 <div class="form-group">
-                  <input class="form-input form-input_mail" id="mail" name="mail" type="text" placeholder="Введите e-mail" data-validate="mail require"/>
+                  <input class="form-input form-input_mail" id="mail" name="mail" type="text" placeholder="Введите e-mail" data-validate="mail require" th:field="*{email}"/>
                 </div>
                 <div class="form-group form-group_key">
                   <input class="form-input form-input_code" id="mailCode" name="mailCode" type="text" placeholder="Код из письма" data-mask="999 999" data-validate="require key"/>
@@ -71,8 +73,11 @@
                   </button>
                 </div>
               </div>
+              <div class="form-group">
+                <input class="form-input form-input_password" id="pwd" name="password" type="text" placeholder="Введите новый пароль" data-validate="password require" th:field="*{password}"/>
+              </div>
               <div class="form-group form-group_center">
-                <button class="btn btn_primary form-btn" type="button" name="registration" id="registration" disabled="disabled">Зарегистрироваться
+                <button class="btn btn_primary form-btn" type="submit" name="registration" id="registration" disabled="disabled">Зарегистрироваться
                 </button>
               </div>
             </div>
