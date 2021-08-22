@@ -28,9 +28,22 @@ public class BookstoreUserDetailService implements UserDetailsService {
         if (bookstoreUser != null) {
             return new BookstoreUserDetails(bookstoreUser);
         } else {
-            throw new UsernameNotFoundException("user not found!");
+            throw new UsernameNotFoundException(String.format("user by name \"%s\" not found!", s));
         }
     }
+
+    public UserDetails loadUserByName(String s) throws UsernameNotFoundException {
+        BookstoreUser bookstoreUser = bookstoreUserRepository.findBookstoreUserByName(s);
+        if (bookstoreUser != null) {
+            return new BookstoreUserDetails(bookstoreUser);
+        } else {
+            throw new UsernameNotFoundException(String.format("user by e-mail \"%s\" not found!", s));
+        }
+    }
+
+
+
+
 
 
 }

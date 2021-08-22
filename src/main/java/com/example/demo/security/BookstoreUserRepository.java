@@ -11,4 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BookstoreUserRepository extends JpaRepository<BookstoreUser, Integer> {
     BookstoreUser findBookstoreUserByEmail(String email);
+    BookstoreUser findBookstoreUserByName(String userName);
+
 }

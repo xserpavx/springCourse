@@ -6,14 +6,12 @@ import com.example.demo.security.RegistrationForm;
 import com.example.demo.security.UserService;
 import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * Created on 21.07.2021
@@ -60,7 +58,7 @@ public class SignInController {
     @ResponseBody
     public ContactConfirmationResponse handleRequestContactConfirmation(@RequestBody ContactConfirmationPayLoad payload) {
         ContactConfirmationResponse response = new ContactConfirmationResponse();
-        response.setResult(true);
+        response.setResult("true");
         return response;
     }
 
@@ -68,7 +66,7 @@ public class SignInController {
     @ResponseBody
     public ContactConfirmationResponse handleRequestApproveContact(@RequestBody ContactConfirmationPayLoad payload) {
         ContactConfirmationResponse response = new ContactConfirmationResponse();
-        response.setResult(true);
+        response.setResult("true");
         return response;
     }
 
@@ -81,8 +79,14 @@ public class SignInController {
 
     @PostMapping("/login")
     @ResponseBody
-    public ContactConfirmationResponse handleLogin(@RequestBody ContactConfirmationPayLoad payload) {
-        return userService.login(payload);
+    public ContactConfirmationResponse handleLogin(@RequestBody ContactConfirmationPayLoad payload, HttpServletResponse httpServletResponse) {
+//        Авторизация при помощи сессий
+//        return userService.login(payload);
+//        Авторизация при помощи JWT
+        ContactConfirmationResponse loginResponse = userService.jwtLogin(payload);
+        Cookie cookie = new Cookie("token", loginResponse.getResult());
+        httpServletResponse.addCookie(cookie);
+        return loginResponse;
     }
 
     @GetMapping("/my")
@@ -96,16 +100,16 @@ public class SignInController {
         return "profile";
     }
 
-    @GetMapping("/logout")
-    public String logout(HttpServletRequest request) {
-        HttpSession session = request.getSession();
-        SecurityContextHolder.clearContext();
-        if (session != null) {
-            session.invalidate();
-        }
-        for (Cookie cookie : request.getCookies()) {
-            cookie.setMaxAge(0);
-        }
-        return "redirect:/";
-    }
+//    @GetMapping("/logout")
+//    public String logout(HttpServletRequest request) {
+//        HttpSession session = request.getSession();
+//        SecurityContextHolder.clearContext();
+//        if (session != null) {
+//            session.invalidate();
+//        }
+//        for (Cookie cookie : request.getCookies()) {
+//            cookie.setMaxAge(0);
+//        }
+//        return "redirect:/";
+//    }
 }

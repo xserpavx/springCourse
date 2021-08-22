@@ -9,5 +9,9 @@ import lombok.Data;
  **/
 @Data
 public class ContactConfirmationResponse {
-    Boolean result;
+//    Авторизация при помощи сессий
+//    Boolean result;
+
+//  Авторизация при помощи JWT
+    String result;
 }
