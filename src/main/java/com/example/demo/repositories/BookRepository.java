@@ -53,8 +53,11 @@ public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndS
     @Query(value = "select b.* from genres g left outer join book2genre b2g on b2g.id_genre = g.id left outer join books b on b2g.id_book = b.id where g.slug = ?1", nativeQuery = true)
     Page<Book> getBooksByGenre(String slug, Pageable pageable);
 
-    @Query(value = "select b.* from authors a left outer join books b on a.id = b.id_author where a.slug = ?1", nativeQuery = true)
+    @Query(value = "select b.* from book2author b2a left outer join books b on b.id = b2a.id_book left outer join authors a on a.id = b2a.id_author where a.slug = ?1", nativeQuery = true)
     Page<Book> getBooksBySlugAuthor(String slug, Pageable pageable);
+
+    @Query(value = "select b.* from book2author b2a left outer join books b on b.id = b2a.id_book where id_author = ?1", nativeQuery = true)
+    Page<Book> getBooksByIdAuthor(Integer id_author, Pageable pageable);
 
     @Query(value = "select count(id) from book_user_rating where id_book = ?1", nativeQuery = true)
     Integer getBookRateCount(int id);

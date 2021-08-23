@@ -60,8 +60,10 @@ public class BooksController {
             model.addAttribute("book", books.get(0));
             model.addAttribute("rateCount", bookService.getRateCount(books.get(0).getId()));
             model.addAttribute("rateCountByRateValue", bookService.getRateCountByRateValue(books.get(0).getId()));
+            return "books/slug";
+        } else {
+            return "redirect:/";
         }
-        return "books/slug";
     }
 
 
