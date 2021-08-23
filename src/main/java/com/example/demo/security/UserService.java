@@ -54,7 +54,14 @@ public class UserService {
     }
 
     public ContactConfirmationResponse jwtLogin(ContactConfirmationPayLoad payload) {
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(payload.getContact(), payload.getCode()));
+        // Необходимо определить что использовалось в качестве имени пользователя: телефон или email
+
+        try {
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(payload.getContact(), payload.getCode()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         BookstoreUserDetails bookstoreUserDetails = (BookstoreUserDetails) bookstoreUserDetailService.loadUserByUsername(payload.getContact());
         String jwtToken = jwtService.generateToken(bookstoreUserDetails);
         ContactConfirmationResponse response = new ContactConfirmationResponse();
