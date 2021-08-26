@@ -6,6 +6,7 @@ import com.example.demo.security.RegistrationForm;
 import com.example.demo.security.UserService;
 import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -27,6 +28,11 @@ public class SignInController {
     public SignInController(ControllerService controllerService, UserService userService) {
         this.controllerService = controllerService;
         this.userService = userService;
+    }
+
+    @ModelAttribute("isLogged")
+    public Boolean isLogged() {
+        return !(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString().compareTo("anonymousUser") == 0);
     }
 
     @ModelAttribute("ppCount")

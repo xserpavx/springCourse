@@ -5,6 +5,7 @@ import com.example.demo.entity.Tag;
 import com.example.demo.services.BookService;
 import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -30,9 +31,9 @@ public class MainPageController {
         this.controllerService = controllerService;
     }
 
-    @ModelAttribute("recommendBooks")
-    public List<Book> recommendBooks() {
-        return bookService.getRecomendBooks(0, 6).getContent();
+    @ModelAttribute("isLogged")
+    public Boolean isLogged() {
+        return !(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString().compareTo("anonymousUser") == 0);
     }
 
     @ModelAttribute("ppCount")
@@ -43,6 +44,12 @@ public class MainPageController {
     @ModelAttribute("cartCount")
     public int cartCount(@CookieValue(name="cartCount", required = false) String ppCount) {
         return controllerService.getBooksCount(ppCount);
+    }
+
+
+    @ModelAttribute("recommendBooks")
+    public List<Book> recommendBooks() {
+        return bookService.getRecomendBooks(0, 6).getContent();
     }
 
     @ModelAttribute("tags")
