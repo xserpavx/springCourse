@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Скрипты для переключения языка</title>
+</head>
+<body>
+    <div th:fragment="switcher" th:remove="tag">
+        <script th:replace="fragments/switch_lang :: switcher"></script>
+    </div>
+</body>
+</html>
