@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.json.JSONObject;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -119,16 +120,20 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", price=" + price +
-                ", pubDate=" + pubDate +
-                ", isBestseller=" + bestseller +
-                ", slug='" + slug + '\'' +
-                ", image='" + image + '\'' +
-                ", description='" + description + '\'' +
-                ", discount=" + discount +
-                '}';
+        JSONObject book = new JSONObject();
+        book.put("id", id);
+        book.put("authors", getAuthors());
+        book.put("title", title);
+        book.put("price", price);
+        book.put("pubDate", pubDate);
+        book.put("isBestseller", bestseller);
+        book.put("slug", slug);
+        book.put("image", image);
+        book.put("description", description);
+        book.put("discount", discount);
+        return book.toString();
     }
+
+
+
 }
