@@ -1,9 +1,11 @@
 package com.example.demo.entity;
 
+import com.example.demo.services.Money;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -48,5 +50,10 @@ public class User {
             joinColumns = @JoinColumn(name = "id_user"),
             inverseJoinColumns = @JoinColumn(name = "id_book"))
     List<Book> reviewedBooks;
+
+    @Transient
+    public String getBalanceString() {
+        return String.format("На счете %s", Money.money2DigitsText(new BigDecimal(balance)).toLowerCase());
+    }
 
 }

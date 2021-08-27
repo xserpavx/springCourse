@@ -2,6 +2,8 @@ package com.example.demo.controllers;
 
 import com.example.demo.entity.Book;
 import com.example.demo.entity.Tag;
+import com.example.demo.entity.User;
+import com.example.demo.security.BookstoreUserDetails;
 import com.example.demo.services.BookService;
 import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,15 @@ public class MainPageController {
     @ModelAttribute("isLogged")
     public Boolean isLogged() {
         return !(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString().compareTo("anonymousUser") == 0);
+    }
+
+    @ModelAttribute("authUser")
+    public User checkAuth() {
+        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof BookstoreUserDetails) {
+            return ((BookstoreUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUser();
+        } else {
+            return new BookstoreUserDetails(new User()).getUser();
+        }
     }
 
     @ModelAttribute("ppCount")

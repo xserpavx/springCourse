@@ -1,7 +1,7 @@
 package com.example.demo.config;
 
-import com.example.demo.services.BookstoreUserDetailService;
 import com.example.demo.security.jwt.JwtRequestFilter;
+import com.example.demo.services.BookstoreUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -49,7 +49,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth
                 .userDetailsService(bookstoreUserDetailService)
                 .passwordEncoder(getPasswordEncoder());
-
     }
 
     @Override
@@ -61,9 +60,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/**").permitAll()
                 .and().formLogin()
                 .loginPage("/signin").failureUrl("/signin")
-                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/signin").deleteCookies("token");
+                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/signin");
 
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
     }
+
 }

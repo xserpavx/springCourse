@@ -1,10 +1,13 @@
 package com.example.demo.controllers;
 
+import com.example.demo.entity.User;
+import com.example.demo.security.BookstoreUserDetails;
 import com.example.demo.security.ContactConfirmationPayLoad;
 import com.example.demo.security.ContactConfirmationResponse;
 import com.example.demo.security.RegistrationForm;
-import com.example.demo.services.UserService;
+import com.example.demo.security.jwt.JwtService;
 import com.example.demo.services.ControllerService;
+import com.example.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -12,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
@@ -23,16 +27,28 @@ import javax.servlet.http.HttpServletResponse;
 public class SignInController {
     private final ControllerService controllerService;
     private final UserService userService;
+    private final JwtService jwtService;
+
 
     @Autowired
-    public SignInController(ControllerService controllerService, UserService userService) {
+    public SignInController(ControllerService controllerService, UserService userService, JwtService jwtService ) {
         this.controllerService = controllerService;
         this.userService = userService;
+        this.jwtService = jwtService;
     }
 
     @ModelAttribute("isLogged")
     public Boolean isLogged() {
         return !(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString().compareTo("anonymousUser") == 0);
+    }
+
+    @ModelAttribute("authUser")
+    public User checkAuth() {
+        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof BookstoreUserDetails) {
+            return ((BookstoreUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUser();
+        } else {
+            return new BookstoreUserDetails(new User()).getUser();
+        }
     }
 
     @ModelAttribute("ppCount")
@@ -106,16 +122,20 @@ public class SignInController {
         return "profile";
     }
 
-//    @GetMapping("/logout")
-//    public String logout(HttpServletRequest request) {
-//        HttpSession session = request.getSession();
-//        SecurityContextHolder.clearContext();
-//        if (session != null) {
-//            session.invalidate();
-//        }
-//        for (Cookie cookie : request.getCookies()) {
-//            cookie.setMaxAge(0);
-//        }
-//        return "redirect:/";
-//    }
+    @GetMapping("/before_logout")
+    public String logout(HttpServletRequest request) {
+        String token = null;
+        Cookie[] cookies = request.getCookies();
+
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("token")) {
+                    token = cookie.getValue();
+                    break;
+                }
+            }
+        }
+        jwtService.markLogoutEventForToken(token);
+        return "redirect:/logout";
+    }
 }

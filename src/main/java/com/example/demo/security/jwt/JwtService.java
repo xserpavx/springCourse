@@ -23,6 +23,23 @@ public class JwtService {
     @Value("${auth.secret}")
     private String secret;
 
+
+    private Map<String, Date> jwtBlackList = new HashMap<>();
+
+    public void markLogoutEventForToken(String token) {
+        if (jwtBlackList.containsKey(token)) {
+            System.out.println(String.format("Log out token for user [%s] is already present in the cache", this.tokenUserName(token)));
+        } else {
+            Date tokenExpiryDate = this.tokenExpiration(token);
+            System.out.println(String.format("Logout token cache set for [%s]. Token is due expiry at [%s]", this.tokenUserName(token), tokenExpiryDate));
+            jwtBlackList.put(token, new Date());
+        }
+    }
+
+    public Date getLogoutEventForToken(String token) {
+        return jwtBlackList.get(token);
+    }
+
     private String createToken(Map<String, Object> claims, String userName) {
         return Jwts
                 .builder()
@@ -61,9 +78,16 @@ public class JwtService {
     }
 
     public Boolean validateToken(String token, UserDetails userDetails) {
+        Date logoutDate = getLogoutEventForToken(token);
+        if (logoutDate != null) {
+            String errorMessage = String.format("Token corresponds to an already logged out user [%s] at [%s]. Please login again", this.tokenUserName(token), logoutDate);
+            System.out.println(errorMessage);
+            return false;
+//            throw new InvalidTokenRequestException("JWT", authToken, errorMessage);
+        }
+
         String userName= tokenUserName(token);
         return userName.equals(userDetails.getUsername()) && !isTokenExpired(token);
     }
-
 
 }
