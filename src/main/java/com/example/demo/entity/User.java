@@ -18,7 +18,9 @@ import java.util.List;
 @Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator( name = "usersSequence", sequenceName = "USER_SEQUENCE", allocationSize = 1, initialValue = 1000)
+    @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "usersSequence")
     private int id;
 
     @ApiModelProperty("hash of user, use for hide ID")
@@ -33,6 +35,12 @@ public class User {
 
     @ApiModelProperty("User`s name")
     private String name;
+
+    private String email;
+
+    private String phone;
+
+    private String password;
 
     @ManyToMany
     @JoinTable(

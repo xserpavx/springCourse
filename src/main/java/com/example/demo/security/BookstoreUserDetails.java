@@ -1,5 +1,6 @@
 package com.example.demo.security;
 
+import com.example.demo.entity.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -17,10 +18,10 @@ import java.util.Collection;
 public class BookstoreUserDetails implements UserDetails {
 
     @Getter
-    private final BookstoreUser bookstoreUser;
+    private final User user;
 
-    public BookstoreUserDetails(BookstoreUser bookstoreUser) {
-        this.bookstoreUser = bookstoreUser;
+    public BookstoreUserDetails(User user) {
+        this.user = user;
     }
 
     @Override
@@ -30,12 +31,12 @@ public class BookstoreUserDetails implements UserDetails {
 
     @Override
     public String getPassword() {
-        return bookstoreUser.getPassword();
+        return user.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return bookstoreUser.getName();
+        return user.getName();
     }
 
     @Override

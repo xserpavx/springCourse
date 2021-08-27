@@ -1,5 +1,8 @@
-package com.example.demo.security;
+package com.example.demo.services;
 
+import com.example.demo.entity.User;
+import com.example.demo.repositories.UserRepository;
+import com.example.demo.security.*;
 import com.example.demo.security.jwt.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -17,17 +20,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    private final BookstoreUserRepository bookstoreUserRepository;
+    private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
     private final BookstoreUserDetailService bookstoreUserDetailService;
     private final JwtService jwtService;
 
     @Autowired
-    public UserService(BookstoreUserRepository bookstoreUserRepository, PasswordEncoder passwordEncoder,
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder,
                        AuthenticationManager authenticationManager, BookstoreUserDetailService bookstoreUserDetailService,
                        JwtService jwtService) {
-        this.bookstoreUserRepository = bookstoreUserRepository;
+        this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.authenticationManager = authenticationManager;
         this.bookstoreUserDetailService = bookstoreUserDetailService;
@@ -35,13 +38,13 @@ public class UserService {
     }
 
     public void registrationNewUser(RegistrationForm regForm) {
-        if (bookstoreUserRepository.findBookstoreUserByEmail(regForm.getEmail()) == null) {
-            BookstoreUser bsUser = new BookstoreUser();
-            bsUser.setName(regForm.getName());
-            bsUser.setPhone(regForm.getPhone());
-            bsUser.setEmail(regForm.getEmail());
-            bsUser.setPassword(passwordEncoder.encode(regForm.getPassword()));
-            bookstoreUserRepository.save(bsUser);
+        if (userRepository.findBookstoreUserByEmail(regForm.getEmail()) == null) {
+            User user = new User();
+            user.setName(regForm.getName());
+            user.setPhone(regForm.getPhone());
+            user.setEmail(regForm.getEmail());
+            user.setPassword(passwordEncoder.encode(regForm.getPassword()));
+            userRepository.save(user);
         }
     }
 
@@ -71,6 +74,6 @@ public class UserService {
 
     public Object getCurrentUser() {
         BookstoreUserDetails bookstoreUserDetails = (BookstoreUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return bookstoreUserDetails.getBookstoreUser();
+        return bookstoreUserDetails.getUser();
     }
 }

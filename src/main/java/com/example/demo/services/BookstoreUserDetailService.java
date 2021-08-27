@@ -1,5 +1,8 @@
-package com.example.demo.security;
+package com.example.demo.services;
 
+import com.example.demo.entity.User;
+import com.example.demo.repositories.UserRepository;
+import com.example.demo.security.BookstoreUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -15,24 +18,24 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookstoreUserDetailService implements UserDetailsService {
 
-    private final BookstoreUserRepository bookstoreUserRepository;
+    private final UserRepository bookstoreUserRepository;
 
     @Autowired
-    public BookstoreUserDetailService(BookstoreUserRepository bookstoreUserRepository) {
+    public BookstoreUserDetailService(UserRepository bookstoreUserRepository) {
         this.bookstoreUserRepository = bookstoreUserRepository;
     }
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         // Определяем по какому полю авторизуется пользователь, по почте или телефону
-        BookstoreUser bookstoreUser;
+        User user;
         if (s.contains("@")) {
-            bookstoreUser = bookstoreUserRepository.findBookstoreUserByEmail(s);
+            user = bookstoreUserRepository.findBookstoreUserByEmail(s);
         } else {
-            bookstoreUser = bookstoreUserRepository.findBookstoreUserByPhone(s);
+            user = bookstoreUserRepository.findBookstoreUserByPhone(s);
         }
-        if (bookstoreUser != null) {
-            return new BookstoreUserDetails(bookstoreUser);
+        if (user != null) {
+            return new BookstoreUserDetails(user);
         } else {
             if (s.contains("@")) {
                 throw new UsernameNotFoundException(String.format("user by e-mail \"%s\" not found!", s));
@@ -43,9 +46,9 @@ public class BookstoreUserDetailService implements UserDetailsService {
     }
 
     public UserDetails loadUserByName(String s) throws UsernameNotFoundException {
-        BookstoreUser bookstoreUser = bookstoreUserRepository.findBookstoreUserByName(s);
-        if (bookstoreUser != null) {
-            return new BookstoreUserDetails(bookstoreUser);
+        User user = bookstoreUserRepository.findBookstoreUserByName(s);
+        if (user != null) {
+            return new BookstoreUserDetails(user);
         } else {
             throw new UsernameNotFoundException(String.format("user by e-mail \"%s\" not found!", s));
         }

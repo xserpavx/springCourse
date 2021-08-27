@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: roland-functions-001-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/functions/functions-002.sql

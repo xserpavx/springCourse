@@ -3,7 +3,7 @@ package com.example.demo.controllers;
 import com.example.demo.security.ContactConfirmationPayLoad;
 import com.example.demo.security.ContactConfirmationResponse;
 import com.example.demo.security.RegistrationForm;
-import com.example.demo.security.UserService;
+import com.example.demo.services.UserService;
 import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;

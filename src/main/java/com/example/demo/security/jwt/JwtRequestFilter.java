@@ -1,6 +1,6 @@
 package com.example.demo.security.jwt;
 
-import com.example.demo.security.BookstoreUserDetailService;
+import com.example.demo.services.BookstoreUserDetailService;
 import com.example.demo.security.BookstoreUserDetails;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
