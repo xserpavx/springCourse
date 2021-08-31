@@ -1,5 +1,6 @@
 package com.example.demo.security.jwt;
 
+import com.example.demo.exceptions.JwtTimeoutException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -26,7 +27,7 @@ public class JwtService {
 
     private Map<String, Date> jwtBlackList = new HashMap<>();
 
-    public void markLogoutEventForToken(String token) {
+    public void markLogoutEventForToken(String token) throws JwtTimeoutException {
         if (jwtBlackList.containsKey(token)) {
             System.out.println(String.format("Log out token for user [%s] is already present in the cache", this.tokenUserName(token)));
         } else {
@@ -56,28 +57,32 @@ public class JwtService {
         return createToken(claims, userDetails.getUsername());
     }
 
-    public <T> T extractClaims(String token, Function<Claims, T> claimsResolver) {
+    public <T> T extractClaims(String token, Function<Claims, T> claimsResolver) throws JwtTimeoutException {
         Claims claims = extractAllClaims(token);
         return claimsResolver.apply(claims);
     }
 
-    private Claims extractAllClaims(String token) {
-        return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+    private Claims extractAllClaims(String token) throws JwtTimeoutException  {
+        try {
+            return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+        } catch (Exception e) {
+            throw new JwtTimeoutException("Авторизационный токен устарел. Необходимо авторизоваться заново");
+        }
     }
 
-    public String tokenUserName(String token) {
+    public String tokenUserName(String token) throws JwtTimeoutException{
         return extractClaims(token, Claims::getSubject);
     }
 
-    public Date tokenExpiration(String token) {
+    public Date tokenExpiration(String token) throws JwtTimeoutException{
         return extractClaims(token, Claims::getExpiration);
     }
 
-    public Boolean isTokenExpired(String token) {
+    public Boolean isTokenExpired(String token) throws JwtTimeoutException{
         return tokenExpiration(token).before(new Date());
     }
 
-    public Boolean validateToken(String token, UserDetails userDetails) {
+    public Boolean validateToken(String token, UserDetails userDetails) throws JwtTimeoutException{
         Date logoutDate = getLogoutEventForToken(token);
         if (logoutDate != null) {
             String errorMessage = String.format("Token corresponds to an already logged out user [%s] at [%s]. Please login again", this.tokenUserName(token), logoutDate);
@@ -89,5 +94,6 @@ public class JwtService {
         String userName= tokenUserName(token);
         return userName.equals(userDetails.getUsername()) && !isTokenExpired(token);
     }
+
 
 }

@@ -8,11 +8,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
@@ -26,11 +28,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final BookstoreUserDetailService bookstoreUserDetailService;
     private final JwtRequestFilter filter;
+    private final AccessDeniedHandler accessDeniedHandler;
 
     @Autowired
-    public SecurityConfig(BookstoreUserDetailService bookStoreUserDetailService, JwtRequestFilter filter) {
+    public SecurityConfig(BookstoreUserDetailService bookStoreUserDetailService, JwtRequestFilter filter, AccessDeniedHandler accessDeniedHandler) {
         this.bookstoreUserDetailService = bookStoreUserDetailService;
         this.filter = filter;
+        this.accessDeniedHandler = accessDeniedHandler;
     }
 
     @Bean
@@ -49,6 +53,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth
                 .userDetailsService(bookstoreUserDetailService)
                 .passwordEncoder(getPasswordEncoder());
+
+    }
+
+    //FIXME попытка исключить страницу с адресом /505 из проверки безопасности чтобы она открылась даже с истекшим токеном.
+    // Безуспешно
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/505");
     }
 
     @Override
@@ -61,9 +73,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().formLogin()
                 .loginPage("/signin").failureUrl("/signin")
                 .and().logout().logoutUrl("/logout").logoutSuccessUrl("/signin");
-
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
+        http
+                .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
+
+        ;
+
+        ;
     }
 
 }

@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.entity.User;
+import com.example.demo.exceptions.JwtTimeoutException;
 import com.example.demo.security.BookstoreUserDetails;
 import com.example.demo.security.ContactConfirmationPayLoad;
 import com.example.demo.security.ContactConfirmationResponse;
@@ -135,7 +136,11 @@ public class SignInController {
                 }
             }
         }
-        jwtService.markLogoutEventForToken(token);
+        try {
+            jwtService.markLogoutEventForToken(token);
+        } catch (JwtTimeoutException e) {
+            return "redirect:/logout";
+        }
         return "redirect:/logout";
     }
 }
