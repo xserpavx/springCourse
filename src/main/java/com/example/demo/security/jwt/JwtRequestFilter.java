@@ -46,6 +46,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 if (cookie.getName().equals("token")) {
                     token = cookie.getValue();
                     try {
+
                         userName = jwtService.tokenUserName(token);
                     } catch (JwtTimeoutException e) {
 

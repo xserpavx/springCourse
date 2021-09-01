@@ -31,6 +31,7 @@ public class JwtExpiredFilter extends OncePerRequestFilter {
         String userName = null;
         Cookie[] cookies = httpServletRequest.getCookies();
 
+
         if (cookies != null) {
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals("token")) {
@@ -38,8 +39,7 @@ public class JwtExpiredFilter extends OncePerRequestFilter {
                     try {
                         userName = jwtService.tokenUserName(token);
                     } catch (JwtTimeoutException e) {
-                        httpServletRequest.getRequestDispatcher("login").forward(httpServletRequest, httpServletResponse);
-                        return;
+                        cookie.setValue(jwtService.refreshToken(token));
                     }
                 }
             }

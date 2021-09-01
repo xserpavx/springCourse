@@ -4,6 +4,7 @@ import com.example.demo.exceptions.JwtTimeoutException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,8 @@ public class JwtService {
 
 
     private Map<String, Date> jwtBlackList = new HashMap<>();
+    @Getter
+    private Map<String, UserDetails> jwtList = new HashMap<>();
 
     public void markLogoutEventForToken(String token) throws JwtTimeoutException {
         if (jwtBlackList.containsKey(token)) {
@@ -34,6 +37,7 @@ public class JwtService {
             Date tokenExpiryDate = this.tokenExpiration(token);
             System.out.println(String.format("Logout token cache set for [%s]. Token is due expiry at [%s]", this.tokenUserName(token), tokenExpiryDate));
             jwtBlackList.put(token, new Date());
+            jwtList.remove(token);
         }
     }
 
@@ -47,7 +51,7 @@ public class JwtService {
                 .setClaims(claims)
                 .setSubject(userName)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 ))
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
                 .signWith(SignatureAlgorithm.HS256, secret).compact();
 
     }
@@ -56,6 +60,16 @@ public class JwtService {
         Map<String, Object> claims = new HashMap<>();
         return createToken(claims, userDetails.getUsername());
     }
+
+    public String refreshToken(String token) {
+        UserDetails userDetails = jwtList.get(token);
+        if (userDetails != null) {
+            return generateToken(userDetails);
+        } else  {
+            return token;
+        }
+    }
+
 
     public <T> T extractClaims(String token, Function<Claims, T> claimsResolver) throws JwtTimeoutException {
         Claims claims = extractAllClaims(token);
