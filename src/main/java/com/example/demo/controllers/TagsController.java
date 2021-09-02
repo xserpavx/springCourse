@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.entity.User;
 import com.example.demo.services.BookService;
 import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,11 @@ public class TagsController {
     public TagsController(BookService bookService, ControllerService controllerService) {
         this.bookService = bookService;
         this.controllerService = controllerService;
+    }
+
+    @ModelAttribute("authUser")
+    public User checkAuth() {
+        return controllerService.addCurrentUser2Model();
     }
 
     @ModelAttribute("ppCount")

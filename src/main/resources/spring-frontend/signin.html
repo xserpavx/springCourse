@@ -102,7 +102,18 @@
                 </button>
               </div>
             </div>
-            <div class="form-group form-group_center"><a class="Login-reg" href="/signup.html" th:href="@{/signup}">Зарегистрироваться</a>
+            <div class="form-group form-group_center">
+              <a class="Login-reg" href="/signup.html" th:href="@{/signup}">Зарегистрироваться</a>
+            </div>
+            <div class="form-group form-group_center">
+              <a class="Login-reg" href="/oauth2/authorization/"  th:href="@{/oauth2/authorization/github}">
+                <img src="/assets/img/oauth2/github.png" width="64" height="64">
+              </a>
+            </div>
+            <div class="form-group form-group_center">
+              <a class="Login-reg" href="/oauth2/authorization/"  th:href="@{/oauth2/authorization/google}">
+                <img src="/assets/img/oauth2/google.png" width="64" height="64">
+              </a>
             </div>
           </div>
         </form>

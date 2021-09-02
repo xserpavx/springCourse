@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.entity.User;
 import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,11 @@ public class CartController {
     @ModelAttribute("active")
     public String active() {
         return "cart";
+    }
+
+    @ModelAttribute("authUser")
+    public User checkAuth() {
+        return controllerService.addCurrentUser2Model();
     }
 
     @ModelAttribute("ppCount")

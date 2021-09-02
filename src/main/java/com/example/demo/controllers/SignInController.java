@@ -2,7 +2,6 @@ package com.example.demo.controllers;
 
 import com.example.demo.entity.User;
 import com.example.demo.exceptions.JwtTimeoutException;
-import com.example.demo.security.BookstoreUserDetails;
 import com.example.demo.security.ContactConfirmationPayLoad;
 import com.example.demo.security.ContactConfirmationResponse;
 import com.example.demo.security.RegistrationForm;
@@ -10,7 +9,6 @@ import com.example.demo.security.jwt.JwtService;
 import com.example.demo.services.ControllerService;
 import com.example.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -38,18 +36,9 @@ public class SignInController {
         this.jwtService = jwtService;
     }
 
-    @ModelAttribute("isLogged")
-    public Boolean isLogged() {
-        return !(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString().compareTo("anonymousUser") == 0);
-    }
-
     @ModelAttribute("authUser")
     public User checkAuth() {
-        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof BookstoreUserDetails) {
-            return ((BookstoreUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUser();
-        } else {
-            return new BookstoreUserDetails(new User()).getUser();
-        }
+        return controllerService.addCurrentUser2Model();
     }
 
     @ModelAttribute("ppCount")

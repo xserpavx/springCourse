@@ -1,6 +1,10 @@
 package com.example.demo.services;
 
+import com.example.demo.entity.User;
+import com.example.demo.security.BookstoreUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.Cookie;
@@ -16,8 +20,12 @@ import java.util.regex.Pattern;
 
 @Service
 public class ControllerService {
+    private final UserService userService;
+
     @Autowired
-    ControllerService() {}
+    ControllerService(UserService userService) {
+        this.userService = userService;
+    }
 
     public int getBooksCount(String ppCount) {
         try {
@@ -116,6 +124,21 @@ public class ControllerService {
                 case 2: case 3: case 4: return secondEnding;
                 default: return thirdEnding;
             }
+        }
+    }
+
+    public User addCurrentUser2Model() {
+        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof BookstoreUserDetails) {
+            return ((BookstoreUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUser();
+        } else
+        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof DefaultOAuth2User) {
+            String login = (String) ((DefaultOAuth2User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getAttributes().get("login");
+            String id = ((DefaultOAuth2User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getAttributes().get("id").toString();
+            userService.registrationOAuthUser(login, id);
+            return userService.findOAuthUser(login, id);
+        }
+        else {
+            return new User();
         }
     }
 }

@@ -3,11 +3,10 @@ package com.example.demo.controllers;
 import com.example.demo.entity.Book;
 import com.example.demo.entity.Tag;
 import com.example.demo.entity.User;
-import com.example.demo.security.BookstoreUserDetails;
 import com.example.demo.services.BookService;
 import com.example.demo.services.ControllerService;
+import com.example.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -26,25 +25,19 @@ public class MainPageController {
 
     private final BookService bookService;
     private final ControllerService controllerService;
+    private final UserService userService;
 
     @Autowired
-    public MainPageController(BookService bookService, ControllerService controllerService) {
+    public MainPageController(BookService bookService, ControllerService controllerService, UserService userService) {
         this.bookService = bookService;
         this.controllerService = controllerService;
+        this.userService = userService;
     }
 
-    @ModelAttribute("isLogged")
-    public Boolean isLogged() {
-        return !(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString().compareTo("anonymousUser") == 0);
-    }
 
     @ModelAttribute("authUser")
     public User checkAuth() {
-        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof BookstoreUserDetails) {
-            return ((BookstoreUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUser();
-        } else {
-            return new BookstoreUserDetails(new User()).getUser();
-        }
+        return controllerService.addCurrentUser2Model();
     }
 
     @ModelAttribute("ppCount")

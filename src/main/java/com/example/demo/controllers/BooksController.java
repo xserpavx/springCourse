@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.entity.Author;
 import com.example.demo.entity.Book;
+import com.example.demo.entity.User;
 import com.example.demo.services.AuthorService;
 import com.example.demo.services.BookService;
 import com.example.demo.services.ControllerService;
@@ -30,6 +31,11 @@ public class BooksController {
         this.bookService = bookService;
         this.authorService = authorService;
         this.controllerService = controllerService;
+    }
+
+    @ModelAttribute("authUser")
+    public User checkAuth() {
+        return controllerService.addCurrentUser2Model();
     }
 
     @ModelAttribute("ppCount")

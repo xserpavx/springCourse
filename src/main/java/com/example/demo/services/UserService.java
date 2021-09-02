@@ -2,14 +2,16 @@ package com.example.demo.services;
 
 import com.example.demo.entity.User;
 import com.example.demo.repositories.UserRepository;
-import com.example.demo.security.*;
+import com.example.demo.security.BookstoreUserDetails;
+import com.example.demo.security.ContactConfirmationPayLoad;
+import com.example.demo.security.ContactConfirmationResponse;
+import com.example.demo.security.RegistrationForm;
 import com.example.demo.security.jwt.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -77,5 +79,18 @@ public class UserService {
     public Object getCurrentUser() {
         BookstoreUserDetails bookstoreUserDetails = (BookstoreUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return bookstoreUserDetails.getUser();
+    }
+
+    public void registrationOAuthUser(String login, String oAuthId) {
+        if (userRepository.findUserByNameAndOauthId(login, oAuthId) == null) {
+            User user = new User();
+            user.setName(login);
+            user.setOauthId(oAuthId);
+            userRepository.save(user);
+        }
+    }
+
+    public User findOAuthUser(String login, String oAuthId) {
+        return userRepository.findUserByNameAndOauthId(login, oAuthId);
     }
 }

@@ -44,6 +44,9 @@ public class User {
 
     private String password;
 
+    @Column(name="oauth_id")
+    private String oauthId;
+
     @ManyToMany
     @JoinTable(
             name = "book_review",

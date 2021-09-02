@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.entity.Genre;
+import com.example.demo.entity.User;
 import com.example.demo.services.ControllerService;
 import com.example.demo.services.GenreService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,11 @@ public class GenresController {
     public GenresController(GenreService genreService, ControllerService controllerService) {
         this.genreService = genreService;
         this.controllerService = controllerService;
+    }
+
+    @ModelAttribute("authUser")
+    public User checkAuth() {
+        return controllerService.addCurrentUser2Model();
     }
 
     @ModelAttribute("ppCount")
