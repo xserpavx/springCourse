@@ -127,7 +127,7 @@ public class ControllerService {
         }
     }
 
-    public User addCurrentUser2Model() {
+    public User getCurrentUser() {
         if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof BookstoreUserDetails) {
             return ((BookstoreUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUser();
         } else

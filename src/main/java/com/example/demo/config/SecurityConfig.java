@@ -70,9 +70,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/505").permitAll()
                 .antMatchers("/my", "/profile").authenticated()//hasRole("USER")
                 .antMatchers("/**").permitAll()
+                .antMatchers("/books**").permitAll()
                 .and().formLogin()
                 .loginPage("/signin").failureUrl("/signin")
                 .and().logout().logoutUrl("/logout").logoutSuccessUrl("/signin").deleteCookies("token")

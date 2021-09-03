@@ -24,7 +24,7 @@ public class FaqController {
 
     @ModelAttribute("authUser")
     public User checkAuth() {
-        return controllerService.addCurrentUser2Model();
+        return controllerService.getCurrentUser();
     }
 
     @ModelAttribute("ppCount")
