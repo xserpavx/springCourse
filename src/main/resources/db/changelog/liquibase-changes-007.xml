@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="roland (generated)" id="1630687150812-1">
+        <createSequence sequenceName="book_review_like_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1630687150812-2">
+        <createSequence sequenceName="book_review_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1630687150812-4">
+        <createSequence sequenceName="user_sequence"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1630687150812-6">
+        <addColumn tableName="users">
+            <column name="email" type="varchar(255)"/>
+            <column name="oauth_id" type="varchar(255)"/>
+            <column name="password" type="varchar(255)"/>
+            <column name="phone" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

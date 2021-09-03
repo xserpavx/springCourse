@@ -20,9 +20,7 @@ import java.util.List;
 @Table(name = "users")
 public class User {
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @SequenceGenerator( name = "usersSequence", sequenceName = "USER_SEQUENCE", allocationSize = 1, initialValue = 1000)
-    @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "usersSequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ApiModelProperty("hash of user, use for hide ID")
