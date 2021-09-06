@@ -1,5 +1,6 @@
 package com.example.demo.controllers.rest;
 
+import com.example.demo.controllers.rest.rto.RtoRateView;
 import com.example.demo.dto.DtoBookReview;
 import com.example.demo.dto.DtoBooks;
 import com.example.demo.entity.Book;
@@ -166,19 +167,35 @@ public class BooksRestApiController {
     }
 
     @PostMapping("rateBookReview")
-    public ResponseEntity<DtoBookReview> addRateBookReview(@RequestParam("reviewId") String idReview, @RequestParam("value") String value) {
+    public ResponseEntity<DtoBookReview> addRateBookReview(@RequestBody RtoRateView rtoRateView) {
         try {
+            int requestRateValue = Integer.parseInt(rtoRateView.getValue());
+            int requestIdReview = Integer.parseInt(rtoRateView.getReviewId());
+
+
             User user = controllerService.getCurrentUser();
-            BookReview bookReview = bookReviewRepository.findByIdEquals(Integer.parseInt(idReview));
+            BookReview bookReview = bookReviewRepository.findByIdEquals(requestIdReview);
             if (bookReview == null) {
                 return ResponseEntity.ok(new DtoBookReview("Неверный id отзыва"));
             }
 
-            BookReviewLike bookReviewLike = new BookReviewLike();
-            bookReviewLike.setIdUser(user.getId());
-            bookReviewLike.setIdReview(bookReview.getId());
-            bookReviewLike.setValue(Short.parseShort(value));
-            bookReviewLikeRepository.save(bookReviewLike);
+            // Один пользователь может поставить только один like/dislike на один отзыв.
+            BookReviewLike bookReviewLike = bookReviewLikeRepository.findByIdReviewAndIdUser(requestIdReview, user.getId());
+            if (bookReviewLike == null) {
+                bookReviewLike = new BookReviewLike();
+                bookReviewLike.setIdUser(user.getId());
+                bookReviewLike.setIdReview(bookReview.getId());
+                bookReviewLike.setValue(requestRateValue);
+                bookReviewLikeRepository.save(bookReviewLike);
+            } else {
+               // Если значение в запросе совпадает со значением в БД - удаляем отзыв
+               if (requestRateValue == 0) {
+                   bookReviewLikeRepository.delete(bookReviewLike);
+               } else {
+                   bookReviewLike.setValue(requestRateValue);
+                   bookReviewLikeRepository.save(bookReviewLike);
+               }
+            }
             return ResponseEntity.ok(new DtoBookReview());
         } catch (NumberFormatException e) {
             return ResponseEntity.ok(new DtoBookReview("В запросе переданы некорректные данные"));

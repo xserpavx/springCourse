@@ -570,7 +570,6 @@ insert into book_review_like (id, id_user, id_review, time, value) values (-569,
 insert into book_review_like (id, id_user, id_review, time, value) values (-570, -40, -8, '2020-10-28 21:43:08', -1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-571, -119, -243, '2021-05-24 07:06:30', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-572, -250, -136, '2020-02-20 09:36:36', -1);
-insert into book_review_like (id, id_user, id_review, time, value) values (-573, -199, -451, '2020-12-15 14:37:55', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-574, -136, -116, '2021-01-28 08:08:01', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-575, -226, -106, '2020-03-20 07:52:59', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-576, -12, -477, '2021-04-04 03:50:50', 1);
@@ -609,7 +608,6 @@ insert into book_review_like (id, id_user, id_review, time, value) values (-608,
 insert into book_review_like (id, id_user, id_review, time, value) values (-609, -113, -88, '2021-11-06 20:09:37', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-610, -230, -17, '2020-10-08 07:00:27', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-611, -157, -226, '2021-10-28 03:29:56', -1);
-insert into book_review_like (id, id_user, id_review, time, value) values (-612, -210, -51, '2020-04-19 19:14:32', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-613, -136, -402, '2020-02-21 17:41:40', -1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-614, -214, -386, '2020-08-06 16:39:44', -1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-615, -56, -426, '2021-03-25 16:41:21', 1);
@@ -718,7 +716,6 @@ insert into book_review_like (id, id_user, id_review, time, value) values (-717,
 insert into book_review_like (id, id_user, id_review, time, value) values (-718, -238, -196, '2020-05-01 06:35:44', -1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-719, -94, -415, '2020-04-16 19:45:01', -1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-720, -83, -311, '2020-07-15 04:59:46', 1);
-insert into book_review_like (id, id_user, id_review, time, value) values (-721, -66, -61, '2020-08-09 19:36:04', -1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-722, -200, -269, '2021-08-20 17:36:25', -1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-723, -122, -469, '2020-07-05 09:45:57', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-724, -140, -222, '2021-09-19 19:59:30', 1);
@@ -796,7 +793,6 @@ insert into book_review_like (id, id_user, id_review, time, value) values (-795,
 insert into book_review_like (id, id_user, id_review, time, value) values (-796, -14, -244, '2020-05-13 00:02:36', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-797, -238, -305, '2020-01-30 12:05:04', -1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-798, -103, -160, '2020-06-25 21:10:27', -1);
-insert into book_review_like (id, id_user, id_review, time, value) values (-799, -209, -122, '2021-08-07 22:05:34', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-800, -141, -74, '2020-08-26 21:14:23', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-801, -4, -348, '2020-12-25 23:29:07', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-802, -144, -391, '2020-11-24 19:12:39', -1);
@@ -917,7 +913,6 @@ insert into book_review_like (id, id_user, id_review, time, value) values (-916,
 insert into book_review_like (id, id_user, id_review, time, value) values (-917, -37, -76, '2020-10-18 18:44:02', -1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-918, -241, -432, '2021-09-26 12:10:39', -1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-919, -132, -223, '2021-10-06 05:24:34', 1);
-insert into book_review_like (id, id_user, id_review, time, value) values (-920, -103, -354, '2020-04-17 21:39:54', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-921, -35, -487, '2021-03-11 21:35:11', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-922, -169, -313, '2020-03-20 21:08:09', 1);
 insert into book_review_like (id, id_user, id_review, time, value) values (-923, -135, -478, '2021-01-25 13:25:59', 1);

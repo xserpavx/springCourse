@@ -113,6 +113,32 @@ public class Book {
     List<BookReview> bookReviews;
 
     @Transient
+    public boolean bookReviewValue(int idUser, int idReview, int value) {
+        for (BookReview br : bookReviews) {
+            if (br.getId() != idReview) {continue;}
+
+            for (BookReviewLike brl : value == 1 ? br.likeBookReviews : br.dislikeBookReviews) {
+                if (brl.getIdUser() == idUser) {
+                    if (brl.getValue() == value) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    @Transient
+    public boolean bookReviewLike(int idUser, int idReview) {
+        return bookReviewValue(idUser, idReview, 1);
+    }
+
+    @Transient
+    public boolean bookReviewDislike(int idUser, int idReview) {
+        return bookReviewValue(idUser, idReview, -1);
+    }
+
+    @Transient
     public String getReviewEnding() {
         return ControllerService.getEnding(bookReviews.size(),
                 "", "а", "ов");

@@ -13,7 +13,9 @@ import java.util.Date;
  **/
 @Entity
 @Data
-@Table(name="book_review_like")
+@Table(name="book_review_like", uniqueConstraints={
+        @UniqueConstraint(columnNames = {"id_review", "id_user"})
+})
 public class BookReviewLike {
 
     @Id
@@ -33,7 +35,7 @@ public class BookReviewLike {
     private Date time;
 
     @ApiModelProperty("like/dislike of book review")
-    private short value;
+    private int value;
 
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "id_review", insertable = false, updatable = false)

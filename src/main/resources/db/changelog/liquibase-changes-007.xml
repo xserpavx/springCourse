@@ -17,4 +17,7 @@
             <column name="phone" type="varchar(255)"/>
         </addColumn>
     </changeSet>
+    <changeSet author="roland (generated)" id="1630903927179-1">
+        <addUniqueConstraint columnNames="id_review, id_user" constraintName="unq_id_review_id_user" tableName="book_review_like"/>
+    </changeSet>
 </databaseChangeLog>
