@@ -1,4 +1,4 @@
-package com.example.demo.controllers.rest.rto;
+package com.example.demo.dto;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import lombok.Data;
  **/
 
 @Data
-public class RtoBookReview {
+public class DtoAddBookReview {
     private String bookId;
     private String text;
 }

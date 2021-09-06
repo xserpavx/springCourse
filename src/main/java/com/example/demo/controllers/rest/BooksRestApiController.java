@@ -1,8 +1,7 @@
 package com.example.demo.controllers.rest;
 
-import com.example.demo.controllers.rest.rto.RtoBookReview;
-import com.example.demo.controllers.rest.rto.RtoRateBookReview;
-import com.example.demo.dto.DtoBookReview;
+import com.example.demo.dto.DtoAddBookReview;
+import com.example.demo.dto.DtoRateBookReview;
 import com.example.demo.dto.DtoBooks;
 import com.example.demo.entity.Book;
 import com.example.demo.entity.BookReview;
@@ -146,10 +145,10 @@ public class BooksRestApiController {
     }
 
     @PostMapping("bookReview")
-    public ResponseEntity<DtoBookReview> addBookReview(@RequestBody RtoBookReview rtoBookReview) {
-        DtoBookReview dtoBookReview;
+    public ResponseEntity<com.example.demo.dto.DtoBookReview> addBookReview(@RequestBody DtoAddBookReview rtoBookReview) {
+        com.example.demo.dto.DtoBookReview dtoBookReview;
         if (rtoBookReview.getText().length() <= 50) {
-            dtoBookReview = new DtoBookReview("Отзыв слишком короткий. Напишите, пожалуйста, более развёрнутый отзыв");
+            dtoBookReview = new com.example.demo.dto.DtoBookReview("Отзыв слишком короткий. Напишите, пожалуйста, более развёрнутый отзыв");
         } else {
             try {
                 User user = controllerService.getCurrentUser();
@@ -159,16 +158,16 @@ public class BooksRestApiController {
                 bookReview.setIdBook(Integer.parseInt(rtoBookReview.getBookId()));
                 bookReview.setText(rtoBookReview.getText());
                 bookReviewRepository.save(bookReview);
-                dtoBookReview = new DtoBookReview();
+                dtoBookReview = new com.example.demo.dto.DtoBookReview();
             } catch (NumberFormatException e) {
-                dtoBookReview = new DtoBookReview("В запросе переданы некорректные данные");
+                dtoBookReview = new com.example.demo.dto.DtoBookReview("В запросе переданы некорректные данные");
             }
         }
         return ResponseEntity.ok(dtoBookReview);
     }
 
     @PostMapping("rateBookReview")
-    public ResponseEntity<DtoBookReview> addRateBookReview(@RequestBody RtoRateBookReview rtoRateView) {
+    public ResponseEntity<com.example.demo.dto.DtoBookReview> addRateBookReview(@RequestBody DtoRateBookReview rtoRateView) {
         try {
             int requestRateValue = Integer.parseInt(rtoRateView.getValue());
             int requestIdReview = Integer.parseInt(rtoRateView.getReviewId());
@@ -177,7 +176,7 @@ public class BooksRestApiController {
             User user = controllerService.getCurrentUser();
             BookReview bookReview = bookReviewRepository.findByIdEquals(requestIdReview);
             if (bookReview == null) {
-                return ResponseEntity.ok(new DtoBookReview("Неверный id отзыва"));
+                return ResponseEntity.ok(new com.example.demo.dto.DtoBookReview("Неверный id отзыва"));
             }
 
             // Один пользователь может поставить только один like/dislike на один отзыв.
@@ -197,9 +196,9 @@ public class BooksRestApiController {
                    bookReviewLikeRepository.save(bookReviewLike);
                }
             }
-            return ResponseEntity.ok(new DtoBookReview());
+            return ResponseEntity.ok(new com.example.demo.dto.DtoBookReview());
         } catch (NumberFormatException e) {
-            return ResponseEntity.ok(new DtoBookReview("В запросе переданы некорректные данные"));
+            return ResponseEntity.ok(new com.example.demo.dto.DtoBookReview("В запросе переданы некорректные данные"));
         }
     }
 }

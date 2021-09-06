@@ -1,5 +1,6 @@
 package com.example.demo.config;
 
+import com.example.demo.security.AuthEntryPointJwt;
 import com.example.demo.security.jwt.JwtExpiredFilter;
 import com.example.demo.security.jwt.JwtRequestFilter;
 import com.example.demo.services.BookstoreUserDetailService;
@@ -30,12 +31,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final JwtRequestFilter filter;
 //    private final AccessDeniedHandler accessDeniedHandler;
     private final JwtExpiredFilter jwtExpiredFilter;
+    private final AuthEntryPointJwt unauthorizedHandler;
 
     @Autowired
-    public SecurityConfig(BookstoreUserDetailService bookStoreUserDetailService, JwtRequestFilter filter, JwtExpiredFilter jwtExpiredFilter) {
+    public SecurityConfig(BookstoreUserDetailService bookStoreUserDetailService, JwtRequestFilter filter, JwtExpiredFilter jwtExpiredFilter, AuthEntryPointJwt unauthorizedHandler) {
         this.bookstoreUserDetailService = bookStoreUserDetailService;
         this.filter = filter;
         this.jwtExpiredFilter = jwtExpiredFilter;
+        this.unauthorizedHandler = unauthorizedHandler;
     }
 
     @Bean
@@ -61,7 +64,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // Безуспешно
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/505**");
+        web.ignoring().antMatchers("/api/auth/refreshtoken");
     }
 
     @Override
@@ -69,10 +72,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
 
                 .csrf().disable()
+//                .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .authorizeRequests()
                 .antMatchers("/my", "/profile").authenticated()//hasRole("USER")
                 .antMatchers("/**").permitAll()
-                .antMatchers("/books**").permitAll()
                 .and().formLogin()
                 .loginPage("/signin").failureUrl("/signin")
                 .and().logout().logoutUrl("/logout").logoutSuccessUrl("/signin").deleteCookies("token")

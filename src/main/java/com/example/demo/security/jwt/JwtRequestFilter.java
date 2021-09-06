@@ -53,9 +53,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                         //FIXME Единственный способ который я нашел чтобы пользователь понял что происходит.
                         // Но это не решает проблему, потому что авторизоваться повторно пользователь не может из за
                         // устаревшего токена.
-                        httpServletResponse.setCharacterEncoding("Windows-1251");
-                        httpServletResponse.getWriter().write(e.getMessage());
-                        return;
+//                        httpServletResponse.setCharacterEncoding("Windows-1251");
+//                        httpServletResponse.sendError(401);
+//                        httpServletResponse.getWriter().write(e.getMessage());
+//                        return;
 
                         //FIXME Пробовал перенаправить пользователя на страницу ошибки, предварительно отключив URI
                         // из настроек безопасности. Не выходит. Пытаемся перейти на страницу /505, снова попадаем сюда

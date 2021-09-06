@@ -1,6 +1,8 @@
 package com.example.demo.security.jwt;
 
+import com.example.demo.entity.AccessToken;
 import com.example.demo.exceptions.JwtTimeoutException;
+import com.example.demo.repositories.TokenRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -21,6 +23,12 @@ import java.util.function.Function;
  **/
 @Service
 public class JwtService {
+
+    private final TokenRepository tokenRepository;
+
+    public JwtService(TokenRepository tokenRepository) {
+        this.tokenRepository = tokenRepository;
+    }
 
     @Value("${auth.secret}")
     private String secret;
@@ -45,20 +53,25 @@ public class JwtService {
         return jwtBlackList.get(token);
     }
 
-    private String createToken(Map<String, Object> claims, String userName) {
+    private String createToken(Map<String, Object> claims, String userName, long ttl) {
         return Jwts
                 .builder()
                 .setClaims(claims)
                 .setSubject(userName)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
+                .setExpiration(new Date(System.currentTimeMillis() + ttl ))
                 .signWith(SignatureAlgorithm.HS256, secret).compact();
 
     }
 
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
-        return createToken(claims, userDetails.getUsername());
+        AccessToken accessToken = new AccessToken();
+        accessToken.setAccessToken(createToken(claims, userDetails.getUsername(), 1000 * 60));
+        accessToken.setRefreshToken(createToken(claims, userDetails.getUsername(), 1000 * 3600 * 24 * 60));
+        accessToken.setUserName(userDetails.getUsername());
+        tokenRepository.save(accessToken);
+        return accessToken.getAccessToken();
     }
 
     public String refreshToken(String token) {
