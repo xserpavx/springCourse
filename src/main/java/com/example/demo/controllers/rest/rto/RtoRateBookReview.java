@@ -9,7 +9,7 @@ import lombok.Data;
  **/
 
 @Data
-public class RtoRateView {
+public class RtoRateBookReview {
     private String reviewId;
     private String value;
 }

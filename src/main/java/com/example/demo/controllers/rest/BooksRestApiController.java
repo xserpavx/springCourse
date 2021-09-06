@@ -1,6 +1,7 @@
 package com.example.demo.controllers.rest;
 
-import com.example.demo.controllers.rest.rto.RtoRateView;
+import com.example.demo.controllers.rest.rto.RtoBookReview;
+import com.example.demo.controllers.rest.rto.RtoRateBookReview;
 import com.example.demo.dto.DtoBookReview;
 import com.example.demo.dto.DtoBooks;
 import com.example.demo.entity.Book;
@@ -145,9 +146,9 @@ public class BooksRestApiController {
     }
 
     @PostMapping("bookReview")
-    public ResponseEntity<DtoBookReview> addBookReview(@RequestParam("bookId") String idBook, @RequestParam("text") String review) {
+    public ResponseEntity<DtoBookReview> addBookReview(@RequestBody RtoBookReview rtoBookReview) {
         DtoBookReview dtoBookReview;
-        if (review.length() <= 50) {
+        if (rtoBookReview.getText().length() <= 50) {
             dtoBookReview = new DtoBookReview("Отзыв слишком короткий. Напишите, пожалуйста, более развёрнутый отзыв");
         } else {
             try {
@@ -155,8 +156,8 @@ public class BooksRestApiController {
 
                 BookReview bookReview = new BookReview();
                 bookReview.setIdUser(user.getId());
-                bookReview.setIdBook(Integer.parseInt(idBook));
-                bookReview.setText(review);
+                bookReview.setIdBook(Integer.parseInt(rtoBookReview.getBookId()));
+                bookReview.setText(rtoBookReview.getText());
                 bookReviewRepository.save(bookReview);
                 dtoBookReview = new DtoBookReview();
             } catch (NumberFormatException e) {
@@ -167,7 +168,7 @@ public class BooksRestApiController {
     }
 
     @PostMapping("rateBookReview")
-    public ResponseEntity<DtoBookReview> addRateBookReview(@RequestBody RtoRateView rtoRateView) {
+    public ResponseEntity<DtoBookReview> addRateBookReview(@RequestBody RtoRateBookReview rtoRateView) {
         try {
             int requestRateValue = Integer.parseInt(rtoRateView.getValue());
             int requestIdReview = Integer.parseInt(rtoRateView.getReviewId());
