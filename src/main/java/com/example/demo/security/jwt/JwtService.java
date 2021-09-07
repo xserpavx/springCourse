@@ -67,8 +67,8 @@ public class JwtService {
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
         AccessToken accessToken = new AccessToken();
-        accessToken.setAccessToken(createToken(claims, userDetails.getUsername(), 1000 * 60));
-        accessToken.setRefreshToken(createToken(claims, userDetails.getUsername(), 1000 * 3600 * 24 * 60));
+        accessToken.setAccessToken(createToken(claims, userDetails.getUsername(), 1000 * 3600)); // ttl = 1 час
+        accessToken.setRefreshToken(createToken(claims, userDetails.getUsername(), 1000 * 3600 * 24 * 60)); // ttl = 60 дней
         accessToken.setUserName(userDetails.getUsername());
         tokenRepository.save(accessToken);
         return accessToken.getAccessToken();

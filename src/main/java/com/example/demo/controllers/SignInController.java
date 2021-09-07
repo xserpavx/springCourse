@@ -66,6 +66,7 @@ public class SignInController {
         model.addAttribute("regForm", new RegistrationForm());
         return "signup";
     }
+
     @PostMapping("/requestContactConfirmation")
     @ResponseBody
     public ContactConfirmationResponse handleRequestContactConfirmation(@RequestBody ContactConfirmationPayLoad payload) {
@@ -105,6 +106,7 @@ public class SignInController {
     public String getMyPage() {
         return "my";
     }
+
 
     @GetMapping("/profile")
     public String getProfilePage(Model model) {

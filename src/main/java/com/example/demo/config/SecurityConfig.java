@@ -1,7 +1,5 @@
 package com.example.demo.config;
 
-import com.example.demo.security.AuthEntryPointJwt;
-import com.example.demo.security.jwt.JwtExpiredFilter;
 import com.example.demo.security.jwt.JwtRequestFilter;
 import com.example.demo.services.BookstoreUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +8,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.access.channel.ChannelProcessingFilter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
@@ -29,16 +25,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final BookstoreUserDetailService bookstoreUserDetailService;
     private final JwtRequestFilter filter;
-//    private final AccessDeniedHandler accessDeniedHandler;
-    private final JwtExpiredFilter jwtExpiredFilter;
-    private final AuthEntryPointJwt unauthorizedHandler;
 
     @Autowired
-    public SecurityConfig(BookstoreUserDetailService bookStoreUserDetailService, JwtRequestFilter filter, JwtExpiredFilter jwtExpiredFilter, AuthEntryPointJwt unauthorizedHandler) {
+    public SecurityConfig(BookstoreUserDetailService bookStoreUserDetailService, JwtRequestFilter filter) {
         this.bookstoreUserDetailService = bookStoreUserDetailService;
         this.filter = filter;
-        this.jwtExpiredFilter = jwtExpiredFilter;
-        this.unauthorizedHandler = unauthorizedHandler;
     }
 
     @Bean
@@ -60,19 +51,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-    //FIXME попытка исключить страницу с адресом /505 из проверки безопасности чтобы она открылась даже с истекшим токеном.
-    // Безуспешно
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/api/auth/refreshtoken");
-    }
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-
                 .csrf().disable()
-//                .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .authorizeRequests()
                 .antMatchers("/my", "/profile").authenticated()//hasRole("USER")
                 .antMatchers("/**").permitAll()
@@ -83,12 +65,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().oauth2Client();
 //        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http
-                .addFilterBefore(jwtExpiredFilter, ChannelProcessingFilter.class)
-                .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
-
-        ;
-
-        ;
+                .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
     }
 
 }

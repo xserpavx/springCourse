@@ -1,6 +1,8 @@
 package com.example.demo.security.jwt;
 
+import com.example.demo.entity.AccessToken;
 import com.example.demo.exceptions.JwtTimeoutException;
+import com.example.demo.repositories.TokenRepository;
 import com.example.demo.security.BookstoreUserDetails;
 import com.example.demo.services.BookstoreUserDetailService;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -28,10 +30,12 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
     private final BookstoreUserDetailService bookstoreUserDetailService;
     private final JwtService jwtService;
+    private final TokenRepository tokenRepository;
 
-    public JwtRequestFilter(BookstoreUserDetailService bookstoreUserDetailService, JwtService jwtService) {
+    public JwtRequestFilter(BookstoreUserDetailService bookstoreUserDetailService, JwtService jwtService, TokenRepository tokenRepository) {
         this.bookstoreUserDetailService = bookstoreUserDetailService;
         this.jwtService = jwtService;
+        this.tokenRepository = tokenRepository;
     }
 
     @Override
@@ -46,26 +50,26 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 if (cookie.getName().equals("token")) {
                     token = cookie.getValue();
                     try {
-
                         userName = jwtService.tokenUserName(token);
                     } catch (JwtTimeoutException e) {
-
-                        //FIXME Единственный способ который я нашел чтобы пользователь понял что происходит.
-                        // Но это не решает проблему, потому что авторизоваться повторно пользователь не может из за
-                        // устаревшего токена.
-//                        httpServletResponse.setCharacterEncoding("Windows-1251");
-//                        httpServletResponse.sendError(401);
-//                        httpServletResponse.getWriter().write(e.getMessage());
-//                        return;
-
-                        //FIXME Пробовал перенаправить пользователя на страницу ошибки, предварительно отключив URI
-                        // из настроек безопасности. Не выходит. Пытаемся перейти на страницу /505, снова попадаем сюда
-                        // и так до тех пор пока браузер не скажет слишком много переадресаций.
-                        //httpServletResponse.sendRedirect("/505");
-                        //return;
-
-
+                        SecurityContextHolder.getContext().setAuthentication(null);
+                        AccessToken accessToken = tokenRepository.findAccessTokenByAccessToken(token);
+                        if (accessToken != null) {
+                            try {
+                                if (!jwtService.isTokenExpired(accessToken.getRefreshToken())) {
+                                    BookstoreUserDetails bookstoreUserDetails = (BookstoreUserDetails) bookstoreUserDetailService.loadUserByName(accessToken.getUserName());
+                                    token = jwtService.generateToken(bookstoreUserDetails);
+                                    Cookie cookie2 = new Cookie("token", token);
+                                    httpServletResponse.addCookie(cookie2);
+                                    tokenRepository.delete(accessToken);
+                                }
+                            } catch (JwtTimeoutException e2) {
+                                token = null;
+                            }
+                            userName = accessToken.getUserName();
+                        }
                     }
+                    break;
                 }
             }
         }

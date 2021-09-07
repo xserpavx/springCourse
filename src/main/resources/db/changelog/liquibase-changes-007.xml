@@ -17,7 +17,20 @@
             <column name="phone" type="varchar(255)"/>
         </addColumn>
     </changeSet>
-    <changeSet author="roland (generated)" id="1630903927179-1">
-        <addUniqueConstraint columnNames="id_review, id_user" constraintName="unq_id_review_id_user" tableName="book_review_like"/>
+    <changeSet author="roland (generated)" id="1630993677041-1">
+        <createSequence sequenceName="access_token_id_seq"/>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1630993677041-2">
+        <createTable tableName="access_token">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="access_token_pkey"/>
+            </column>
+            <column name="user_name" type="VARCHAR(255)"/>
+            <column name="access_token" type="VARCHAR(255)"/>
+            <column name="refresh_token" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="roland (generated)" id="1630993677041-3">
+        <addUniqueConstraint columnNames="id_review, id_user" constraintName="ukponl77e0o055it2waabfpq50d" tableName="book_review_like"/>
     </changeSet>
 </databaseChangeLog>
