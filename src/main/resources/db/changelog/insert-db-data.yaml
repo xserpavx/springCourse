@@ -6,6 +6,12 @@ databaseChangeLog:
         - sqlFile:
             path: db/data/authors.sql
   - changeSet:
+      id: roland-book2user_types-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/book/book2user_types.sql
+  - changeSet:
       id: roland-books-sql
       author: roland
       changes:

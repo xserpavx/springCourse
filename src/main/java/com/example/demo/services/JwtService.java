@@ -1,4 +1,4 @@
-package com.example.demo.security.jwt;
+package com.example.demo.services;
 
 import com.example.demo.entity.AccessToken;
 import com.example.demo.exceptions.JwtTimeoutException;
@@ -65,24 +65,20 @@ public class JwtService {
     }
 
     public String generateToken(UserDetails userDetails) {
+        // access token ttl = 1 hour, refresh token = 60 days
+        return  generateToken(userDetails, 1000 * 3600);
+    }
+
+
+    public String generateToken(UserDetails userDetails, long ttlAccessToken) {
         Map<String, Object> claims = new HashMap<>();
         AccessToken accessToken = new AccessToken();
-        accessToken.setAccessToken(createToken(claims, userDetails.getUsername(), 1000 * 3600)); // ttl = 1 час
-        accessToken.setRefreshToken(createToken(claims, userDetails.getUsername(), 1000 * 3600 * 24 * 60)); // ttl = 60 дней
+        accessToken.setAccessToken(createToken(claims, userDetails.getUsername(), ttlAccessToken));
+        accessToken.setRefreshToken(createToken(claims, userDetails.getUsername(), ttlAccessToken * 24 * 60));
         accessToken.setUserName(userDetails.getUsername());
         tokenRepository.save(accessToken);
         return accessToken.getAccessToken();
     }
-
-    public String refreshToken(String token) {
-        UserDetails userDetails = jwtList.get(token);
-        if (userDetails != null) {
-            return generateToken(userDetails);
-        } else  {
-            return token;
-        }
-    }
-
 
     public <T> T extractClaims(String token, Function<Claims, T> claimsResolver) throws JwtTimeoutException {
         Claims claims = extractAllClaims(token);

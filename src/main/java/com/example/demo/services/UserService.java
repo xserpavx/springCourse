@@ -6,7 +6,6 @@ import com.example.demo.security.BookstoreUserDetails;
 import com.example.demo.security.ContactConfirmationPayLoad;
 import com.example.demo.security.ContactConfirmationResponse;
 import com.example.demo.security.RegistrationForm;
-import com.example.demo.security.jwt.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

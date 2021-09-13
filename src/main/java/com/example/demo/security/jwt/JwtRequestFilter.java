@@ -5,6 +5,7 @@ import com.example.demo.exceptions.JwtTimeoutException;
 import com.example.demo.repositories.TokenRepository;
 import com.example.demo.security.BookstoreUserDetails;
 import com.example.demo.services.BookstoreUserDetailService;
+import com.example.demo.services.JwtService;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

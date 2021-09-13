@@ -15,7 +15,12 @@ public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndS
 
 
 
-    public static enum BookUserTypes {EMPTY, KEPT, CART, PAID, ARCHIVED}
+    public static enum BookUserTypes {EMPTY,
+        KEPT, // отложена
+        CART, // в корзине
+        PAID, // куплена
+        ARCHIVED // в архиве
+    }
 
     List<Book> findBookByOrderByPubDateDesc();
 
@@ -65,8 +70,17 @@ public interface BookRepository extends JpaRepository<Book, Integer>, PagingAndS
     @Query(value = "select count(id) cnt from book_user_rating but where id_book = ?1 and rate = ?2", nativeQuery = true)
     Integer getRateCountByRateValue(int id_book, int rate);
 
+    @Query (value = "select count(id) cnt from book2user where id_book = ?1 and id_type = ?2", nativeQuery = true)
+    Integer getCountBooksByIdAndUserType(int id_book, int user_type);
+
     Page<Book> findBooksByTitleIn(String[] titles, Pageable pageable);
 
     Page<Book> findBooksByTitleContainingIgnoreCase(String title, Pageable pageable);
     List<Book> findBooksByTitleContainingIgnoreCase(String title);
+
+    @Query (value="select rateval from (select  round(avg(rate)) rateval, id_book from book_user_rating group by id_book order by rateVal desc limit 1) s1", nativeQuery = true)
+    Integer getMaxRating();
+
+    @Query (value="select rateval from (select  round(avg(rate)) rateval, id_book from book_user_rating group by id_book order by rateVal limit 1) s1", nativeQuery = true)
+    Integer getMinRating();
 }

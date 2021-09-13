@@ -35,4 +35,13 @@
     <changeSet author="roland (generated)" id="1627218799909-9">
         <addForeignKeyConstraint baseColumnNames="id_author" baseTableName="books" constraintName="fk4ih38omjrl63dv9509hddgyia" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="authors"/>
     </changeSet>
+    <changeSet author="roland (generated)" id="1627218799909-10">
+        <createTable tableName="book2user_types">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book2user_types_pkey"/>
+            </column>
+            <column name="code" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>

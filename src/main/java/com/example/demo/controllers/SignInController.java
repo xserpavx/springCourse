@@ -5,7 +5,7 @@ import com.example.demo.exceptions.JwtTimeoutException;
 import com.example.demo.security.ContactConfirmationPayLoad;
 import com.example.demo.security.ContactConfirmationResponse;
 import com.example.demo.security.RegistrationForm;
-import com.example.demo.security.jwt.JwtService;
+import com.example.demo.services.JwtService;
 import com.example.demo.services.ControllerService;
 import com.example.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
