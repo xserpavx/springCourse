@@ -248,3 +248,4 @@ insert into users (id, balance, hash, name, reg_time) values (-247, 820.04, 'JN8
 insert into users (id, balance, hash, name, reg_time) values (-248, 17.5, '1G6KH5E60BU922665', 'Garnette', '27/05/2020');
 insert into users (id, balance, hash, name, reg_time) values (-249, 2597.67, 'WBA1F9C51FV020121', 'Lucine', '17/09/2020');
 insert into users (id, balance, hash, name, reg_time) values (-250, 3751.25, '1FTMF1CW6AK355618', 'Clerkclaude', '23/12/2021');
+insert into users (id, balance, hash, name, reg_time, email, password, phone) values (-251, 1231.23, '1FTMF1CWFRDK355618', 'testUser', '23/12/2021', '123@123.123', '$2a$10$CTgPPWew6P176H/uR6CBf.X8RqAfE/.k/Y5w1o2XCT4ciukzLFbQu', '+7 (123) 123-12-31');

@@ -39,15 +39,17 @@ public class UserService {
         this.jwtService = jwtService;
     }
 
-    public void registrationNewUser(RegistrationForm regForm) {
+    public User registrationNewUser(RegistrationForm regForm) {
+        User user = null;
         if (userRepository.findBookstoreUserByEmail(regForm.getEmail()) == null) {
-            User user = new User();
+            user = new User();
             user.setName(regForm.getName());
             user.setPhone(regForm.getPhone());
             user.setEmail(regForm.getEmail());
             user.setPassword(passwordEncoder.encode(regForm.getPassword()));
             userRepository.save(user);
         }
+        return user;
     }
 
     public ContactConfirmationResponse login(ContactConfirmationPayLoad payload) {
