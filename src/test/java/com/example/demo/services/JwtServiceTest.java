@@ -1,7 +1,7 @@
 package com.example.demo.services;
 
+import com.example.demo.TestValues;
 import com.example.demo.entity.AccessToken;
-import com.example.demo.entity.User;
 import com.example.demo.exceptions.JwtTimeoutException;
 import com.example.demo.repositories.TokenRepository;
 import com.example.demo.repositories.UserRepository;
@@ -37,48 +37,36 @@ class JwtServiceTest {
      */
     @Test
     public void expirationTokenTest() throws InterruptedException {
-        User user = new User();
-        user.setName("testUser");
-        user.setEmail("testUser@mail.my");
-        user.setPassword("resUtset");
-        userRepository.save(user);
+        BookstoreUserDetails userDetails = (BookstoreUserDetails) bookstoreUserDetailService.loadUserByUsername(TestValues.testEmail);
+
+        assertEquals(false, userDetails == null, String.format("Loading bookstore user deatils for user \"%s\" failed!", TestValues.testEmail));
+
+        // Генерируем токен, время жизни = 5 сек
+        String token = jwtService.generateToken(userDetails, 5000);
+        // Ждем 6 секунд
+        TimeUnit.SECONDS.sleep(6);
         try {
-            BookstoreUserDetails userDetails = (BookstoreUserDetails) bookstoreUserDetailService.loadUserByUsername(user.getEmail());
+            jwtService.validateToken(token, userDetails);
+            assertEquals(true, false, "Token is not expired!");
+        } catch (JwtTimeoutException e) {
 
-            assertEquals(false, userDetails == null, "Loading bookstore user deatils for user \"testUser\" failed!");
-
-            // Генерируем токен, время жизни = 5 сек
-            String token = jwtService.generateToken(userDetails, 5000);
-            // Ждем 10 секунд
-            TimeUnit.SECONDS.sleep(6);
-            try {
-                jwtService.validateToken(token, userDetails);
-                assertEquals(true, false, "Token is not expired!");
-            } catch (JwtTimeoutException e) {
-
-            }
-
-            AccessToken accessToken = tokenRepository.findAccessTokenByAccessToken(token);
-
-            assertEquals(true, accessToken != null, "Pair accessToken/refreshToken not found in database!");
-            try {
-                if (!jwtService.isTokenExpired(accessToken.getRefreshToken())) {
-                    BookstoreUserDetails bookstoreUserDetails = (BookstoreUserDetails) bookstoreUserDetailService.loadUserByName(accessToken.getUserName());
-                    token = jwtService.generateToken(bookstoreUserDetails, 5000);
-                }
-            } catch (JwtTimeoutException e2) {
-                assertEquals(true, false, "Refresh token expired early!");
-            }
-            try {
-                jwtService.validateToken(token, userDetails);
-            } catch (JwtTimeoutException e) {
-                assertEquals(true, false, "Grant new accessToken by refresh token failed!");
-            }
-
-
-        } finally {
-            userRepository.delete(user);
         }
 
+        AccessToken accessToken = tokenRepository.findAccessTokenByAccessToken(token);
+
+        assertEquals(true, accessToken != null, "Pair accessToken/refreshToken not found in database!");
+        try {
+            if (!jwtService.isTokenExpired(accessToken.getRefreshToken())) {
+                BookstoreUserDetails bookstoreUserDetails = (BookstoreUserDetails) bookstoreUserDetailService.loadUserByName(accessToken.getUserName());
+                token = jwtService.generateToken(bookstoreUserDetails, 5000);
+            }
+        } catch (JwtTimeoutException e2) {
+            assertEquals(true, false, "Refresh token expired early!");
+        }
+        try {
+            jwtService.validateToken(token, userDetails);
+        } catch (JwtTimeoutException e) {
+            assertEquals(true, false, "Grant new accessToken by refresh token failed!");
+        }
     }
 }

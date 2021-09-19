@@ -83,3 +83,9 @@ databaseChangeLog:
       changes:
         - sqlFile:
             path: db/data/review/book_review_like.sql
+  - changeSet:
+      id: roland-testUser-sql
+      author: roland
+      changes:
+        - sqlFile:
+            path: db/data/testUser.sql
