@@ -47,13 +47,12 @@ public class ControllerService {
         String result = cookieValue != null ? cookieValue : "";
         String[] removeValues = removeCookieValues.split("/");
         for (String remove : removeValues) {
-            // Удаляем значение из середины
-            result = result.replaceFirst("^(.*)/"+remove+"/?(.*)?", "$1/$2");
             // Удаляем значение из начала строки
             result = result.replaceFirst("^"+remove+"/?(.*)?", "$1");
             // Удаляем значение из конца строки
             result = result.replaceFirst("^(.*)/"+remove+"$", "$1");
-
+            // Удаляем значение из середины
+            result = result.replaceFirst("^(.*)/"+remove+"/?(.*)?", "$1/$2");
         }
         return result;
     }

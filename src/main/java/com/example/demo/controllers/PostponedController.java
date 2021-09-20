@@ -82,7 +82,7 @@ public class PostponedController {
                 strValue = controllerService.definePostponedBooksCountCookie(postponedBooks);
                 strValue = controllerService.definePostponedBooksCountCookie(cartBooks);
                 controllerService.addCookie("cartCount", strValue, "/", response);
-                break;
+                return "redirect:/books/"+slug;
             case UNLINK_CART:
                 break;
             case UNLINK:

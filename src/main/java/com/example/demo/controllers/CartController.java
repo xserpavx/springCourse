@@ -1,9 +1,11 @@
 package com.example.demo.controllers;
 
 import com.example.demo.entity.User;
+import com.example.demo.services.BookService;
 import com.example.demo.services.ControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,10 +18,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 @Controller
 public class CartController {
     private final ControllerService controllerService;
+    private final BookService bookService;
 
     @Autowired
-    public CartController(ControllerService controllerService) {
+    public CartController(ControllerService controllerService, BookService bookService) {
         this.controllerService = controllerService;
+        this.bookService = bookService;
     }
 
     @ModelAttribute("active")
@@ -42,8 +46,14 @@ public class CartController {
         return controllerService.getBooksCount(ppCount);
     }
 
-    @GetMapping("books/cart")
-    public String cartPage() {
+    @GetMapping("cart")
+    public String cartPage(@CookieValue(name="cartBooks", required = false) String cartBooks, Model model) {
+        if (cartBooks != null && !cartBooks.isEmpty()) {
+            String[] pb = cartBooks.replaceAll("^/", "").replaceAll("/$", "").split("/");
+//            model.addAttribute("carted", bookService.getBooksBySlug(pb));
+//            model.addAttribute("slugs4BuyAll", cartBooks);
+        }
+
         return "cart";
     }
 }

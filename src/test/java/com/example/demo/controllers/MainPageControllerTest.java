@@ -1,7 +1,6 @@
 package com.example.demo.controllers;
 
 import com.example.demo.TestValues;
-import com.example.demo.repositories.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -23,12 +22,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @TestPropertySource("/application-test.properties")
 public class MainPageControllerTest {
     private final MockMvc mockMvc;
-    private final UserRepository userRepository;
 
     @Autowired
-    public MainPageControllerTest(MockMvc mockMvc, UserRepository userRepository) {
+    public MainPageControllerTest(MockMvc mockMvc) {
         this.mockMvc = mockMvc;
-        this.userRepository = userRepository;
     }
 
     @Test
