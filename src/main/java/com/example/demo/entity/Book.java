@@ -80,7 +80,7 @@ public class Book {
 
     @Transient
     public String discountString() {
-        return String.format("Скидка %d%%", discount);
+        return String.format("-%d%%", discount);
     }
 
     @Transient

@@ -46,11 +46,11 @@ public class CartController {
         return controllerService.getBooksCount(ppCount);
     }
 
-    @GetMapping("cart")
+    @GetMapping("/books/cart")
     public String cartPage(@CookieValue(name="cartBooks", required = false) String cartBooks, Model model) {
         if (cartBooks != null && !cartBooks.isEmpty()) {
             String[] pb = cartBooks.replaceAll("^/", "").replaceAll("/$", "").split("/");
-//            model.addAttribute("carted", bookService.getBooksBySlug(pb));
+            model.addAttribute("carted", bookService.getBooksBySlug(pb));
 //            model.addAttribute("slugs4BuyAll", cartBooks);
         }
 
