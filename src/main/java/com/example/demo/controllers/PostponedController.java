@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.dto.DtoChangeBookStatus;
 import com.example.demo.entity.User;
 import com.example.demo.services.BookService;
 import com.example.demo.services.ControllerService;
@@ -57,39 +58,40 @@ public class PostponedController {
     }
 
     @PostMapping(value="/books/changeBookStatus")
-    public String changeBookStatus(@RequestParam(value = "booksIds") String slug, @RequestParam(value = "status") String status,
-                                         @CookieValue(name="postponedBooks", required = false) String postponedBooks,
-                                         @CookieValue(name="cartBooks", required = false) String cartBooks,
-                                         HttpServletResponse response) {
-        var switchBy = ControllerService.ButtonsUI.valueOf(status);
+    public String changeBookStatus2(@RequestBody DtoChangeBookStatus changeBookStatus,
+                                    @CookieValue(name="postponedBooks", required = false) String postponedBooks,
+                                    @CookieValue(name="cartBooks", required = false) String cartBooks,
+                                    HttpServletResponse response) {
+
+        var switchBy = ControllerService.ButtonsUI.valueOf(changeBookStatus.getStatus());
         String strValue;
         switch (switchBy) {
             case KEPT:
-                postponedBooks = controllerService.addCookieValue(postponedBooks, slug);
+                postponedBooks = controllerService.addCookieValue(postponedBooks, changeBookStatus.getBooksIds());
                 controllerService.addCookie("postponedBooks", postponedBooks, "/books", response);
-                cartBooks = controllerService.removeCookieValue(cartBooks, slug);
+                cartBooks = controllerService.removeCookieValue(cartBooks, changeBookStatus.getBooksIds());
                 controllerService.addCookie("cartBooks", cartBooks, "/books", response);
                 strValue = controllerService.definePostponedBooksCountCookie(postponedBooks);
                 controllerService.addCookie("ppCount", strValue, "/", response);
                 strValue = controllerService.definePostponedBooksCountCookie(cartBooks);
                 controllerService.addCookie("cartCount", strValue, "/", response);
-                return "redirect:/books/"+slug;
+                return "redirect:/books/"+changeBookStatus.getBooksIds();
             case CART:
-                cartBooks = controllerService.addCookieValue(cartBooks, slug);
+                cartBooks = controllerService.addCookieValue(cartBooks, changeBookStatus.getBooksIds());
                 controllerService.addCookie("cartBooks", cartBooks, "/books", response);
-                postponedBooks = controllerService.removeCookieValue(postponedBooks, slug);
+                postponedBooks = controllerService.removeCookieValue(postponedBooks, changeBookStatus.getBooksIds());
                 controllerService.addCookie("postponedBooks", postponedBooks, "/books", response);
                 strValue = controllerService.definePostponedBooksCountCookie(cartBooks);
                 controllerService.addCookie("cartCount", strValue, "/", response);
-                return "redirect:/books/"+slug;
+                return "redirect:/books/"+changeBookStatus.getBooksIds();
             case UNLINK_CART:
-                cartBooks = controllerService.removeCookieValue(cartBooks, slug);
+                cartBooks = controllerService.removeCookieValue(cartBooks, changeBookStatus.getBooksIds());
                 controllerService.addCookie("cartBooks", cartBooks, "/books", response);
                 strValue = controllerService.definePostponedBooksCountCookie(cartBooks);
                 controllerService.addCookie("cartCount", strValue, "/", response);
                 return "redirect:cart";
             case UNLINK:
-                postponedBooks = controllerService.removeCookieValue(postponedBooks, slug);
+                postponedBooks = controllerService.removeCookieValue(postponedBooks, changeBookStatus.getBooksIds());
                 controllerService.addCookie("postponedBooks", postponedBooks, "/books", response);
                 strValue = controllerService.definePostponedBooksCountCookie(postponedBooks);
                 controllerService.addCookie("ppCount", strValue, "/", response);
