@@ -86,18 +86,18 @@ class PostponedControllerTest {
     @Test
     public void removeBookFromCart() throws Exception {
 
-        String postponedBooks = "cartBook1/cartBook2";
-        int ppCount = 2;
+        String cartBooks = "cartBook1/cartBook2";
+        int cartCount = 2;
 
         mockMvc.perform(post("/books/changeBookStatus")
                 .param("booksIds", "cartBook2")
                 .param("status", ControllerService.ButtonsUI.UNLINK_CART.name())
-                .cookie(new Cookie("ppCount", String.format("%d", ppCount)))
-                .cookie(new Cookie("postponedBooks", postponedBooks)))
-                .andExpect(status().isOk())
-//                .andExpect(redirectedUrl("postponed"))
+                .cookie(new Cookie("cartCount", String.format("%d", cartCount)))
+                .cookie(new Cookie("cartBooks", cartBooks)))
+                .andExpect(status().is3xxRedirection())
+                .andExpect(redirectedUrl("cart"))
                 .andExpect(cookie().value("cartCount", "1"))
-                .andExpect(cookie().value("postponedBooks", "cartBook1"))
+                .andExpect(cookie().value("cartBooks", "cartBook1"))
                 .andDo(print());
 
     }

@@ -13,7 +13,7 @@
                              xmlns:th="http://www.thymeleaf.org"> <!--<![endif]-->
 <head>
   <title>Тут название страницы написать</title>
-  <meta name="description" content="Описание страницы" />
+  <meta name="description" content="Книги в корзине" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
   <!--meta( http-equiv="cache-control" content="no-cache")-->
@@ -59,12 +59,14 @@
                   <div class="Cart-buttons">
                     <div class="Cart-btn">
                       <button class="btn btn_primary btn_outline" data-sendstatus="KEPT" data-bookid="[1133]" th:attr="data-bookid=${book.getSlug()}">
-                        <span class="btn-icon"><img src="/assets/img/icons/heart.svg" alt="heart.svg"/></span><span class="btn-content" th:text="#{buttons.postpone}">Отложить</span>
+                        <span class="btn-icon"><img src="/assets/img/icons/heart.svg" alt="heart.svg"/></span>
+                        <span class="btn-content" th:text="#{buttons.postpone}">Отложить</span>
                       </button>
                     </div>
                     <div class="Cart-btn">
-                      <button class="btn btn_danger btn_outline" data-sendstatus="UNLINK" data-bookid="[1133]" th:attr="data-bookid=${book.getSlug()}">
-                        <span class="btn-icon"><img src="/assets/img/icons/trash.svg" alt="trash.svg"/></span><span class="btn-content" th:text="#{buttons.del}">Удалить</span>
+                      <button class="btn btn_danger btn_outline" data-sendstatus="UNLINK_CART" data-bookid="[1122]" th:attr="data-bookid=${book.getSlug()}">
+                        <span class="btn-icon"><img src="/assets/img/icons/trash.svg" alt="trash.svg"/></span>
+                        <span class="btn-content" th:text="#{buttons.del}">Удалить</span>
                       </button>
                     </div>
                   </div>

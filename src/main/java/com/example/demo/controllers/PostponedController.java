@@ -79,12 +79,15 @@ public class PostponedController {
                 controllerService.addCookie("cartBooks", cartBooks, "/books", response);
                 postponedBooks = controllerService.removeCookieValue(postponedBooks, slug);
                 controllerService.addCookie("postponedBooks", postponedBooks, "/books", response);
-                strValue = controllerService.definePostponedBooksCountCookie(postponedBooks);
                 strValue = controllerService.definePostponedBooksCountCookie(cartBooks);
                 controllerService.addCookie("cartCount", strValue, "/", response);
                 return "redirect:/books/"+slug;
             case UNLINK_CART:
-                break;
+                cartBooks = controllerService.removeCookieValue(cartBooks, slug);
+                controllerService.addCookie("cartBooks", cartBooks, "/books", response);
+                strValue = controllerService.definePostponedBooksCountCookie(cartBooks);
+                controllerService.addCookie("cartCount", strValue, "/", response);
+                return "redirect:cart";
             case UNLINK:
                 postponedBooks = controllerService.removeCookieValue(postponedBooks, slug);
                 controllerService.addCookie("postponedBooks", postponedBooks, "/books", response);
