@@ -1,1 +1,1 @@
-insert into users (id, balance, hash, name, reg_time, email, password, phone) values (-251, 1231.23, '1FTMF1CWFRDK355618', 'testUser', '23/12/2021', '123@123.123', '$2a$10$CTgPPWew6P176H/uR6CBf.X8RqAfE/.k/Y5w1o2XCT4ciukzLFbQu', '+7 (123) 123-12-31');
+insert into users (id, balance, hash, name, reg_time, email, password, phone) values (-251, 1231.23, '1FTMF1CWFRDK355618', '123', '23/12/2021', '123@123.123', '$2a$10$CTgPPWew6P176H/uR6CBf.X8RqAfE/.k/Y5w1o2XCT4ciukzLFbQu', '+7 (123) 123-12-31');
