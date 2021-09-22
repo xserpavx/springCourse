@@ -1,8 +1,9 @@
 package com.example.demo.controllers.rest;
 
 import com.example.demo.dto.DtoAddBookReview;
-import com.example.demo.dto.DtoRateBookReview;
+import com.example.demo.dto.DtoBookReview;
 import com.example.demo.dto.DtoBooks;
+import com.example.demo.dto.DtoRateBookReview;
 import com.example.demo.entity.Book;
 import com.example.demo.entity.BookReview;
 import com.example.demo.entity.BookReviewLike;
@@ -145,8 +146,8 @@ public class BooksRestApiController {
     }
 
     @PostMapping("bookReview")
-    public ResponseEntity<com.example.demo.dto.DtoBookReview> addBookReview(@RequestBody DtoAddBookReview rtoBookReview) {
-        com.example.demo.dto.DtoBookReview dtoBookReview;
+    public ResponseEntity<DtoBookReview> addBookReview(@RequestBody DtoAddBookReview rtoBookReview) {
+        DtoBookReview dtoBookReview;
         if (rtoBookReview.getText().length() <= 50) {
             dtoBookReview = new com.example.demo.dto.DtoBookReview("Отзыв слишком короткий. Напишите, пожалуйста, более развёрнутый отзыв");
         } else {

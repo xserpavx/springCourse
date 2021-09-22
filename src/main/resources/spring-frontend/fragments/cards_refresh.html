@@ -7,20 +7,22 @@
 </head>
 <body>
 <div class="Cards Cards_refresh" th:fragment="cards_refresh">
-        <div class="Card" th:each="book : ${listBooks}">
-            <div class="Card-picture"><a href="#"><img th:src="${book.image}" src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
-            <div class="Card-sale" th:if="${book.discount != 0}" th:text="${book.discountString()}">30% скидка</div>
-            <div class="Card-ribbon" th:if="${book.bestseller}"><span class="Card-ribbonText">Бестселлер</span></div>
+<!--        <div class="Card" th:each="book : ${listBooks}">-->
+    <div class="Card" th:each="i : ${#numbers.sequence(0, listBooks.size() - 1)}">
+
+            <div class="Card-picture"><a href="#"><img th:src="${listBooks.get(i).image}" src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
+            <div class="Card-sale" th:if="${listBooks.get(i).discount != 0}" th:text="${listBooks.get(i).discountString()}">30% скидка</div>
+            <div class="Card-ribbon" th:if="${listBooks.get(i).bestseller}"><span class="Card-ribbonText">Бестселлер</span></div>
             <!--                <a class="Card-status" title="Отложена"><img src="/assets/img/icons/heart.svg" alt="heart.svg"/>-->
             <!--                <a class="Card-status" title="В корзине"><img src="/assets/img/icons/shopping-basket.svg" alt="shopping-basket.svg"/></a>-->
             <!--                                <a class="Card-status" title="Куплена"><img src="/assets/img/icons/check.svg" alt="check.svg"/></a>-->
         </div>
         <div class="Card-content">
-            <strong class="Card-title"><a href="#" th:href="'/books/'+${book.getSlug()}" th:text="${book.getTitle()}">Техника</a>
+            <strong class="Card-title"><a th:id="'bookLink'+${i}" href="#" th:href="'/books/'+${listBooks.get(i).getSlug()}" th:text="${listBooks.get(i).getTitle()}">Техника</a>
             </strong>
-            <div class="Card-description" th:text="${book.getAuthors()}">Кондратенко Александр Петрович
+            <div class="Card-description" th:text="${listBooks.get(i).getAuthors()}">Кондратенко Александр Петрович
             </div>
-            <div class="Card-cost"><span class="Card-priceOld" th:if="${book.getDiscount() != 0}" th:text="${book.getPrice()}"></span><span class="Card-price" th:text="${book.getDiscountPrice()}"></span>
+            <div class="Card-cost"><span class="Card-priceOld" th:if="${listBooks.get(i).getDiscount() != 0}" th:text="${listBooks.get(i).getPrice()}"></span><span class="Card-price" th:text="${listBooks.get(i).getDiscountPrice()}"></span>
             </div>
         </div>
     </div>

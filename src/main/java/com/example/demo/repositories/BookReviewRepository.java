@@ -5,4 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookReviewRepository extends JpaRepository<BookReview, Integer> {
     BookReview findByIdEquals(Integer id);
+
+    BookReview findTop1ByIdUserOrderByIdDesc(Integer id_user);
 }
