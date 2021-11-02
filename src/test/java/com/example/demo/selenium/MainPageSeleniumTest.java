@@ -22,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author roland
  **/
 @SpringBootTest
+//@IfProfileValue(name = "dev", value = "false")
 public class MainPageSeleniumTest {
     private static ChromeDriver driver;
     private final UserRepository userRepository;
