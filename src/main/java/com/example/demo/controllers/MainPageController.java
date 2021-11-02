@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.aop.annotations.LogExecution;
 import com.example.demo.entity.Book;
 import com.example.demo.entity.Tag;
 import com.example.demo.entity.User;
@@ -82,6 +83,7 @@ public class MainPageController {
     }
 
 
+    @LogExecution
     @GetMapping("/")
     public String mainPage(Model model) {
         return "index";
